@@ -1,4 +1,64 @@
 
+* {
+  align-content: center;
+  text-align: center;
+  margin: 0px auto;
+}
+
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(242, 242, 243, 1);
+  font-family: 'Raleway', sans-serif;
+  background-color: black;
+}
+
+p {
+  color: white;
+}
+
+#container {
+  background-color: green;
+  /* width: 100%;
+  max-width: 800px;
+  min-width: 200px;
+  height: 1000px; */
+  background: url(star-night-trim.jpg);
+
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  
+  height: 150px;
+  width: 232px;
+
+
+  /* background-size: cover; */
+}
+
+#main {
+  /* width: 800px; */
+  min-width: 428px;
+  height: 100px;
+
+  background: url(star-night-trim.jpg);
+
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+#main-body {
+  width: 1700px;
+  height: 1100px;
+  background-color: black;
+}
 
 #banner {
     color: blue;
@@ -31,14 +91,6 @@
 
 
 
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background: rgba(242, 242, 243, 1);
-  font-family: 'Raleway', sans-serif;
-}
 body h1 {
   text-align: center;
   margin-top: 35px;
@@ -61,6 +113,7 @@ body h1 {
   top: 0;
   z-index: 990;
   height: 100%;
+  width: 125px;
   background: rgba(38, 38, 38, 1);
 }
 .icon li {
