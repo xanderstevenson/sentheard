@@ -15,56 +15,76 @@
     <title>SentHeard</title>
 </head>
 <body>
+        <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2"> 
     <div class='container-fluid'>
-            <div id="nav" class="nav">
+
+            <div id="nav" class="nav"> 
+                
                     <div class="icon">
+                        
                         <ul id='binder-thin'>
-                            <li><img src="{% static '/home.png'%}" alt="house icon" id="home-icon"><a title="Home" href="#"><i class="fa fa-home "></i></a></li>
+                            <!-- <li><img src="{% static '/home.png'%}" alt="house icon" id="home-icon"><a title="Home" href="#"><i class="fa fa-home "></i></a></li>
                             <li><img src="{% static '/about_us.png'%}" alt="about us icon" id="about-us-icon"><a href="About"><i class="fa fa-search "></i></a></li>
                             <li><img src="{% static '/hand-peace.png'%}" alt="hand icon" id="hand-peace-icon"><a href="About"><i class="fa fa-search "></i></a></li>  
-                            <li><img src="{% static '/contact.png'%}" alt="contact icon" id="contact-icon"><a href="#"><i class="fa fa-edit "></i></a></li>
-                            <li><a href="#"><i class="fa fa-cog "></i></a></li>
-                
+                            <li><img src="{% static '/contact.png'%}" alt="contact icon" id="contact-icon"><a href="#"><i class="fa fa-edit "></i></a></li> -->
+                           
+                            <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding">
+           
                         </ul>
+
+
                     </div>
+
+
                     <div class="text">
                         <ul>
-                            <li><a title="Home" href="#">Home</a></li>
+                            <li><a title="Home" href="#">home</a></li>
+                            <img src="{% static '/home.png'%}" alt="house icon" id="home-icon"><a title="Home" href="#"><i class="fa fa-home "></i></a>
+
                                 <li><a href="/about_us/about_us.html" >About Us</a>
             </li>
+            <img src="{% static '/about_us.png'%}" alt="about us icon" id="about-us-icon"><a href="About"><i class="fa fa-search "></i></a>
                 <li><a href="#" >What We Offer</a>
             </li>
+            <img src="{% static '/hand-peace.png'%}" alt="hand icon" id="hand-peace-icon"><a href="About"><i class="fa fa-search "></i></a>
                 <li><a href="#" >Contact</a>
             </li>
+            <img src="{% static '/contact.png'%}" alt="contact icon" id="contact-icon"><a href="#"><i class="fa fa-edit "></i></a>
                         </ul>
                     </div>
-                    <div class="info">
-                        <div class="logo"><p>LOGO</p></div>
-                        <div class="name">Co. Name</div>
-                        <div class="quote">WHAT WE DO IS WHO WE ARE</div>
-                        <div class="social">
-                            <a target="_blank" href="https://twitter.com/tmrDevelops"><i class="fa fa-twitter"></i></a>
-                        </div>
+
+                    </div> 
+                    
+            </div>
+           
+            <div class="row" id='row1'>
+                  
+                    <div id="main">
                         
                     </div>
-            </div>
-
-            <div class="row" id='row1'>
+                    
                 <div class="col-lg-12 col-sm-12">
-
+                      
                     <div id="banner">
-
+                          
                     </div>
 
-
+             
                 </div>
+
+
             </div>
 
 
                     {% block content %}
-                    <p>hi</p>
-                    {% endblock %}
+                    <link rel="stylesheet" href="/static/index.css"/>
+                    <div id=box-fuck>
+                            <h1 class="fuck-motto">Fascists</br>United</br>Communicating</br>Kindly</h1>
+                    </div>
 
+                    {% endblock %}
+                   
+                    <!-- <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2"> -->
 
     </div>
 </body>
