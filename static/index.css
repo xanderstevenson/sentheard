@@ -28,8 +28,8 @@
 }
 
 body {
-  width: 100%;
-  min-width: 300px;
+  /* width: 100%; */
+  min-width: 150px;
   height: auto;
 
   background-color: black;
@@ -51,7 +51,7 @@ p {
   align-content: center;
   text-align: center;
   margin: 0px auto;
-  width: 100%;
+  /* width: 900px; */
   height: auto;
 }
 #banner {
@@ -61,17 +61,19 @@ p {
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
-  z-index: 9;
+  /* z-index: 9; */
   height: 120px;
-  width: 955px;
+  width: 100%px;
   /* max-width: 464px; */
   margin: 0px auto;
   /* margin-left: 29px; */
   margin-top: -32px;
-  margin-left: 0px;
+  margin-left: -60px;
+  margin-right: 0px; 
   align-content: center;
   text-align: center;
   border: 1px outset rgb(179, 179, 145);
+  border-right: 1.5px inset rgb(211, 211, 188);
 }
 
 #main {
@@ -87,8 +89,8 @@ p {
   background-size: contain;
   margin: 0px auto;
   margin-top: -20px;
-  margin-left: -40px;
-  margin-right: -110px;
+  margin-left: -45px;
+  margin-right: 0px;
   align-content: center;
   z-index: 0;
   /* float: left; */
@@ -123,7 +125,7 @@ float: left;
 #binding2 {
   height: 100%;
   /* min-height: 900px; */
-  margin-right: 22px;
+  margin-right: 0px;
   margin-top: 0p;
   width: 150px;
 float: right;
