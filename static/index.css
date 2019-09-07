@@ -140,6 +140,21 @@ transform: scaleX(-1);
   padding-left: 35px;
 }
 
+#title-box {
+  width: 350px;
+  height: 75px;
+  background-color: white;
+  text-align: center;
+  align-content: center;
+  margin: 0px auto;
+  padding: 0px;
+  opacity: 0.55;
+}
+
+#title-box p {
+  font-size: 48px;
+  color: black;
+}
 
 #home-icon, #about-us-icon, #contact-icon, #hand-peace-icon {
     color: white;
