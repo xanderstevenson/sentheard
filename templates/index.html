@@ -18,67 +18,25 @@
         <!-- <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2">  -->
     <div class='container-fluid'>
 
-            <div id="nav" class="nav"> 
-                
-                    <div class="icon">
-                        
-                        <ul id='binder-thin'>
-                            <!-- <li><img src="{% static '/home.png'%}" alt="house icon" id="home-icon"><a title="Home" href="#"><i class="fa fa-home "></i></a></li>
-                            <li><img src="{% static '/about_us.png'%}" alt="about us icon" id="about-us-icon"><a href="About"><i class="fa fa-search "></i></a></li>
-                            <li><img src="{% static '/hand-peace.png'%}" alt="hand icon" id="hand-peace-icon"><a href="About"><i class="fa fa-search "></i></a></li>  
-                            <li><img src="{% static '/contact.png'%}" alt="contact icon" id="contact-icon"><a href="#"><i class="fa fa-edit "></i></a></li> -->
-                           
    
-           
-                        </ul>
 
-
-                    </div>
-
-
-                    <div class="text">
-                        <ul>
-                            <li><a title="Home" href="#" class='right-text'>home</a></li>
-                            <img src="{% static '/home.png'%}" alt="house icon" id="home-icon"><a title="Home" href="#"><i class="fa fa-home "></i></a>
-
-                                <li><a href="/about_us/about_us.html" class='right-text' >About Us</a>
-            </li>
-            <img src="{% static '/about_us.png'%}" alt="about us icon" id="about-us-icon"><a href="About"><i class="fa fa-search "></i></a>
-                <li><a href="#"  class='right-text'>Offer</a>
-            </li>
-            <img src="{% static '/hand-peace.png'%}" alt="hand icon" id="hand-peace-icon"><a href="About"><i class="fa fa-search "></i></a>
-                <li><a href="#"  class='right-text'>Contact</a>
-            </li>
-            <img src="{% static '/contact.png'%}" alt="contact icon" id="contact-icon"><a href="#"><i class="fa fa-edit "></i></a>
-                        </ul>
-                    </div>
-
-                    </div> 
-                    
-            </div>
-           
             <div class="row" id='row1'>
-                  
-                    <div id="main">
 
-                    </div>
+
                     
-                <div class="col-lg-12 col-sm-12">
-                      
-                    <div id="banner">
-                           <dir id="title-box">
-                                <p>Free the We</p>   
-                           </dir>
-                       
-                    </div>
+                <div class="col-lg-12 col-sm-12" id='full-wide'>
+                                        
 
-                    <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding">
-                    <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2">
+                        <div id="main">
+
+                            </div>
                 </div>
-
-
-            </div>
-
+                <br>
+                <div class="col-lg-12 col-sm-12" id='full-wide'>
+                    <div id="banner">
+                           <div id="title-box">
+                                <p>Free the We</p>   
+                           </div>
 
                     {% block content %}
                     <link rel="stylesheet" href="/static/index.css"/>
@@ -87,6 +45,25 @@
                     </div>
 
                     {% endblock %}
+                    </div>
+                        
+                </div>
+
+
+
+                    </div>
+                    <div class="row" id='row2'>
+                        <div class="col-lg-12 col-sm-12" id='full-wide'>  
+                            <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding">
+                             <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2">
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+            </div>
+
+#block content goes here
                    
                     <!-- <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2"> -->
 
