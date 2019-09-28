@@ -20,7 +20,18 @@
 
     <div class="row" id='row1'>
         <div class="col-xl-12 col-lg-12 col-sm-12 col-xs-12" id='full-wide'>               
-            <div id="main">
+                <div id="main">
+                <div id=box-nav>
+                        <div>
+                        <a href= {% url 'index' %}><button class="nav-btn">Home</button></a>
+                         <button class="nav-btn nav-btn-marg-left">Shop</button>
+                         <button class="nav-btn nav-btn-marg-left">Donate</button>
+                         <a href= {% url 'about_us' %}><button class="nav-btn nav-btn-marg-left">About Us</button></a>
+                        </div>
+                    </div>
+            
+           
+                
 
             </div>
         </div>
@@ -29,23 +40,14 @@
             <div id="banner">
                     <div id="title-box">
                         <p>Free the We</p>  
-                    </div>
-
-                    <div id=box-nav>
-                        <div>
-                         <button class="nav-btn">Home</a></button>
-                         <button class="nav-btn nav-btn-marg-left">Shop</button>
-                         <button class="nav-btn nav-btn-marg-left">Donate</button>
-                         <button class="nav-btn nav-btn-marg-left">About Us</button>
-                        </div>
-                    </div>
-
-
+            </div>
+                  
             {% block content %}
             <link rel="stylesheet" href="/static/index.css"/>
             
                 <br>
                 <br>
+
                 <br>
                 <br>
                     <h3 class="fuck-motto">Homepage</h3>

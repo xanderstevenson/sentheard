@@ -34,7 +34,7 @@ html {
   padding-left: 0px;
   clear: left;
   margin: 0px auto;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   background-image: url(vatican/canopy.jpg);
    -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -48,18 +48,14 @@ html {
   width: 77px;
   height: 45px;
   margin-top: 12.5px;
-  /* opacity: 0.75; */
+  opacity: 0.75;
   border: 2px inset gold;
   border-image: url(gold.jpg) 30% round;
 }
 
 .nav-btn-marg-left   {
-  margin-left: 12px;
-
+  margin-left: 10px;
 } 
-
-
-
 
 body {
   width: 100%;
@@ -108,13 +104,13 @@ p {
   /* max-width: 464px; */
   margin: 0px auto;
   /* margin-left: 29px; */
-  margin-top: -52px;
+  margin-top: -26px;
   margin-left: 0px;
   margin-right: 0px; 
   align-content: center;
   text-align: center;
   border: 1px outset rgb(179, 179, 145);
-  border-right: 1.5px inset rgb(211, 211, 188);
+  /* border-right: 1.5px inset rgb(211, 211, 188); */
   padding: 0px;
   box-shadow: 2px 8px 12px rgb(65, 65, 58);
 }
