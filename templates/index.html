@@ -3,76 +3,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" type="text/css" href="{% static '/index.css'%}">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+</script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+</script>
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>SentHeard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SentHeard</title>
 </head>
-<body>
-<!-- <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2">  -->
-<div class='container-fluid'>
 
-    <div class="row" id='row1'>
-        <div class="col-xl-12 col-lg-12 col-sm-12 col-xs-12" id='full-wide'>               
+<body>
+    <!-- <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2">  -->
+    <div class='container-fluid'>
+
+        <div class="row" id='row1'>
+            <div class="col-xl-12 col-lg-12 col-sm-12 col-xs-12" id='full-wide'>
                 <div id="main">
-                <div id=box-nav>
+                    <div id=box-nav>
                         <div>
-                        <a href= {% url 'index' %}><button class="nav-btn">Home</button></a>
-                         <button class="nav-btn nav-btn-marg-left">Shop</button>
-                         <button class="nav-btn nav-btn-marg-left">Donate</button>
-                         <a href= {% url 'about_us' %}><button class="nav-btn nav-btn-marg-left">About Us</button></a>
+                            <a href={% url 'index' %}><button class="nav-btn">Home</button></a>
+                            <button class="nav-btn nav-btn-marg-left">Shop</button>
+                            <button class="nav-btn nav-btn-marg-left">Donate</button>
+                            <a href={% url 'about_us' %}><button class="nav-btn nav-btn-marg-left">About Us</button></a>
                         </div>
                     </div>
-            
-           
-                
+
+
+                </div>
 
             </div>
         </div>
         <br>
-        <div class="col-lg-12 col-sm-12" id='full-wide'>
+        <div class="col-xl-12 col-xs-12" id='full-wide'>
             <div id="banner">
-                    <div id="title-box">
-                        <p>Free the We</p>  
-            </div>
-                  
-            {% block content %}
-            <link rel="stylesheet" href="/static/index.css"/>
-            
-                <br>
-                <br>
-
-                <br>
-                <br>
-                    <h3 class="fuck-motto">Homepage</h3>
-            
-
-            {% endblock %}
-            </div>   
-        </div>
-            </div>
-            <div class="row" id='row2'>
-                <div class="col-xl-12 col-lg-12 col-sm-12 col-xs-12" id='full-wide'>  
-                    <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding">
-                        <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2">
+                <div id="title-box">
+                    <p>Free the We</p>
                 </div>
             </div>
         </div>
+        <div class="row col-xl-12 col-xs-12" id='row2'>
+
+
+            <!-- <div class="col-xl-12 col-xs-12">  -->
+
+            <div>
+                <img src="{% static '/green-binding6.png'%}" alt="contact icon" id="binding">
+            </div>
+
+
+
+            {% block content %}
+
+            <link rel="stylesheet" href="/static/index.css" />
+            <div id="mission">
+                <br>
+                <br>
+
+                <br>
+                <br>
+                <h3 class="fuck-motto">Mission Statement</h3>
+
+                The Declaration of Independence begins with the phrase: "We the People"
+                <br>
+                But now is the time to Free the People
+                <br>
+                A movement has been born, in the spirit of that declaration,
+                <br>
+                in the spirit of the <a href='https://en.wikipedia.org/wiki/Magna_Carta' target="#">Magna Carta</a>, of
+                the Ten Commandments,
+                <br>
+                of Hammurabi's Code of Law, of the Golden Rule
+                <br>
+                This marks the dawn of a Golden Age, and the dusk of an Age of Rage
+                <br>
+                Wherever injustice, oppression, intimidation and fear reside,
+                <br>
+                We will chase them to the ends of the Earth, until they end, on Earth
+                <br>
+                With respect for every race, and the right to choose our own way
+                <br>
+                So one day we can come together and do something amazing in this universe
+                <br>
+                We come from the stars. No one here comes from trash.
+                <br>
+                Accident or not, we were jettisoned from a magnificent place
+                <br>
+                Let us not, as seeds, destroy our new Home
+                <br>
+                Let not the fire of hate, seal our fate
+                <br>
+                It's time to wake up!
+                <br>
+                We are not alone
+            </div>
+
+
+
+            {% endblock %}
+
+            <!-- </div> -->
+
+
+            <div>
+                <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2">
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
     </div>
-</div>
-</div>
+    </div>
 
 
-            
-            <!-- <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2"> -->
 
-</div>
+    <!-- <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2"> -->
+
+    </div>
 </body>
 
 </html>
