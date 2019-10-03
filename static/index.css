@@ -170,12 +170,14 @@ p {
 
 #mission {
   z-index: -1;
-  position: absolute;
+  margin: 0px auto;
+  align-content: center;
+  text-align: center;
   width: 80%;
   max-width: 700px;
   min-width: 0px;
-  display: block;
-  position: relative;
+  /* display: block; */
+  /* position: relative; */
 }
 
 

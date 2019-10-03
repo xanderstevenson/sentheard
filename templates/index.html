@@ -32,8 +32,8 @@
                     <div id=box-nav>
                         <div>
                             <a href={% url 'index' %}><button class="nav-btn">Home</button></a>
-                            <button class="nav-btn nav-btn-marg-left">Shop</button>
-                            <button class="nav-btn nav-btn-marg-left">Donate</button>
+                            <a href={% url 'shop' %}><button class="nav-btn nav-btn-marg-left">Shop</button></a>
+                            <a href={% url 'donate' %}><button class="nav-btn nav-btn-marg-left">Donate</button></a>
                             <a href={% url 'about_us' %}><button class="nav-btn nav-btn-marg-left">About Us</button></a>
                         </div>
                     </div>
@@ -65,6 +65,7 @@
             {% block content %}
 
             <link rel="stylesheet" href="/static/index.css" />
+
             <div id="mission">
                 <br>
                 <br>
@@ -72,17 +73,19 @@
                 <br>
                 <br>
                 <h3 class="fuck-motto">Mission Statement</h3>
-
-                The Declaration of Independence begins with the phrase: "We the People"
+               
+                The <a href="https://en.wikipedia.org/wiki/Declaration_of_independence">Declaration of Independence</a> begins with the phrase: "We the People"
                 <br>
                 But now is the time to Free the People
                 <br>
                 A movement has been born, in the spirit of that declaration,
                 <br>
                 in the spirit of the <a href='https://en.wikipedia.org/wiki/Magna_Carta' target="#">Magna Carta</a>, of
-                the Ten Commandments,
+                the <a href="https://en.wikipedia.org/wiki/Ten_Commandments">Ten Commandments</a> ,
                 <br>
-                of Hammurabi's Code of Law, of the Golden Rule
+                of <a href="https://en.wikipedia.org/wiki/Code_of_Hammurabi">the Code of Hammurabi</a>, 
+                
+                of <a href="https://en.wikipedia.org/wiki/Golden_Rule">the Golden Rule</a>.
                 <br>
                 This marks the dawn of a Golden Age, and the dusk of an Age of Rage
                 <br>
@@ -100,9 +103,11 @@
                 <br>
                 Let us not, as seeds, destroy our new Home
                 <br>
-                Let not the fire of hate, seal our fate
+                Let not the fire of hate, seal your fate
                 <br>
                 It's time to wake up!
+                <br>
+                You are not alone
                 <br>
                 We are not alone
             </div>
