@@ -11,6 +11,7 @@ html {
   padding: 0px;
   min-width: 364px;
   min-width: 375px;
+  background-color: white; 
 }
 
 .center {
@@ -61,9 +62,10 @@ html {
 body {
   width: 100%;
   min-width: 375px;
-
+  max-width: 2500px;
+  min-height: 1300px;
   height: 100%;
-   background: url(images/parchment1.png); 
+  background: url(images/parchment1.png); 
  /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; */
@@ -78,10 +80,17 @@ body {
 
 }
 
+#full-wide {
+  height: 100%;
+  /* background-color: white; */
+}
+
+
 p {
   color: white;
 }
 .container-fluid {
+  background: url(); 
   align-content: center;
   text-align: center;
   margin: 0px auto;
@@ -92,12 +101,14 @@ p {
   padding: 0px;
 }
 #banner {
-  background-color: black;
-  background: url(images/star-night-trim.jpg);
+  /* background-color: white; */
+  background: url(images/lovedOnes2.jpg);
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
-  background-size: contain;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
   /* z-index: 9; */
   height: 120px;
   /* width: 100%; */
@@ -164,6 +175,7 @@ p {
   /* padding-right: -10px; */
   /* padding: -110px; */
   display: inline-block;
+  /* background: url(images/parchment1.png);  */
 }
 
 #full-wide {
