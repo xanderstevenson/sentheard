@@ -6,13 +6,11 @@ $(document).ready(function() {
     const binding2 = $("#binding2")
 
 
-    // if($(window).width < 1026){
-    //     document.getElementById("fadeshow1").style.display = "none";
-    //     alert("ok")
-    //    }
+// hide or show scrolls based on window width
+
 
     window.onresize = function(event) {
-        if($(window).width() < 960){
+        if($('#row1').width() < 960)  {
             binding.hide()
             binding2.hide()
         }
@@ -20,7 +18,13 @@ $(document).ready(function() {
             binding.show()
             binding2.show()
         }
-}
+    }
 
+    
+// hide scrolls if you click on them
 
-});
+    $('.bindings').click(()=> {
+        $('.bindings').hide()
+    })
+
+}); 
