@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<link rel="stylesheet" href="/static/index.css"/>
+<br><br><br>
+
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
+
+{% endblock %}

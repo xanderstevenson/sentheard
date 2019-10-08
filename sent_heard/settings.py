@@ -45,7 +45,8 @@ ROOT_URLCONF = 'sent_heard.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates',],
+        # 'DIRS': ['templates',],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,3 +120,5 @@ STATICFILES_DIRS = [
 ]
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+
+LOGIN_REDIRECT_URL = '/'
