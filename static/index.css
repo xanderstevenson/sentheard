@@ -44,13 +44,14 @@ html {
   background-size: 100%;
   background-repeat: none;
   box-shadow: 0px 4px 12px rgb(65, 65, 58);
+  opacity: 0.65;
 }
 
 .nav-btn {
   width: 77px;
   height: 45px;
   margin-top: 12.5px;
-  opacity: 0.75;
+  /* opacity: 0.75; */
   border: 2px inset gold;
   border-image: url(images/gold.jpg) 30% round;
 }
@@ -63,7 +64,7 @@ body {
   width: 100%;
   min-width: 375px;
   max-width: 2500px;
-  min-height: 1300px;
+  min-height: 1200px;
   height: 100%;
   background: url(images/parchment1.png); 
  /* -webkit-background-size: cover;
@@ -82,7 +83,8 @@ body {
 
 #full-wide {
   height: 100%;
-  /* background-color: white; */
+  padding: 0px;
+
 }
 
 
@@ -100,44 +102,52 @@ p {
   height: 100%;
   padding: 0px;
 }
+
 #banner {
-  /* background-color: white; */
+  background-color:black;
   background: url(images/lovedOnes2.jpg);
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   /* z-index: 9; */
-  height: 120px;
+  min-height: 125px;
+
   /* width: 100%; */
   min-width: 300px;
   /* max-width: 464px; */
   margin: 0px auto;
   /* margin-left: 29px; */
-  margin-top: -26px;
+  margin-top: -49px;
   margin-left: 0px;
   margin-right: 0px; 
   margin-bottom: 0px;
   align-content: center;
   text-align: center;
   border: 1px outset rgb(179, 179, 145);
-  /* border-top: 1.5px inset rgb(211, 211, 188); */
+  border: 3px inset gold;
+  border-image: url(images/gold.jpg) 30% round;
   padding: 0px;
-  box-shadow: 0px 8px 12px rgb(65, 65, 58), 0px -1px 12px rgb(163, 163, 160);
+  box-shadow: 0px 6px 12px rgb(65, 65, 58);
+  opacity: 0.75;
 }
 #main {
   /* width: 100%; */
   min-width: 300px;
-  height: 100px;
+  height: 200px;
   /* width: 100%; */
+
   background-color: black;
-  background: url(images/star-night-trim.jpg);
+  /* background: url(images/star-night-trim.jpg); */
+  background: url(images/heaven/heaven2.png);
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 0px auto;
   margin-top: 0px;
   /* margin-left: -45px; */
@@ -149,7 +159,7 @@ p {
 #main-body {
   width: 100%;
   height: 100%;
-  background: url(images/parchment1.png);
+  /* background: url(images/parchment1.png); */
   background-size: 100%;
   margin: 0px auto;
   align-content: center;
@@ -163,7 +173,7 @@ p {
 
   width: 100%;
 
-  height: auto;
+  height: 100px;
   padding: 0px;
 }
 
@@ -178,10 +188,6 @@ p {
   /* background: url(images/parchment1.png);  */
 }
 
-#full-wide {
-  padding: 0px;
-  display: inline-block;
-}
 
 #mission {
   z-index: -1;
@@ -206,9 +212,9 @@ width: 50%;
 left: 0px;
   max-width: 180px;
   position: absolute;
-background-color: rgb(85, 79, 60);
+  background-color: rgb(105, 99, 81);
 border-right: 5px solid rgb(116, 112, 95);
-box-shadow: 5px 0px 25px rgb(54, 54, 48);
+box-shadow: 3px 0px 20px rgb(54, 54, 48);
 z-index: 7;
 }
 
