@@ -121,4 +121,5 @@ STATICFILES_DIRS = [
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'
