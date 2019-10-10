@@ -15,6 +15,14 @@ SECRET_KEY = 'pmlkdd12_o9ugmvw@%z*(373dfbzm=asqr$gw@k4=()=acy)%*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# SendGrid Email
+
+SENDGRID_API_KEY = os.getenv('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')
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
+# SENDGRID_SANDBOX_MODE_IN_DEBUG=True
+SENDGRID_ECHO_TO_STDOUT=True
+
 ALLOWED_HOSTS = []
 
 

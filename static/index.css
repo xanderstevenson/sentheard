@@ -188,6 +188,9 @@ p {
   /* background: url(images/parchment1.png);  */
 }
 
+label {
+  color: black;
+}
 
 #mission {
   z-index: -1;
