@@ -17,7 +17,7 @@ DEBUG = True
 
 # SendGrid Email
 
-SENDGRID_API_KEY = os.getenv('')
+SENDGRID_API_KEY = os.getenv('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')
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
 # SENDGRID_SANDBOX_MODE_IN_DEBUG=True
