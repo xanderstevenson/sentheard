@@ -10,14 +10,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'pmlkdd12_o9ugmvw@%z*(373dfbzm=asqr$gw@k4=()=acy)%*'
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # SendGrid Email
 
-SENDGRID_API_KEY = os.getenv('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')
+
+
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
 # SENDGRID_SANDBOX_MODE_IN_DEBUG=True
