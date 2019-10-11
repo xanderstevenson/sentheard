@@ -35,7 +35,7 @@
                             <a href={% url 'index' %}><button class="nav-btn">Home</button></a>
                             <a href={% url 'shop' %}><button class="nav-btn nav-btn-marg-left">Shop</button></a>
                             <a href={% url 'about_us' %}><button class="nav-btn nav-btn-marg-left">About Us</button></a>
-                            <a href={% url 'login' %}><button class="nav-btn nav-btn-marg-left">Login</button></a>
+                            <a href={% url 'signup' %}><button class="nav-btn nav-btn-marg-left">Sign Up</button></a>
                         </div>
                     </div>
 
@@ -50,7 +50,9 @@
                 <div id="title-box">
                     <p>Sent Heard</p>
                 </div>
+
             </div>
+            
         </div>
         <div class="row col-xl-12 col-xs-12" id='row2'>
 
@@ -61,13 +63,29 @@
                 <img src="{% static 'images/green-binding6.png'%}" alt="contact icon" id="binding" class="bindings">
             </div>
 
+                <div>
+                    {% if user.is_authenticated %}
+                        User: {{ user.username }}
+                        <p><a href="{% url 'logout' %}">logout</a></p>
 
+                    {% else %}
+
+                    You are not logged in
+                    <br>
+                    <a href="{% url 'login' %}">login</a>
+
+                    {% endif %}
+
+        
+             
+                </div>
 
             {% block content %}
 
             <link rel="stylesheet" href="/static/index.css" />
 
             <div id="mission">
+              
                 <br>
                 <br>
 
@@ -77,13 +95,7 @@
 
 
             {% endblock %}
-            {% if user.is_authenticated %}
-            You are logged in as: {{ user.username }}!
-            <p><a href="{% url 'logout' %}">logout</a></p>
-          {% else %}
-            <!-- <p>You are not logged in</p>
-            <a href="{% url 'login' %}">login</a> -->
-          {% endif %}
+  
             <!-- </div> -->
 
 
