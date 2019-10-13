@@ -63,21 +63,18 @@
                 <img src="{% static 'images/green-binding6.png'%}" alt="contact icon" id="binding" class="bindings">
             </div>
 
-                <div>
+                <div id='user_box'>
                     {% if user.is_authenticated %}
                         User: {{ user.username }}
-                        <p><a href="{% url 'logout' %}">logout</a></p>
+                        <p><a href="{% url 'logout' %}">Logout</a></p>
 
                     {% else %}
 
                     You are not logged in
                     <br>
-                    <a href="{% url 'login' %}">login</a>
+                    <a href="{% url 'login' %}">Login</a>
 
                     {% endif %}
-
-        
-             
                 </div>
 
             {% block content %}
@@ -92,7 +89,7 @@
                 <h3 class="fuck-motto">Home</h3>
             </div>
 
-
+            <a href="{% url 'password_reset' %}">Change Password</a>
 
             {% endblock %}
   
