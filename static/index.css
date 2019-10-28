@@ -165,6 +165,7 @@ p {
   margin-top: 1px;
   background-color: silver;
   background-image: url(images/gold_cloud.png);
+  opacity: 0.85;
 }
 
 
