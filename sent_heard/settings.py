@@ -10,7 +10,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("Secret_KEY")
+
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -24,7 +25,8 @@ EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 # SENDGRID_SANDBOX_MODE_IN_DEBUG=True
 SENDGRID_ECHO_TO_STDOUT=True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sentheard.pythonanywhere.com',
+'www.sentheard.com']
 
 
 # Application definition
@@ -37,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Sent_Heard_App',
-    'accounts.apps.AccountsConfig'
 ]
 
 MIDDLEWARE = [
@@ -124,9 +125,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'root')
+STATIC_ROOT = '/home/sentheard/sentheard/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
