@@ -5,15 +5,17 @@
 
 {% block content %}
 
-<link rel="stylesheet" href="/static/index.css"/>
-<br><br><br>
+<link rel="stylesheet" href="/static/index.css" />
+<br>
 <!-- {% block title %}Sign Up{% endblock %} -->
 
-<h2>Sign up</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Sign up</button>
-</form>
+<h2 >Sign up</h2>
+<div id="sign_up_form">
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+</div>
 
 {% endblock %}
