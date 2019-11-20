@@ -1,4 +1,4 @@
-{%load static %}
+ {%load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +20,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>(LOCAL) SentHeard</title>
+    <title>SentHeard</title>
 </head>
+
+
+
+
 
 <body>
     <!-- <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2">  -->
@@ -36,9 +40,9 @@
                             <a href={% url 'shop' %}><button class="nav-btn nav-btn-marg-left">Shop</button></a>
                             <a href={% url 'about_us' %}><button class="nav-btn nav-btn-marg-left">About Us</button></a>
                             {% if user.is_authenticated %}
-                            <a href={% url 'signup' %}><button class="nav-btn nav-btn-marg-left">account</button></a>
+                            <a href={% url 'signup' %}><button class="nav-btn nav-btn-marg-left">Account</button></a>
                             {% else  %}
-                            <a href={% url 'signup' %}><button class="nav-btn nav-btn-marg-left">signup</button></a>
+                            <a href={% url 'signup' %}><button class="nav-btn nav-btn-marg-left">Signup</button></a>
                             {% endif %}
                         </div>
                     </div>
@@ -87,8 +91,7 @@
             <link rel="stylesheet" href="/static/index.css" />
 
             <div id="home-container">
-
-
+                </br>
                 <p>In order to safeguard a brighter future for your loved ones,
                     You should cement your legacy. Passing down the family
                     triumphs, tribulations, morals, wisdom and traditions
@@ -97,18 +100,35 @@
                     departed this world. Now, our dearly aparted can leave
                     something with us. Until we have made
                     peace with your history, can we truly be centered in
-                    the present, between the past and the future, and claim our destiny?
+                    the present, between the past and the future, and claim our destiny? <br>
                     It's time to get centered...
+
+
+                <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574211118/SentHeard/logo-gold-sun-outline-sm.png" alt="sh_logo" id="logo">
+
+                </p>
+            </div>
+
+
+            <div id="home-container-lg">
+
+                </br>
+                <p>In order to safeguard a brighter future for your loved ones,
+                    You should cement your legacy. Passing down the family
+                    triumphs, tribulations, morals, wisdom and traditions
+                    is itself a time-honored tradition. In fact, for tens of thousands
+                    of years, we sent valuable heirlooms with our kin when they
+                    departed this world. Now, our dearly aparted can leave
+                    something with us. Until we have made
+                    peace with your history, can we truly be centered in
+                    the present, between the past and the future, and claim our destiny? <br>
+                    It's time to get centered...
+
+
+                <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574213473/SentHeard/logo-gold-sun-outline.png" alt="sh_logo" id="logo-lg">
+
                 </p>
 
-                <img src="{% static 'images/logo/logo-gold-sun.png'%}" alt="sh_logo" id="logo">
-                <p>
-                    Offering the recording and safekeeping of family traditions, voices, documents,
-                    videos and stories.
-                </p>
-                <div id=”illustration”>
-
-                </div>
             </div>
 
 
