@@ -26,7 +26,7 @@ $(document).ready(function() {
             mediumMarble.hide()
             largeMarble.hide()
         }
-        else if($('#row1').width() > 650 && $('#row1').width() <= 850)  {
+        else if($('#row1').width() > 650 && $('#row1').width() <= 1080)  {
             binding.hide()
             binding2.hide()
             smallMarble.hide()
@@ -34,7 +34,7 @@ $(document).ready(function() {
             largeMarble.hide()
         }
 
-        else if($('#row1').width() > 850) {
+        else if($('#row1').width() > 1080) {
             binding.show()
             binding2.show()
             smallMarble.hide()

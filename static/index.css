@@ -158,6 +158,7 @@ p {
   border-image: url(images/gold.jpg) 30% round;
   padding-top: 3px;
   margin-top: 1px;
+  margin-bottom: 3px;
   background-color: silver;
   background-image: url(images/gold_cloud.png);
   opacity: 0.85;
@@ -383,7 +384,9 @@ p .helptext {
   height: 100%;
   max-width: 345px;
   max-height: 525px;
-  background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574269536/SentHeard/marble-on-marble.png);
+  min-width: 345px;
+  min-height: 525px;
+  background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574369827/SentHeard/marble-frame345x425C.png);
  -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -391,16 +394,18 @@ p .helptext {
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 4px;
+  border: 1px outset #d7b88a;
+  box-shadow: 1px 1px 5px #9B9C90, -1px 1px 5px #9B9C90, 0px 1px 5px #9B9C90;
 }
 
 #home-container p {
   font-size: 16px;
-  color: #69645c;
+  color: #4d4943;
   width: 90%;
   margin-top: 20px;
 font-family: 'Fahkwang', sans-serif;
   font-weight: bold;
-  text-shadow: 0px 2px 0px white;
+  text-shadow: 1px 1px 0px #f2f0ed, -1px -1px 0px #f2f0ed, -1px 0px 0px #f2f0ed, -0px 1px 0px #f2f0ed, 1px -1px 0px #f2f0ed;
   margin-top: 15px;
 }
 
@@ -409,7 +414,7 @@ font-family: 'Fahkwang', sans-serif;
   width: 300px;
   margin: 0px auto;
   align-content: center;
-  margin-top: 5px;
+  margin-bottom: 7px;
 }
 
 
@@ -422,7 +427,7 @@ font-family: 'Fahkwang', sans-serif;
   min-height: 600px;
   max-width: 600px;
   max-height: 600px;
-  background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574213473/SentHeard/marble-frame600x600.png);
+  background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574369073/SentHeard/marble-frame600x600C.png);
  -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -431,16 +436,19 @@ font-family: 'Fahkwang', sans-serif;
   background-position: center;
   padding: 10px 20px 10px 20px;
   padding-top: 5px;
+  border: 2px outset #d7b88a;
+  box-shadow: 2px 2px 10px #9B9C90, -2px 2px 10px #9B9C90, 0px 2px 10px #9B9C90;
 }
 
 #home-container-md p {
   font-size: 20px;
-  color: #69645c;
+  color: #4d4943;
   width: 90%;
   margin-top: 20px;
 font-family: 'Fahkwang', sans-serif;
   font-weight: bold;
-  text-shadow: 0px 2px 0px white;
+  /*text-shadow: 2px 2px 0px #f2f0ed, -2px -2px 0px #f2f0ed, -2px 0px 0px #f2f0ed, -0px 2px 0px #f2f0ed, 2px -2px 0px #f2f0ed;*/
+  text-shadow: 3px 3px 0px #f2f0ed, -3px -3px 0px #f2f0ed, -3px 0px 0px #f2f0ed, -0px 3px 0px #f2f0ed, 3px -3px 0px #f2f0ed;
 /*max-width: 525px;*/
 }
 
@@ -458,11 +466,11 @@ font-family: 'Fahkwang', sans-serif;
 #home-container-lg {
   width: 100%;
   height: 100%;
-  min-width: 800px;
-  min-height: 800px;
-  max-width: 800px;
-  max-height: 800px;
-  background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574263731/SentHeard/marble-frame800x800.png);
+  min-width: 700px;
+  min-height: 700px;
+  max-width: 700px;
+  max-height: 700px;
+  background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574368944/SentHeard/marble-frame800x800C.png);
  -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -471,16 +479,18 @@ font-family: 'Fahkwang', sans-serif;
   background-position: center;
   padding: 10px 20px 10px 20px;
   padding-top: 10px;
+  border: 3px outset #d7b88a;
+  box-shadow: 3px 3px 15px #9B9C90, -3px 3px 15px #9B9C90, 0px 3px 150px #9B9C90;
 }
 
 #home-container-lg p {
-  font-size: 28px;
-  color: #69645c;
-  width: 90%;
-  margin-top: 20px;
+  font-size: 24px;
+  color: #4d4943;
+  width: 92%;
+  margin-top: 10px;
 font-family: 'Fahkwang', sans-serif;
   font-weight: bold;
-  text-shadow: 0px 2px 0px white;
+  text-shadow: 2px 2px 0px #f2f0ed, -2px -2px 0px #f2f0ed, -2px 0px 0px #f2f0ed, -0px 2px 0px #f2f0ed, 2px -2px 0px #f2f0ed;
 /*max-width: 525px;*/
 }
 
