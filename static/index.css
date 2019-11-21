@@ -394,10 +394,14 @@ p .helptext {
 }
 
 #home-container p {
-  font-size: 18px;
-  color: black;
+  font-size: 16px;
+  color: #69645c;
   width: 90%;
-  margin-top: 10px;
+  margin-top: 20px;
+font-family: 'Fahkwang', sans-serif;
+  font-weight: bold;
+  text-shadow: 0px 2px 0px white;
+  margin-top: 15px;
 }
 
 #logo {
@@ -405,7 +409,7 @@ p .helptext {
   width: 300px;
   margin: 0px auto;
   align-content: center;
-  margin-top: -10px;
+  margin-top: 5px;
 }
 
 
@@ -426,22 +430,24 @@ p .helptext {
   background-repeat: no-repeat;
   background-position: center;
   padding: 10px 20px 10px 20px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 #home-container-md p {
-  font-size: 22px;
-  color: #5E4539;
+  font-size: 20px;
+  color: #69645c;
   width: 90%;
   margin-top: 20px;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, .5);
+font-family: 'Fahkwang', sans-serif;
+  font-weight: bold;
+  text-shadow: 0px 2px 0px white;
 /*max-width: 525px;*/
 }
 
 
 #logo-lg {
   text-align: center;
-  width: 400px;
+  width: 350px;
   margin: 0px auto;
   align-content: center;
 }
@@ -468,11 +474,13 @@ p .helptext {
 }
 
 #home-container-lg p {
-  font-size: 26px;
-  color: #5E4539;
+  font-size: 28px;
+  color: #69645c;
   width: 90%;
   margin-top: 20px;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, .5);
+font-family: 'Fahkwang', sans-serif;
+  font-weight: bold;
+  text-shadow: 0px 2px 0px white;
 /*max-width: 525px;*/
 }
 
@@ -482,6 +490,7 @@ p .helptext {
   width: 400px;
   margin: 0px auto;
   align-content: center;
+  margin-top: 15px;
 }
 
 
