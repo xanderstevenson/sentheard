@@ -420,7 +420,7 @@ font-family: 'Fahkwang', sans-serif;
 
 #hc-sm-txt {
     margin: 5px auto;
-    font-size: 36px;
+    font-size: 34px;
     font-weight: bold;
     font-family: 'Fahkwang', sans-serif;
     text-shadow: 2px 2px 0px #f2f0ed, -2px -2px 0px #f2f0ed, -2px 0px 0px #f2f0ed, -0px 2px 0px #f2f0ed, 2px -2px 0px #f2f0ed;
@@ -458,7 +458,7 @@ font-family: 'Fahkwang', sans-serif;
 }
 
 #home-container-md p {
-  font-size: 20px;
+  font-size: 40px;
   color: #4d4943;
   width: 90%;
   margin-top: 20px;
@@ -469,11 +469,18 @@ font-family: 'Fahkwang', sans-serif;
 /*max-width: 525px;*/
 }
 
+#hc-md-txt {
+    margin: 5px auto;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Fahkwang', sans-serif;
+    text-shadow: 3px 3px 0px #f2f0ed, -3px -3px 0px #f2f0ed, -3px 0px 0px #f2f0ed, -0px 3px 0px #f2f0ed, 3px -3px 0px #f2f0ed;
+}
 
-#logo-lg {
+#logo-md {
   text-align: center;
-  width: 350px;
-  margin: 0px auto;
+  width: 400px;
+  margin: 10px auto;
   align-content: center;
 }
 
@@ -501,7 +508,7 @@ font-family: 'Fahkwang', sans-serif;
 }
 
 #home-container-lg p {
-  font-size: 24px;
+  font-size: 48px;
   color: #4d4943;
   width: 92%;
   margin-top: 10px;
@@ -512,15 +519,19 @@ font-family: 'Fahkwang', sans-serif;
     blink-caret .75s step-end infinite;
 }
 
-@keyframes typing {
-  from { width: 1% }
-  to { width: 100% }
+#hc-lg-txt {
+    margin: 5px auto;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Fahkwang', sans-serif;
+    text-shadow: 4px 4px 0px #f2f0ed, -4px -4px 0px #f2f0ed, -4px 0px 0px #f2f0ed, -0px 4px 0px #f2f0ed, 4px -4px 0px #f2f0ed;
 }
+
 
 #logo-lg {
   text-align: center;
-  width: 400px;
-  margin: 0px auto;
+  width: 500px;
+  margin: 10px auto;
   align-content: center;
   margin-top: 15px;
 }

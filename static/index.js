@@ -13,46 +13,91 @@ $(document).ready(function() {
     mediumMarble.hide()
     largeMarble.hide()
 
-    $('#logo').hide()
-
-
 
 
 
     const hcSmTxt = $('#hc-sm-txt')
+    const hcMdTxt = $('#hc-md-txt')
+    const hcLgTxt = $('#hc-lg-txt')
 
-        const verse = ['You\'ll record personalized momentos for your family, friends and descendants to cherish.',
-        'Audio, Video and Images, recorded by you, to pass along to the next generation.',
-        'We are the Creator and Industry Leader in Digital Inheritance Services']
+    const smLogo = $('#logo')
+    const mdLogo = $('#logo-md')
+    const lgLogo = $('#logo-lg')
 
 
+    smLogo.hide()
+    mdLogo.hide()
+    lgLogo.hide()
 
-        const newText = ()=>{
+        const verse = ['Record your Stories in Audio, Video, Images and Text to pass along to future generations.',
+            'You\'ll record Personalized Momentos for your family, friends and descendants to cherish.',
+            'We are the Creator and World Leader in Digital Inheritance Services.',
+            'Somewhere between Heaven and Earth...Let\'s get centered...']
 
-            if(hcSmTxt.text.length == 0 || hcSmTxt.text() == ''){
+
+const textMarbleAll = function(marble, logo){
+
+            const newText = ()=>{
+
+            if(marble.text.length == 0 || marble.text() == ''){
                 return(verse[0])
             }
-            else if(hcSmTxt.text() == verse[0]){
+            else if(marble.text() == verse[0]){
                 return(verse[1])
             }
-            else if(hcSmTxt.text() == verse[1]){
+            else if(marble.text() == verse[1]){
                 return(verse[2])
             }
-            else if(hcSmTxt.text() == verse[2]){
+            else if(marble.text() == verse[2]){
+                return(verse[3])
+            }
+            else if(marble.text() == verse[3]){
                 return(verse[0])
             }
             else {
-                return(hcSmTxt.text + '<--- text present')
+                return(marble.text + '<--- text present')
             }
 
         }
 
 
         setInterval(()=>{
-            $('#logo').fadeIn(2500);
-            hcSmTxt.text(newText)
-            $('#logo').fadeOut(2500);
+            $(logo).fadeIn(2500);
+            marble.text(newText)
+            $(logo).fadeOut(2500);
         }, 5000)
+}
+
+
+textMarbleAll(hcMdTxt, mdLogo)
+textMarbleAll(hcLgTxt, lgLogo)
+
+        // const newText = ()=>{
+
+        //     if(hcSmTxt.text.length == 0 || hcSmTxt.text() == ''){
+        //         return(verse[0])
+        //     }
+        //     else if(hcSmTxt.text() == verse[0]){
+        //         return(verse[1])
+        //     }
+        //     else if(hcSmTxt.text() == verse[1]){
+        //         return(verse[2])
+        //     }
+        //     else if(hcSmTxt.text() == verse[2]){
+        //         return(verse[0])
+        //     }
+        //     else {
+        //         return(hcSmTxt.text + '<--- text present')
+        //     }
+
+        // }
+
+
+        // setInterval(()=>{
+        //     $('#logo').fadeIn(2500);
+        //     hcSmTxt.text(newText)
+        //     $('#logo').fadeOut(2500);
+        // }, 5000)
 
 
 // hide or show scrolls based on window width
@@ -66,7 +111,8 @@ $(document).ready(function() {
             smallMarble.show()
             mediumMarble.hide()
             largeMarble.hide()
-
+            // setInterval(textMarbleAll(hcSmTxt, smLogo), 3000)
+            textMarbleAll(hcSmTxt, smLogo)
         }
         else if($('#row1').width() > 650 && $('#row1').width() <= 1080)  {
             binding.hide()
