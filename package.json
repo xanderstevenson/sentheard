@@ -1,0 +1,23 @@
+{
+  "name": "SentHeard",
+  "version": "1.0.0",
+  "description": "SentHeard",
+  "main": "index.js",
+  "dependencies": {
+    "typed.js": "^2.0.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xanderstevenson/sentheard.git"
+  },
+  "author": "xander stevenson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xanderstevenson/sentheard/issues"
+  },
+  "homepage": "https://github.com/xanderstevenson/sentheard#readme"
+}

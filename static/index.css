@@ -201,17 +201,17 @@ label {
   color: black;
 }
 
-#home-container {
-  z-index: -1;
-  margin: 0px auto;
-  align-content: center;
-  text-align: center;
-  width: 80%;
-  max-width: 700px;
-  min-width: 0px;
+/*#home-container {*/
+/*  z-index: -1;*/
+/*  margin: 0px auto;*/
+/*  align-content: center;*/
+/*  text-align: center;*/
+/*  width: 80%;*/
+/*  max-width: 700px;*/
+/*  min-width: 0px;*/
   /* display: block; */
   /* position: relative; */
-}
+/*}*/
 
 #binding {
   height: 100%;
@@ -313,55 +313,66 @@ label {
   color: black;
   text-align: left;
   align-content: left;
-  clear: left;
-  max-width: 370px;
+  /*clear: left;*/
+  width: 100%;
+  max-width: 375px;
   background-color: silver;
   background-image: url(images/gold.jpg);
   padding: 10px;
   border: 3px outset rgb(241, 241, 18);
   border-image: url(images/gold.jpg) 30% round;
   opacity: 0.8;
-  display: block;
+  display: inline-block;
 }
 
-#sign_up_form ul {
-  font-size: 10.5px;
-  margin-left: 0px;
+#sign_up_form li {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0px auto;
   text-align: left;
+  color: green;
+  background-color: black;
+  padding: 5px;
+  width: 310px;
   /* float: left; */
 }
 
 #sign_up_form label {
-  clear: right;
+
 }
 
 #sign_up_form p {
   text-align: left;
-  margin-left: 10px;
+  margin-left: 0px;
   font-size: 17px;
   font-weight: bold;
-  clear: left;
+
 }
 
 #sign_up_form input {
   /* margin: 0px auto; */
-  width: 125px;
+  width: 100%;
+  max-width: 315px;
   margin-left: 5px;
-  margin-right: 10px;
-  /* margin-right: 65px; */
-  clear: right;
+  margin-right: 5px;
 }
 
 #sign_up_form button {
   width: 75px;
+  background-color: silver;
 }
 
 p #id_password2 input {
   width: 50px;
+  clear: right;
 }
 
 #sign_up_form ul {
   list-style-type: none;
+  border: 2px solid gray;
+  background-color: black;
+  max-width: 325px;
+
 }
 
 .helptext {
@@ -369,15 +380,14 @@ p #id_password2 input {
   font-size: 11px;
   /* clear: left; */
   margin: 0px auto;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   text-align: center;
 }
 
 p .helptext {
-  margin-left: 20px;
-  font-size: 11px;
+  clear: left;
+  font-size: 12px;
 }
-
 
 #home-container {
   width: 100%;
@@ -395,28 +405,41 @@ p .helptext {
   background-position: center;
   padding-top: 4px;
   border: 1px outset #d7b88a;
-  box-shadow: 1px 1px 5px #9B9C90, -1px 1px 5px #9B9C90, 0px 1px 5px #9B9C90;
+  box-shadow: 1px 1px 4px #808071, -1px 1px 4px #808071, 0px 1px 4px #808071;
 }
 
 #home-container p {
-  font-size: 16px;
+  font-size: 24px;
   color: #4d4943;
   width: 90%;
   margin-top: 20px;
 font-family: 'Fahkwang', sans-serif;
   font-weight: bold;
-  text-shadow: 1px 1px 0px #f2f0ed, -1px -1px 0px #f2f0ed, -1px 0px 0px #f2f0ed, -0px 1px 0px #f2f0ed, 1px -1px 0px #f2f0ed;
+  margin-top: 10px;
+}
+
+#hc-sm-txt {
+    margin: 5px auto;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Fahkwang', sans-serif;
+    text-shadow: 2px 2px 0px #f2f0ed, -2px -2px 0px #f2f0ed, -2px 0px 0px #f2f0ed, -0px 2px 0px #f2f0ed, 2px -2px 0px #f2f0ed;
+}
+
+#logo-sm {
+  text-align: center;
+  margin: 0px auto;
+  width: 325px;
+  align-content: center;
+  margin-bottom: 7px;
   margin-top: 15px;
 }
 
-#logo {
-  text-align: center;
-  width: 300px;
-  margin: 0px auto;
-  align-content: center;
-  margin-bottom: 7px;
+#smImg {
+    max-height: 150px;
+    margin: 20px auto;
+    box-shadow: 0px 2px 10px gray;
 }
-
 
 /*medium*/
 
@@ -437,11 +460,11 @@ font-family: 'Fahkwang', sans-serif;
   padding: 10px 20px 10px 20px;
   padding-top: 5px;
   border: 2px outset #d7b88a;
-  box-shadow: 2px 2px 10px #9B9C90, -2px 2px 10px #9B9C90, 0px 2px 10px #9B9C90;
+  box-shadow: 2px 2px 8px #808071, -2px 2px 8px #808071, 0px 2px 8px #808071;
 }
 
 #home-container-md p {
-  font-size: 20px;
+  font-size: 32px;
   color: #4d4943;
   width: 90%;
   margin-top: 20px;
@@ -452,14 +475,25 @@ font-family: 'Fahkwang', sans-serif;
 /*max-width: 525px;*/
 }
 
+#hc-md-txt {
+    margin: 15px auto;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Fahkwang', sans-serif;
+    text-shadow: 3px 3px 0px #f2f0ed, -3px -3px 0px #f2f0ed, -3px 0px 0px #f2f0ed, -0px 3px 0px #f2f0ed, 3px -3px 0px #f2f0ed;
+}
 
-#logo-lg {
+#logo-md {
   text-align: center;
-  width: 350px;
-  margin: 0px auto;
+  width: 400px;
+  margin: 15px auto;
   align-content: center;
 }
 
+#mdImg {
+    max-height: 150px;
+    margin: 20px auto;
+}
 
 /*LARGE*/
 
@@ -480,29 +514,39 @@ font-family: 'Fahkwang', sans-serif;
   padding: 10px 20px 10px 20px;
   padding-top: 10px;
   border: 3px outset #d7b88a;
-  box-shadow: 3px 3px 15px #9B9C90, -3px 3px 15px #9B9C90, 0px 3px 150px #9B9C90;
+  box-shadow: 3px 3px 12px #808071, -3px 3px 12px #808071, 0px 3px 12px #808071;
 }
 
 #home-container-lg p {
-  font-size: 24px;
+  font-size: 42px;
   color: #4d4943;
   width: 92%;
-  margin-top: 10px;
+  margin-top: -15px;
 font-family: 'Fahkwang', sans-serif;
   font-weight: bold;
-  text-shadow: 2px 2px 0px #f2f0ed, -2px -2px 0px #f2f0ed, -2px 0px 0px #f2f0ed, -0px 2px 0px #f2f0ed, 2px -2px 0px #f2f0ed;
-/*max-width: 525px;*/
+}
+
+#hc-lg-txt {
+    margin: -10px auto;
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'Fahkwang', sans-serif;
+    text-shadow: 4px 4px 0px #f2f0ed, -4px -4px 0px #f2f0ed, -4px 0px 0px #f2f0ed, -0px 4px 0px #f2f0ed, 4px -4px 0px #f2f0ed;
 }
 
 
 #logo-lg {
   text-align: center;
-  width: 400px;
-  margin: 0px auto;
+  width: 500px;
+  margin: 10px auto;
   align-content: center;
   margin-top: 15px;
 }
 
+#lgImg {
+    max-height: 200px;
+    margin: 20px auto;
+}
 
 
 /* ANIMATION */
