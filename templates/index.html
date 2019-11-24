@@ -70,8 +70,8 @@
         </div>
         <div class="row col-xl-12 col-xs-12" id='row2'>
 
+<!--DONT FORGET EMAIL SUBSCRIPTION-->
 
-            <!-- <div class="col-xl-12 col-xs-12">  -->
 
             <div>
                 <img src="{% static 'images/green-binding6.png'%}" alt="right scroll/pillar" id="binding"
@@ -95,25 +95,28 @@
             {% block content %}
 
             <link rel="stylesheet" href="/static/index.css" />
+
+
 <!--SMALL-->
             <div id="home-container">
-    <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574211118/SentHeard/logo-gold-sun-outline-sm.png" id="logo">
+    <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574211118/SentHeard/logo-gold-sun-outline-sm.png" id="logo-sm">
                 <p id='hc-sm-txt'></p>
+                <img id='smImg'></img>
             </div>
+
 <!--MEDIUM-->
             <div id="home-container-md">
                 <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574213473/SentHeard/logo-gold-sun-outline.png" id="logo-md">
                 <p id='hc-md-txt'></p>
+                <img id='mdImg' src=''>
             </div>
 
 <!--LARGE-->
             <div id="home-container-lg">
                 <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574213473/SentHeard/logo-gold-sun-outline.png" id="logo-lg">
                 <p id='hc-lg-txt'></p>
+                <img id='lgImg' src=''>
             </div>
-
-
-            <!-- <a href="{% url 'password_reset' %}">Change Password</a> -->
 
             {% endblock %}
 
