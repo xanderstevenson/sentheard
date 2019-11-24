@@ -409,7 +409,7 @@ p .helptext {
 }
 
 #home-container p {
-  font-size: 24px;
+  font-size: 22px;
   color: #4d4943;
   width: 90%;
   margin-top: 20px;
@@ -420,7 +420,7 @@ font-family: 'Fahkwang', sans-serif;
 
 #hc-sm-txt {
     margin: 5px auto;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     font-family: 'Fahkwang', sans-serif;
     text-shadow: 2px 2px 0px #f2f0ed, -2px -2px 0px #f2f0ed, -2px 0px 0px #f2f0ed, -0px 2px 0px #f2f0ed, 2px -2px 0px #f2f0ed;
@@ -439,6 +439,8 @@ font-family: 'Fahkwang', sans-serif;
     max-height: 150px;
     margin: 20px auto;
     box-shadow: 0px 2px 10px gray;
+    border: 1px outset #d7b88a;
+    border-image: url(images/gold.jpg) 30% round;
 }
 
 /*medium*/
@@ -467,7 +469,7 @@ font-family: 'Fahkwang', sans-serif;
   font-size: 32px;
   color: #4d4943;
   width: 90%;
-  margin-top: 20px;
+  margin-top: 10px;
 font-family: 'Fahkwang', sans-serif;
   font-weight: bold;
   /*text-shadow: 2px 2px 0px #f2f0ed, -2px -2px 0px #f2f0ed, -2px 0px 0px #f2f0ed, -0px 2px 0px #f2f0ed, 2px -2px 0px #f2f0ed;*/
@@ -476,7 +478,7 @@ font-family: 'Fahkwang', sans-serif;
 }
 
 #hc-md-txt {
-    margin: 15px auto;
+    margin: 5px auto;
     font-size: 32px;
     font-weight: bold;
     font-family: 'Fahkwang', sans-serif;
@@ -493,6 +495,9 @@ font-family: 'Fahkwang', sans-serif;
 #mdImg {
     max-height: 150px;
     margin: 20px auto;
+    box-shadow: 0px 3px 10px gray;
+    border: 2px outset #d7b88a;
+    border-image: url(images/gold.jpg) 30% round;
 }
 
 /*LARGE*/
@@ -518,18 +523,19 @@ font-family: 'Fahkwang', sans-serif;
 }
 
 #home-container-lg p {
-  font-size: 42px;
+  font-size: 38px;
   color: #4d4943;
   width: 92%;
-  margin-top: -15px;
+  margin-top: -25px;
 font-family: 'Fahkwang', sans-serif;
   font-weight: bold;
 }
 
 #hc-lg-txt {
-    margin: -10px auto;
-    font-size: 42px;
+    margin: 0px auto;
+    font-size: 38px;
     font-weight: bold;
+  margin-top: -25px;
     font-family: 'Fahkwang', sans-serif;
     text-shadow: 4px 4px 0px #f2f0ed, -4px -4px 0px #f2f0ed, -4px 0px 0px #f2f0ed, -0px 4px 0px #f2f0ed, 4px -4px 0px #f2f0ed;
 }
@@ -545,8 +551,53 @@ font-family: 'Fahkwang', sans-serif;
 
 #lgImg {
     max-height: 200px;
-    margin: 20px auto;
+    margin: 25px auto;
+    box-shadow: 0px 4px 10px gray;
+    border: 3px outset #d7b88a;
+    border-image: url(images/gold.jpg) 30% round;
 }
 
+#join-button {
+    width: 100%;
+    width: 187px;
+    height: 100px;
+    color: black;
+    background-color: white;
+    /*background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574625917/SentHeard/join-free3.png);*/
+    -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 5px;
+  border: 3px outset #d7b88a;
+  border-image: url(images/gold.jpg) 30% round;
+  box-shadow: 0px 4px 10px gray;
+}
+/*.join-free-color {*/
+
+/*        width: 100%;*/
+/*    width: 187px;*/
+/*    height: 100px;*/
+/*    color: black;*/
+/*    background-color: white;*/
+/*    background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574626946/SentHeard/join-free4.png);*/
+/*    -webkit-background-size: contain;*/
+/*  -moz-background-size: contain;*/
+/*  -o-background-size: contain;*/
+/*  background-size: cover;*/
+/*  background-repeat: no-repeat;*/
+/*  background-position: center;*/
+/*  align-content: center;*/
+/*  text-align: center;*/
+/*  margin-bottom: 5px;*/
+/*  border: 3px outset #d7b88a;*/
+/*  border-image: url(images/gold.jpg) 30% round;*/
+/*  box-shadow: 0px 4px 10px gray;*/
+
+/*}*/
 
 /* ANIMATION */

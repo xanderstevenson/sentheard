@@ -39,17 +39,23 @@ $(document).ready(function() {
     lgImg.hide()
 
 
+    const joinButton = $('#join-button')
 
-        const verse = ['Record your Stories in Audio, Video, Images and Text to pass along to future generations.',
-            'Create Personalized Momentos for your family, friends and descendants to cherish.',
-            'We are the Creator of, and World Leader in, Digital Inheritance Services.',
-            'Finally, somewhere between Heaven and Earth...you and your loved ones, can be centered.']
+
+
+        const verse = ['Record your stories with audio, video, images and text and pass them along to future generations.',
+            'Create personalized momentos for your family, friends and descendants to cherish.',
+            'We are the creator of, and world leader in, digital inheritance services.',
+            'Now, more than ever, between heaven and earth, we can be centered.']
 
 
         const imageS = ['https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg',
         'https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574552113/SentHeard/granma-granddaughter.jpg',
         'https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574552114/SentHeard/asian-family-history.jpg',
         'https://res.cloudinary.com/dx5eoz5dw/image/upload/c_scale,h_517/v1574568249/SentHeard/Family-Teach-Genealogy.jpg']
+
+        const freeButtons = ['https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574625917/SentHeard/join-free3.png',
+        'https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574626946/SentHeard/join-free4.png']
 
 
 const textMarbleAll = (marble, logo, image)=>{
@@ -99,13 +105,26 @@ const textMarbleAll = (marble, logo, image)=>{
             }
         }
 
+       const freeButtonSwitch = ()=>{
+            if(joinButton.attr('src') == ''){
+                return(freeButtons[0])
+            }
+            else if(joinButton.attr('src') == freeButtons[0]){
+                return(freeButtons[1])
+            }
+            else if(joinButton.attr('src') == freeButtons[1]){
+                return(freeButtons[0])
+       }}
 
         setInterval(()=>{
             $(logo).fadeIn(2500);
             image.attr('src',newImage())
             image.fadeIn(2500)
-            marble.text(newText())
+
+            joinButton.attr('src', freeButtonSwitch())
+
             image.fadeOut(2500)
+            marble.text(newText())
             $(logo).fadeOut(2500);
         }, 5000)
 }
