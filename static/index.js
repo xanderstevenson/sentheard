@@ -33,9 +33,10 @@ $(document).ready(function () {
     lgImg.hide()
     // flashing "Join for Free"
     const joinButton = $('.join-button')
-    const joinButtonSm = $('#join-buttonSm')
-    const joinButtonMd = $('#join-buttonMd')
-    const joinButtonLg = $('#join-buttonLg')
+    joinButton.hide()
+    // const joinButtonSm = $('#join-buttonSm')
+    // const joinButtonMd = $('#join-buttonMd')
+    // const joinButtonLg = $('#join-buttonLg')
     // different texts for home screen rotation
     const verse = ['Record your stories with audio, video, images and text and pass them along to future generations.',
         'Create personalized momentos for your family, friends and descendants to cherish.',
@@ -47,12 +48,12 @@ $(document).ready(function () {
     const imageS = ['https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg',
         'https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574552113/SentHeard/granma-granddaughter.jpg',
         'https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574552114/SentHeard/asian-family-history.jpg',
-        'https://res.cloudinary.com/dx5eoz5dw/image/upload/c_scale,h_517/v1574568249/SentHeard/Family-Teach-Genealogy.jpg'
+        'https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717218/SentHeard/Family-Teach-Genealogy_xzfyvq.jpg'
     ]
 
     // different buttons for neon interval
-    const freeButtons = ['https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574625917/SentHeard/join-free3.png',
-        'https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574626946/SentHeard/join-free4.png'
+    const freeButtons = ['https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png',
+        'https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717415/SentHeard/free-button-black-fun.png'
     ]
 
     // mega function switching verses and images on homescreen and fading the logo
@@ -93,23 +94,8 @@ $(document).ready(function () {
             }
         }
 
-        setInterval(() => {
-            $(logo).fadeIn(2500);
-            image.attr('src', newImage())
-            image.fadeIn(2500)
-            image.fadeOut(2500)
-            marble.text(newText())
-            $(logo).fadeOut(2500);
-        }, 5000)
-    }
 
-    textMarbleAll(hcSmTxt, smLogo, smImg)
-    textMarbleAll(hcMdTxt, mdLogo, mdImg)
-    textMarbleAll(hcLgTxt, lgLogo, lgImg)
-
-    // interval function to make flashing neon "Join for Free"
-
-    const freeButtonSwitch = () => {
+        const freeButtonSwitch = () => {
 
           if (joinButton.attr('src') == freeButtons[0]) {
             return (freeButtons[1])
@@ -121,9 +107,45 @@ $(document).ready(function () {
 
     }
 
-    setInterval(() => {
-        joinButton.attr('src', freeButtonSwitch, 10000).delay(5000)
-    })
+        setInterval(() => {
+            $(logo).fadeIn(2500);
+            image.attr('src', newImage)
+            image.fadeIn(2500)
+            joinButton.fadeIn(2500)
+            joinButton.attr('src', freeButtonSwitch(), 1500)
+            image.fadeOut(2500)
+            marble.text(newText)
+            $(logo).fadeOut(2500);
+        }, 5000)
+
+    }
+
+
+    textMarbleAll(hcSmTxt, smLogo, smImg)
+    textMarbleAll(hcMdTxt, mdLogo, mdImg)
+    textMarbleAll(hcLgTxt, lgLogo, lgImg)
+
+    // interval function to make flashing neon "Join for Free"
+
+
+
+    //     const freeButtonSwitch = () => {
+
+    //       if (joinButton.attr('src') == freeButtons[0]) {
+    //         return (freeButtons[1])
+    //     } else if (joinButton.attr('src') == freeButtons[1]) {
+    //         return (freeButtons[0])
+    //     } else {
+    //         return (freeButtons[0])
+    //     }
+
+    // }
+
+    // setInterval(() => {
+    //     joinButton.attr('src', freeButtonSwitch, 1500)
+
+    // })
+
 
     // show the correct marble frame based on screen size
     window.onresize = function (event) {

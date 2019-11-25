@@ -326,7 +326,7 @@ label {
 }
 
 #sign_up_form li {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   margin: 0px auto;
   text-align: left;
@@ -360,6 +360,7 @@ label {
 #sign_up_form button {
   width: 75px;
   background-color: silver;
+  border: 2px ridge gray;
 }
 
 p #id_password2 input {
