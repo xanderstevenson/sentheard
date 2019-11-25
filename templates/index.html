@@ -25,12 +25,9 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 
-
     <title>SentHeard</title>
+
 </head>
-
-
-
 
 
 <body>
@@ -52,10 +49,7 @@
                             {% endif %}
                         </div>
                     </div>
-
-
                 </div>
-
             </div>
         </div>
         <br>
@@ -70,9 +64,9 @@
         </div>
         <div class="row col-xl-12 col-xs-12" id='row2'>
 
-<!--DONT FORGET EMAIL SUBSCRIPTION-->
+            <!--DONT FORGET EMAIL SUBSCRIPTION-->
 
-
+<!--LEFT SCROLL / COLUMN-->
             <div>
                 <img src="{% static 'images/green-binding6.png'%}" alt="right scroll/pillar" id="binding"
                     class="bindings">
@@ -91,62 +85,64 @@
 
                 {% endif %}
             </div>
-<!-- BLOCK -->
+
+
+<!--            BLOCK             -->
             {% block content %}
 
             <link rel="stylesheet" href="/static/index.css" />
 
 
-<!--SMALL-->
+            <!--SMALL-->
             <div id="home-container">
-    <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574211118/SentHeard/logo-gold-sun-outline-sm.png" id="logo-sm">
+                <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574211118/SentHeard/logo-gold-sun-outline-sm.png"
+                    id="logo-sm">
                 <p id='hc-sm-txt'></p>
                 <img id='smImg'></img>
-                <br />
-            </div>
-            <span class="join-button"></span>
 
-<!--MEDIUM-->
+                <img src='' class='join-button' id='join-buttonSm'>
+            </div>
+
+
+            <!--MEDIUM-->
             <div id="home-container-md">
-                <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574213473/SentHeard/logo-gold-sun-outline.png" id="logo-md">
+                <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574213473/SentHeard/logo-gold-sun-outline.png"
+                    id="logo-md">
                 <p id='hc-md-txt'></p>
                 <img id='mdImg' src=''>
                 <br />
+                <img src='' class='join-button' id='join-buttonMd'>
             </div>
-            <span class="join-button"></span>
 
-<!--LARGE-->
+
+            <!--LARGE-->
             <div id="home-container-lg">
-                <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574213473/SentHeard/logo-gold-sun-outline.png" id="logo-lg">
+                <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574213473/SentHeard/logo-gold-sun-outline.png"
+                    id="logo-lg">
                 <p id='hc-lg-txt'></p>
                 <img id='lgImg' src=''>
                 <br />
+                <img src='' class='join-button' id='join-buttonLg'>
             </div>
-            <span ></span>
 
-            <img src='' id='join-button'>
 
 
 
             {% endblock %}
 
 
-<!-- BLOCK END-->
+<!--              BLOCK END            -->
 
-
+<!--RIGHT SCROLL / COLUMN-->
             <div>
                 <img src="{% static 'images/green-binding5.png'%}" alt="right scroll/pillar" id="binding2"
                     class="bindings">
             </div>
 
 
-
         </div>
     </div>
     </div>
-
-
-
     </div>
 
 
