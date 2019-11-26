@@ -5,11 +5,16 @@
   padding: 0px;
 }
 
+p {
+      color: black;
+}
+
 html {
   padding: 0px;
   min-width: 364px;
   /* min-width: 375px; */
   background-color: white;
+  color: black;
 }
 
 .center {

@@ -9,6 +9,8 @@ urlpatterns = [
     path('shop/', views.shop, name="shop"),
     path('donate/', views.donate, name="donate"),
     path('about_us/', views.about_us, name="about_us"),
-    path('', TemplateView.as_view(template_name='index.html'), name='index'),    
+    path('account/', views.account, name="account"),
+    path('password_reset/', views.password_reset, name="password_reset"),
+    path('', TemplateView.as_view(template_name='index.html'), name='index'),
     # path('', views.index, name="index"),
 ]
