@@ -1,8 +1,11 @@
 $(document).ready(function () {
 
+
     // scrolls / pillars
     const binding = $("#binding")
     const binding2 = $("#binding2")
+    binding.fadeOut(4000)
+    binding2.fadeOut(4000)
     // rectangles of marble on home screen
     const smallMarble = $("#home-container")
     const mediumMarble = $("#home-container-md")
@@ -108,15 +111,15 @@ $(document).ready(function () {
     }
 
         setInterval(() => {
-            $(logo).fadeIn(2500);
+            $(logo).fadeIn(2000);
             image.attr('src', newImage)
-            image.fadeIn(2500)
-            joinButton.fadeIn(2500)
+            image.fadeIn(2000)
+            joinButton.fadeIn(2000)
             joinButton.attr('src', freeButtonSwitch(), 1500)
-            image.fadeOut(2500)
+            image.fadeOut(2000)
             marble.text(newText)
-            $(logo).fadeOut(2500);
-        }, 5000)
+            $(logo).fadeOut(2000);
+        }, 4000)
 
     }
 
@@ -147,24 +150,49 @@ $(document).ready(function () {
     // })
 
 
+// Fade in appropriate marble frame size on screen load
+
+    window.onload = function (event) {
+
+        if ($('#row1').width() <= 650) {
+            // binding.hide()
+            // binding2.hide()
+            smallMarble.fadeIn(2000)
+            mediumMarble.hide()
+            largeMarble.hide()
+        } else if ($('#row1').width() > 650 && $('#row1').width() <= 1080) {
+            // binding.hide()
+            // binding2.hide()
+            smallMarble.hide()
+            mediumMarble.fadeIn(2000)
+            largeMarble.hide()
+        } else if ($('#row1').width() > 1080) {
+            // binding.show()
+            // binding2.show()
+            smallMarble.hide()
+            mediumMarble.hide()
+            largeMarble.fadeIn(2000)
+        }
+    }
+
     // show the correct marble frame based on screen size
     window.onresize = function (event) {
 
         if ($('#row1').width() <= 650) {
-            binding.hide()
-            binding2.hide()
+            // binding.hide()
+            // binding2.hide()
             smallMarble.show()
             mediumMarble.hide()
             largeMarble.hide()
         } else if ($('#row1').width() > 650 && $('#row1').width() <= 1080) {
-            binding.hide()
-            binding2.hide()
+            // binding.hide()
+            // binding2.hide()
             smallMarble.hide()
             mediumMarble.show()
             largeMarble.hide()
         } else if ($('#row1').width() > 1080) {
-            binding.show()
-            binding2.show()
+            // binding.show()
+            // binding2.show()
             smallMarble.hide()
             mediumMarble.hide()
             largeMarble.show()

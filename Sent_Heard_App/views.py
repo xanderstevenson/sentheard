@@ -16,5 +16,5 @@ def about_us(request):
 def account(request):
     return render(request, "account.html")
 
-def password_rese(request):
-    return render(request, "password_reset_form.html")
+# def password_reset(request):
+#     return render(request, "/registration/password_reset_form.html")
