@@ -19,11 +19,7 @@ DEBUG = True
 
 # SendGrid Email
 
-SENDGRID_API_KEY = os.environ.get("Sendgrid_API_Key")
 
-EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-# SENDGRID_SANDBOX_MODE_IN_DEBUG=True
-SENDGRID_ECHO_TO_STDOUT=True
 
 ALLOWED_HOSTS = ['sentheard.pythonanywhere.com',
 'www.sentheard.com']
@@ -139,3 +135,11 @@ LOGOUT_REDIRECT_URL = 'index'
 
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
+
+# Toggle sandbox mode (when running in DEBUG mode)
+# SENDGRID_SANDBOX_MODE_IN_DEBUG=True
+
+# echo to stdout or any other file-like object that is passed to the backend via the stream kwarg.
+SENDGRID_ECHO_TO_STDOUT=True
