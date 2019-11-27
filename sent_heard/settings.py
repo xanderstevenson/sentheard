@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # SendGrid Email
 
@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Sent_Heard_App',
+    'posts.apps.PostsConfig',
 ]
 
 MIDDLEWARE = [
@@ -116,15 +117,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/sentheard/sentheard/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+
+
+# Commented this out because I got an error when I ran python manage.py migrate
+
+'''
+SystemCheckError: System check identified some issues:
+ERRORS:
+?: (staticfiles.E002) The STATICFILES_DIRS setting should not contain the STATIC_ROOT setting.
+'''
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
@@ -136,6 +149,7 @@ LOGOUT_REDIRECT_URL = 'index'
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+
 SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
 
 # Toggle sandbox mode (when running in DEBUG mode)
