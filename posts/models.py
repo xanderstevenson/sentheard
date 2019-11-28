@@ -1,5 +1,14 @@
 from django.db import models
+from django_s3_storage.storage import S3Storage
 import uuid
+
+storage = S3Storage(aws_s3_bucket_name='django-static-sentheard')
+
+
+class Car(models.Model):
+    name = models.CharField(max_length=255)
+    photo = models.ImageField(storage=storage)
+
 
 
 class Post(models.Model):
