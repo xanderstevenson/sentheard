@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'Sent_Heard_App',
     'posts.apps.PostsConfig',
 ]
-
+    # 'storages',
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -114,13 +114,27 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.1/howto/static-files/
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
+AWS_STORAGE_BUCKET_NAME = 'django-static-sentheard'
+AWS_S3_REGION_NAME = 'us-east-2'
+AWS_S3_ENDPOINT_URL = 'http://django-static-sentheard.s3-website.us-east-2.amazonaws.com'
+AWS_S3_CUSTOM_DOMAIN = ""
+AWS_LOCATION = 'files'
+AWS_DEFAULT_ACL = None
+# General optimization for faster delivery
+AWS_IS_GZIPPED = True
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
 
+MEDIA_URL = 'http://django-static-sentheard.s3-website.us-east-2.amazonaws.com/media/'
 
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
