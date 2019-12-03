@@ -36,8 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Sent_Heard_App',
     'posts.apps.PostsConfig',
+    'django_s3_storage',
 ]
-
+    # 'storages',
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -74,12 +75,15 @@ WSGI_APPLICATION = 'sent_heard.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'sentheard$sentheard-db',
+    'USER': 'sentheard',
+    'PASSWORD': 'MsQL2019@!jw*aw3',
+    'HOST': 'sentheard.mysql.pythonanywhere-services.com',
+    'sql_mode': 'strict',
 }
-
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -114,13 +118,31 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.1/howto/static-files/
+DEFAULT_FILE_STORAGE = 'django_s3_storage.storage.S3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
+AWS_S3_BUCKET_NAME = 'django-static-sentheard'
+AWS_S3_REGION_NAME = 'us-east-2'
+AWS_S3_ENDPOINT_URL = ''
+AWS_S3_CUSTOM_DOMAIN = ""
+AWS_S3_ADDRESSING_STYLE = "auto"
+AWS_S3_BUCKET_AUTH = True
+AWS_S3_MAX_AGE_SECONDS = 60 * 60  # 1 hours.
+AWS_S3_ENCRYPT_KEY = True
+# General optimization for faster delivery
+AWS_IS_GZIPPED = True
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_S3_SIGNATURE_VERSION = None
+AWS_S3_FILE_OVERWRITE = False
 
+MEDIA_URL = 'http://django-static-sentheard.apigateway.us-east-2.amazonaws.com/media/'
 
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
