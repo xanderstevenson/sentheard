@@ -590,4 +590,26 @@ font-family: 'Fahkwang', sans-serif;
     margin-bottom: 0px;
 }
 
-/* ANIMATION */
+#hand-pray-lg{
+    margin: 0px auto;
+    margin-top: 25%;
+    align-content: center;
+    display: none;
+    max-width: 600px;
+}
+
+#hand-pray-md{
+    margin: 0px auto;
+    margin-top: 35%;
+    align-content: center;
+    display: none;
+    max-width: 500px;
+}
+
+
+#hand-pray-sm{
+    margin: 0px auto;
+    margin-top: 45%;
+    align-content: center;
+    display: none;
+}

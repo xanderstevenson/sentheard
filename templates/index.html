@@ -45,7 +45,7 @@
                             {% if user.is_authenticated %}
                             <a href={% url 'account' %}><button class="nav-btn nav-btn-marg-left">Account</button></a>
                             {% else  %}
-                            <a href={% url 'signup' %}><button class="nav-btn nav-btn-marg-left">Sign up</button></a>
+                            <a href={% url 'signup' %}><button class="nav-btn nav-btn-marg-left">Join Free</button></a>
                             {% endif %}
                         </div>
                     </div>
@@ -86,43 +86,47 @@
                 {% endif %}
             </div>
 
-
 <!--            BLOCK             -->
             {% block content %}
 
             <link rel="stylesheet" href="/static/index.css" />
 
 
+
+
             <!--SMALL-->
             <div id="home-container">
+                  <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1575327252/SentHeard/ezgif.com-webp-maker_1.webp' id='hand-pray-sm'>
                 <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574211118/SentHeard/logo-gold-sun-outline-sm.png"
                     id="logo-sm">
                 <p id='hc-sm-txt'></p>
                 <img id='smImg'></img>
-                <a href={% url 'signup' %}><img src='' class='join-button' id='join-buttonSm'></a>
+                <a href={% url 'signup' %}><img  class='join-button' id='join-buttonSm'></a>
 
             </div>
 
 
             <!--MEDIUM-->
             <div id="home-container-md">
+                  <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1575401308/SentHeard/pray-hands-lg.webp' id='hand-pray-md'>
                 <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574213473/SentHeard/logo-gold-sun-outline.png"
                     id="logo-md">
                 <p id='hc-md-txt'></p>
                 <img id='mdImg' src=''>
                 <br />
-                <a href={% url 'signup' %}><img src='' class='join-button' id='join-buttonMd'></a>
+                <a href={% url 'signup' %}><img  class='join-button' id='join-buttonMd'></a>
             </div>
 
 
             <!--LARGE-->
             <div id="home-container-lg">
+                 <center> <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1575401308/SentHeard/pray-hands-lg.webp' id='hand-pray-lg'></center>
                 <img src="https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574213473/SentHeard/logo-gold-sun-outline.png"
                     id="logo-lg">
                 <p id='hc-lg-txt'></p>
                 <img id='lgImg' src=''>
                 <br />
-                <a href={% url 'signup' %}><img src='' class='join-button' id='join-buttonLg'></a>
+                <a href={% url 'signup' %}><img class='join-button' id='join-buttonLg'></a>
             </div>
 
             {% endblock %}

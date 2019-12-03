@@ -34,6 +34,11 @@ $(document).ready(function () {
     smImg.hide()
     mdImg.hide()
     lgImg.hide()
+    // praying hands image
+    const handPrayLg = $('#hand-pray-lg')
+    const handPrayMd = $('#hand-pray-md')
+    const handPraySm = $('#hand-pray-sm')
+
     // flashing "Join for Free"
     const joinButton = $('.join-button')
     joinButton.hide()
@@ -132,52 +137,36 @@ $(document).ready(function () {
 
 
 
-    //     const freeButtonSwitch = () => {
-
-    //       if (joinButton.attr('src') == freeButtons[0]) {
-    //         return (freeButtons[1])
-    //     } else if (joinButton.attr('src') == freeButtons[1]) {
-    //         return (freeButtons[0])
-    //     } else {
-    //         return (freeButtons[0])
-    //     }
-
-    // }
-
-    // setInterval(() => {
-    //     joinButton.attr('src', freeButtonSwitch, 1500)
-
-    // })
-
 
 // Fade in appropriate marble frame size on screen load
 
     window.onload = function (event) {
-
         if ($('#row1').width() <= 650) {
             // binding.hide()
             // binding2.hide()
             smallMarble.fadeIn(2000)
             mediumMarble.hide()
             largeMarble.hide()
+            handPraySm.fadeIn(2500).fadeOut(1000)
         } else if ($('#row1').width() > 650 && $('#row1').width() <= 1080) {
             // binding.hide()
             // binding2.hide()
             smallMarble.hide()
             mediumMarble.fadeIn(2000)
             largeMarble.hide()
+            handPrayMd.fadeIn(2500).fadeOut(1000)
         } else if ($('#row1').width() > 1080) {
             // binding.show()
             // binding2.show()
             smallMarble.hide()
             mediumMarble.hide()
             largeMarble.fadeIn(2000)
+            handPrayLg.fadeIn(3000).fadeOut(1000)
         }
     }
 
     // show the correct marble frame based on screen size
     window.onresize = function (event) {
-
         if ($('#row1').width() <= 650) {
             // binding.hide()
             // binding2.hide()
