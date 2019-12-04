@@ -117,8 +117,8 @@ $(document).ready(function () {
 
         setInterval(() => {
             $(logo).fadeIn(2000);
-            image.attr('src', newImage)
-            image.fadeIn(2000)
+            image.attr('src', newImage).fadeIn(2000)
+            // image
             joinButton.fadeIn(2000)
             joinButton.attr('src', freeButtonSwitch(), 1500)
             image.fadeOut(2000)
