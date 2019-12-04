@@ -5,7 +5,10 @@ from django.views.generic import TemplateView
 from . import views
 
 urlpatterns = [
-    path('post_stuff/', views.post_stuff, name="post_stuff"),
     path('post_stuff/add_photos/', views.add_photos, name="add_photos"),
+    path('post_stuff/add_audio/', views.add_audio, name="add_audio"),
+    path('post_stuff/add_video/', views.add_video, name="add_video"),
+    path('post_stuff/add_text/', views.add_text, name="add_text"),
+    path('post_stuff/', views.post_stuff, name="post_stuff"),
 
 ]
