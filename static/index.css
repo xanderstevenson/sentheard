@@ -615,3 +615,24 @@ font-family: 'Fahkwang', sans-serif;
     align-content: center;
     display: none;
 }
+
+#post-page {
+    font-size: 25px;
+}
+
+#post-page i {
+    text-align: left;
+}
+
+.data-input-post {
+    border: 2px ridge gray;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: silver;
+    background-image: url(images/gold_cloud.png);
+    opacity: 0.85;
+      background-image: url(images/gold.jpg);
+    text-shadow: 1px 1px 1px white;
+      box-shadow: 0px 4px 10px #CDD3A6;
+      border-image: url(images/gold.jpg) 30% round;
+}
