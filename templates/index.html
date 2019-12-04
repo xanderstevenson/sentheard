@@ -24,14 +24,14 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-
+<script src="https://kit.fontawesome.com/d39a8a1de2.js" crossorigin="anonymous"></script>
     <title>SentHeard</title>
 
 </head>
 
 
 <body>
-    <!-- <img src="{% static '/green-binding5.png'%}" alt="contact icon" id="binding2">  -->
+
     <div class='container-fluid'>
 
         <div class="row" id='row1'>
@@ -41,7 +41,7 @@
                         <div>
                             <a href={% url 'index' %}><button class="nav-btn">Home</button></a>
                             {% if user.is_authenticated %}
-                            <a href={% url 'post' %}><button class="nav-btn nav-btn-marg-left">Post</button></a>
+                            <a href={% url 'post_stuff' %}><button class="nav-btn nav-btn-marg-left">Post</button></a>
                             {% else  %}
                             <a href={% url 'shop' %}><button class="nav-btn nav-btn-marg-left">Shop</button></a>
                             {% endif %}

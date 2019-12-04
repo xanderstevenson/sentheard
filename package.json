@@ -6,7 +6,9 @@
   "dependencies": {
     "typed.js": "^2.0.11"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
