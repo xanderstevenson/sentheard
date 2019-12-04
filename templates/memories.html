@@ -1,0 +1,17 @@
+
+{% extends 'index.html' %}
+{% load static %}
+
+
+    {% block content %}
+    <link rel="stylesheet" href="/static/index.css"/>
+    <div id='post-page'>
+        <br>
+    <h1>Post Memories</h1>
+    <br>
+<a href={% url 'photo_new' %}>New Photo</a>
+
+
+
+    </div>
+    {% endblock %}
