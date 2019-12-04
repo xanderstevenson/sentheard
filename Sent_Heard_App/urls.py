@@ -10,6 +10,7 @@ urlpatterns = [
     path('donate/', views.donate, name="donate"),
     path('about_us/', views.about_us, name="about_us"),
     path('account/', views.account, name="account"),
+    path('post/', views.post, name="post"),
     # path('password_reset/', views.password_reset, name="password_reset"),
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
     # path('', views.index, name="index"),
