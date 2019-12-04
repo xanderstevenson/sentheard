@@ -13,6 +13,28 @@ class Photo(models.Model):
     def __str__(self):
         return self.title
 
+class Audio(models.Model):
+    uuid = models.UUIDField(
+    primary_key=True, default=uuid.uuid4, editable=False,)
+    title = models.CharField(max_length=255)
+    def __str__(self):
+        return self.title
+
+class Video(models.Model):
+    uuid = models.UUIDField(
+    primary_key=True, default=uuid.uuid4, editable=False,)
+    title = models.CharField(max_length=255)
+    def __str__(self):
+        return self.title
+
+class Text(models.Model):
+    uuid = models.UUIDField(
+    primary_key=True, default=uuid.uuid4, editable=False,)
+    title = models.CharField(max_length=255)
+    text = models.CharField(max_length=510)
+    def __str__(self):
+        return self.title
+
 
 # class Post(models.Model):
 #     title = models.TextField()
