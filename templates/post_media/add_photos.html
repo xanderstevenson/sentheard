@@ -9,11 +9,12 @@
         <br>
     <h1>Post Photos</h1>
     <br>
-<a>New Photo</a>
-<!--<form method="POST" class="post-form">{% csrf_token %}-->
-<!--        {{ form.as_p }}-->
-<!--        <button type="submit" class="save btn btn-default">Save</button>-->
-<!--    </form>-->
+<h3>New Photo</h3>
 
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit New Post</button>
+</form>
     </div>
     {% endblock %}

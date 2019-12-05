@@ -12,8 +12,9 @@ urlpatterns = [
     path('add_audio/', views.add_audio, name="add_audio"),
     path('add_video/', views.add_video, name="add_video"),
     path('text/', views.text, name="text"),
+    # path('gallery/', GalleryView.as_view(), name='gallery'),
     path('gallery/', views.gallery, name="gallery"),
-    path('', views.post_stuff, name="post_stuff"),
+    path('post_stuff/', views.post_stuff, name="post_stuff"),
 
 ]
     # path('post_stuff/add_photos/', views.add_photos, name="add_photos"),
