@@ -11,13 +11,13 @@ class CreatePhotoView(CreateView):
     template_name = 'post_media/add_photos.html'
     success_url = reverse_lazy('post_stuff')
 
-# def add_photos(request):
-#     return render(request, "post_media/add_photos.html")
+def gallery(request):
+    return render(request, "post_media/gallery.html")
 def add_audio(request):
     return render(request, "post_media/add_audio.html")
 def add_video(request):
     return render(request, "post_media/add_video.html")
-def add_text(request):
+def text(request):
     return render(request, "post_media/add_text.html")
 def post_stuff(request):
     return render(request, "memories.html")

@@ -17,6 +17,7 @@ class Audio(models.Model):
     uuid = models.UUIDField(
     primary_key=True, default=uuid.uuid4, editable=False,)
     title = models.CharField(max_length=255)
+    audio = models.FileField(storage=storage)
     def __str__(self):
         return self.title
 
@@ -24,6 +25,7 @@ class Video(models.Model):
     uuid = models.UUIDField(
     primary_key=True, default=uuid.uuid4, editable=False,)
     title = models.CharField(max_length=255)
+    video = models.FileField(storage=storage)
     def __str__(self):
         return self.title
 

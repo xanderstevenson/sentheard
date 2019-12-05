@@ -11,7 +11,8 @@ urlpatterns = [
     path('add_photos/', CreatePhotoView.as_view(), name='add_photos'),
     path('add_audio/', views.add_audio, name="add_audio"),
     path('add_video/', views.add_video, name="add_video"),
-    path('add_text/', views.add_text, name="add_text"),
+    path('text/', views.text, name="text"),
+    path('gallery/', views.gallery, name="gallery"),
     path('', views.post_stuff, name="post_stuff"),
 
 ]
