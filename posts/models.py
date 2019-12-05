@@ -8,32 +8,34 @@ storage = S3Storage(aws_s3_bucket_name='django-static-sentheard')
 class Photo(models.Model):
     uuid = models.UUIDField(
     primary_key=True, default=uuid.uuid4, editable=False,)
-    title = models.CharField(max_length=255)
-    photo = models.ImageField(storage=storage)
+    title = models.CharField(default="", max_length=55)
+    photo = models.ImageField(storage=storage, default="")
     def __str__(self):
         return self.title
 
 class Audio(models.Model):
     uuid = models.UUIDField(
     primary_key=True, default=uuid.uuid4, editable=False,)
-    title = models.CharField(max_length=255)
-    audio = models.FileField(storage=storage)
+    title = models.CharField(default="", max_length=55)
+    audio = models.FileField(storage=storage, default="")
     def __str__(self):
         return self.title
 
 class Video(models.Model):
     uuid = models.UUIDField(
     primary_key=True, default=uuid.uuid4, editable=False,)
-    title = models.CharField(max_length=255)
-    video = models.FileField(storage=storage)
+    title = models.CharField(default="", max_length=55)
+    video = models.FileField(storage=storage, default="")
     def __str__(self):
-        return self.title
+        return self.name + ": " + str(self.video)
+
 
 class Text(models.Model):
     uuid = models.UUIDField(
     primary_key=True, default=uuid.uuid4, editable=False,)
-    title = models.CharField(max_length=255)
-    text = models.CharField(max_length=510)
+    title = models.CharField(default="", max_length=55)
+    text_typed = models.TextField(default="", max_length=510)
+    text_upload = models.FileField(storage=storage, default="")
     def __str__(self):
         return self.title
 

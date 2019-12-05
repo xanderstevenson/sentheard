@@ -19,4 +19,4 @@ class VideoForm(forms.ModelForm):
 class TextForm(forms.ModelForm):
     class Meta:
         model = Text
-        fields = ('title', 'text',)
+        fields = ('title', 'text_typed', 'text_upload')
