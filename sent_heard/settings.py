@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django_s3_storage',
 ]
     # 'storages',
+        # 'upload',
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
