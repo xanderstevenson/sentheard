@@ -4,7 +4,8 @@ from django.urls import path, include, re_path
 from django.views.generic import TemplateView
 from . import views
 from .views import CreatePhotoView, CreateAudioView, CreateVideoView, CreateTextView
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
 
@@ -19,5 +20,5 @@ urlpatterns = [
     path('gallery/', views.gallery, name="gallery"),
     path('', views.post_stuff, name="post_stuff"),
 
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     # path('post_stuff/add_photos/', views.add_photos, name="add_photos"),

@@ -16,6 +16,10 @@
 
     <p>User: {{ user }}</p>
 
+    {% for email in user.items %}
+    {{email}}<br>
+    {% endfor %}
+    <h1>test</h1>
     <p><a href="{% url 'password_reset' %}">Reset Your Password</a></p>
 
     {% endblock %}

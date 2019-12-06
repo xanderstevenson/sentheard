@@ -35,7 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Sent_Heard_App',
-    'posts.apps.PostsConfig',
+    'posts',
+    # 'posts.apps.PostsConfig',
     'django_s3_storage',
 ]
     # 'storages',
@@ -127,7 +128,7 @@ DEFAULT_FILE_STORAGE = 'django_s3_storage.storage.S3Storage'
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-
+AWS_REGION = 'us-east-2'
 AWS_S3_BUCKET_NAME = 'django-static-sentheard'
 AWS_S3_REGION_NAME = 'us-east-2'
 AWS_S3_ENDPOINT_URL = ''

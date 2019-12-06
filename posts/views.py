@@ -37,6 +37,11 @@ class CreateTextView(CreateView):
     success_url = reverse_lazy('gallery')
 
 
+# class HomePageView(ListView):
+#     model = Post
+#     template_name = 'post_media/gallery.html'
+
+
 def gallery(request):
     return render(request, "post_media/gallery.html")
 # def add_audio(request):
