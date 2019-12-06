@@ -141,6 +141,8 @@ $(document).ready(function () {
 // Fade in appropriate marble frame size on screen load
 
     window.onload = function (event) {
+        $('#title-box').toggleClass('titleBoxGlow')
+
         if ($('#row1').width() <= 650) {
             // binding.hide()
             // binding2.hide()
