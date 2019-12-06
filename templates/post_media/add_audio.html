@@ -10,10 +10,10 @@
     <h1>Post Audio</h1>
     <br>
 <a>New Audio</a>
-<!--<form method="POST" class="post-form">{% csrf_token %}-->
-<!--        {{ form.as_p }}-->
-<!--        <button type="submit" class="save btn btn-default">Save</button>-->
-<!--    </form>-->
-
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit New Post</button>
+</form>
     </div>
     {% endblock %}

@@ -117,8 +117,8 @@ $(document).ready(function () {
 
         setInterval(() => {
             $(logo).fadeIn(2000);
-            image.attr('src', newImage).fadeIn(2000)
-            // image
+            image.attr('src', newImage)
+            image.fadeIn(2000)
             joinButton.fadeIn(2000)
             joinButton.attr('src', freeButtonSwitch(), 1500)
             image.fadeOut(2000)
@@ -141,6 +141,8 @@ $(document).ready(function () {
 // Fade in appropriate marble frame size on screen load
 
     window.onload = function (event) {
+        $('#title-box').toggleClass('titleBoxGlow')
+
         if ($('#row1').width() <= 650) {
             // binding.hide()
             // binding2.hide()

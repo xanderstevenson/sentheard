@@ -131,7 +131,7 @@ p {
   border: 1px outset rgb(179, 179, 145);
   border: 3px inset gold;
   border-image: url(images/gold.jpg) 30% round;
-  padding: 0px;
+  padding-top: 7px;
   box-shadow: 0px 6px 12px rgb(65, 65, 58);
   opacity: 0.75;
 }
@@ -269,7 +269,7 @@ label {
   text-align: center;
   align-content: center;
   margin: 0px auto;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   padding: 0px;
   /* opacity: 0.55; */
   border: 3px outset rgb(241, 241, 18);
@@ -284,6 +284,22 @@ label {
   text-shadow: -2px 1px ghostwhite;
   font-weight: bold;
 }
+
+.titleBoxGlow {
+/*box-shadow: 14px 14px 0px #f2f0ed, -14px -14px 0px #f2f0ed, -14px 0px 0px #f2f0ed, 0px 14px 0px #f2f0ed, 0px -14px 0px #f2f0ed, 14px -14px 0px #f2f0ed, -14px 14px 0px #f2f0ed;*/
+}
+
+#cloud-bg-title {
+
+  width: 295px;
+  height: 105px;
+  background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1575664677/SentHeard/awesome-cloud-animated.gif);
+  text-align: center;
+  align-content: center;
+    padding: 15px;
+    opacity: 0.85;
+}
+
 
 #home-icon,
 #about-us-icon,
@@ -431,7 +447,8 @@ font-family: 'Fahkwang', sans-serif;
     font-size: 23px;
     font-weight: bold;
     font-family: 'Fahkwang', sans-serif;
-    text-shadow: 2px 2px 0px #f2f0ed, -2px -2px 0px #f2f0ed, -2px 0px 0px #f2f0ed, -0px 2px 0px #f2f0ed, 2px -2px 0px #f2f0ed;
+    text-shadow: 2px 2px 0px #f2f0ed, -2px -2px 0px #f2f0ed, -2px 0px 0px #f2f0ed, 0px 2px 0px #f2f0ed, 0px -2px 0px #f2f0ed, 2px -2px 0px #f2f0ed, -2px 2px 0px #f2f0ed;
+
 }
 
 #logo-sm {
@@ -481,7 +498,7 @@ font-family: 'Fahkwang', sans-serif;
 font-family: 'Fahkwang', sans-serif;
   font-weight: bold;
   /*text-shadow: 2px 2px 0px #f2f0ed, -2px -2px 0px #f2f0ed, -2px 0px 0px #f2f0ed, -0px 2px 0px #f2f0ed, 2px -2px 0px #f2f0ed;*/
-  text-shadow: 3px 3px 0px #f2f0ed, -3px -3px 0px #f2f0ed, -3px 0px 0px #f2f0ed, -0px 3px 0px #f2f0ed, 3px -3px 0px #f2f0ed;
+  text-shadow: 3px 3px 0px #f2f0ed, -3px -3px 0px #f2f0ed, -3px 0px 0px #f2f0ed, 0px 3px 0px #f2f0ed, 0px -3px 0px #f2f0ed, 3px -3px 0px #f2f0ed, -3px 3px 0px #f2f0ed;
 /*max-width: 525px;*/
 }
 
@@ -490,7 +507,7 @@ font-family: 'Fahkwang', sans-serif;
     font-size: 28px;
     font-weight: bold;
     font-family: 'Fahkwang', sans-serif;
-    text-shadow: 3px 3px 0px #f2f0ed, -3px -3px 0px #f2f0ed, -3px 0px 0px #f2f0ed, -0px 3px 0px #f2f0ed, 3px -3px 0px #f2f0ed;
+    text-shadow: 3px 3px 0px #f2f0ed, -3px -3px 0px #f2f0ed, -3px 0px 0px #f2f0ed, 0px 3px 0px #f2f0ed, 0px -3px 0px #f2f0ed, 3px -3px 0px #f2f0ed, -3px 3px 0px #f2f0ed;
 }
 
 #logo-md {
@@ -545,7 +562,7 @@ font-family: 'Fahkwang', sans-serif;
     font-weight: bold;
   margin-top: -25px;
     font-family: 'Fahkwang', sans-serif;
-    text-shadow: 4px 4px 0px #f2f0ed, -4px -4px 0px #f2f0ed, -4px 0px 0px #f2f0ed, -0px 4px 0px #f2f0ed, 4px -4px 0px #f2f0ed;
+    text-shadow: 4px 4px 0px #f2f0ed, -4px -4px 0px #f2f0ed, -4px 0px 0px #f2f0ed, 0px 4px 0px #f2f0ed, 0px -4px 0px #f2f0ed, 4px -4px 0px #f2f0ed, -4px 4px 0px #f2f0ed;
 }
 
 
