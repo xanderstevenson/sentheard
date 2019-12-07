@@ -1,2 +1,2 @@
 python-dotenv
-python-dotenv
+django = ">=2.2.8"

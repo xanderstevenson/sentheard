@@ -149,7 +149,7 @@ $(document).ready(function () {
             smallMarble.fadeIn(2000)
             mediumMarble.hide()
             largeMarble.hide()
-            handPraySm.fadeIn(2500).fadeOut(1000)
+            handPraySm.fadeIn(2000).fadeOut(1000)
         } else if ($('#row1').width() > 650 && $('#row1').width() <= 1080) {
             // binding.hide()
             // binding2.hide()

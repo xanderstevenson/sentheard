@@ -298,6 +298,9 @@ label {
   align-content: center;
     padding: 15px;
     opacity: 0.85;
+  box-shadow:  2px 4px 10px #bda177;
+  border: 1px solid #bda177;
+
 }
 
 
