@@ -27,13 +27,13 @@ $(document).ready(function () {
     const mdImg = $('#mdImg')
     const lgImg = $('#lgImg')
     // hide the 3 logos from the start or all three will display (see window.resize)
-    smLogo.hide()
-    mdLogo.hide()
-    lgLogo.hide()
+    smLogo.css('visibility', 'hidden')
+    mdLogo.css('visibility', 'hidden')
+    lgLogo.css('visibility', 'hidden')
     // hide the 3 family images from the start or all three will display (see window.resize)
-    smImg.hide()
-    mdImg.hide()
-    lgImg.hide()
+    smImg.css('visibility', 'hidden')
+    mdImg.css('visibility', 'hidden')
+    lgImg.css('visibility', 'hidden')
     // praying hands image
     const handPrayLg = $('#hand-pray-lg')
     const handPrayMd = $('#hand-pray-md')
@@ -41,7 +41,7 @@ $(document).ready(function () {
 
     // flashing "Join for Free"
     const joinButton = $('.join-button')
-    joinButton.hide()
+    joinButton.css('visibility', 'hidden')
     // const joinButtonSm = $('#join-buttonSm')
     // const joinButtonMd = $('#join-buttonMd')
     // const joinButtonLg = $('#join-buttonLg')
@@ -65,7 +65,7 @@ $(document).ready(function () {
     ]
 
     // mega function switching verses and images on homescreen and fading the logo
-    const textMarbleAll = (marble, logo, image) => {
+    const textMarbleAll = (marble, logo, image, joinButton) => {
 
         const newText = () => {
 
@@ -80,7 +80,7 @@ $(document).ready(function () {
             } else if (marble.text() == verse[3]) {
                 return (verse[0])
             } else {
-                return (marble.text + '<--- text present')
+                return (verse[0])
             }
 
         }
@@ -115,23 +115,28 @@ $(document).ready(function () {
 
     }
 
-        setInterval(() => {
-            $(logo).fadeIn(2000);
-            image.attr('src', newImage)
-            image.fadeIn(2000)
-            joinButton.fadeIn(2000)
-            joinButton.attr('src', freeButtonSwitch(), 1500)
-            image.fadeOut(2000)
-            marble.text(newText)
-            $(logo).fadeOut(2000);
-        }, 4000)
+setInterval(() => {
+
+    marble.fadeTo(3000, 100, ()=> { marble.text(newText) ; marble.css('visibility', 'visible')  }).delay(2000)
+    image.fadeTo(3000, 100, ()=>{image.attr('src', newImage); image.css("visibility", "visible")  }).delay(2000)
+    joinButton.fadeTo(3000, 100, ()=>{ joinButton.attr("src", freeButtonSwitch); joinButton.css("visibility", "visible")  }).delay(2000)
+    logo.fadeTo(3000, 100, ()=>{ logo.css('visibility', 'visible')} ).delay(2000);
+
+
+
+    marble.fadeTo(2000, 0, ()=> { marble.css('visibility', 'hidden')  })
+    image.fadeTo(2000, 0, ()=>{ image.css("visibility", "hidden")  })
+    joinButton.fadeTo(2000, 100, ()=>{ joinButton.attr("src", freeButtonSwitch) ; joinButton.css("visibility", "visible") })
+    logo.fadeTo(2000, 0, ()=>{ logo.css('visibility', 'hidden')} );
+
+}, 2000)
 
     }
 
 
-    textMarbleAll(hcSmTxt, smLogo, smImg)
-    textMarbleAll(hcMdTxt, mdLogo, mdImg)
-    textMarbleAll(hcLgTxt, lgLogo, lgImg)
+    textMarbleAll(hcSmTxt, smLogo, smImg, joinButton)
+    textMarbleAll(hcMdTxt, mdLogo, mdImg, joinButton)
+    textMarbleAll(hcLgTxt, lgLogo, lgImg, joinButton)
 
     // interval function to make flashing neon "Join for Free"
 
@@ -149,7 +154,7 @@ $(document).ready(function () {
             smallMarble.fadeIn(2000)
             mediumMarble.hide()
             largeMarble.hide()
-            handPraySm.fadeIn(2000).fadeOut(1000)
+            handPraySm.fadeIn(2000).fadeOut(1500)
         } else if ($('#row1').width() > 650 && $('#row1').width() <= 1080) {
             // binding.hide()
             // binding2.hide()

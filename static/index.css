@@ -1,5 +1,4 @@
 
-
 * {
   align-content: center;
   text-align: center;
@@ -68,21 +67,25 @@ html {
 body {
   width: 100%;
   min-width: 355px;
-  max-width: 2500px;
-  min-height: 1200px;
+  max-width: 1900px;
+  min-height: 1000px;
   height: 100%;
-  background: url(images/parchment1.png);
-  /* -webkit-background-size: cover;
+  background-color: black;
+  background: url(images/cloud-parch.png);
+   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover; */
-  /* background-size: 100%; */
-  background-repeat: repeat-y;
+  -o-background-size: cover;
+   background-size: 100% 100%;
+  background-repeat: no-repeat;
   align-content: center;
   text-align: center;
   margin: 0px auto;
   margin: 0px auto;
   padding: 0px;
   padding-right: -15px;
+  display: inline-block;
+  border-image: url(images/gold.jpg) 30% round;
+   box-shadow: 3px 3px 10px #f2f0ed, -3px -3px 10px #f2f0ed, -3px 0px 10px #f2f0ed, 0px 3px 10px #f2f0ed, 0px -3px 10px #f2f0ed, 3px -3px 10px #f2f0ed, -3px 3px 10px #f2f0ed;
 }
 
 #full-wide {
@@ -94,7 +97,8 @@ p {
   color: white;
 }
 .container-fluid {
-  background: url();
+    z-index: 99;
+  /*background: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1575755678/SentHeard/Fiery-Cloud-water.gif);*/
   align-content: center;
   text-align: center;
   margin: 0px auto;
@@ -122,14 +126,14 @@ p {
   /* max-width: 464px; */
   margin: 0px auto;
   /* margin-left: 29px; */
-  margin-top: -49px;
+  margin-top: -48px;
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
   align-content: center;
   text-align: center;
-  border: 1px outset rgb(179, 179, 145);
-  border: 3px inset gold;
+  /*border: 1px outset rgb(179, 179, 145);*/
+  border: 3px solid gold;
   border-image: url(images/gold.jpg) 30% round;
   padding-top: 7px;
   box-shadow: 0px 6px 12px rgb(65, 65, 58);
@@ -200,7 +204,13 @@ p {
   /* padding-right: -10px; */
   /* padding: -110px; */
   display: inline-block;
-  /* background: url(images/parchment1.png);  */
+   /*background: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1575755678/SentHeard/Fiery-Cloud-water.gif);*/
+  /*  -webkit-background-size: contain;*/
+  /*-moz-background-size: contain;*/
+  /*-o-background-size: contain;*/
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
   /* opacity: 0.75; */
 }
 
@@ -272,7 +282,7 @@ label {
   /*margin-top: 20px;*/
   padding: 0px;
   /* opacity: 0.55; */
-  border: 3px outset rgb(241, 241, 18);
+  border: 3px ridge rgb(241, 241, 18);
   border-image: url(images/gold.jpg) 30% round;
   opacity: 0.95;
   display: block;
@@ -467,7 +477,7 @@ font-family: 'Fahkwang', sans-serif;
     max-height: 125px;
     margin: 20px auto;
     box-shadow: 0px 2px 10px gray;
-    border: 1px outset #d7b88a;
+    border: 1px solid #d7b88a;
     border-image: url(images/gold.jpg) 30% round;
 }
 
@@ -524,7 +534,7 @@ font-family: 'Fahkwang', sans-serif;
     max-height: 150px;
     margin: 20px auto;
     box-shadow: 0px 3px 10px gray;
-    border: 2px outset #d7b88a;
+    border: 2px solid #d7b88a;
     border-image: url(images/gold.jpg) 30% round;
 }
 
@@ -581,7 +591,7 @@ font-family: 'Fahkwang', sans-serif;
     max-height: 200px;
     margin: 25px auto;
     box-shadow: 0px 4px 10px gray;
-    border: 3px outset #d7b88a;
+    border: 3px solid #d7b88a;
     border-image: url(images/gold.jpg) 30% round;
 }
 
@@ -601,13 +611,13 @@ font-family: 'Fahkwang', sans-serif;
   align-content: center;
   text-align: center;
   margin-bottom: 0px;
-  border: 3px outset #d7b88a;
+  border: 2px solid #d7b88a;
   border-image: url(images/gold.jpg) 30% round;
   box-shadow: 0px 4px 10px gray;
-
+    opacity: 0.90;
 }
 
-#join-buttonSm,#join-buttonMd,#join-buttonLg {
+#join-buttonSm,#join-buttonMd,#join-buttonLg, .join-button  {
     max-width: 187px;
     margin-bottom: 0px;
 }
