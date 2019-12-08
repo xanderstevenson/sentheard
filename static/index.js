@@ -26,6 +26,11 @@ $(document).ready(function () {
     const smImg = $('#smImg')
     const mdImg = $('#mdImg')
     const lgImg = $('#lgImg')
+
+    hcSmTxt.css('visibility', 'hidden')
+    hcMdTxt.css('visibility', 'hidden')
+    hcLgTxt.css('visibility', 'hidden')
+
     // hide the 3 logos from the start or all three will display (see window.resize)
     smLogo.css('visibility', 'hidden')
     mdLogo.css('visibility', 'hidden')
@@ -117,15 +122,15 @@ $(document).ready(function () {
 
 setInterval(() => {
 
-    marble.fadeTo(3000, 100, ()=> { marble.text(newText) ; marble.css('visibility', 'visible')  }).delay(2000)
-    image.fadeTo(3000, 100, ()=>{image.attr('src', newImage); image.css("visibility", "visible")  }).delay(2000)
-    joinButton.fadeTo(3000, 100, ()=>{ joinButton.attr("src", freeButtonSwitch); joinButton.css("visibility", "visible")  }).delay(2000)
+    marble.fadeTo(3000, 100, ()=> { marble.css('visibility', 'visible')  }).delay(2000)
+    image.fadeTo(3000, 100, ()=>{ image.css("visibility", "visible")  }).delay(2000)
+    joinButton.fadeTo(3000, 100, ()=>{ joinButton.css("visibility", "visible")  }).delay(2000)
     logo.fadeTo(3000, 100, ()=>{ logo.css('visibility', 'visible')} ).delay(2000);
 
 
 
-    marble.fadeTo(2000, 0, ()=> { marble.css('visibility', 'hidden')  })
-    image.fadeTo(2000, 0, ()=>{ image.css("visibility", "hidden")  })
+    marble.fadeTo(2000, 0, ()=> { marble.css('visibility', 'hidden'); marble.text(newText)  })
+    image.fadeTo(2000, 0, ()=>{ image.css("visibility", "hidden"); image.attr('src', newImage)  })
     joinButton.fadeTo(2000, 100, ()=>{ joinButton.attr("src", freeButtonSwitch) ; joinButton.css("visibility", "visible") })
     logo.fadeTo(2000, 0, ()=>{ logo.css('visibility', 'hidden')} );
 
