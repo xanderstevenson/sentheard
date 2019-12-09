@@ -168,7 +168,7 @@ ERRORS:
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
-LOGIN_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = '../../post_stuff/gallery/'
 LOGOUT_REDIRECT_URL = 'index'
 
 
