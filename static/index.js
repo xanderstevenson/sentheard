@@ -26,6 +26,11 @@ $(document).ready(function () {
     const smImg = $('#smImg')
     const mdImg = $('#mdImg')
     const lgImg = $('#lgImg')
+
+    hcSmTxt.css('visibility', 'hidden')
+    hcMdTxt.css('visibility', 'hidden')
+    hcLgTxt.css('visibility', 'hidden')
+
     // hide the 3 logos from the start or all three will display (see window.resize)
     smLogo.css('visibility', 'hidden')
     mdLogo.css('visibility', 'hidden')
@@ -63,6 +68,9 @@ $(document).ready(function () {
     const freeButtons = ['https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png',
         'https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717415/SentHeard/free-button-black-fun.png'
     ]
+
+const homeContainers = $('.home-containers')
+
 
     // mega function switching verses and images on homescreen and fading the logo
     const textMarbleAll = (marble, logo, image, joinButton) => {
@@ -115,21 +123,24 @@ $(document).ready(function () {
 
     }
 
-setInterval(() => {
-
-    marble.fadeTo(3000, 100, ()=> { marble.text(newText) ; marble.css('visibility', 'visible')  }).delay(2000)
-    image.fadeTo(3000, 100, ()=>{image.attr('src', newImage); image.css("visibility", "visible")  }).delay(2000)
-    joinButton.fadeTo(3000, 100, ()=>{ joinButton.attr("src", freeButtonSwitch); joinButton.css("visibility", "visible")  }).delay(2000)
-    logo.fadeTo(3000, 100, ()=>{ logo.css('visibility', 'visible')} ).delay(2000);
 
 
+setInterval((event) => {
 
-    marble.fadeTo(2000, 0, ()=> { marble.css('visibility', 'hidden')  })
-    image.fadeTo(2000, 0, ()=>{ image.css("visibility", "hidden")  })
-    joinButton.fadeTo(2000, 100, ()=>{ joinButton.attr("src", freeButtonSwitch) ; joinButton.css("visibility", "visible") })
+
+    marble.fadeTo(2500, 1, 'swing', ()=> { marble.css('visibility', 'visible')  }).delay(2000)
+    image.fadeTo(2500, 1, 'swing', ()=>{ image.css("visibility", "visible")  }).delay(2000)
+    joinButton.fadeTo(2500, 1, 'swing', ()=>{ joinButton.css("visibility", "visible")  }).delay(2000)
+    logo.fadeTo(2500, 1, 'swing', ()=>{ logo.css('visibility', 'visible') } ).delay(2000)
+
+    marble.fadeTo(2000, 0, ()=> { marble.css('visibility', 'hidden'); marble.text(newText)  })
+    image.fadeTo(2000, 0, ()=>{ image.css("visibility", "hidden"); image.attr('src', newImage)  })
+    joinButton.fadeTo(2000, 1, ()=>{ joinButton.attr("src", freeButtonSwitch) ; joinButton.css("visibility", "visible") })
     logo.fadeTo(2000, 0, ()=>{ logo.css('visibility', 'hidden')} );
 
-}, 2000)
+
+
+}, 1000)
 
     }
 
@@ -154,21 +165,21 @@ setInterval(() => {
             smallMarble.fadeIn(2000)
             mediumMarble.hide()
             largeMarble.hide()
-            handPraySm.fadeIn(2000).fadeOut(1500)
+            handPraySm.fadeIn(1750).fadeOut(1250)
         } else if ($('#row1').width() > 650 && $('#row1').width() <= 1080) {
             // binding.hide()
             // binding2.hide()
             smallMarble.hide()
             mediumMarble.fadeIn(2000)
             largeMarble.hide()
-            handPrayMd.fadeIn(2500).fadeOut(1000)
+            handPrayMd.fadeIn(1750).fadeOut(1250)
         } else if ($('#row1').width() > 1080) {
             // binding.show()
             // binding2.show()
             smallMarble.hide()
             mediumMarble.hide()
             largeMarble.fadeIn(2000)
-            handPrayLg.fadeIn(3000).fadeOut(1000)
+            handPrayLg.fadeIn(1750).fadeOut(1250)
         }
     }
 

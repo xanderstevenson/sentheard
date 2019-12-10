@@ -2,6 +2,13 @@ from django.db import models
 from django_s3_storage.storage import S3Storage
 import uuid
 
+# django-storages and boto3
+class Upload(models.Model):
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+    file = models.FileField()
+#
+
+
 storage = S3Storage(aws_s3_bucket_name='django-static-sentheard')
 
 
@@ -38,6 +45,13 @@ class Text(models.Model):
     text_upload = models.FileField(storage=storage, default="")
     def __str__(self):
         return self.title
+
+
+# class Published(models.Model):
+#     photos_all = Photo.objects.all()
+#     audio_all = Audio.objects.all()
+#     video_all = Video.objects.all()
+#     text_all = Text.objects.all()
 
 
 # class Post(models.Model):
