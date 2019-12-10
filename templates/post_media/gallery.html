@@ -14,10 +14,9 @@
     <br>
     <h5>Django Image Uploading...</h5>
     <ul>
-      {% for photo in object_list %}
-        <h2>{{ photo.title }}</h2>
-        <img src="{{ post.photo.url}}" alt="{{ photo.title }}">
-      {% endfor %}
+    {% for photo in object_list %}
+            <p style='{color:black;}'>{{ photo.title }}</p>
+        {% endfor %}
     </ul>
 <img src="{{ photo.title }}" alt="...">
     {% endblock %}

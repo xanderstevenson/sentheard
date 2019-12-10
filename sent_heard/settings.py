@@ -37,9 +37,10 @@ INSTALLED_APPS = [
     'Sent_Heard_App',
     'posts',
     # 'posts.apps.PostsConfig',
-    'django_s3_storage',
+    'storages',
 ]
     # 'storages',
+        # 'django_s3_storage',
         # 'upload',
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -82,13 +83,13 @@ WSGI_APPLICATION = 'sent_heard.wsgi.application'
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'sentheard$sentheard-db',
+    'NAME': 'sentheard$default',
     'USER': 'sentheard',
     'PASSWORD': 'MsQL2019@!jw*aw3',
     'HOST': 'sentheard.mysql.pythonanywhere-services.com',
-    'sql_mode': 'strict',
-}
-}
+    # 'sql_mode': 'strict',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -123,48 +124,38 @@ USE_L10N = True
 USE_TZ = True
 
 
-DEFAULT_FILE_STORAGE = 'django_s3_storage.storage.S3Storage'
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_REGION = 'us-east-2'
-AWS_S3_BUCKET_NAME = 'django-static-sentheard'
-AWS_S3_REGION_NAME = 'us-east-2'
-AWS_S3_ENDPOINT_URL = ''
-AWS_S3_CUSTOM_DOMAIN = ""
-AWS_S3_ADDRESSING_STYLE = "auto"
-AWS_S3_BUCKET_AUTH = True
-AWS_S3_MAX_AGE_SECONDS = 60 * 60  # 1 hours.
-AWS_S3_ENCRYPT_KEY = True
-# General optimization for faster delivery
-AWS_IS_GZIPPED = True
-AWS_S3_OBJECT_PARAMETERS = {
-    'CacheControl': 'max-age=86400',
-}
-AWS_S3_SIGNATURE_VERSION = None
-AWS_S3_FILE_OVERWRITE = False
 
-MEDIA_URL = 'http://django-static-sentheard.apigateway.us-east-2.amazonaws.com/media/'
 
-# MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# USE_S3 = os.getenv('USE_S3') == 'TRUE'
+
+# if USE_S3:
+#     # aws settings
+#     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+#     AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+#     # add to os.environ
+#     AWS_STORAGE_BUCKET_NAME = 'django-static-sentheard'
+#     AWS_S3_REGION_NAME = 'us-east-2'
+#     AWS_DEFAULT_ACL = 'public-read'
+#     AWS_QUERYSTRING_AUTH = False
+#     AWS_IS_GZIPPED = True
+#     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+#     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+#     PUBLIC_MEDIA_LOCATION = '/media'
+#     # Perhaps add Region ID
+#     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
+#     # DEFAULT_FILE_STORAGE = 'sent_heard.storage_backends.PublicMediaStorage'
+#     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# else:
+#     MEDIA_URL = '/media/'
+#     MEDIA_ROOT = os.path.join(BASE_DIR, '/media')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '/media')
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/sentheard/sentheard/static/'
 
-
-# Commented this out because I got an error when I ran python manage.py migrate
-
-'''
-SystemCheckError: System check identified some issues:
-ERRORS:
-?: (staticfiles.E002) The STATICFILES_DIRS setting should not contain the STATIC_ROOT setting.
-'''
-
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-# ]
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
