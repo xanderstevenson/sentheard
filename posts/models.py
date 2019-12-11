@@ -1,6 +1,8 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django_s3_storage.storage import S3Storage
 import uuid
+from django.conf import settings
 
 # django-storages and boto3
 class Upload(models.Model):
@@ -15,8 +17,9 @@ storage = S3Storage(aws_s3_bucket_name='django-static-sentheard')
 class Photo(models.Model):
     uuid = models.UUIDField(
     primary_key=True, default=uuid.uuid4, editable=False,)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=None, null=True)
     title = models.CharField(default="", max_length=55)
-    photo = models.ImageField(storage=storage, default="")
+    photo = models.ImageField(upload_to='photos/', default="")
     def __str__(self):
         return self.title
 

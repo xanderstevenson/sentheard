@@ -2,7 +2,9 @@ from django.shortcuts import render
 from django.views.generic import ListView, CreateView
 from django.urls import reverse_lazy
 from django.conf import settings
+from django.utils import timezone
 from django.core.files.storage import FileSystemStorage
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .forms import PhotoForm, AudioForm, VideoForm, TextForm
 from .models import Photo, Audio, Video, Text
@@ -62,8 +64,14 @@ class CreateTextView(CreateView):
 class GalleryListView(ListView):
     model = Photo
     template_name = 'post_media/gallery.html'
-
-
+    context_object_name = 'photo_list'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
+    # def get_queryset(self):
+    #     queryset = super(GalleryListView, self).get_queryset()
+    #     return queryset.filter(author__username=self.kwargs['username'])
 
 def post_stuff(request):
     return render(request, "memories.html")
