@@ -16,7 +16,7 @@ class Photo(models.Model):
     uuid = models.UUIDField(
     primary_key=True, default=uuid.uuid4, editable=False,)
     title = models.CharField(default="", max_length=55)
-    photo = models.ImageField(storage=storage, default="")
+    photo = models.ImageField(upload_to='photos/', default="")
     def __str__(self):
         return self.title
 

@@ -2,7 +2,7 @@
 {% extends 'index.html' %}
 {% load static %}
 
-
+{% if user.is_authenticated %}
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
     <br>
@@ -13,14 +13,19 @@
     <h3 class="fuck-motto">Your Memories</h3>
     <br>
     <h5>Django Image Uploading...</h5>
-    <ul>
-    {% for photo in object_list %}
-            <p style='{color:black;}'>{{ photo.title }}</p>
-        {% endfor %}
-    </ul>
-<img src="{{ photo.title }}" alt="...">
-    {% endblock %}
 
+
+            <ul>
+            {% for photo in object_list %}
+                    <p style='{color:black;}'>{{ photo.title }}</p>
+
+            </ul>
+             <img src="static{{ photo.photo.url }}" alt="...">
+             {% endfor %}
+
+
+    {% endblock %}
+{% endif %}
 
 
 <!--<h2>{{ user.get_full_name }}</h2>-->
