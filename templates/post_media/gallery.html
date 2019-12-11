@@ -12,12 +12,12 @@
 
     <h3 class="fuck-motto">Your Memories</h3>
     <br>
-    <h5>Django Image Uploading...</h5>
+    <!--<h5>Django Image Uploading...</h5>-->
 
 
             <ul>
             {% for photo in object_list %}
-                    <p style='{color:black;}'>{{ photo.title }}</p>
+                    <p style='{color:black;}'>Photo title: {{ photo.title }} </br> Author: {{ photo.author }}</p>
 
             </ul>
              <img src="https://www.sentheard.com/static{{ photo.photo.url }}" alt="...">
