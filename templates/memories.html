@@ -5,16 +5,17 @@
 
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
-    <div id='post-page'>
+
     <h1>Save Memories</h1>
-    <br>
-
-
-    <a href={% url 'add_photos' %}><i class="fas fa-camera-retro data-input-post">   Add Photos</i></a><br>
-    <a href={% url 'add_audio' %}><i class="fas fa-microphone-alt data-input-post">   Record Audio</i></a><br>
-    <a href={% url 'add_video' %}><i class="fas fa-file-video data-input-post">   Record or Upload Video</i></a><br>
-    <a href={% url 'text' %}><i class="fas fa-file-alt data-input-post">   Upload or Type Your Text</i></a>
-
-
+    </br>
+    <div class='row' >
+    <div id='post-page'>
+    <ul>
+        <li><a href={% url 'add_photos' %}><i class="fas fa-camera-retro data-input-post">      Add Photos</i></a></li>
+        <li><a href={% url 'add_audio' %}><i class="fas fa-microphone-alt data-input-post">      Record Audio</i></a></li>
+        <li><a href={% url 'add_video' %}><i class="fas fa-file-video data-input-post">      Record or Upload Video</i></a></li>
+        <li><a href={% url 'text' %}><i class="fas fa-file-alt data-input-post">      Upload or Type Your Text</i></a></li>
+    </ul>
+    </div>
     </div>
     {% endblock %}

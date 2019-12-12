@@ -18,7 +18,7 @@
             {% for photo in object_list %}
             <div class='photo_gallery_img'>
                     <p id="photo-title">{{ photo.title }} </p>
-             <img  src="https://www.sentheard.com/static{{ photo.photo.url }}" alt="...">
+             <img class="zoomTarget" src="https://www.sentheard.com/static{{ photo.photo.url }}" alt="...">
              </div>
              {% endfor %}
 
