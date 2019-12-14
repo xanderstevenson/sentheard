@@ -201,7 +201,7 @@ p {
 }
 
 #row2 {
-  /* margin-left: 10px; */
+   margin-left: -20px;
   /* background-color: orange; */
   width: 100%;
   margin: 0px auto;
@@ -294,7 +294,7 @@ label {
 
 #title-box p {
   font-size: 42px;
-  color: rgb(33, 53, 10);
+  color: black;
   text-shadow: -2px 1px ghostwhite;
   font-weight: bold;
 }
@@ -652,21 +652,113 @@ font-family: 'Fahkwang', sans-serif;
 
 #post-page {
     font-size: 25px;
+    margin: 0px auto;
+
+    align-content: center;
+    width: 95%;
+    height: auto;
+    max-width: 575px;
+     background-image: url(images/photo_gallery/cloud-from-plane-animated.gif);
+     -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    box-shadow: 1px 1px 9px #333328, -1px 1px 9px #333328;
+  border: 4px solid #d7b88a;
+  border-image: url(images/gold.jpg) 30% square;
 }
 
 #post-page i {
     text-align: left;
+    margin: 0px auto;
 }
 
+#post-page a {
+    margin: 10px auto;
+    align-content: center;
+    /*float: left;*/
+}
+
+#post-page li{
+        margin: 10px auto;
+    align-content: center;
+    list-style-type:none
+}
+
+
+
 .data-input-post {
-    border: 2px ridge gray;
+  border: 2px solid #d7b88a;
+        border-image: url(images/gold.jpg) 30% round;
     padding: 10px;
     margin-top: 10px;
     background-color: silver;
-    background-image: url(images/gold_cloud.png);
-    opacity: 0.85;
-      background-image: url(images/gold.jpg);
+    background-image: url(images/gold.jpg);
+    opacity: 0.90;
+
     text-shadow: 1px 1px 1px white;
-      box-shadow: 0px 4px 10px #CDD3A6;
-      border-image: url(images/gold.jpg) 30% round;
+  box-shadow: 1px 1px 4px #CDD3A6, -1px 1px 4px #CDD3A6;
+    /*box-shadow: 1px 1px 9px #333328, -1px 1px 9px #333328;*/
+      /*float: left;*/
+}
+
+.photo_gallery_img {
+
+    color: black;
+    max-width: 275px;
+    max-height: 275px;
+      border: 2px solid #d7b88a;
+  border-image: url(images/gold.jpg) 30% round;
+ /*float: left;*/
+  margin-top: 5px;
+  padding: 10px;
+  background-color: gray;
+  opacity: 0.85;
+  box-shadow: 1px 1px 9px #333328, -1px 1px 9px #333328;
+}
+
+.photo_gallery_img img{
+
+    color: black;
+    max-width: 200px;
+    max-height: 200px;
+        min-width: 175px;
+    min-height: 175px;
+      border: 2px ridge #d7b88a;
+    opacity: 1.0;
+  margin-top: -5px;
+      box-shadow: 1px 1px 9px #333328, -1px 1px 9px #333328;
+}
+
+#photo-title {
+ color: black;
+ font-size: 24px;
+ opacity: 1.0;
+}
+
+#photo_gallery_block {
+width: 100%;
+height: 100%;
+min-width: 300px;
+min-height: 300px;
+max-width: 1150px;
+border: 1px solid black;
+color: black;
+ align-content: center;
+ margin: 0px auto;
+ padding: 5px;
+ background-image: url(images/photo_gallery/photo-gallary-angels.jpg);
+     -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+        border: 4px solid #d7b88a;
+  border-image: url(images/gold.jpg) 25% square;
+    box-shadow: 2px 2px 18px #333328, -2px 2px 18px #333328;
+}
+
 }

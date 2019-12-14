@@ -5,21 +5,18 @@
 
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
-    <br>
+
     <h1>Account</h1>
-    <br>
+
     <!--<img src="/static/images/medeival.png" alt="" style="width:300px; height:200px;">-->
-    <br>
-    <br>
 
     <h3 class="fuck-motto">Your Account</h3>
 
     <p>User: {{ user }}</p>
 
-    {% for email in user.items %}
-    {{email}}<br>
-    {% endfor %}
-    <h1>test</h1>
+    <!--{% for item in user.items %}-->
+    {{author}}<br>
+    <!--{% endfor %}-->
     <p><a href="{% url 'password_reset' %}">Reset Your Password</a></p>
 
     {% endblock %}

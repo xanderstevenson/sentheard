@@ -1,5 +1,5 @@
-$(document).ready(function () {
 
+$(document).ready(function () {
 
     // scrolls / pillars
     const binding = $("#binding")
@@ -165,21 +165,21 @@ setInterval((event) => {
             smallMarble.fadeIn(2000)
             mediumMarble.hide()
             largeMarble.hide()
-            handPraySm.fadeIn(1750).fadeOut(1250)
+            handPraySm.fadeIn(1500).fadeOut(1250)
         } else if ($('#row1').width() > 650 && $('#row1').width() <= 1080) {
             // binding.hide()
             // binding2.hide()
             smallMarble.hide()
             mediumMarble.fadeIn(2000)
             largeMarble.hide()
-            handPrayMd.fadeIn(1750).fadeOut(1250)
+            handPrayMd.fadeIn(1500).fadeOut(1250)
         } else if ($('#row1').width() > 1080) {
             // binding.show()
             // binding2.show()
             smallMarble.hide()
             mediumMarble.hide()
             largeMarble.fadeIn(2000)
-            handPrayLg.fadeIn(1750).fadeOut(1250)
+            handPrayLg.fadeIn(1500).fadeOut(1250)
         }
     }
 
