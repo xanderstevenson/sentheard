@@ -27,26 +27,29 @@ $(document).ready(function () {
     const mdImg = $('#mdImg')
     const lgImg = $('#lgImg')
 
-    hcSmTxt.css('visibility', 'hidden')
-    hcMdTxt.css('visibility', 'hidden')
-    hcLgTxt.css('visibility', 'hidden')
+    hcSmTxt.hide()
+    hcMdTxt.hide()
+    hcLgTxt.hide()
 
     // hide the 3 logos from the start or all three will display (see window.resize)
-    smLogo.css('visibility', 'hidden')
-    mdLogo.css('visibility', 'hidden')
-    lgLogo.css('visibility', 'hidden')
+    smLogo.hide()
+    mdLogo.hide()
+    lgLogo.hide()
     // hide the 3 family images from the start or all three will display (see window.resize)
-    smImg.css('visibility', 'hidden')
-    mdImg.css('visibility', 'hidden')
-    lgImg.css('visibility', 'hidden')
-    // praying hands image
+    smImg.hide()
+    mdImg.hide()
+    lgImg.hide()
     const handPrayLg = $('#hand-pray-lg')
     const handPrayMd = $('#hand-pray-md')
     const handPraySm = $('#hand-pray-sm')
 
+    handPrayLg.hide()
+    handPrayMd.hide()
+    handPraySm.hide()
+
     // flashing "Join for Free"
     const joinButton = $('.join-button')
-    joinButton.css('visibility', 'hidden')
+    joinButton.hide()
     // const joinButtonSm = $('#join-buttonSm')
     // const joinButtonMd = $('#join-buttonMd')
     // const joinButtonLg = $('#join-buttonLg')
@@ -90,9 +93,7 @@ const homeContainers = $('.home-containers')
             } else {
                 return (verse[0])
             }
-
         }
-
 
         const newImage = () => {
             if (image.attr('src') == '') {
@@ -110,7 +111,6 @@ const homeContainers = $('.home-containers')
             }
         }
 
-
         const freeButtonSwitch = () => {
 
           if (joinButton.attr('src') == freeButtons[0]) {
@@ -125,18 +125,18 @@ const homeContainers = $('.home-containers')
 
 
 
-setInterval((event) => {
+setInterval(() => {
 
 
-    marble.fadeTo(2500, 1, 'swing', ()=> { marble.css('visibility', 'visible')  }).delay(2000)
-    image.fadeTo(2500, 1, 'swing', ()=>{ image.css("visibility", "visible")  }).delay(2000)
-    joinButton.fadeTo(2500, 1, 'swing', ()=>{ joinButton.css("visibility", "visible")  }).delay(2000)
-    logo.fadeTo(2500, 1, 'swing', ()=>{ logo.css('visibility', 'visible') } ).delay(2000)
+    marble.fadeTo(3000, 1, 'swing', ()=> { marble.fadeIn(3000) }).delay(2000)
+    image.fadeTo(3000, 1, 'swing', ()=>{ image.fadeIn(3000)  }).delay(2000)
+    joinButton.fadeTo(3000, 1, 'swing', ()=>{ joinButton.fadeIn(3000)  }).delay(2000)
+    logo.fadeTo(3000, 1, 'swing', ()=>{ logo.fadeIn(3000) } ).delay(2000)
 
-    marble.fadeTo(2000, 0, ()=> { marble.css('visibility', 'hidden'); marble.text(newText)  })
-    image.fadeTo(2000, 0, ()=>{ image.css("visibility", "hidden"); image.attr('src', newImage)  })
+    marble.fadeTo(2000, 0, ()=> { marble.fadeOut(); marble.text(newText)  })
+    image.fadeTo(2000, 0, ()=>{ image.fadeOut(); image.attr('src', newImage)  })
     joinButton.fadeTo(2000, 1, ()=>{ joinButton.attr("src", freeButtonSwitch) ; joinButton.css("visibility", "visible") })
-    logo.fadeTo(2000, 0, ()=>{ logo.css('visibility', 'hidden')} );
+    logo.fadeTo(2000, 0, ()=>{ logo.fadeOut()} );
 
 
 
@@ -157,29 +157,35 @@ setInterval((event) => {
 // Fade in appropriate marble frame size on screen load
 
     window.onload = function (event) {
-        $('#title-box').toggleClass('titleBoxGlow')
+        // $('#title-box').toggleClass('titleBoxGlow')
 
         if ($('#row1').width() <= 650) {
             // binding.hide()
             // binding2.hide()
-            smallMarble.fadeIn(2000)
+            // handPraySm.show()
+            handPraySm.fadeIn()
+            smallMarble.delay(3000).fadeIn(3000)
+            handPraySm.delay(1000).fadeOut(1500)
             mediumMarble.hide()
             largeMarble.hide()
-            handPraySm.fadeIn(1500).fadeOut(1250)
+
         } else if ($('#row1').width() > 650 && $('#row1').width() <= 1080) {
             // binding.hide()
             // binding2.hide()
-            smallMarble.hide()
-            mediumMarble.fadeIn(2000)
+            handPrayMd.show()
+            mediumMarble.delay(3000).fadeIn(3000)
+            handPrayMd.delay(1000).fadeOut(1500)
             largeMarble.hide()
-            handPrayMd.fadeIn(1500).fadeOut(1250)
+            smallMarble.hide()
+
         } else if ($('#row1').width() > 1080) {
             // binding.show()
             // binding2.show()
+            handPrayLg.fadeIn()
+            largeMarble.delay(3000).fadeIn(3000)
+            handPrayLg.delay(1000).fadeOut(1500)
             smallMarble.hide()
             mediumMarble.hide()
-            largeMarble.fadeIn(2000)
-            handPrayLg.fadeIn(1500).fadeOut(1250)
         }
     }
 

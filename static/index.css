@@ -448,6 +448,7 @@ p .helptext {
   padding: 0px 4px 0px 4px;
   border: 1px outset #d7b88a;
   box-shadow: 1px 1px 4px #808071, -1px 1px 4px #808071, 0px 1px 4px #808071;
+      position: relative;
 }
 
 #home-container p {
@@ -505,6 +506,7 @@ font-family: 'Fahkwang', sans-serif;
   padding-top: 5px;
   border: 2px outset #d7b88a;
   box-shadow: 2px 2px 8px #808071, -2px 2px 8px #808071, 0px 2px 8px #808071;
+      position: relative;
 }
 
 #home-container-md p {
@@ -562,6 +564,7 @@ font-family: 'Fahkwang', sans-serif;
   padding-top: 10px;
   border: 3px outset #d7b88a;
   box-shadow: 3px 3px 12px #808071, -3px 3px 12px #808071, 0px 3px 12px #808071;
+      position: relative;
 }
 
 #home-container-lg p {
@@ -605,38 +608,49 @@ font-family: 'Fahkwang', sans-serif;
     width: 187px;
     height: 100px;
     color: black;
-    background-color: white;
-    -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  border: 2px solid #d7b88a;
+  position: absolute;
+    bottom: 4%;
+        left: 25%;
+            right: 25%;
+  margin: 0px auto;
   align-content: center;
   text-align: center;
-  margin-bottom: 0px;
-  border: 2px solid #d7b88a;
   border-image: url(images/gold.jpg) 30% round;
   box-shadow: 0px 4px 10px gray;
     opacity: 0.90;
 }
 
-#join-buttonSm,#join-buttonMd,#join-buttonLg, .join-button  {
+#join-buttonSm, {
     max-width: 187px;
-    margin-bottom: 0px;
+
+  margin: 0px auto;
+  align-content: center;
+  text-align: center;
+
 }
+
+#join-buttonMd {
+
+}
+
+#join-buttonLg {
+
+}
+
 
 #hand-pray-lg{
     margin: 0px auto;
-    margin-top: 25%;
+    margin-top: 15%;
     align-content: center;
     display: none;
     max-width: 600px;
+    opacity: 0.70;
 }
 
 #hand-pray-md{
     margin: 0px auto;
-    margin-top: 35%;
+    margin-top: 25%;
     align-content: center;
     display: none;
     max-width: 500px;
@@ -645,7 +659,7 @@ font-family: 'Fahkwang', sans-serif;
 
 #hand-pray-sm{
     margin: 0px auto;
-    margin-top: 45%;
+    margin-top: 35%;
     align-content: center;
     display: none;
 }
