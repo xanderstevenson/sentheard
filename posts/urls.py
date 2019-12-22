@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.generic import TemplateView
 from . import views
-from .views import CreatePhotoView, CreateAudioView, CreateVideoView, CreateTextView, GalleryListView
+from .views import CreatePhotoView, CreateAudioView, CreateVideoView, CreateTextView, GalleryListView, PhotoGalleryListView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -17,6 +17,7 @@ urlpatterns = [
     path('text/', CreateTextView.as_view(), name='text'),
     # path('published/', PublishedList.as_view(), name='published'),
     path('gallery/', GalleryListView.as_view(), name="gallery"),
+    path('gallery/photo_gallery', PhotoGalleryListView.as_view(), name="photo_gallery"),
     path('', views.post_stuff, name="post_stuff"),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

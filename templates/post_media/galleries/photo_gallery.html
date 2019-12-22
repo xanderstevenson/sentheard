@@ -1,0 +1,30 @@
+
+{% extends 'index.html' %}
+{% load static %}
+
+{% if user.is_authenticated %}
+    {% block content %}
+    <link rel="stylesheet" href="/static/index.css"/>
+    <br>
+    <h1>Photo Gallery</h1>
+
+
+    <h3 class="fuck-motto">Your Memories...</h3>
+    <br>
+    <!--<h5>Django Image Uploading...</h5>-->
+            {{ photo.author }}
+<div id='photo_gallery_block' class='row'>
+
+            {% for photo in object_list %}
+            {% if photo.author == user %}
+            <div class='photo_gallery_img zoomTarget'>
+                    <p id="photo-title">{{ photo.title }} </p>
+             <img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ photo.photo.url }}" alt="...">
+             </div>
+             {% endif %}
+             {% endfor %}
+
+</div>
+
+    {% endblock %}
+{% endif %}

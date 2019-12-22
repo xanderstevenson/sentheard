@@ -55,12 +55,6 @@ class CreateTextView(CreateView):
     success_url = reverse_lazy('gallery')
 
 
-# class PublishedList(ListView):
-#     model = Photo
-#     template_name = 'post_media/published.html'
-#     context_object_name = 'photo_list'   # your own name for the list as a template variable
-#     queryset = Photo.objects
-
 class GalleryListView(ListView):
     model = Photo
     template_name = 'post_media/gallery.html'
@@ -69,9 +63,17 @@ class GalleryListView(ListView):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
         return context
-    # def get_queryset(self):
-    #     queryset = super(GalleryListView, self).get_queryset()
-    #     return queryset.filter(author__username=self.kwargs['username'])
+
+class PhotoGalleryListView(ListView):
+    model = Photo
+    template_name = 'post_media/galleries/photo_gallery.html'
+    context_object_name = 'photo_list'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
+
+
 
 def post_stuff(request):
     return render(request, "memories.html")
