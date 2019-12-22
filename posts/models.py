@@ -15,8 +15,8 @@ storage = S3Storage(aws_s3_bucket_name='django-static-sentheard')
 
 
 class Photo(models.Model):
-    uuid = models.UUIDField(
-    primary_key=True, default=uuid.uuid4, editable=False,)
+    photo_id = models.UUIDField(
+    primary_key=False, default=uuid.uuid4, editable=False,)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=None, null=True)
     title = models.CharField(default="", max_length=55)
     photo = models.ImageField(upload_to='photos/', default="")
@@ -24,16 +24,16 @@ class Photo(models.Model):
         return self.title
 
 class Audio(models.Model):
-    uuid = models.UUIDField(
-    primary_key=True, default=uuid.uuid4, editable=False,)
+    audio_id = models.UUIDField(
+    primary_key=False, default=uuid.uuid4, editable=False,)
     title = models.CharField(default="", max_length=55)
     audio = models.FileField(storage=storage, default="")
     def __str__(self):
         return self.title
 
 class Video(models.Model):
-    uuid = models.UUIDField(
-    primary_key=True, default=uuid.uuid4, editable=False,)
+    video_id = models.UUIDField(
+    primary_key=False, default=uuid.uuid4, editable=False,)
     title = models.CharField(default="", max_length=55)
     video = models.FileField(storage=storage, default="")
     def __str__(self):
@@ -41,8 +41,8 @@ class Video(models.Model):
 
 
 class Text(models.Model):
-    uuid = models.UUIDField(
-    primary_key=True, default=uuid.uuid4, editable=False,)
+    text_id = models.UUIDField(
+    primary_key=False, default=uuid.uuid4, editable=False,)
     title = models.CharField(default="", max_length=55)
     text_typed = models.TextField(default="", max_length=510)
     text_upload = models.FileField(storage=storage, default="")
