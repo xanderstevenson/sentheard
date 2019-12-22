@@ -26,7 +26,7 @@ class Photo(models.Model):
 class Audio(models.Model):
     audio_id = models.UUIDField(
     primary_key=False, default=uuid.uuid4, editable=False,)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=None, null=True)
+    author = models.ForeignKey(User, on_delete=models.PROTECT, default=None, null=True)
     title = models.CharField(default="", max_length=55)
     audio = models.FileField(storage=storage, default="")
     def __str__(self):
@@ -35,7 +35,7 @@ class Audio(models.Model):
 class Video(models.Model):
     video_id = models.UUIDField(
     primary_key=False, default=uuid.uuid4, editable=False,)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=None, null=True)
+    author = models.ForeignKey(User, on_delete=models.PROTECT, default=None, null=True)
     title = models.CharField(default="", max_length=55)
     video = models.FileField(storage=storage, default="")
     def __str__(self):
@@ -45,7 +45,7 @@ class Video(models.Model):
 class Text(models.Model):
     text_id = models.UUIDField(
     primary_key=False, default=uuid.uuid4, editable=False,)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=None, null=True)
+    author = models.ForeignKey(User, on_delete=models.PROTECT, default=None, null=True)
     title = models.CharField(default="", max_length=55)
     text_typed = models.TextField(default="", max_length=510)
     text_upload = models.FileField(storage=storage, default="")

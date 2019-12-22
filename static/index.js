@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     // scrolls / pillars
@@ -47,6 +46,26 @@ $(document).ready(function () {
     handPrayMd.hide()
     handPraySm.hide()
 
+const theCloudTitle= $('#cloud-bg-title')
+
+const changeCloudTitleSides = ()=>{
+    borders = ['border-left-color', 'border-top-color', 'border-right-color', 'border-bottom-color']
+    let origColor = 'rgb(189, 161, 119)'
+    let goldenRod = 'rgb(238, 232, 170)'
+    for(let i=0; i < 4; i++){
+
+        if(theCloudTitle.css(borders[i]) == origColor){
+            theCloudTitle.css(borders[i], goldenRod).delay(2000)
+            theCloudTitle.css('box-shadow', '2px 4px 30px rgb(238, 232, 170)').delay(2000)
+        }
+
+        else {
+           theCloudTitle.css(borders[i], origColor).delay(2000)
+            theCloudTitle.css('box-shadow', '2px 4px 10px rgb(189, 161, 119)').delay(2000)
+        }
+
+    }
+}
     // flashing "Join for Free"
     const joinButton = $('.join-button')
     joinButton.hide()
@@ -72,7 +91,7 @@ $(document).ready(function () {
         'https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717415/SentHeard/free-button-black-fun.png'
     ]
 
-const homeContainers = $('.home-containers')
+    const homeContainers = $('.home-containers')
 
 
     // mega function switching verses and images on homescreen and fading the logo
@@ -113,34 +132,56 @@ const homeContainers = $('.home-containers')
 
         const freeButtonSwitch = () => {
 
-          if (joinButton.attr('src') == freeButtons[0]) {
-            return (freeButtons[1])
-        } else if (joinButton.attr('src') == freeButtons[1]) {
-            return (freeButtons[0])
-        } else {
-            return (freeButtons[0])
+            if (joinButton.attr('src') == freeButtons[0]) {
+                return (freeButtons[1])
+            } else if (joinButton.attr('src') == freeButtons[1]) {
+                return (freeButtons[0])
+            } else {
+                return (freeButtons[0])
+            }
+
         }
 
-    }
+
+
+        setInterval(() => {
+
+
+            marble.fadeTo(3000, 1, 'swing', () => {
+                marble.fadeIn(3000)
+            }).delay(2000)
+            image.fadeTo(3000, 1, 'swing', () => {
+                image.fadeIn(3000)
+            }).delay(2000)
+            joinButton.fadeTo(3000, 1, 'swing', () => {
+                joinButton.fadeIn(3000)
+            }).delay(2000)
+            logo.fadeTo(3000, 1, 'swing', () => {
+                logo.fadeIn(3000)
+            }).delay(2000)
+
+        changeCloudTitleSides()
+
+
+            marble.fadeTo(2000, 0, () => {
+                marble.fadeOut();
+                marble.text(newText)
+            })
+            image.fadeTo(2000, 0, () => {
+                image.fadeOut();
+                image.attr('src', newImage)
+            })
+            joinButton.fadeTo(2000, 1, () => {
+                joinButton.attr("src", freeButtonSwitch);
+                joinButton.css("visibility", "visible")
+            })
+            logo.fadeTo(2000, 0, () => {
+                logo.fadeOut()
+            });
 
 
 
-setInterval(() => {
-
-
-    marble.fadeTo(3000, 1, 'swing', ()=> { marble.fadeIn(3000) }).delay(2000)
-    image.fadeTo(3000, 1, 'swing', ()=>{ image.fadeIn(3000)  }).delay(2000)
-    joinButton.fadeTo(3000, 1, 'swing', ()=>{ joinButton.fadeIn(3000)  }).delay(2000)
-    logo.fadeTo(3000, 1, 'swing', ()=>{ logo.fadeIn(3000) } ).delay(2000)
-
-    marble.fadeTo(2000, 0, ()=> { marble.fadeOut(); marble.text(newText)  })
-    image.fadeTo(2000, 0, ()=>{ image.fadeOut(); image.attr('src', newImage)  })
-    joinButton.fadeTo(2000, 1, ()=>{ joinButton.attr("src", freeButtonSwitch) ; joinButton.css("visibility", "visible") })
-    logo.fadeTo(2000, 0, ()=>{ logo.fadeOut()} );
-
-
-
-}, 1000)
+        }, 1000)
 
     }
 
@@ -154,7 +195,7 @@ setInterval(() => {
 
 
 
-// Fade in appropriate marble frame size on screen load
+    // Fade in appropriate marble frame size on screen load
 
     window.onload = function (event) {
         // $('#title-box').toggleClass('titleBoxGlow')
