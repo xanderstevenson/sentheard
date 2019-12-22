@@ -73,7 +73,32 @@ class PhotoGalleryListView(ListView):
         context['now'] = timezone.now()
         return context
 
+class AudioGalleryListView(ListView):
+    model = Audio
+    template_name = 'post_media/galleries/audio_gallery.html'
+    context_object_name = 'audio_list'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
 
+class VideoGalleryListView(ListView):
+    model = Video
+    template_name = 'post_media/galleries/video_gallery.html'
+    context_object_name = 'video_list'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
+
+class TextGalleryListView(ListView):
+    model = Text
+    template_name = 'post_media/galleries/text_gallery.html'
+    context_object_name = 'texto_list'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
 
 def post_stuff(request):
     return render(request, "memories.html")

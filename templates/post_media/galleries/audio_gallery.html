@@ -12,13 +12,14 @@
     <h3 class="fuck-motto">Your Memories...</h3>
     <br>
     <!--<h5>Django Image Uploading...</h5>-->
-            {{ audio.author }}
+
 <div id='photo_gallery_block' class='row'>
 
             {% for audio in audio_list %}
             {% if audio.author == user %}
             <div class='photo_gallery_img zoomTarget'>
                     <p id="photo-title">{{ audio.title }} </p>
+                <p id="photo-title">{{ audio.author }} </p>
              <!--<img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ photo.photo.url }}" alt="...">-->
              </div>
              {% endif %}
