@@ -17,7 +17,7 @@ storage = S3Storage(aws_s3_bucket_name='django-static-sentheard')
 class Photo(models.Model):
     photo_id = models.UUIDField(
     primary_key=False, default=uuid.uuid4, editable=False,)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=None, null=True)
+    author = models.ForeignKey(User, on_delete=models.PROTECT, default=None, null=True)
     title = models.CharField(default="", max_length=55)
     photo = models.ImageField(upload_to='photos/', default="")
     def __str__(self):

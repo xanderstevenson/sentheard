@@ -19,6 +19,7 @@
             {% if photo.author == user %}
             <div class='photo_gallery_img zoomTarget'>
                     <p id="photo-title">{{ photo.title }} </p>
+                    <p>{{ photo.author}} </p>
              <img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ photo.photo.url }}" alt="...">
              </div>
              {% endif %}
