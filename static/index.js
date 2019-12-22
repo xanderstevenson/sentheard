@@ -47,6 +47,7 @@ $(document).ready(function () {
     handPraySm.hide()
 
 const theCloudTitle= $('#cloud-bg-title')
+const theBanner= $('#banner')
 
 const changeCloudTitleSides = ()=>{
     borders = ['border-left-color', 'border-top-color', 'border-right-color', 'border-bottom-color']
@@ -57,11 +58,13 @@ const changeCloudTitleSides = ()=>{
         if(theCloudTitle.css(borders[i]) == origColor){
             theCloudTitle.css(borders[i], goldenRod).delay(2000)
             theCloudTitle.css('box-shadow', '2px 4px 30px rgb(238, 232, 170)').delay(2000)
+            theBanner.css('box-shadow', '0px 6px 22px rgb(238, 232, 170)').delay(2000)
         }
 
         else {
            theCloudTitle.css(borders[i], origColor).delay(2000)
             theCloudTitle.css('box-shadow', '2px 4px 10px rgb(189, 161, 119)').delay(2000)
+            theBanner.css('box-shadow', '0px 6px 12px rgb(65, 65, 58)').delay(2000)
         }
 
     }
