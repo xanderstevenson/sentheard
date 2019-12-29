@@ -5,9 +5,12 @@
 {% if user.is_authenticated %}
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
+    <h3>AudioGallery</h3>
 
 
- <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!--ALL JPLAYER STUFF -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link type="text/css" href="/static/skin/pink.flag/jplayer.pink.flag.css" rel="stylesheet" />
 
 <script type="text/javascript" src="/static/js/jquery.jplayer.min.js"></script>
@@ -98,7 +101,7 @@ $(document).ready(function(){
 });
 //]]>
 </script>
-
+<div id='photo_gallery_block' class='row'>
 
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
@@ -138,28 +141,11 @@ $(document).ready(function(){
   </div>
 </div>
 
+<!--ALL JPLAYER STUFF ENDS-->
 
 
+<!--<div id='photo_gallery_block' class='row'>-->
 
-
-
-
-
-
-
-
-
-
-
-    <br>
-    <h1>AudioGallery</h1>
-
-
-    <h3 class="fuck-motto">Your Memories...</h3>
-    <br>
-    <!--<h5>Django Image Uploading...</h5>-->
-
-<div id='photo_gallery_block' class='row'>
 
             {% for audio in audio_list %}
             {% if audio.author == user %}

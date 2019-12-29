@@ -14,6 +14,17 @@
  * Skin Version: 2.1 (jPlayer 2.8.0)
  * Date: 13th November 2014
  */
+
+#jp_container_1 {
+    width: 350px;
+    margin: 0px auto;
+    align-content: center;
+    float: left;
+}
+
+
+
+
 .jp-audio *:focus,
 .jp-audio-stream *:focus,
 .jp-video *:focus {
@@ -40,7 +51,7 @@
   background-color: #3a2a45; }
 
 .jp-audio {
-  width: 201px;
+  /*width: 370px;*/
   padding: 20px; }
 
 .jp-audio-stream {
@@ -66,12 +77,14 @@
   z-index: 1000; }
 
 .jp-video-full .jp-jplayer {
-  top: 0;
-  left: 0;
-  position: fixed !important;
-  position: relative;
+  /*top: 0;*/
+  /*left: 0;*/
+  /*position: fixed !important;*/
+  /*position: relative;*/
   /* Rules for IE6 (full-screen) */
-  overflow: hidden; }
+  /*overflow: hidden; */
+
+}
 
 .jp-video-full .jp-gui {
   position: fixed !important;
@@ -540,10 +553,10 @@ span.jp-artist {
 .jp-video-play-icon:focus {
   background: url("../image/jplayer.pink.flag.video.play.png") 0 -100px no-repeat; }
 
-.jp-jplayer audio,
-.jp-jplayer {
-  width: 0px;
-  height: 0px; }
+/*.jp-jplayer audio,*/
+/*.jp-jplayer {*/
+/*  width: 0px;*/
+/*  height: 0px; }*/
 
 .jp-jplayer {
   background-color: #000000; }

@@ -3,8 +3,8 @@ $(document).ready(function () {
     // scrolls / pillars
     const binding = $("#binding")
     const binding2 = $("#binding2")
-    binding.fadeOut(4000)
-    binding2.fadeOut(4000)
+    binding.fadeOut(3000)
+    binding2.fadeOut(3000)
     // rectangles of marble on home screen
     const smallMarble = $("#home-container")
     const mediumMarble = $("#home-container-md")
@@ -58,16 +58,16 @@ const changeCloudTitleSides = ()=>{
         if(theCloudTitle.css(borders[i]) == origColor){
             theCloudTitle.css(borders[i], goldenRod).delay(3000)
             theCloudTitle.css('box-shadow', '2px 4px 22px rgb(238, 232, 170)').delay(3000)
-            // theBanner.css('box-shadow', '0px 6px 42px rgb(238, 232, 170)').delay(2000)
-            theBanner.css('box-shadow', '0px 6px 12px rgb(65, 65, 58)').delay(3000)
+            theBanner.css('box-shadow', '0px 6px 42px rgb(238, 232, 170)').delay(3000)
+            // theBanner.css('box-shadow', '0px 6px 12px rgb(65, 65, 58)').delay(3000)
             joinButton.css('box-shadow', '0px 4px 20px rgb(238, 232, 170)').delay(3000)
         }
 
         else {
            theCloudTitle.css(borders[i], origColor).delay(3000)
             theCloudTitle.css('box-shadow', '2px 4px 10px rgb(189, 161, 119)').delay(3000)
-            // theBanner.css('box-shadow', '0px 6px 12px rgb(65, 65, 58)').delay(2000)
-            theBanner.css('box-shadow', '0px 6px 22px rgb(238, 232, 170)').delay(3000)
+            theBanner.css('box-shadow', '0px 6px 12px rgb(65, 65, 58)').delay(3000)
+            // theBanner.css('box-shadow', '0px 6px 22px rgb(238, 232, 170)').delay(3000)
                         joinButton.css('box-shadow', '0px 4px 10px gray').delay(3000)
         }
 
