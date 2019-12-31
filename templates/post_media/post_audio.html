@@ -7,13 +7,9 @@
     <link rel="stylesheet" href="/static/index.css"/>
     <div id=''>
         <br>
-    <h1>Upload Audio</h1>
+    <h1>Post Audio</h1>
     <br>
-
-<form method="post" enctype="multipart/form-data">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Submit New Post</button>
-</form>
+<a href= {% url 'add_audio' %} >Add Audio</a>
+<a href= {% url 'record_audio' %}>Record Audio</a>
     </div>
     {% endblock %}
