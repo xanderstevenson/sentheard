@@ -88,9 +88,9 @@
 
                 {% else %}
 
-                You are not logged in
+               Welcome,<br> <span class='underlined'><a href="{% url 'login' %}">Login</a></span> or <span class='underlined'><a href={% url 'signup' %}>Join</a></span>...
                 <br>
-                <a href="{% url 'login' %}">Login</a>
+
 
                 {% endif %}
             </div>

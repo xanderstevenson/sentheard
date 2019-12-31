@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django_s3_storage.storage import S3Storage
 import uuid
-from django.conf import settings
+# from django.conf import settings
 
 # django-storages and boto3
 class Upload(models.Model):
@@ -17,7 +17,7 @@ storage = S3Storage(aws_s3_bucket_name='django-static-sentheard')
 class Photo(models.Model):
     photo_id = models.UUIDField(
     primary_key=False, default=uuid.uuid4, editable=False,)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=None, null=True)
+    author = models.ForeignKey(User, on_delete=models.PROTECT, default=None, null=True)
     title = models.CharField(default="", max_length=55)
     photo = models.ImageField(upload_to='photos/', default="")
     def __str__(self):
@@ -26,16 +26,18 @@ class Photo(models.Model):
 class Audio(models.Model):
     audio_id = models.UUIDField(
     primary_key=False, default=uuid.uuid4, editable=False,)
+    author = models.ForeignKey(User, on_delete=models.PROTECT, default=None, null=True)
     title = models.CharField(default="", max_length=55)
-    audio = models.FileField(storage=storage, default="")
+    audio = models.FileField(upload_to='audio/', default="")
     def __str__(self):
         return self.title
 
 class Video(models.Model):
     video_id = models.UUIDField(
     primary_key=False, default=uuid.uuid4, editable=False,)
+    author = models.ForeignKey(User, on_delete=models.PROTECT, default=None, null=True)
     title = models.CharField(default="", max_length=55)
-    video = models.FileField(storage=storage, default="")
+    video = models.FileField(upload_to='video/', default="")
     def __str__(self):
         return self.name + ": " + str(self.video)
 
@@ -43,9 +45,10 @@ class Video(models.Model):
 class Text(models.Model):
     text_id = models.UUIDField(
     primary_key=False, default=uuid.uuid4, editable=False,)
+    author = models.ForeignKey(User, on_delete=models.PROTECT, default=None, null=True)
     title = models.CharField(default="", max_length=55)
-    text_typed = models.TextField(default="", max_length=510)
-    text_upload = models.FileField(storage=storage, default="")
+    # text_typed = models.TextField(default="", max_length=510)
+    text_upload = models.FileField(upload_to='text/', default="")
     def __str__(self):
         return self.title
 
