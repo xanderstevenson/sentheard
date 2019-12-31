@@ -154,7 +154,7 @@ THUMBNAIL_HIGH_RESOLUTION = True
 
 MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, '')
-MEDIA_ROOT = '/home/sentheard/sentheard/static//media/'
+MEDIA_ROOT = '/home/sentheard/sentheard/static/media/'
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/sentheard/sentheard/static/'
 

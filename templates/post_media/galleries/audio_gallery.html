@@ -101,7 +101,7 @@ $(document).ready(function(){
 });
 //]]>
 </script>
-<div id='photo_gallery_block' class='row'>
+<div id='photo_gallery_block' class=''>
 
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
@@ -143,22 +143,31 @@ $(document).ready(function(){
 
 <!--ALL JPLAYER STUFF ENDS-->
 
+<br style="clear: both;">
 
+
+<div id='audio-row'>
 <!--<div id='photo_gallery_block' class='row'>-->
 
 
             {% for audio in audio_list %}
             {% if audio.author == user %}
             <div class='photo_gallery_img zoomTarget'>
-                    <p id="photo-title">{{ audio.title }} </p>
-                <p id="photo-title">{{ audio.author }} </p>
+                    <p id="photo-title">Title: {{ audio.title }} </p>
+                <p id="photo-title">Author: {{ audio.author }}</p>
+            <div class='row'>
+                <audio controls = 'controls'>
+                <source src='/static/{{ static }}{{ audio.audio.url }}' type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
 
 
              <!--<img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ photo.photo.url }}" alt="...">-->
              </div>
              {% endif %}
              {% endfor %}
-
+</div>
 </div>
 
     {% endblock %}
