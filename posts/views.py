@@ -9,6 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import PhotoForm, AudioForm, VideoForm, TextForm
 from .models import Photo, Audio, Video, Text
 
+
 # django-storages and boto3
 # def image_upload(request):
 #     if request.method == 'POST':
@@ -112,3 +113,4 @@ def post_stuff(request):
 
 def post_audio(request):
     return render(request, "post_media/post_audio.html")
+
