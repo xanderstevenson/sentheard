@@ -46,7 +46,7 @@
                             <a href={% url 'shop' %}><button class="nav-btn nav-btn-marg-left">Shop</button></a>
                             {% endif %}
                             {% if user.is_authenticated %}
-                            <a href={% url 'gallery' %}><button class="nav-btn nav-btn-marg-left">Gallery</button></a>
+                            <a href={% url 'gallery' %}><button class="nav-btn nav-btn-marg-left">Galleries</button></a>
                             {% else  %}
                             <a href={% url 'about_us' %}><button class="nav-btn nav-btn-marg-left">About Us</button></a>
                             {% endif %}

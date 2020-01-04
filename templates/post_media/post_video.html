@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+    {% block content %}
+    <link rel="stylesheet" href="/static/index.css"/>
+    <div id=''>
+        <br>
+    <h1>Post Video</h1>
+    <br>
+<a href= {% url 'add_video' %} >Upload Video</a>
+<a href= {% url 'record_video' %}>Record Video</a>
+    </div>
+    {% endblock %}

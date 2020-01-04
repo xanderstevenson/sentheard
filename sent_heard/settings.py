@@ -36,12 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Sent_Heard_App',
     'posts',
-    # 'posts.apps.PostsConfig',
     'storages',
 ]
-    # 'storages',
-        # 'django_s3_storage',
-        # 'upload',
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

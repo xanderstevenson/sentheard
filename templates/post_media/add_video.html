@@ -7,29 +7,21 @@
     <link rel="stylesheet" href="/static/index.css"/>
     <div id=''>
         <br>
-    <h1>Post Video</h1>
+    <h1>Upload Video</h1>
     <br>
 <a>New Video</a>
 
 
 <h1>Video Uploader</h1>
-<form enctype="multipart/form-data" method="POST" action="">
+<form enctype="multipart/form-data" method="POST">
 {% csrf_token %}
 {{ form.as_p }}
-<input type="submit" value="Upload"/>
+<button type="submit"> Submit </button>
 </form>
 
-<!--<br><br>-->
-<!--<video width='400' controls>-->
-<!--<source src='{{ MEDIA_URL }}{{ videofile }}' type='video/mp4'>-->
-<!--Your browser does not support the video tag.-->
-<!--</video>-->
-<!--<br><br>-->
-<!--</p>-->
 
 
-<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'p3plcpnl0769'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script><script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'p3plcpnl0769'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script></html>
 
-
+</div>
 
     {% endblock %}

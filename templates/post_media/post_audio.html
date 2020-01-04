@@ -1,0 +1,15 @@
+
+{% extends 'index.html' %}
+{% load static %}
+
+
+    {% block content %}
+    <link rel="stylesheet" href="/static/index.css"/>
+    <div id=''>
+        <br>
+    <h1>Post Audio</h1>
+    <br>
+<a href= {% url 'add_audio' %} >Upload Audio</a>
+<a href= {% url 'record_audio' %}>Record Audio</a>
+    </div>
+    {% endblock %}
