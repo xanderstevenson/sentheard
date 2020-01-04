@@ -42,7 +42,7 @@ class Video(models.Model):
     title = models.CharField(default="", max_length=55)
     video = models.FileField(upload_to='video/', default="")
     def __str__(self):
-        return self.name + ": " + str(self.video)
+        return self.title
 
 
 class Text(models.Model):

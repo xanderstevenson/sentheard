@@ -54,6 +54,12 @@ class CreateVideoView(CreateView):
     template_name = 'post_media/add_video.html'
     success_url = reverse_lazy('gallery')
 
+class CreateRecordVideoView(CreateView):
+    model = Video
+    form_class = VideoForm
+    template_name = 'post_media/record_video.html'
+    success_url = reverse_lazy('gallery')
+
 
 class CreateTextView(CreateView):
     model = Text
@@ -113,4 +119,7 @@ def post_stuff(request):
 
 def post_audio(request):
     return render(request, "post_media/post_audio.html")
+
+def post_video(request):
+    return render(request, "post_media/post_video.html")
 

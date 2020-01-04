@@ -10,13 +10,14 @@
     <h1>Upload Audio</h1>
     <br>
 
+<h1>Audio Uploader</h1>
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   {{ form.as_p }}
-  <button type="submit">Submit New Post</button>
+  <button type="submit"> Submit </button>
 </form>
 
-<!--<video id="video" autoplay loop="loop" preload="auto">    	 </video>-->
+
 
     </div>
     {% endblock %}
