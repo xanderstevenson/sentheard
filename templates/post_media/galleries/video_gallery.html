@@ -9,21 +9,31 @@
     <h1>Video Gallery</h1>
 
 
-    <h3 class="fuck-motto">Your Memories...</h3>
-    <br>
-    <!--<h5>Django Image Uploading...</h5>-->
+<!--<br style="clear: both;">-->
 
-<div id='photo_gallery_block' class='row'>
 
-            {% for video in object_list %}
+<div id='photo_gallery_block'>
+
+<div id='audio-row'>
+
+            {% for video in video_list %}
             {% if video.author == user %}
-            <div class='photo_gallery_img zoomTarget'>
-                    <p id="photo-title">{{ video.title }} </p>
-             <!--<img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ video.photo.url }}" alt="...">-->
-             </div>
+            <div class='video_gallery_img'>
+                    <p id="photo-title">Title: {{ video.title }} </p>
+                <p id="photo-title">Author: {{ video.author }}</p>
+
+                <video controls = 'controls'>
+                <source src='/static/{{ static }}{{ video.video.url }}' type="audio/mpeg">
+                Your browser does not support the video element.
+                </video>
+            </div>
+
+
+             <!--<img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ photo.photo.url }}" alt="...">-->
+
              {% endif %}
              {% endfor %}
-
+ </div>
 </div>
 
     {% endblock %}

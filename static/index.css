@@ -729,6 +729,41 @@ font-family: 'Fahkwang', sans-serif;
       /*float: left;*/
 }
 
+
+#audio-row {
+    margin: 0px auto;
+    display: inline-block;
+
+}
+
+.video_gallery_img {
+    color: black;
+    width: 275px;
+    height: 275px;
+      border: 2px solid #d7b88a;
+  border-image: url(images/gold.jpg) 30% round;
+  margin-top: 5px;
+  padding: 10px;
+  background-color: gray;
+  opacity: 0.85;
+  box-shadow: 1px 1px 9px #333328, -1px 1px 9px #333328;
+  font-size: 10px;
+}
+
+.video_gallery_img video{
+
+    color: black;
+    max-width: 200px;
+    max-height: 200px;
+        min-width: 175px;
+    min-height: 175px;
+      border: 2px ridge #d7b88a;
+    opacity: 1.0;
+  margin-top: -5px;
+      box-shadow: 1px 1px 9px #333328, -1px 1px 9px #333328;
+}
+
+
 .photo_gallery_img {
 
     color: black;
@@ -759,8 +794,11 @@ font-family: 'Fahkwang', sans-serif;
 
 #photo-title {
  color: black;
- font-size: 24px;
+ font-size: 16px;
  opacity: 1.0;
+ padding: 0px;
+ text-align: center;
+ margin: 0px auto;
 }
 
 #photo_gallery_block {

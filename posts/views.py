@@ -107,7 +107,7 @@ class VideoGalleryListView(ListView):
 class TextGalleryListView(ListView):
     model = Text
     template_name = 'post_media/galleries/text_gallery.html'
-    context_object_name = 'texto_list'
+    context_object_name = 'text_list'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
