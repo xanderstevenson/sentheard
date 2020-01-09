@@ -21,7 +21,8 @@
             <div class='photo_gallery_img zoomTarget'>
                     <p id="photo-title">Title: {{ text.title }} </p>
                 <p id="photo-title">Author: {{ text.author }}</p>
-                <a href="https://www.sentheard.com/static{{ text.text.url }}">Text</a>
+                <a href="https://www.sentheard.com/static{{ text.text_upload.url }}" download>Text</a>
+
              <!--<img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ text.photo.url }}" alt="...">-->
              </div>
              {% endif %}
