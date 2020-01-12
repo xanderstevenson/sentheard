@@ -271,6 +271,17 @@ const changeCloudTitleSides = ()=>{
         $('.bindings').hide()
     })
 
-
+recorder = RecordRTC(camera, {
+    recorderType: MediaStreamRecorder,
+    type: 'video',
+    mimeType: 'video/webm',  // defaults to vp8 in Firefox 59
+    disableLogs: false,
+    //video: {width: 320, height: 240},  // seems to have no effect?
+    //mimeType: 'video/webm\;codecs=vp9', // possible codecs=h264, vp8, vp9, in FF 59 and Chrome using OSX only vp8 available?
+    //audioBitsPerSecond: 2000,  // min: 100bps max: 6000bps
+    //videoBitsPerSecond: 6000,  // min: -5000bps max: 100000bps, lower values reduce filesize
+    // using default values equals roughly 20 Mbyte per Minute, vbpr 2000 is less than 1 MB per Minute (but with poor quality)
+    //bitsPerSecond: 128000 // if this line is provided, skip above two
+});
 
 });
