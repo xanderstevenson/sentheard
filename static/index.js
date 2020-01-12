@@ -49,6 +49,7 @@ $(document).ready(function () {
 
 const theCloudTitle= $('#cloud-bg-title')
 const theBanner= $('#banner')
+const navBtn = $('.nav-btn')
 
 const changeCloudTitleSides = ()=>{
     borders = ['border-left-color', 'border-top-color', 'border-right-color', 'border-bottom-color']
@@ -59,14 +60,16 @@ const changeCloudTitleSides = ()=>{
         if(theCloudTitle.css(borders[i]) == origColor){
             theCloudTitle.css(borders[i], goldenRod).delay(3000)
             theCloudTitle.css('box-shadow', '2px 4px 22px rgb(238, 232, 170)').delay(3000)
+            navBtn.css('box-shadow', '2px -4px 12px rgb(238, 232, 170)').delay(3000)
             theBanner.css('box-shadow', '0px 6px 42px rgb(238, 232, 170)').delay(3000)
             // theBanner.css('box-shadow', '0px 6px 12px rgb(65, 65, 58)').delay(3000)
             joinButton.css('box-shadow', '0px 4px 20px rgb(238, 232, 170)').delay(3000)
         }
 
         else {
-           theCloudTitle.css(borders[i], origColor).delay(3000)
+          theCloudTitle.css(borders[i], origColor).delay(3000)
             theCloudTitle.css('box-shadow', '2px 4px 10px rgb(189, 161, 119)').delay(3000)
+            navBtn.css('box-shadow', '2px -4px 12px rgb(189, 161, 119)').delay(3000)
             theBanner.css('box-shadow', '0px 6px 12px rgb(65, 65, 58)').delay(3000)
             // theBanner.css('box-shadow', '0px 6px 22px rgb(238, 232, 170)').delay(3000)
                         joinButton.css('box-shadow', '0px 4px 10px gray').delay(3000)
@@ -268,6 +271,17 @@ const changeCloudTitleSides = ()=>{
         $('.bindings').hide()
     })
 
-
+recorder = RecordRTC(camera, {
+    recorderType: MediaStreamRecorder,
+    type: 'video',
+    mimeType: 'video/webm',  // defaults to vp8 in Firefox 59
+    disableLogs: false,
+    //video: {width: 320, height: 240},  // seems to have no effect?
+    //mimeType: 'video/webm\;codecs=vp9', // possible codecs=h264, vp8, vp9, in FF 59 and Chrome using OSX only vp8 available?
+    //audioBitsPerSecond: 2000,  // min: 100bps max: 6000bps
+    //videoBitsPerSecond: 6000,  // min: -5000bps max: 100000bps, lower values reduce filesize
+    // using default values equals roughly 20 Mbyte per Minute, vbpr 2000 is less than 1 MB per Minute (but with poor quality)
+    //bitsPerSecond: 128000 // if this line is provided, skip above two
+});
 
 });

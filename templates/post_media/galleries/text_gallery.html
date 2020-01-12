@@ -5,6 +5,7 @@
 {% if user.is_authenticated %}
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
+
     <br>
     <h1>Text Gallery</h1>
 
@@ -15,10 +16,13 @@
 
 <div id='photo_gallery_block' class='row'>
 
-            {% for text in object_list %}
+            {% for text in text_list %}
             {% if text.author == user %}
             <div class='photo_gallery_img zoomTarget'>
-                    <p id="photo-title">{{ text.title }} </p>
+                    <p id="photo-title">Title: {{ text.title }} </p>
+                <p id="photo-title">Author: {{ text.author }}</p>
+                <a href="https://www.sentheard.com/static{{ text.text_upload.url }}" download>Text</a>
+
              <!--<img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ text.photo.url }}" alt="...">-->
              </div>
              {% endif %}

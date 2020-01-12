@@ -107,7 +107,7 @@ class VideoGalleryListView(ListView):
 class TextGalleryListView(ListView):
     model = Text
     template_name = 'post_media/galleries/text_gallery.html'
-    context_object_name = 'texto_list'
+    context_object_name = 'text_list'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
@@ -123,3 +123,44 @@ def post_audio(request):
 def post_video(request):
     return render(request, "post_media/post_video.html")
 
+
+
+def upload(request):
+    if request.method == 'POST':
+        logger.info("Received Upload POST request: %s" % request.META)
+        baseDir = settings.BASE_DIR
+
+        try:
+            recordingLength = float(request.META['HTTP_LENGTH'])
+
+            path = baseDir + "/media/recordings/" + request.user.username + "/"
+            userID = request.user.id
+            filename = str(uuid.uuid1()) + "-" + datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+            logger.info("Filepath: %s" % path)
+            if not os.path.exists(path):
+                logger.info("Creating new Folder: %s" % path)
+                os.makedirs(path)
+            logger.info("Writing file: %s" % filename)
+            extension = ".ogg" if promptGroup.type == "audio" else ".webm"
+            with open(path + filename + extension, 'wb+') as destination:
+                for chunk in request.FILES['blob'].chunks():
+                    destination.write(chunk)
+
+            # AudioSegment.from_file(path+filename+".ogg").export(path+filename+".mp3", format="mp3").close()
+            # os.remove(path+filename+".ogg")
+
+            Recording.objects.create(path=path, name=filename + extension, created=timezone.now(),
+                                                 user_id=userID,
+                                                 length=recordingLength)
+        except:
+            logger.critical("Error while trying to upload! Please check previous Log Messages")
+            raise SuspiciousFileOperation
+        else:
+            # No errors during processing of the uploaded recording - proceeding with updating stats for user
+
+            response = {'total_recordings': stats.total_recordings}
+
+        return JsonResponse(response, safe=False)
+    else:
+        return redirect('/recorder')
