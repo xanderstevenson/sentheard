@@ -1,14 +1,38 @@
 {% extends 'index.html' %}
 {% load static %}
-
+<meta name="viewport" content="width=device-width, initial-scale=1"> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8;IE=edge">
 
     {% block content %}
+    <script src="artyom.window.min.js"></script>
+    <script type="text/javascript">window.onload=function(){try{var a=window.location.hostname; if (a.includes(".azurewebsites.net")){a=a.replace(".azurewebsites.net", "")}var b=document.getElementById("quickStartLink"); b.setAttribute("href", b.getAttribute("href") + "&sitename=" + a);}catch (d){}}</script>
     <link rel="stylesheet" href="/static/index.css"/>
 
         <br>
     <h1>Record Audio</h1>
     <br>
-        Record New Audio Here
+
+        <video id="video" autoplay loop="loop" preload="auto">    	 </video>
+        <br>
+
+
+<script type='text/javascript'>
+
+  var video = document.querySelector("#video");
+
+
+if (navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({video: true}).then(function(stream) {
+    var sourceObject = video.srcObject;
+    video.srcObject = stream;
+    video.loop = true;
+  })
+    .catch(function(err0r) {
+    console.log("Something is wrong!");
+  });
+}
+
+
+</script>
 
 
 
