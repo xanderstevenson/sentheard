@@ -4,15 +4,74 @@
 
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
+    <script type="text/javascript">window.onload=function(){try{var a=window.location.hostname; if (a.includes(".azurewebsites.net")){a=a.replace(".azurewebsites.net", "")}var b=document.getElementById("quickStartLink"); b.setAttribute("href", b.getAttribute("href") + "&sitename=" + a);}catch (d){}}</script>
+    <script src="artyom.window.min.js"></script>
     <div id=''>
-        <br>
+
     <h1>Record Video</h1>
-    <br>
         Record New Video Here
-<br>
-
-
+    <br>
     </div>
+
+        <video id="video" autoplay loop="loop" preload="auto">    	 </video>
+        <br>
+
+<div id="container">
+
+    <h1><a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">WebRTC samples</a>
+        <span>MediaRecorder</span></h1>
+
+    <p>For more information see the MediaStream Recording API <a
+            href="http://w3c.github.io/mediacapture-record/MediaRecorder.html"
+            title="W3C MediaStream Recording API Editor's Draft">Editor's&nbsp;Draft</a>.</p>
+
+    <video id="gum" playsinline autoplay muted></video>
+    <video id="recorded" playsinline loop></video>
+
+    <div>
+        <button id="start">Start camera</button>
+        <button id="record" disabled>Start Recording</button>
+        <button id="play" disabled>Play</button>
+        <button id="download" disabled>Download</button>
+    </div>
+
+    <div>
+        <h4>Media Stream Constraints options</h4>
+        <p>Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
+    </div>
+
+    <div>
+        <span id="errorMsg"></span>
+    </div>
+
+    <a href="https://github.com/webrtc/samples/tree/gh-pages/src/content/getusermedia/record"
+       title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
+
+</div>
+
+<!-- include adapter for srcObject shim -->
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="/static/js/main.js" async></script>
+<script src="../../../js/lib/ga.js"></script>
+
+
+
+
+<!--  var video = document.querySelector("#video");-->
+
+
+<!--if (navigator.mediaDevices.getUserMedia) {-->
+<!--    navigator.mediaDevices.getUserMedia({video: true}).then(function(stream) {-->
+<!--    var sourceObject = video.srcObject;-->
+<!--    video.srcObject = stream;-->
+<!--    video.loop = true;-->
+<!--  })-->
+<!--    .catch(function(err0r) {-->
+<!--    console.log("Something is wrong!");-->
+<!--  });-->
+<!--}-->
+
+
 
 
     {% endblock %}

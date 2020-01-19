@@ -48,12 +48,12 @@
                             {% if user.is_authenticated %}
                             <a href={% url 'gallery' %}><button class="nav-btn nav-btn-marg-left">Gallery</button></a>
                             {% else  %}
-                            <a href={% url 'about_us' %}><button class="nav-btn nav-btn-marg-left">About Us</button></a>
+                            <a href={% url 'about_us' %}><button class="nav-btn nav-btn-marg-left" id='sixteenPx'>About Us</button></a>
                             {% endif %}
                             {% if user.is_authenticated %}
-                            <a href={% url 'account' %}><button class="nav-btn nav-btn-marg-left">Account</button></a>
+                            <a href={% url 'account' %}><button class="nav-btn nav-btn-marg-left" id='sixteenPx'>Account</button></a>
                             {% else  %}
-                            <a href={% url 'signup' %}><button class="nav-btn nav-btn-marg-left">Join Free</button></a>
+                            <a href={% url 'signup' %}><button class="nav-btn nav-btn-marg-left" id='sixteenPx'>Join Free</button></a>
                             {% endif %}
                         </div>
                     </div>
