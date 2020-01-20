@@ -4,15 +4,67 @@
 
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
-    <div id=''>
-        <br>
+    <script type="text/javascript">window.onload=function(){try{var a=window.location.hostname; if (a.includes(".azurewebsites.net")){a=a.replace(".azurewebsites.net", "")}var b=document.getElementById("quickStartLink"); b.setAttribute("href", b.getAttribute("href") + "&sitename=" + a);}catch (d){}}</script>
+    <script src="artyom.window.min.js"></script>
+
+
     <h1>Record Video</h1>
+
     <br>
-        Record New Video Here
-<br>
 
 
+        <!--<video id="video" autoplay loop="loop" preload="auto">    	 </video>-->
+        <!--<br>-->
+
+<div id="videoCaptureContainer">
+
+
+
+    <video id="gum" playsinline autoplay muted></video>
+    <video id="recorded" playsinline loop></video>
+
+    <div>
+        <button id="start">Start camera</button>
+        <button id="record" disabled>Start Recording</button>
+        <button id="play" disabled>Play</button>
+        <button id="download" disabled>Download</button>
     </div>
+
+    <div>
+        <p>Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
+        Check this box before starting camera to reduce or eliminate echoes.
+    </div>
+
+    <div>
+        <span id="errorMsg"></span>
+    </div>
+
+
+</div>
+
+<!-- include adapter for srcObject shim -->
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="/static/js/main.js" async></script>
+<script src="../../../js/lib/ga.js"></script>
+
+
+
+
+<!--  var video = document.querySelector("#video");-->
+
+
+<!--if (navigator.mediaDevices.getUserMedia) {-->
+<!--    navigator.mediaDevices.getUserMedia({video: true}).then(function(stream) {-->
+<!--    var sourceObject = video.srcObject;-->
+<!--    video.srcObject = stream;-->
+<!--    video.loop = true;-->
+<!--  })-->
+<!--    .catch(function(err0r) {-->
+<!--    console.log("Something is wrong!");-->
+<!--  });-->
+<!--}-->
+
+
 
 
     {% endblock %}

@@ -60,16 +60,35 @@ html {
 }
 
 .nav-btn {
-  width: 77px;
+  width: 82px;
   height: 45px;
   margin-top: 12.5px;
-  /* opacity: 0.75; */
+   opacity: 0.97;
   border: 2px inset rgb(172, 148, 17);
   border-image: url(images/gold.jpg) 30% round;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e3c986;
+  /*text-shadow: 3px 3px 10px gray;*/
+  text-decoration: italic;
+  -webkit-text-stroke: .5px #8a7030;
+  font-size: 17px;
+    padding: 0px;
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
 }
 
+#sixteenPx {
+     font-size: 16px;
+}
+
+
 .nav-btn-marg-left {
-  margin-left: 10px;
+  margin-left: 4px;
+      text-align: center;
+    align-content: center;
+    padding: 0px;
 }
 
 body {
@@ -825,3 +844,13 @@ padding-top: 0px;
     box-shadow: 2px 2px 18px #333328, -2px 2px 18px #333328;
 }
 
+#videoCaptureContainer {
+    margin: 0px auto;
+    margin-top: -75px;
+    max-width: 90%;
+}
+
+video {
+
+        max-width: 90%;
+}
