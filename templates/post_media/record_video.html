@@ -6,24 +6,19 @@
     <link rel="stylesheet" href="/static/index.css"/>
     <script type="text/javascript">window.onload=function(){try{var a=window.location.hostname; if (a.includes(".azurewebsites.net")){a=a.replace(".azurewebsites.net", "")}var b=document.getElementById("quickStartLink"); b.setAttribute("href", b.getAttribute("href") + "&sitename=" + a);}catch (d){}}</script>
     <script src="artyom.window.min.js"></script>
-    <div id=''>
+
 
     <h1>Record Video</h1>
-        Record New Video Here
+
     <br>
-    </div>
 
-        <video id="video" autoplay loop="loop" preload="auto">    	 </video>
-        <br>
 
-<div id="container">
+        <!--<video id="video" autoplay loop="loop" preload="auto">    	 </video>-->
+        <!--<br>-->
 
-    <h1><a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">WebRTC samples</a>
-        <span>MediaRecorder</span></h1>
+<div id="videoCaptureContainer">
 
-    <p>For more information see the MediaStream Recording API <a
-            href="http://w3c.github.io/mediacapture-record/MediaRecorder.html"
-            title="W3C MediaStream Recording API Editor's Draft">Editor's&nbsp;Draft</a>.</p>
+
 
     <video id="gum" playsinline autoplay muted></video>
     <video id="recorded" playsinline loop></video>
@@ -36,16 +31,14 @@
     </div>
 
     <div>
-        <h4>Media Stream Constraints options</h4>
         <p>Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
+        Check this box before starting camera to reduce or eliminate echoes.
     </div>
 
     <div>
         <span id="errorMsg"></span>
     </div>
 
-    <a href="https://github.com/webrtc/samples/tree/gh-pages/src/content/getusermedia/record"
-       title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
 
 </div>
 

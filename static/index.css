@@ -844,3 +844,13 @@ padding-top: 0px;
     box-shadow: 2px 2px 18px #333328, -2px 2px 18px #333328;
 }
 
+#videoCaptureContainer {
+    margin: 0px auto;
+    margin-top: -75px;
+    max-width: 90%;
+}
+
+video {
+
+        max-width: 90%;
+}
