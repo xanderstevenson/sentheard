@@ -274,5 +274,28 @@ const changeCloudTitleSides = ()=>{
 
 
 
+const start = $('#start')
+const download = $('#download')
+const play = $('#play')
+const record = $('#record')
+
+record.hide()
+play.hide()
+download.hide()
+
+const buttonPoppin = ()=>{
+    start.click(()=>{
+        start.hide()
+        record.show()
+    })
+
+    record.click(()=>{
+        play.show()
+        download.show()
+    })
+}
+
+buttonPoppin()
+
 
 });
