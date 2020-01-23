@@ -846,11 +846,40 @@ padding-top: 0px;
 
 #videoCaptureContainer {
     margin: 0px auto;
-    margin-top: -75px;
-    max-width: 90%;
+    max-width: 800px;
+    align-content: center;
+    margin-top: 0px;
 }
 
 video {
 
         max-width: 90%;
+}
+
+#vidRecordBtns {
+    display: inline-block;
+    align-content: center;
+    margin: 0px auto;
+        background-color: gray;
+        max-width: 800px;
+    width: 100%;
+}
+
+#gum {
+/*margin-bottom: 0px;*/
+margin-top: 0px;
+width: 100%;
+max-width: 800px;
+background-color: silver;
+}
+
+#vidButtonRow  {
+    /*padding: 0px;*/
+    margin: 0px auto;
+    align-content: center;
+    height: 100px;
+    max-width: 800px;
+    min-width: 365px;
+    background-color: black;
+    text-align: center;
 }

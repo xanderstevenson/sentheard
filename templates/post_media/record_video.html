@@ -4,44 +4,45 @@
 
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
-    <script type="text/javascript">window.onload=function(){try{var a=window.location.hostname; if (a.includes(".azurewebsites.net")){a=a.replace(".azurewebsites.net", "")}var b=document.getElementById("quickStartLink"); b.setAttribute("href", b.getAttribute("href") + "&sitename=" + a);}catch (d){}}</script>
     <script src="artyom.window.min.js"></script>
 
 
     <h1>Record Video</h1>
 
-    <br>
 
 
-        <!--<video id="video" autoplay loop="loop" preload="auto">    	 </video>-->
-        <!--<br>-->
-
-<div id="videoCaptureContainer">
+</row>
+<div id="">
 
 
 
     <video id="gum" playsinline autoplay muted></video>
-    <video id="recorded" playsinline loop></video>
-
-    <div>
+    <video id="recorded" playsinline loop style='display: none;'></video>
+<div class='row'  id='vidButtonRow'>
+    <div id="vidRecordBtns">
         <button id="start">Start camera</button>
         <button id="record" disabled>Start Recording</button>
         <button id="play" disabled>Play</button>
         <button id="download" disabled>Download</button>
-    </div>
 
-    <div>
+
+
+
+        <div>
         <p>Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
         Check this box before starting camera to reduce or eliminate echoes.
+        </div>
     </div>
+
+
 
     <div>
         <span id="errorMsg"></span>
     </div>
+</div>
 
 
 </div>
-
 <!-- include adapter for srcObject shim -->
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 <script src="/static/js/main.js" async></script>

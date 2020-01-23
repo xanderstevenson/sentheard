@@ -273,26 +273,45 @@ const changeCloudTitleSides = ()=>{
 
 
 
+const gum = $('#gum')
+const recorded = $('#recorded')
+
+// gum.hide()
+
+
 
 const start = $('#start')
 const download = $('#download')
 const play = $('#play')
 const record = $('#record')
 
+
 record.hide()
 play.hide()
 download.hide()
+recorded.css('display', 'none')
 
 const buttonPoppin = ()=>{
+
+
     start.click(()=>{
-        start.hide()
+        start.css('display', 'none')
         record.show()
+        gum.show()
+        recorded.css('display', 'none')
     })
 
     record.click(()=>{
-        play.show()
-        download.show()
+        start.css('display', 'none')
+        })
+
+
+    play.click(()=> {
+        gum.hide()
+        recorded.show()
+        record.hide()
     })
+
 }
 
 buttonPoppin()
