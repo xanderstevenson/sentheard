@@ -139,3 +139,7 @@ document.querySelector('button#start').addEventListener('click', async () => {
   await init(constraints);
 });
 
+const tryAgain = document.querySelector('button#tryAgain');
+tryAgain.addEventListener('click', () => {
+   window.reload();
+})

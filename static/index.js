@@ -285,11 +285,13 @@ const download = $('#download')
 const play = $('#play')
 const record = $('#record')
 const tryAgain = $('#tryAgain')
+const saveVid = $('#save')
 
 record.hide()
 play.hide()
 download.hide()
 tryAgain.hide()
+saveVid.hide()
 recorded.css('display', 'none')
 
 
@@ -313,14 +315,21 @@ var start_count = 0
                         record.hide()
                         play.show()
                         download.show()
+                        tryAgain.show()
+                        saveVid.show()
 
 
                                 play.click(()=> {
-                                gum.hide()
-                                recorded.show()
+                                    gum.hide()
+                                    recorded.show()
+                                    play.hide()
 
-                            })
+                                })
 
+
+                                tryAgain.click(()=>{
+                                   location.reload();
+                                })
 
 
                     })

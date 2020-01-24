@@ -865,7 +865,7 @@ video {
     width: 100%;
 }
 
-#gum {
+#gum, #recorded{
 /*margin-bottom: 0px;*/
 margin-top: 0px;
 width: 100%;
