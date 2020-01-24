@@ -284,33 +284,51 @@ const start = $('#start')
 const download = $('#download')
 const play = $('#play')
 const record = $('#record')
-
+const tryAgain = $('#tryAgain')
 
 record.hide()
 play.hide()
 download.hide()
+tryAgain.hide()
 recorded.css('display', 'none')
+
+
 
 const buttonPoppin = ()=>{
 
+var start_count = 0
 
     start.click(()=>{
         start.css('display', 'none')
         record.show()
         gum.show()
         recorded.css('display', 'none')
+
+
+            record.click(()=>{
+            start.css('display', 'none')
+
+
+                    record.click(()=>{
+                        record.hide()
+                        play.show()
+                        download.show()
+
+
+                                play.click(()=> {
+                                gum.hide()
+                                recorded.show()
+
+                            })
+
+
+
+                    })
+
+            })
+
     })
 
-    record.click(()=>{
-        start.css('display', 'none')
-        })
-
-
-    play.click(()=> {
-        gum.hide()
-        recorded.show()
-        record.hide()
-    })
 
 }
 
