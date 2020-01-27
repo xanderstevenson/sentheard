@@ -131,8 +131,8 @@
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='mdImg'>
                 <br />
                 <img "{% static 'images/marquee_arrow_cropped.gif'%}" id='marqueeArrow'>
-                <a href={% url 'signup' %}><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
-                class='join-button'  id='join-buttonMd'></a>
+                <a href={% url 'signup' %}><img src="{% static '/images/new_marquee_arrow5.gif'%}" id='marqueeArrowMedium'><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
+                class='join-button'  id='join-buttonMd'><img src="{% static '/images/new_marquee_arrow5.gif'%}" id='marqueeArrowMediumRight'></a>
             </div>
 
 
@@ -147,9 +147,12 @@
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='lgImg'>
                 <br />
                 <img "{% static 'images/marquee_arrow_cropped.gif'%}" id='marqueeArrow'>
-                <a href={% url 'signup' %}><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
-                 class='join-button'  id='join-buttonLg'></a>
+                <a href={% url 'signup' %}><img src="{% static '/images/new_marquee_arrow5.gif'%}" id='marqueeArrowLarge'><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
+                 class='join-button'  id='join-buttonLg'><img src="{% static '/images/new_marquee_arrow5.gif'%}" id='marqueeArrowLargeRight'></a>
+
             </div>
+
+              <img src="{% static '/images/instruct-left.gif'%}" id='instructions'>
 
             {% endblock %}
 

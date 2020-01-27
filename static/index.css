@@ -641,7 +641,7 @@ font-family: 'Fahkwang', sans-serif;
   border: 2px solid #d7b88a;
   position: absolute;
     bottom: 4%;
-        left: 23%;
+        left: 24%;
             right: 25%;
   margin: 0px auto;
   align-content: center;
@@ -897,10 +897,9 @@ background-color: silver;
     position: absolute;
     bottom: 20px;
         left: 25px;
-
    }
 
-#marqueeArrowRight   {
+  #marqueeArrowRight   {
     width: 43px;
     float: right;
     /*margin: 0px auto;*/
@@ -910,3 +909,66 @@ background-color: silver;
 -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
    }
+
+
+#marqueeArrowMedium   {
+    width: 43px;
+    /*float: left;*/
+    /*margin: 0px auto;*/
+    /*margin-left: 20px;*/
+    opacity: 0.70;
+    /*margin-bottom: 0px;*/
+    position: absolute;
+    bottom: 25px;
+        left: 85px;
+   }
+
+#marqueeArrowMediumRight   {
+    width: 43px;
+    /*float: left;*/
+    /*margin: 0px auto;*/
+    /*margin-left: 20px;*/
+    opacity: 0.70;
+    /*margin-bottom: 0px;*/
+    position: absolute;
+    bottom: 25px;
+        right: 85px;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+   }
+
+
+
+#marqueeArrowLarge   {
+    width: 43px;
+    /*float: left;*/
+    /*margin: 0px auto;*/
+    /*margin-left: 20px;*/
+    opacity: 0.70;
+    /*margin-bottom: 0px;*/
+    position: absolute;
+    bottom: 30px;
+        left: 100px;
+   }
+
+
+#marqueeArrowLargeRight   {
+    width: 43px;
+    /*float: left;*/
+    /*margin: 0px auto;*/
+    /*margin-left: 20px;*/
+    opacity: 0.70;
+    /*margin-bottom: 0px;*/
+    position: absolute;
+    bottom: 30px;
+        right: 100px;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+   }
+
+#instructions {
+    width: 200px;
+    margin-bottom: -50px;
+}
+
+
