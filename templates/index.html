@@ -113,7 +113,9 @@
                 <p id='hc-sm-txt'>Record your stories with audio, video, images and text and pass them along to future generations.</p>
                             <span class='test'></span>
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='smImg'></img>
-                <a href={% url 'signup' %}><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png' class='join-button' id='join-buttonSm'></a>
+                </br>
+                <a href={% url 'signup' %}><img src="{% static '/images/new_marquee_arrow5.gif'%}" id='marqueeArrow'><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png' class='join-button' id='join-buttonSm'><img src="{% static '/images/new_marquee_arrow5.gif'%}" id='marqueeArrowRight'></a>
+
 
             </div>
 
@@ -128,6 +130,7 @@
                   <span class='test'></span>
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='mdImg'>
                 <br />
+                <img "{% static 'images/marquee_arrow_cropped.gif'%}" id='marqueeArrow'>
                 <a href={% url 'signup' %}><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
                 class='join-button'  id='join-buttonMd'></a>
             </div>
@@ -143,6 +146,7 @@
                   <span class='test'></span>
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='lgImg'>
                 <br />
+                <img "{% static 'images/marquee_arrow_cropped.gif'%}" id='marqueeArrow'>
                 <a href={% url 'signup' %}><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
                  class='join-button'  id='join-buttonLg'></a>
             </div>

@@ -641,7 +641,7 @@ font-family: 'Fahkwang', sans-serif;
   border: 2px solid #d7b88a;
   position: absolute;
     bottom: 4%;
-        left: 25%;
+        left: 23%;
             right: 25%;
   margin: 0px auto;
   align-content: center;
@@ -655,6 +655,7 @@ font-family: 'Fahkwang', sans-serif;
     max-width: 187px;
 
   margin: 0px auto;
+  /*margin-bottom: 15px;*/
   align-content: center;
   text-align: center;
 
@@ -883,3 +884,29 @@ background-color: silver;
     background-color: black;
     text-align: center;
 }
+
+
+
+#marqueeArrow   {
+    width: 43px;
+    /*float: left;*/
+    /*margin: 0px auto;*/
+    /*margin-left: 20px;*/
+    opacity: 0.70;
+    /*margin-bottom: 0px;*/
+    position: absolute;
+    bottom: 20px;
+        left: 25px;
+
+   }
+
+#marqueeArrowRight   {
+    width: 43px;
+    float: right;
+    /*margin: 0px auto;*/
+    margin-right: 20px;
+    opacity: 0.70;
+    margin-bottom: 0px;
+-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+   }
