@@ -635,7 +635,7 @@ font-family: 'Fahkwang', sans-serif;
 
 .join-button {
     width: 100%;
-    width: 187px;
+    width: 182px;
     height: 100px;
     color: black;
   border: 2px solid #d7b88a;
@@ -888,7 +888,7 @@ background-color: silver;
 
 
 #marqueeArrow   {
-    width: 43px;
+    width: 50px;
     /*float: left;*/
     /*margin: 0px auto;*/
     /*margin-left: 20px;*/
@@ -900,19 +900,22 @@ background-color: silver;
    }
 
   #marqueeArrowRight   {
-    width: 43px;
-    float: right;
+    width: 50px;
+    /*float: right;*/
     /*margin: 0px auto;*/
-    margin-right: 20px;
+    /*margin-right: 16px;*/
     opacity: 0.70;
-    margin-bottom: 0px;
--webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    /*margin-bottom: 0px;*/
+/*-webkit-transform: scaleX(-1);*/
+/*  transform: scaleX(-1);*/
    }
 
 
 #marqueeArrowMedium   {
-    width: 43px;
+    width: 60px;
     /*float: left;*/
     /*margin: 0px auto;*/
     /*margin-left: 20px;*/
@@ -924,7 +927,7 @@ background-color: silver;
    }
 
 #marqueeArrowMediumRight   {
-    width: 43px;
+    width: 60px;
     /*float: left;*/
     /*margin: 0px auto;*/
     /*margin-left: 20px;*/
@@ -932,15 +935,13 @@ background-color: silver;
     /*margin-bottom: 0px;*/
     position: absolute;
     bottom: 25px;
-        right: 85px;
-    -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+        right: 80px;
    }
 
 
 
 #marqueeArrowLarge   {
-    width: 43px;
+    width: 70px;
     /*float: left;*/
     /*margin: 0px auto;*/
     /*margin-left: 20px;*/
@@ -948,12 +949,12 @@ background-color: silver;
     /*margin-bottom: 0px;*/
     position: absolute;
     bottom: 30px;
-        left: 100px;
+        left: 90px;
    }
 
 
 #marqueeArrowLargeRight   {
-    width: 43px;
+    width: 70px;
     /*float: left;*/
     /*margin: 0px auto;*/
     /*margin-left: 20px;*/
@@ -961,9 +962,7 @@ background-color: silver;
     /*margin-bottom: 0px;*/
     position: absolute;
     bottom: 30px;
-        right: 100px;
-    -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+        right: 90px;
    }
 
 #instructions {

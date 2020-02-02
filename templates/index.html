@@ -114,7 +114,7 @@
                             <span class='test'></span>
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='smImg'></img>
                 </br>
-                <a href={% url 'signup' %}><img src="{% static '/images/new_marquee_arrow5.gif'%}" id='marqueeArrow'><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png' class='join-button' id='join-buttonSm'><img src="{% static '/images/new_marquee_arrow5.gif'%}" id='marqueeArrowRight'></a>
+                <a href={% url 'signup' %}><img src="{% static '/images/arrow.gif'%}" id='marqueeArrow'><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png' class='join-button' id='join-buttonSm'><img src="{% static '/images/arrow2.gif'%}" id='marqueeArrowRight'></a>
 
 
             </div>
@@ -131,8 +131,8 @@
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='mdImg'>
                 <br />
                 <img "{% static 'images/marquee_arrow_cropped.gif'%}" id='marqueeArrow'>
-                <a href={% url 'signup' %}><img src="{% static '/images/new_marquee_arrow5.gif'%}" id='marqueeArrowMedium'><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
-                class='join-button'  id='join-buttonMd'><img src="{% static '/images/new_marquee_arrow5.gif'%}" id='marqueeArrowMediumRight'></a>
+                <a href={% url 'signup' %}><img src="{% static '/images/arrow2.gif'%}" id='marqueeArrowMedium'><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
+                class='join-button'  id='join-buttonMd'><img src="{% static '/images/arrow.gif'%}" id='marqueeArrowMediumRight'></a>
             </div>
 
 
@@ -147,12 +147,24 @@
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='lgImg'>
                 <br />
                 <img "{% static 'images/marquee_arrow_cropped.gif'%}" id='marqueeArrow'>
-                <a href={% url 'signup' %}><img src="{% static '/images/new_marquee_arrow5.gif'%}" id='marqueeArrowLarge'><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
-                 class='join-button'  id='join-buttonLg'><img src="{% static '/images/new_marquee_arrow5.gif'%}" id='marqueeArrowLargeRight'></a>
+                <a href={% url 'signup' %}><img src="{% static '/images/arrow.gif'%}" id='marqueeArrowLarge'><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
+                 class='join-button'  id='join-buttonLg'><img src="{% static '/images/arrow2.gif'%}" id='marqueeArrowLargeRight'></a>
 
             </div>
 
-              <img src="{% static '/images/instruct-left.gif'%}" id='instructions'>
+            <div>
+
+                <h1>Easy Instructions</h1>
+                <p>1. Click one of the 'Join' buttons above.</p>
+                <p>2. Fill out the form with a new username and password.</p>
+                <p>3. Log yourself in (the Log-in screen will appear).</p>
+                <p>4. Click on 'Post' button at the very top</p>
+                <p>5. Choose Photos, Audio, Video or Text to add</p>
+                <p>6. Upload an already completed media or record a new one</p>
+                <p>7. Click on the 'Gallery' button to see what you've saved.</p>
+            </div>
+
+
 
             {% endblock %}
 
