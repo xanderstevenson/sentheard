@@ -95,8 +95,9 @@ body {
   width: 100%;
   min-width: 355px;
   max-width: 1900px;
-  min-height: 1000px;
+  min-height: 1300px;
   height: 100%;
+  min-height: 1200px;
   background-color: black;
   background: url(images/cloud-parch.png);
    -webkit-background-size: cover;
@@ -465,8 +466,6 @@ p .helptext {
   height: 100%;
   max-width: 345px;
   max-height: 525px;
-  min-width: 345px;
-  min-height: 525px;
   background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574369827/SentHeard/marble-frame345x425C.png);
  -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -968,30 +967,91 @@ background-color: silver;
 .join-instructions {
     text-align: center;
     margin: 0px auto;
-    margin-top: 130px;
+
     width: 100%;
-    border: 2px ridge gray;
-    background-color: silver;
+    /*border: 2px ridge gray;*/
 }
 
-
 #instructions-large {
+    align-content: center;
+    margin-top: 140px;
+    /*padding-top: 135px;*/
+    max-width: 1200px;
+    min-width: 650px;
+    background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1581282064/SentHeard/scroll-large.png);
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-    padding-top: 135px;
-    max-width: 800px;
-    font-size: 20px;
+#instructions-large p{
+  font-size: 25px;
+  padding-left: 55px;
+  padding-right: 50px;
+  padding: bottom: 5px;
+  padding-top: 5px;
+  text-decoration: none;
 }
 
 #instructions-medium {
-
-    padding-top: 135px;
-    max-width: 800px;
+    align-content: center;
+    margin-top: 140px;
+    /*padding-top: 135px;*/
+    max-width: 700px;
+    min-width: 500px;
     font-size: 20px;
+  z-index: 0;
+    background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1581282064/SentHeard/scroll-large.png);
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+#instructions-medium p{
+    /*margin-top: 25px;*/
+    text-shadow:none;
+    font-size: 21px;
+    padding-left: 45px;
+    padding-right: 35px;
+
+}
+
 
 #instructions-small {
+    align-content: center;
+    margin: 0px auto;
+    margin-top: 120px;
+    background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1581284042/SentHeard/scroll-small3.png);
+    -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
-    padding-top: 135px;
-    max-width: 800px;
-    font-size: 8px;
+    /*padding-top: 25px;*/
+    width: 100%;
+    min-width: 345px;
+    max-width: 375px;
+    font-size: 2px;
+    /*padding-top: -120px;*/
 }
+
+
+
+#instructions-small p {
+    font-size: 16px;
+    padding-left: 22px;
+    padding-right: 15px;
+    padding-top: -3px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
