@@ -21,6 +21,7 @@ class Photo(models.Model):
     primary_key=False, default=uuid.uuid4, editable=False,)
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     title = models.CharField(default="", max_length=55)
+    description = models.TextField(max_length=500, default='', null=False)
     photo = models.ImageField(upload_to='photos/', default="")
     def __str__(self):
         return self.title

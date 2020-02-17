@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 class PhotoForm(forms.ModelForm):
     class Meta:
         model = Photo
-        fields = ('title', 'photo')
+        fields = ('title', 'photo', 'description')
 
 class AudioForm(forms.ModelForm):
     class Meta:
