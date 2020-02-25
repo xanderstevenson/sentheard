@@ -16,12 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.views.generic.base import TemplateView
+from django.contrib import admin
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', include('Sent_Heard_App.urls')),
+    # path('subscriptions/', include('subscriptions.urls')),
     # path('post/', include('posts.urls')),
 ]
 

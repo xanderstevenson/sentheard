@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'Sent_Heard_App',
     'posts',
     'storages',
+
 ]
 
 MIDDLEWARE = [
@@ -174,3 +175,10 @@ SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
 
 # echo to stdout or any other file-like object that is passed to the backend via the stream kwarg.
 SENDGRID_ECHO_TO_STDOUT=True
+
+
+# Subscriptions
+DFS_CURRENCY_LOCALE = 'en_us'
+
+# Subscriptions
+DFS_BASE_TEMPLATE = 'base.html'
