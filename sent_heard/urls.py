@@ -24,6 +24,7 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', include('Sent_Heard_App.urls')),
+    path("stripe/", include("djstripe.urls", namespace="djstripe")),
     # path('subscriptions/', include('subscriptions.urls')),
     # path('post/', include('posts.urls')),
 ]

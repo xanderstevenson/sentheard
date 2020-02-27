@@ -1,2 +1,1 @@
-python-dotenv
-django = ">=2.2.8"
+-f /usr/share/pip-wheels
