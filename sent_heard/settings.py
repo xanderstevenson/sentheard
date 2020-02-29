@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Sent_Heard_App',
     'posts',
-    'storages',
+
+
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ WSGI_APPLICATION = 'sent_heard.wsgi.application'
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'sentheard$default',
+    'NAME': 'sentheard$sentheard_default',
     'USER': 'sentheard',
     'PASSWORD': 'MsQL2019@!jw*aw3',
     'HOST': 'sentheard.mysql.pythonanywhere-services.com',
@@ -174,3 +175,23 @@ SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
 
 # echo to stdout or any other file-like object that is passed to the backend via the stream kwarg.
 SENDGRID_ECHO_TO_STDOUT=True
+
+
+# Stripe  Payment API
+
+STRIPE_PUBLIC_KEY = os.environ.get('SENDGRID_API_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('SENDGRID_API_KEY', '')
+
+DJSTRIPE_PLANS = {
+
+    'monthly': {
+        'stripe_plan_id': 'basic_plan',
+        'name': 'Monthly Subscription',
+        'description': 'Monthly subscription plan',
+        'price': 699,
+        'currency': 'usd',
+        'interval': 'month'
+
+    }
+
+}

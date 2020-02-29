@@ -273,6 +273,75 @@ const changeCloudTitleSides = ()=>{
 
 
 
+const gum = $('#gum')
+const recorded = $('#recorded')
+
+// gum.hide()
+
+
+
+const start = $('#start')
+const download = $('#download')
+const play = $('#play')
+const record = $('#record')
+const tryAgain = $('#tryAgain')
+const saveVid = $('#save')
+
+record.hide()
+play.hide()
+download.hide()
+tryAgain.hide()
+saveVid.hide()
+recorded.css('display', 'none')
+
+
+
+const buttonPoppin = ()=>{
+
+var start_count = 0
+
+    start.click(()=>{
+        start.css('display', 'none')
+        record.show()
+        gum.show()
+        recorded.css('display', 'none')
+
+
+            record.click(()=>{
+            start.css('display', 'none')
+
+
+                    record.click(()=>{
+                        record.hide()
+                        play.show()
+                        download.show()
+                        tryAgain.show()
+                        saveVid.show()
+
+
+                                play.click(()=> {
+                                    gum.hide()
+                                    recorded.show()
+                                    play.hide()
+
+                                })
+
+
+                                tryAgain.click(()=>{
+                                   location.reload();
+                                })
+
+
+                    })
+
+            })
+
+    })
+
+
+}
+
+buttonPoppin()
 
 
 });

@@ -1,0 +1,7 @@
+#bintray--stripe-stripe-cli-rpm - packages by  from Bintray
+[bintray--stripe-stripe-cli-rpm]
+name=bintray--stripe-stripe-cli-rpm
+baseurl=https://dl.bintray.com/stripe/stripe-cli-rpm
+gpgcheck=0
+repo_gpgcheck=0
+enabled=1

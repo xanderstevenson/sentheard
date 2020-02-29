@@ -113,7 +113,20 @@
                 <p id='hc-sm-txt'>Record your stories with audio, video, images and text and pass them along to future generations.</p>
                             <span class='test'></span>
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='smImg'></img>
-                <a href={% url 'signup' %}><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png' class='join-button' id='join-buttonSm'></a>
+                </br>
+                <a href={% url 'signup' %}><img src="{% static '/images/arrow.gif'%}" id='marqueeArrow'><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png' class='join-button' id='join-buttonSm'><img src="{% static '/images/arrow2.gif'%}" id='marqueeArrowRight'></a>
+
+
+                <div class='join-instructions' id='instructions-small'>
+                    <h3 style="margin-bottom: 15px;">Join in 5 Easy Steps</h3>
+                    </hr style="width: 100%; color: black">
+                    <p>1. Click a 'Join' button above.</p>
+                    <p>2. Fill out the form with a new username and password.</p>
+                    <p>3. Log yourself in (the Log-in screen will appear).</p>
+                    <p>4. Click on 'Post' button up top</p>
+                    <p>5. Choose Photos, Audio, Video or Text to upload or record</p>
+                    <p></p>
+                </div>
 
             </div>
 
@@ -128,8 +141,21 @@
                   <span class='test'></span>
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='mdImg'>
                 <br />
-                <a href={% url 'signup' %}><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
-                class='join-button'  id='join-buttonMd'></a>
+                <img "{% static 'images/marquee_arrow_cropped.gif'%}" id='marqueeArrow'>
+                <a href={% url 'signup' %}><img src="{% static '/images/arrow2.gif'%}" id='marqueeArrowMedium'><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
+                class='join-button'  id='join-buttonMd'><img src="{% static '/images/arrow.gif'%}" id='marqueeArrowMediumRight'></a>
+
+
+                <div class='join-instructions' id='instructions-medium'>
+                    <h2 style="margin-bottom: 20px">Join in 5 Easy Steps</h2>
+                    <p>1. Click a 'Join' button above.</p>
+                    <p>2. Fill out the form with a new username and password.</p>
+                    <p>3. Log yourself in (the Log-in screen will appear).</p>
+                    <p>4. Click on 'Post' button up top</p>
+                    <p>5. Choose Photos, Audio, Video or Text to upload or record</p>
+                    <p></p>
+                </div>
+
             </div>
 
 
@@ -143,9 +169,25 @@
                   <span class='test'></span>
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='lgImg'>
                 <br />
-                <a href={% url 'signup' %}><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
-                 class='join-button'  id='join-buttonLg'></a>
+                <img "{% static 'images/marquee_arrow_cropped.gif'%}" id='marqueeArrow'>
+                <a href={% url 'signup' %}><img src="{% static '/images/arrow.gif'%}" id='marqueeArrowLarge'><img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png'
+                 class='join-button'  id='join-buttonLg'><img src="{% static '/images/arrow2.gif'%}" id='marqueeArrowLargeRight'></a>
+
+                <div class='join-instructions' id='instructions-large'>
+                    <h1 style="margin-bottom: 25px">Join in 5 Easy Steps</h1>
+                    <p>1. Click a 'Join' button above.</p>
+                    <p>2. Fill out the form with a new username and password.</p>
+                    <p>3. Log yourself in (the Log-in screen will appear).</p>
+                    <p>4. Click on 'Post' button up top</p>
+                    <p>5. Choose Photos, Audio, Video or Text to upload or record</p>
+                    <p></p>
+                </div>
+
             </div>
+
+
+
+
 
             {% endblock %}
 

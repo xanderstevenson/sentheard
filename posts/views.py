@@ -30,11 +30,15 @@ from .models import Photo, Audio, Video, Text
 
 # #
 
-class CreatePhotoView(CreateView):
+class CreatePhotoView(LoginRequiredMixin, CreateView):
     model = Photo
     form_class = PhotoForm
     template_name = 'post_media/add_photos.html'
     success_url = reverse_lazy('gallery')
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
 
 class CreateAudioView(CreateView):
     model = Audio
