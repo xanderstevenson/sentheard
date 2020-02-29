@@ -35,10 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Sent_Heard_App',
-    # 'subscriptions',
     'posts',
-    'djstripe',
-    # 'storages',
+
 
 ]
 
