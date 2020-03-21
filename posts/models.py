@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django_s3_storage.storage import S3Storage
 from django.conf import settings
 import uuid
 

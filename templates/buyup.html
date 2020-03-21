@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<link rel="stylesheet" href="/static/index.css" />
+
+<!-- {% block title %}Sign Up{% endblock %} -->
+
+<h2 >Put Your Money Where Your Mouth Is</h2>
+<div id="sign_up_form">
+  <form method="post">
+    {% csrf_token %}
+    <!--{{ form.as_p }}-->
+    <button type="submit">Sign up</button>
+  </form>
+</div>
+
+{% endblock %}

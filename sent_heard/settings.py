@@ -24,6 +24,8 @@ DEBUG = False
 ALLOWED_HOSTS = ['sentheard.pythonanywhere.com',
 'www.sentheard.com']
 
+AUTH_USER_MODEL = 'users.CustomUser'
+
 
 # Application definition
 
@@ -36,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Sent_Heard_App',
     'posts',
-    'storages',
-
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
