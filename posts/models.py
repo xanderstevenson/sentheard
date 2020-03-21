@@ -13,7 +13,7 @@ class Upload(models.Model):
 
 
 # storage = S3Storage(aws_s3_bucket_name='django-static-sentheard')
-
+User = settings.AUTH_USER_MODEL
 
 class Photo(models.Model):
     photo_id = models.UUIDField(

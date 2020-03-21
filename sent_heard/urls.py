@@ -21,8 +21,10 @@ from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('users/', include('users.urls')),
+    path('users/', include('django.contrib.auth.urls')),
+    # path('accounts/', include('accounts.urls')),
+    # path('accounts/', include('django.contrib.auth.urls')),
     path('', include('Sent_Heard_App.urls')),
     # path('subscriptions/', include('subscriptions.urls')),
     # path('post/', include('posts.urls')),
