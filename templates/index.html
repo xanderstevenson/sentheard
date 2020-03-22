@@ -83,12 +83,12 @@
 
             <div id='user_box'>
                 {% if user.is_authenticated %}
-                User: {{ user.username }}
+                {{ user.email }}
                 <p><a href="{% url 'logout' %}">Logout</a></p>
 
                 {% else %}
 
-               Welcome,<br> <span class='underlined'><a href="{% url 'login' %}">Login</a></span> or <span class='underlined'><a href={% url 'signup' %}>Join</a></span>...
+               <br> <span class='underlined'><a href="{% url 'login' %}">Login</a></span> or <span class='underlined'><a href={% url 'signup' %}>Join</a></span>...
                 <br>
 
 
