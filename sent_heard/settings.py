@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'Sent_Heard_App',
     'posts',
     'users.apps.UsersConfig',
+    'payments.apps.PaymentsConfig',
 ]
 
 MIDDLEWARE = [
@@ -122,10 +123,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-
-
-
 # USE_S3 = os.getenv('USE_S3') == 'TRUE'
 
 # if USE_S3:
@@ -176,6 +173,12 @@ SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
 
 # echo to stdout or any other file-like object that is passed to the backend via the stream kwarg.
 SENDGRID_ECHO_TO_STDOUT=True
+
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
+STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY")
+
+
+
 
 
 # Subscriptions
