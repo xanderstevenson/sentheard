@@ -13,14 +13,16 @@
 
     Stripe Pay coming soon!!
     </p>
-<h2>Buy for $5.00</h2>
+      {% if user.is_authenticated %}
+<h2>Buy for $4.99</h2>
 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="{{ key }}"
     data-description="A Django Charge"
-    data-amount="500"
+    data-amount="499"
     data-locale="auto">
 </script>
-
+ {% else %}
+ {% endif %}
     </div>
     <!-- <img src="" alt="" style="width:300px; height:200px;"> -->
     {% endblock %}
