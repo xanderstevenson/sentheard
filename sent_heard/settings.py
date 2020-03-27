@@ -50,8 +50,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'always_authenticated.middleware.AlwaysAuthenticatedMiddleware',
 ]
 
+# To run the middleware in production, set ALWAYS_AUTHENTICATED_DEBUG_ONLY to False.
+ALWAYS_AUTHENTICATED_DEBUG_ONLY = False
 
 
 ROOT_URLCONF = 'sent_heard.urls'

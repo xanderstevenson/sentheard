@@ -15,6 +15,7 @@
     </p>
       {% if user.is_authenticated %}
 <h2>Buy for $4.99</h2>
+  {% csrf_token %}
 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="{{ key }}"
     data-description="A Django Charge"
