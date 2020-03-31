@@ -24,6 +24,8 @@ DEBUG = False
 ALLOWED_HOSTS = ['sentheard.pythonanywhere.com',
 'www.sentheard.com']
 
+AUTH_USER_MODEL = 'users.CustomUser'
+
 
 # Application definition
 
@@ -36,8 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Sent_Heard_App',
     'posts',
+<<<<<<< HEAD
+    'users.apps.UsersConfig',
+    'payments.apps.PaymentsConfig',
+=======
 
 
+>>>>>>> 32168c3e4042c3760162df0e40e3a639ca33284b
 ]
 
 MIDDLEWARE = [
@@ -48,8 +55,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'always_authenticated.middleware.AlwaysAuthenticatedMiddleware',
 ]
 
+# To run the middleware in production, set ALWAYS_AUTHENTICATED_DEBUG_ONLY to False.
+ALWAYS_AUTHENTICATED_DEBUG_ONLY = False
 
 
 ROOT_URLCONF = 'sent_heard.urls'
@@ -62,9 +72,9 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.contrib.auth.context_processors.auth',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
             ],
@@ -81,7 +91,7 @@ WSGI_APPLICATION = 'sent_heard.wsgi.application'
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'sentheard$sentheard_default',
+    'NAME': 'sentheard$sentheard_default2',
     'USER': 'sentheard',
     'PASSWORD': 'MsQL2019@!jw*aw3',
     'HOST': 'sentheard.mysql.pythonanywhere-services.com',
@@ -120,10 +130,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-
-
-
 
 # USE_S3 = os.getenv('USE_S3') == 'TRUE'
 
@@ -175,6 +181,12 @@ SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
 
 # echo to stdout or any other file-like object that is passed to the backend via the stream kwarg.
 SENDGRID_ECHO_TO_STDOUT=True
+
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
+STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY")
+
+
+
 
 
 # Stripe  Payment API

@@ -1,0 +1,35 @@
+
+{% extends 'index.html' %}
+{% load static %}
+
+
+    {% block content %}
+    <link rel="stylesheet" href="/static/index.css"/>
+    <br>
+    <div>
+    <h1>Put Your Money Where Your Mouth Is</h1>
+    <br>
+    <p>
+    </p>
+      {% if user.is_authenticated %}
+<h2>Buy for $4.99</h2>
+
+<form action="{% url 'charge' %}" method="post">
+  {% csrf_token %}
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_1WstAayFWHojpBky0IzM0LLt0031UKZWaV"
+    data-name="Stripe.com"
+    data-description="2 widgets"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-description="A Django Charge"
+    data-amount="499"
+    data-locale="auto"></script>
+</form>
+
+ {% else %}
+ {% endif %}
+    </div>
+    <!-- <img src="" alt="" style="width:300px; height:200px;"> -->
+    {% endblock %}
+
+

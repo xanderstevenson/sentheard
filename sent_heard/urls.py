@@ -21,8 +21,11 @@ from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('users/', include('users.urls')),
+    path('users/', include('django.contrib.auth.urls')),
+    # path('accounts/', include('accounts.urls')),
+    # path('accounts/', include('django.contrib.auth.urls')),
+    path('payments/', include('payments.urls')),
     path('', include('Sent_Heard_App.urls')),
     # path("stripe/", include("djstripe.urls", namespace="djstripe")),
     # path('subscriptions/', include('subscriptions.urls')),
