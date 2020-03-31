@@ -5,12 +5,12 @@ import os
 import stripe
 from django.conf import settings
 
-stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
+stripe.api_key = "sk_test_o7yeASKfKUYcZgquJQkKmlqU00kw0WhdaK"
 
 
 class PaymentsPageView(TemplateView):
     template_name = 'payments/payments.html'
-    success_url = reverse_lazy('checkout')
+    success_url = reverse_lazy('charge')
 
     def get_context_data(self, **kwargs): # new
         context = super().get_context_data(**kwargs)
@@ -26,8 +26,8 @@ def charge(request): # new
             description='A Django charge',
             source=request.POST['stripeToken']
         )
-        return render(request, 'payments/checkout.html')
+        return render(request, 'payments/charge.html')
 
-class CheckoutPageView(TemplateView):
-    template_name = 'payments/checkout.html'
-    success_url = reverse_lazy('login')
+# class CheckoutPageView(TemplateView):
+#     template_name = 'payments/checkout.html'
+#     success_url = reverse_lazy('login')
