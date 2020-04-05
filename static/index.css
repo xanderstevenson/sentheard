@@ -193,10 +193,12 @@ p {
 
 #user_box {
   width: 190px;
+  /*width: 375px;*/
   height: 58px;
   border: 2px outset rgb(179, 179, 145);
   border-image: url(images/gold.jpg) 30% round;
-  padding-top: 3px;
+  padding-top: 0px;
+  padding-bottom: 5px;
   margin-top: 1px;
   margin-bottom: 3px;
   background-color: silver;

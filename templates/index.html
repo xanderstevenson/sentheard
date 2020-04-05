@@ -83,13 +83,15 @@
             </div>
 
             <div id='user_box'>
+
                 {% if user.is_authenticated %}
                 {{ user.email }}
                 <p><a href="{% url 'logout' %}">Logout</a></p>
 
                 {% else %}
-
-               <br> <span class='underlined'><a href="{% url 'login' %}">Login</a></span> or <span class='underlined'><a href={% url 'signup' %}>Join</a></span>...
+                <img src="{% static 'images/logo/Vanilla-2.1s-157px.gif'%}" style="margin-top:-5px;margin-left:-10px;">
+                <!--<br>-->
+              <div style="margin-top:-6px;margin-left:3px;"><span class='underlined'><a href="{% url 'login' %}">Login</a></span>  or  <span class='underlined'><a href={% url 'signup' %}>Join</a></span></div>
                 <br>
 
 
@@ -100,7 +102,6 @@
             {% block content %}
 
             <link rel="stylesheet" href="/static/index.css" />
-
 
  <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1575327252/SentHeard/ezgif.com-webp-maker_1.webp' id='hand-pray-sm'>
   <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1575401308/SentHeard/pray-hands-lg.webp' id='hand-pray-md'>
