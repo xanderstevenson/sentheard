@@ -5,7 +5,7 @@ from django.conf import settings
 from django.utils import timezone
 from django.core.files.storage import FileSystemStorage
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+from django.contrib.auth.decorators import permission_required, login_required
 from .forms import PhotoForm, AudioForm, VideoForm, TextForm
 from .models import Photo, Audio, Video, Text
 
@@ -30,15 +30,17 @@ from .models import Photo, Audio, Video, Text
 
 # #
 
+
 class CreatePhotoView(LoginRequiredMixin, CreateView):
     model = Photo
     form_class = PhotoForm
     template_name = 'post_media/add_photos.html'
     success_url = reverse_lazy('gallery')
+    # @permission_required('has_module_perms')
+    @login_required
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-
 
 class CreateAudioView(CreateView):
     model = Audio
@@ -76,6 +78,7 @@ class GalleryListView(ListView):
     model = Photo
     template_name = 'post_media/gallery.html'
     context_object_name = 'photo_list'
+    # @login_required
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()

@@ -2,7 +2,7 @@
 {% extends 'index.html' %}
 {% load static %}
 
-{% if user.is_authenticated %}
+
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
     <br>
@@ -16,8 +16,9 @@
 
 <div id='audio-row'>
 
-            {% for video in video_list %}
+{% if user.is_authenticated %}
             {% if video.author == user %}
+            {% for video in video_list %}
             <div class='video_gallery_img'>
                     <p id="photo-title">Title: {{ video.title }} </p>
                 <p id="photo-title">Author: {{ video.author }}</p>
@@ -30,11 +31,16 @@
 
 
              <!--<img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ photo.photo.url }}" alt="...">-->
-
-             {% endif %}
              {% endfor %}
- </div>
-</div>
-
-    {% endblock %}
+             {% endif %}
+     {% else %}
+<a href={% url 'login' %}>Please Log In to View</a>
 {% endif %}
+ </div>
+
+
+
+
+
+</div>
+    {% endblock %}

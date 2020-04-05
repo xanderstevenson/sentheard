@@ -2,11 +2,15 @@
 {% extends 'index.html' %}
 {% load static %}
 
-{% if user.is_authenticated %}
+
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
     <br>
+
+
+
     <h3>Choose a Gallery</h3>
+
 
 
     <h5 class="fuck-motto">from Your Memories...</h5>
@@ -15,18 +19,23 @@
 
 <div id='photo_gallery_block' class='row'>
 
-
+{% if user.is_authenticated %}
 <a href={% url 'photo_gallery' %}>Photo Gallery</a>
 <a href={% url 'audio_gallery' %}>Audio Gallery</a>
 <a href={% url 'video_gallery' %}>Video Gallery</a>
 <a href={% url 'text_gallery' %}>Text Gallery</a>
+    {% else %}
+<a href={% url 'login' %}>Please Log In to View</a>
+{% endif %}
+
 
 
 
 </div>
 
     {% endblock %}
-{% endif %}
+
+
 
 
 <!--<h2>{{ user.get_full_name }}</h2>-->
