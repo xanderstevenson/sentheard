@@ -2,7 +2,7 @@
 {% extends 'index.html' %}
 {% load static %}
 
-{% if user.is_authenticated %}
+
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
     <br>
@@ -14,19 +14,22 @@
     <!--<h5>Django Image Uploading...</h5>-->
 
 <div id='photo_gallery_block' class='row'>
-
-            {% for photo in photo_list %}
+{% if user.is_authenticated %}
             {% if photo.author == user %}
+            {% for photo in photo_list %}
+
             <div class='photo_gallery_img zoomTarget'>
                     <p id="photo-title">{{ photo.title }} </p>
                     <p>{{ photo.author}} </p>
                     <p>{{ photo.description}} </p>
              <img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ photo.photo.url }}" alt="...">
              </div>
-             {% endif %}
-             {% endfor %}
 
+             {% endfor %}
+             {% endif %}
+                 {% else %}
+<a href={% url 'login' %}>Please Log In to View</a>
+{% endif %}
 </div>
 
     {% endblock %}
-{% endif %}

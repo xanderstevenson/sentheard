@@ -5,6 +5,16 @@
 
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
+
+<!--To prevent users from accidentally clicking the submit button multiple times -->
+<!--which would send multiple requests to the server, consider using this -->
+<!--JavaScript snippet in your template to disable the button as soon as the user -->
+<!--clicks it:    -->
+    <script>
+    $('form').submit(function() {
+        $(this).find("button[class='stripe-button']").prop('disabled',true);
+    });
+</script>
     <br>
     <div>
     <h1>Put Your Money Where Your Mouth Is</h1>
