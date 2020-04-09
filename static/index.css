@@ -97,7 +97,7 @@ body {
   max-width: 1900px;
   min-height: 1300px;
   height: 100%;
-  min-height: 1200px;
+  min-height: 1400px;
   background-color: black;
   background: url(images/cloud-parch.png);
    -webkit-background-size: cover;
@@ -548,7 +548,7 @@ font-family: 'Fahkwang', sans-serif;
 font-family: 'Fahkwang', sans-serif;
   font-weight: bold;
   /*text-shadow: 2px 2px 0px #f2f0ed, -2px -2px 0px #f2f0ed, -2px 0px 0px #f2f0ed, -0px 2px 0px #f2f0ed, 2px -2px 0px #f2f0ed;*/
-  text-shadow: 3px 3px 0px #f2f0ed, -3px -3px 0px #f2f0ed, -3px 0px 0px #f2f0ed, 0px 3px 0px #f2f0ed, 0px -3px 0px #f2f0ed, 3px -3px 0px #f2f0ed, -3px 3px 0px #f2f0ed;
+  /*text-shadow: 3px 3px 0px #f2f0ed, -3px -3px 0px #f2f0ed, -3px 0px 0px #f2f0ed, 0px 3px 0px #f2f0ed, 0px -3px 0px #f2f0ed, 3px -3px 0px #f2f0ed, -3px 3px 0px #f2f0ed;*/
 /*max-width: 525px;*/
 }
 
@@ -966,68 +966,7 @@ background-color: silver;
         right: 80px;
    }
 
-.join-instructions {
-    text-align: center;
-    margin: 0px auto;
-    padding-top: 35px;
-    width: 100%;
-    /*border: 2px ridge gray;*/
-}
-
-#instructions-large {
-    align-content: center;
-    margin-top: 140px;
-    /*padding-top: 135px;*/
-    max-width: 1200px;
-    min-width: 650px;
-    background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1581282064/SentHeard/scroll-large.png);
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#instructions-large p{
-  font-size: 25px;
-  padding-left: 55px;
-  padding-right: 50px;
-  padding: bottom: 5px;
-  padding-top: 5px;
-  text-decoration: none;
-  color: #e0dbd1;
-}
-
-#instructions-medium {
-    align-content: center;
-    margin-top: 140px;
-    /*padding-top: 135px;*/
-    max-width: 700px;
-    min-width: 500px;
-    font-size: 20px;
-  z-index: 0;
-    /*background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1581282064/SentHeard/scroll-large.png);*/
-    background-image: url(images/landing_page/chalkboard-gold.jpg);
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#instructions-medium p{
-    /*margin-top: 25px;*/
-    text-shadow:none;
-    font-size: 21px;
-    padding-left: 45px;
-    padding-right: 35px;
-    color: #e0dbd1;
-}
-
-
-#instructions-small {
+#join-instructions {
     align-content: center;
     margin: 0px auto;
     margin-top: 120px;
@@ -1039,8 +978,9 @@ background-color: silver;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
-    /*padding-top: 25px;*/
+    /*padding-left: 17px;*/
+    /*padding-right: 17px;*/
+    padding-top: 32px;
     width: 100%;
     min-width: 340px;
     max-width: 360px;
@@ -1049,19 +989,16 @@ background-color: silver;
     /*padding-top: -120px;*/
 }
 
-
-
-#instructions-small p {
+#join-instructions p{
     font-size: 16px;
     padding-left: 21px;
-    padding-right: 15px;
-    padding-top: -3px;
+    padding-right: 21px;
+    padding-top: -5px;
     text-align: center;
     color: #e0dbd1;
     font-weight: bold;
     margin-top: 17px;
 }
-
 
 .MyCardElement {
   height: 40px;
