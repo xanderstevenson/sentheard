@@ -40,6 +40,13 @@ class CustomUser(AbstractUser):
             'Designates whether the user can log into this admin site.'
         ),
     )
+    has_paid = models.BooleanField(
+        _('payment status'),
+        default=False,
+        help_text=_(
+            'Designates whether the user has paid.'
+        ),
+    )
     # is_superuser field provided by PermissionsMixin
     # groups field provided by PermissionsMixin
     # user_permissions field provided by PermissionsMixin
