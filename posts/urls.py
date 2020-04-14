@@ -8,6 +8,8 @@ AudioGalleryListView, VideoGalleryListView, TextGalleryListView, CreateRecordAud
 from django.conf import settings
 from django.conf.urls.static import static
 
+app_name = 'posts'
+
 urlpatterns = [
 
     path('add_photos/', CreatePhotoView.as_view(), name='add_photos'),
@@ -19,12 +21,16 @@ urlpatterns = [
     path('post_video/', views.post_video, name="post_video"),
     path('text/', CreateTextView.as_view(), name='text'),
     # path('published/', PublishedList.as_view(), name='published'),
-    path('gallery/', GalleryListView.as_view(), name="gallery"),
+    path('gallery/', views.GalleryListView, name="gallery"),
     path('gallery/photo_gallery', PhotoGalleryListView.as_view(), name="photo_gallery"),
     path('gallery/audio_gallery', AudioGalleryListView.as_view(), name="audio_gallery"),
     path('gallery/video_gallery', VideoGalleryListView.as_view(), name="video_gallery"),
     path('gallery/text_gallery', TextGalleryListView.as_view(), name="text_gallery"),
     path('', views.post_stuff, name="post_stuff"),
 
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+# ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+
     # path('post_stuff/add_photos/', views.add_photos, name="add_photos"),

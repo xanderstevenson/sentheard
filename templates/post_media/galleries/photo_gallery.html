@@ -14,22 +14,27 @@
     <!--<h5>Django Image Uploading...</h5>-->
 
 <div id='photo_gallery_block' class='row'>
-{% if user.is_authenticated %}
-            {% if photo.author == user %}
+<!--{% if user.is_authenticated %}-->
+            <!--{% if photo.author == user %}-->
+            {% if photo_list %}
             {% for photo in photo_list %}
 
-            <div class='photo_gallery_img zoomTarget'>
+            <div class='photo_gallery_img'>
                     <p id="photo-title">{{ photo.title }} </p>
-                    <p>{{ photo.author}} </p>
+                    <!--<p>{{ photo.author}} </p>-->
                     <p>{{ photo.description}} </p>
              <img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ photo.photo.url }}" alt="...">
              </div>
 
-             {% endfor %}
-             {% endif %}
-                 {% else %}
+            {% endfor %}
+    {% else %}
+    <li>No objects yet.</li>
+  {% endif %}
+
+             <!--{% endif %}-->
+                 <!--{% else %}-->
 <a href={% url 'login' %}>Please Log In to View</a>
-{% endif %}
+<!--{% endif %}-->
 </div>
 
     {% endblock %}

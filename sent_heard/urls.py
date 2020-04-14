@@ -23,12 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
     path('users/', include('django.contrib.auth.urls')),
-    # path('accounts/', include('accounts.urls')),
-    # path('accounts/', include('django.contrib.auth.urls')),
     path('payments/', include('payments.urls')),
     path('', include('Sent_Heard_App.urls')),
-    # path('subscriptions/', include('subscriptions.urls')),
-    # path('post/', include('posts.urls')),
+    path('post_stuff/', include('posts.urls', namespace="post_stuff")),
+    # path('app_name/', include('app_name.urls', namespace="app_name")),
 ]
 
 

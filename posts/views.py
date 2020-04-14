@@ -5,10 +5,12 @@ from django.conf import settings
 from django.utils import timezone
 from django.core.files.storage import FileSystemStorage
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.decorators import permission_required, login_required
+# from django.contrib.auth.decorators import permission_required, login_required
 from .forms import PhotoForm, AudioForm, VideoForm, TextForm
 from .models import Photo, Audio, Video, Text
-
+from django.contrib.auth.mixins import PermissionRequiredMixin
+from django.contrib.auth import get_user_model
+from django.views import generic
 
 # django-storages and boto3
 # def image_upload(request):
@@ -28,70 +30,81 @@ from .models import Photo, Audio, Video, Text
 #         })
 #     return render(request, 'post_media/published.html')
 
-# #
+User = get_user_model()
 
-
-class CreatePhotoView(LoginRequiredMixin, CreateView):
-    model = Photo
+class CreatePhotoView(CreateView):
+    # model = Photo
     form_class = PhotoForm
     template_name = 'post_media/add_photos.html'
-    success_url = reverse_lazy('gallery')
-    # @permission_required('has_module_perms')
-    @login_required
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
+    success_url = reverse_lazy('posts:gallery')
 
-class CreateAudioView(CreateView):
+    # def get_initial(self, *args, **kwargs):
+    #     initial = super(CreatePhotoView, self).get_initial(**kwargs)
+    #     initial['author'] = User
+    #     return initial
+
+
+
+    # @permission_required('has_module_perms')
+    # @login_required
+    # def form_valid(self, form):
+    #     form.instance.author = self.request.user
+    #     return super().form_valid(form)
+
+class CreateAudioView(PermissionRequiredMixin, CreateView):
+    permission_required = 'users.has_paid'
     model = Audio
     form_class = AudioForm
     template_name = 'post_media/add_audio.html'
-    success_url = reverse_lazy('gallery')
+    success_url = reverse_lazy('posts:gallery')
 
 class CreateRecordAudioView(CreateView):
     model = Audio
     form_class = AudioForm
     template_name = 'post_media/record_audio.html'
-    success_url = reverse_lazy('gallery')
+    success_url = reverse_lazy('posts:gallery')
 
 class CreateVideoView(CreateView):
     model = Video
     form_class = VideoForm
     template_name = 'post_media/add_video.html'
-    success_url = reverse_lazy('gallery')
+    success_url = reverse_lazy('posts:gallery')
 
 class CreateRecordVideoView(CreateView):
     model = Video
     form_class = VideoForm
     template_name = 'post_media/record_video.html'
-    success_url = reverse_lazy('gallery')
+    success_url = reverse_lazy('posts:gallery')
 
 
 class CreateTextView(CreateView):
     model = Text
     form_class = TextForm
     template_name = 'post_media/add_text.html'
-    success_url = reverse_lazy('gallery')
+    success_url = reverse_lazy('posts:gallery')
 
 
-class GalleryListView(ListView):
-    model = Photo
-    template_name = 'post_media/gallery.html'
-    context_object_name = 'photo_list'
-    # @login_required
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['now'] = timezone.now()
-        return context
+# class GalleryListView(ListView):
+#     template_name = 'post_media/gallery.html'
+#     queryset = Photo.objects.all()
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['now'] = timezone.now()
+#         return context
 
-class PhotoGalleryListView(ListView):
+def GalleryListView(request):
+    return render(request, "post_media/gallery.html")
+
+
+class PhotoGalleryListView(generic.ListView):
     model = Photo
     template_name = 'post_media/galleries/photo_gallery.html'
+    queryset = Photo.objects.all()
     context_object_name = 'photo_list'
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['now'] = timezone.now()
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['now'] = timezone.now()
+    #     return context
 
 class AudioGalleryListView(ListView):
     model = Audio

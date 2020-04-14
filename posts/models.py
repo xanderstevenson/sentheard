@@ -1,8 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.conf import settings
 import uuid
-
+from django.urls import reverse_lazy
 # from django.conf import settings
 
 # django-storages and boto3
@@ -24,6 +24,8 @@ class Photo(models.Model):
     photo = models.ImageField(upload_to='photos/', default="")
     def __str__(self):
         return self.title
+    # def get_absolute_url(self):
+    #     return reverse_lazy('posts:photo_gallery', args=[self.id])
 
 
 class Audio(models.Model):

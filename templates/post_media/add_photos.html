@@ -11,14 +11,15 @@
     <br>
 <h3>New Photo</h3>
 
-<form method="post" enctype="multipart/form-data">
+<form method="POST" enctype="multipart/form-data">
+<!--<form method="POST" enctype="multipart/form-data" action=".">-->
   {% csrf_token %}
-  {% if user.is_authenticated %}
+  <!--{% if user.is_authenticated %}-->
   {{ form.as_p }}
   <button type="submit">Submit New Post</button>
 </form>
     </div>
- {% else %}
- {% endif %}
+ <!--{% else %}-->
+ <!--{% endif %}-->
 
     {% endblock %}
