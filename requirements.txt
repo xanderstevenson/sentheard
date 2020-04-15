@@ -1,2 +1,19 @@
-python-dotenv
-django = ">=2.2.8"
+-f /usr/share/pip-wheels
+asgiref==3.2.5
+certifi==2019.11.28
+chardet==3.0.4
+dj-stripe==2.2.3
+Django==3.0.4
+django-appconf==1.0.3
+django-ipware==2.1.0
+idna==2.9
+jsonfield==3.1.0
+mysqlclient==1.4.6
+Pillow==7.0.0
+pinax-stripe==4.4.0
+pytz==2019.3
+requests==2.23.0
+six==1.14.0
+sqlparse==0.3.1
+stripe==2.44.0
+urllib3==1.25.8

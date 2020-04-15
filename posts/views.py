@@ -7,11 +7,11 @@ from django.core.files.storage import FileSystemStorage
 from django.contrib.auth.mixins import LoginRequiredMixin
 # from django.contrib.auth.decorators import permission_required, login_required
 from .forms import PhotoForm, AudioForm, VideoForm, TextForm
-from .models import Photo, Audio, Video, Text
+from posts.models import Photo, Audio, Video, Text
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib.auth import get_user_model
 from django.views import generic
-
+from django.views.generic.edit import FormMixin
 # django-storages and boto3
 # def image_upload(request):
 #     if request.method == 'POST':
@@ -33,23 +33,12 @@ from django.views import generic
 User = get_user_model()
 
 class CreatePhotoView(CreateView):
-    # model = Photo
+    model = Photo
     form_class = PhotoForm
     template_name = 'post_media/add_photos.html'
     success_url = reverse_lazy('posts:gallery')
 
-    # def get_initial(self, *args, **kwargs):
-    #     initial = super(CreatePhotoView, self).get_initial(**kwargs)
-    #     initial['author'] = User
-    #     return initial
 
-
-
-    # @permission_required('has_module_perms')
-    # @login_required
-    # def form_valid(self, form):
-    #     form.instance.author = self.request.user
-    #     return super().form_valid(form)
 
 class CreateAudioView(PermissionRequiredMixin, CreateView):
     permission_required = 'users.has_paid'
@@ -96,15 +85,15 @@ def GalleryListView(request):
     return render(request, "post_media/gallery.html")
 
 
-class PhotoGalleryListView(generic.ListView):
+class PhotoGalleryListView(ListView):
     model = Photo
     template_name = 'post_media/galleries/photo_gallery.html'
-    queryset = Photo.objects.all()
     context_object_name = 'photo_list'
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['now'] = timezone.now()
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
+
 
 class AudioGalleryListView(ListView):
     model = Audio

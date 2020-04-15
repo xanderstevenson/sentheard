@@ -7,6 +7,7 @@ from .views import CreatePhotoView, CreateAudioView, CreateVideoView, CreateText
 AudioGalleryListView, VideoGalleryListView, TextGalleryListView, CreateRecordAudioView,  CreateRecordVideoView
 from django.conf import settings
 from django.conf.urls.static import static
+from .models import Photo
 
 app_name = 'posts'
 

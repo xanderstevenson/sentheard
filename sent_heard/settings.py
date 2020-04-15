@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Sent_Heard_App',
-    'posts',
+    'posts.apps.PostsConfig',
     'users.apps.UsersConfig',
     'payments.apps.PaymentsConfig',
 ]
