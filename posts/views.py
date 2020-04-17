@@ -37,7 +37,9 @@ class CreatePhotoView(CreateView):
     form_class = PhotoForm
     template_name = 'post_media/add_photos.html'
     success_url = reverse_lazy('posts:gallery')
-
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class CreateAudioView(PermissionRequiredMixin, CreateView):
@@ -88,7 +90,7 @@ def GalleryListView(request):
 class PhotoGalleryListView(ListView):
     model = Photo
     template_name = 'post_media/galleries/photo_gallery.html'
-    context_object_name = 'photo_list'
+    # context_object_name = 'photo_list'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()

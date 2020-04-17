@@ -8,9 +8,9 @@ from django.contrib.auth import get_user_model
 class PhotoForm(forms.ModelForm):
     class Meta:
         model = Photo
-        # exclude = ['author']
+        exclude = ['author']
         # author = User
-        fields = ('title', 'photo', 'description', 'author')
+        fields = ('title', 'photo', 'description')
 
 class AudioForm(forms.ModelForm):
     class Meta:
