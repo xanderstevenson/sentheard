@@ -27,6 +27,7 @@ urlpatterns = [
     path('', include('Sent_Heard_App.urls')),
     path('post_stuff/', include('posts.urls', namespace="post_stuff")),
     # path('app_name/', include('app_name.urls', namespace="app_name")),
+
 ]
 
 

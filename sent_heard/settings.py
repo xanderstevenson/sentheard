@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Sent_Heard_App',
+
     'posts.apps.PostsConfig',
+
     'users.apps.UsersConfig',
     'payments.apps.PaymentsConfig',
 ]
@@ -184,8 +186,21 @@ STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY")
 
 
 
-# Subscriptions
-DFS_CURRENCY_LOCALE = 'en_us'
+# Stripe  Payment API
 
-# Subscriptions
-DFS_BASE_TEMPLATE = 'base.html'
+STRIPE_PUBLIC_KEY = os.environ.get('SENDGRID_API_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('SENDGRID_API_KEY', '')
+
+DJSTRIPE_PLANS = {
+
+    'monthly': {
+        'stripe_plan_id': 'basic_plan',
+        'name': 'Monthly Subscription',
+        'description': 'Monthly subscription plan',
+        'price': 699,
+        'currency': 'usd',
+        'interval': 'month'
+
+    }
+
+}
