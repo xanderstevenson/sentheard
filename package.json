@@ -5,6 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "typed.js": "^2.0.11"
+    "django": ">=2.2.10"
+    "Django": ">=2.2.10"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2"

@@ -90,7 +90,9 @@ def GalleryListView(request):
 class PhotoGalleryListView(ListView):
     model = Photo
     template_name = 'post_media/galleries/photo_gallery.html'
-    # context_object_name = 'photo_list'
+    queryset = Photo.objects.all()
+    context_object_name = 'photo_list'
+    print("hi")
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()

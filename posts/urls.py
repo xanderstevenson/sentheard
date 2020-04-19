@@ -29,9 +29,8 @@ urlpatterns = [
     path('gallery/text_gallery', TextGalleryListView.as_view(), name="text_gallery"),
     path('', views.post_stuff, name="post_stuff"),
 
-]
-# ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-
+urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
     # path('post_stuff/add_photos/', views.add_photos, name="add_photos"),

@@ -17,7 +17,7 @@
 <div id='photo_gallery_block' class='row'>
 {% if user.is_authenticated %}
             <!--{% if photo.author == user %}-->
-            {% for photo in object_list %}
+            {% for photo in photo_list %}
             <div class='photo_gallery_img zoomTarget'>
                     <p id="photo-title">Title: {{ photo.title }} </p>
                 <!--<p id="photo-title">Author: {{ photo.author }}</p>-->
