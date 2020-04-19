@@ -20,10 +20,10 @@ User = get_user_model()
 class Photo(models.Model):
     photo_id = models.UUIDField(
     primary_key=False, default=uuid.uuid4, editable=False,)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
-    title = models.CharField(default="", max_length=55)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=False)
+    title = models.CharField(default="", max_length=55, null=False)
     description = models.TextField(max_length=500, default='', null=False)
-    photo = models.ImageField(upload_to='photos/', default="")
+    photo = models.ImageField(upload_to = 'photos/')
     def __str__(self):
         return self.title
     # def get_absolute_url(self):

@@ -151,11 +151,14 @@ USE_TZ = True
 THUMBNAIL_HIGH_RESOLUTION = True
 
 
+PROJECT_URL = 'https://www.sentheard.com'
+
 MEDIA_URL = '/static/media/'
-MEDIA_ROOT = '/home/sentheard/sentheard/static/media'
+MEDIA_ROOT = '/home/sentheard/sentheard/static/media/'
+
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/sentheard/sentheard/static'
+STATIC_ROOT = '/home/sentheard/sentheard/static/'
 
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))

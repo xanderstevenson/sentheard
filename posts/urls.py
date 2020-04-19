@@ -8,6 +8,7 @@ AudioGalleryListView, VideoGalleryListView, TextGalleryListView, CreateRecordAud
 from django.conf import settings
 from django.conf.urls.static import static
 from .models import Photo
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 app_name = 'posts'
 
@@ -33,4 +34,5 @@ urlpatterns = [
 
 urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
+urlpatterns += staticfiles_urlpatterns()
     # path('post_stuff/add_photos/', views.add_photos, name="add_photos"),
