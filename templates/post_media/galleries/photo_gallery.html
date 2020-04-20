@@ -28,9 +28,10 @@ test
             {% for photo in photo_list %}
             <div class='photo_gallery_img'>
 
-
+               <li id="photo-title" style='color:black;'>Title: {{ photo.title }}</li>
                 <li id="photo-title" style='color:black;'>Author: {{ photo.author }}</li>
-                <img src="{{PROJECT_URL}}{{MEDIA_URL}}photos/{{photo.url}}" alt="Profile Picture" width="200"/>
+                <li id="photo-title" style='color:black;'>Description: {{ photo.description }}</li>
+                <img src="{{ static }}{{photo.photo.url}}" alt="Profile Picture" width="200"/>
 
              </div>
 
