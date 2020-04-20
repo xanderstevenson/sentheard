@@ -12,32 +12,35 @@
 
     <h3 class="fuck-motto">Your Memories...</h3>
     <br>
-    <!--<h5>Django Image Uploading...</h5>-->
+
 
 <div id='photo_gallery_block' class='row'>
-<!--{% if user.is_authenticated %}-->
+
 test
 <img src="https://www.sentheard.com/static/media/photos/20191226_151205_sVrPMPr.jpg" width="200">
 <img src="https://www.sentheard.com{{MEDIA_URL}}photos/20191226_151205_sVrPMPr.jpg" width="200">
 
+{% if photo_list %}
+
     <ul>
-            <!--{% if photo.author == user %}-->
-            {% for object in object_list %}
+
+
+            {% for photo in photo_list %}
             <div class='photo_gallery_img'>
 
-                    <!--<li id="photo-title">Title: {{MEDIA_URL}}/media/photos/{{ photo.title }} </li>-->
-                <li id="photo-title" style='color:black;'>Author: {{ object.author }}</li>
-                <!--<a href="https://www.sentheard.com/static{{ text.text_upload.url }}" download>Text</a>-->
-                <img src="{{PROJECT_URL}}{{MEDIA_URL}}/photos/{{photo.url}}" alt="Profile Picture" width="200"/>
-             <!--<img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ text.photo.url }}" alt="...">-->
+
+                <li id="photo-title" style='color:black;'>Author: {{ photo.author }}</li>
+                <img src="{{PROJECT_URL}}{{MEDIA_URL}}photos/{{photo.url}}" alt="Profile Picture" width="200"/>
+
              </div>
 
              {% endfor %}
+
     </ul>
-             <!--{% endif %}-->
-<!--    {% else %}-->
-<!--<a href={% url 'login' %}>Please Log In to View</a>-->
-<!--{% endif %}-->
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
+
 
 </div>
     {% endblock %}

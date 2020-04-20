@@ -90,9 +90,9 @@ def GalleryListView(request):
 class PhotoGalleryListView(ListView):
     model = Photo
     template_name = 'post_media/galleries/photo_gallery.html'
-    def get_queryset(self):
-        queryset = Photo.objects.all()
-        return queryset
+    queryset = Photo.objects.all().order_by('photo_id')
+    # def get_queryset(self):
+    #     return Book.objects.filter(title__icontains='war')[:5]
     context_object_name = 'photo_list'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

@@ -6,6 +6,8 @@ from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
 # from django.conf import settings
 
+
+
 # django-storages and boto3
 class Upload(models.Model):
     uploaded_at = models.DateTimeField(auto_now_add=True)
