@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="/static/index.css"/>
 
     <br>
+    <h1>Audio Gallery</h1>
 
+
+    <h3 class="fuck-motto">Your Memories...</h3>
+    <br>
 
 
 
@@ -104,7 +108,7 @@
 <!--});-->
 <!--//]]>-->
 <!--</script>-->
-<div id='photo_gallery_block' class=''>
+<!--<div id='photo_gallery_block' class=''>-->
 
 <!--<div id="jquery_jplayer_1" class="jp-jplayer"></div>-->
 <!--<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">-->
@@ -153,24 +157,25 @@
 
 
     {% if user.is_authenticated %}
+<div id='photo_gallery_block' class=''>
 
-    <h3>AudioGallery</h3>
-
-            {% if audio.author == user %}
             {% for audio in audio_list %}
+            {% if audio.author == user %}
+
             <div class='photo_gallery_img zoomTarget'>
                     <p id="photo-title">Title: {{ audio.title }} </p>
                 <p id="photo-title">Author: {{ audio.author }}</p>
             <div class='row'>
                 <audio controls = 'controls'>
-                <source src='/static/{{ static }}{{ audio.audio.url }}' type="audio/mpeg">
+                <source src='{{ static }}{{ audio.audio.url }}' type="audio/mpeg">
                 Your browser does not support the audio element.
                 </audio>
             </div>
 
              </div>
-            {% endfor %}
              {% endif %}
+            {% endfor %}
+
                  {% else %}
 <a href={% url 'login' %}>Please Log In to View</a>
              {% endif %}

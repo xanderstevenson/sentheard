@@ -35,9 +35,9 @@ class Photo(models.Model):
 class Audio(models.Model):
     audio_id = models.UUIDField(
     primary_key=False, default=uuid.uuid4, editable=False,)
-    author = models.ForeignKey(User, on_delete=models.PROTECT, default=None, null=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     title = models.CharField(default="", max_length=55)
-    audio = models.FileField(upload_to='audio/', default="")
+    audio = models.FileField(upload_to='audio/')
     def __str__(self):
         return self.title
 

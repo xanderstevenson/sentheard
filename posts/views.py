@@ -32,6 +32,10 @@ from django.views.generic.edit import FormMixin
 
 User = get_user_model()
 
+def post_stuff(request):
+    return render(request, "memories.html")
+
+
 class CreatePhotoView(CreateView):
     model = Photo
     form_class = PhotoForm
@@ -41,13 +45,18 @@ class CreatePhotoView(CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
+# def audio(request):
+#     return render(request, "/post_media/post_audio.html")
 
-class CreateAudioView(PermissionRequiredMixin, CreateView):
-    permission_required = 'users.has_paid'
+class CreateAudioView(CreateView):
+    # permission_required = 'users.has_paid'
     model = Audio
     form_class = AudioForm
     template_name = 'post_media/add_audio.html'
     success_url = reverse_lazy('posts:gallery')
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 class CreateRecordAudioView(CreateView):
     model = Audio
@@ -100,13 +109,15 @@ class PhotoGalleryListView(ListView):
         return context
 
 
+
 class AudioGalleryListView(ListView):
     model = Audio
     template_name = 'post_media/galleries/audio_gallery.html'
+    queryset = Audio.objects.all().order_by('audio_id')
     context_object_name = 'audio_list'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['now'] = timezone.now()
+        # context['now'] = timezone.now()
         return context
 
 class VideoGalleryListView(ListView):
@@ -127,12 +138,10 @@ class TextGalleryListView(ListView):
         context['now'] = timezone.now()
         return context
 
-def post_stuff(request):
-    return render(request, "memories.html")
 
 
-def post_audio(request):
-    return render(request, "post_media/post_audio.html")
+
+
 
 def post_video(request):
     return render(request, "post_media/post_video.html")
