@@ -20,7 +20,7 @@
 <!--<img src="https://www.sentheard.com/static/media/photos/20191226_151205_sVrPMPr.jpg" width="200">-->
 <!--<img src="https://www.sentheard.com{{MEDIA_URL}}photos/20191226_151205_sVrPMPr.jpg" width="200">-->
 
-<!--{% if photo_list %}-->
+{% if photo_list %}
 
 
 
@@ -37,9 +37,9 @@
             {% endif %}
              {% endfor %}
 
-  <!--{% else %}-->
-  <!--  <p>There are no photos in the gallery.</p>-->
-  <!--{% endif %}-->
+  {% else %}
+    <p>There are no photos in the gallery.</p>
+  {% endif %}
 
 
 </div>

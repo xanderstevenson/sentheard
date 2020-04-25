@@ -17,22 +17,24 @@
 <div id='audio-row'>
 
 {% if user.is_authenticated %}
-            {% if video.author == user %}
+
             {% for video in video_list %}
+            {% if video.author == user %}
             <div class='video_gallery_img'>
                     <p id="photo-title">Title: {{ video.title }} </p>
                 <p id="photo-title">Author: {{ video.author }}</p>
 
                 <video controls = 'controls'>
-                <source src='/static/{{ static }}{{ video.video.url }}' type="audio/mpeg">
+                <source src='{{ static }}{{ video.video.url }}' type="audio/mpeg">
                 Your browser does not support the video element.
                 </video>
             </div>
 
 
              <!--<img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ photo.photo.url }}" alt="...">-->
+              {% endif %}
              {% endfor %}
-             {% endif %}
+
      {% else %}
 <a href={% url 'login' %}>Please Log In to View</a>
 {% endif %}
