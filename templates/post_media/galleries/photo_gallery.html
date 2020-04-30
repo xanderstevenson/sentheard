@@ -1,47 +1,52 @@
-
 {% extends 'index.html' %}
 {% load static %}
 
 
-    {% block content %}
-    <link rel="stylesheet" href="/static/index.css"/>
+{% block content %}
+<link rel="stylesheet" href="/static/index.css" />
 
-    <br>
-    <h1>Photo Gallery</h1>
-
-
-    <h3 class="fuck-motto">Your Memories...</h3>
-    <br>
-
-{% if user.is_authenticated %}
-<div id='photo_gallery_block' class='row'>
-
-<!--test-->
-<!--<img src="https://www.sentheard.com/static/media/photos/20191226_151205_sVrPMPr.jpg" width="200">-->
-<!--<img src="https://www.sentheard.com{{MEDIA_URL}}photos/20191226_151205_sVrPMPr.jpg" width="200">-->
-
-{% if photo_list %}
-
-
-
-            {% for photo in photo_list %}
-            {% if photo.author == user %}
-            <div class='photo_gallery_img'>
-
-               <p id="photo-title" style='color:black;'>Title: {{ photo.title }}</li>
-                <p id="photo-title" style='color:black;'>Author: {{ photo.author }}</li>
-                <p id="photo-title" style='color:black;'>Description: {{ photo.description }}</li>
-                <img src="{{ static }}{{photo.photo.url}}" alt="Profile Picture" width="200"/>
-
-             </div>
-            {% endif %}
-             {% endfor %}
-
-  {% else %}
-    <p>There are no photos in the gallery.</p>
-  {% endif %}
-
-
+<br>
+<div class="GalleryTitleBox">
+<h1>Photo Gallery</h1>
+<h3 class="fuck-motto">Your Memories</h3>
 </div>
-{% endif %}
-    {% endblock %}
+<br>
+<br style="clear: both;">
+
+
+<div id='audio-row'>
+
+
+    {% if user.is_authenticated %}
+    <div id='photo_gallery_block' class='row'>
+        {% if photo_list %}
+        {% for photo in photo_list %}
+        {% if photo.author == user %}
+
+    <div class='photo_gallery_img'>
+        <div>
+            <p id="photo-title"><span id="display_category">Title: </span>{{ photo.title }}</p>
+            <p id="photo-title"><span id="display_category">Author: </span>{{photo.author.first_name }}</p>
+            <p id="photo-title"><span id="display_category">About: </span>{{ photo.description }}</p>
+            <img src="{{ static }}{{photo.photo.url}}" alt="Profile Picture" width="200" />
+        </div>
+    </div>
+
+        </div>
+        {% else %}
+        <p>There are no photos in the gallery.</p>
+        {% endif %}
+        {% endfor %}
+
+
+        {% endif %}
+
+    </div>
+    {% else %}
+    <a href={% url 'login' %}>Please Log In to View</a>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+

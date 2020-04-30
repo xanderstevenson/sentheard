@@ -86,11 +86,14 @@ WSGI_APPLICATION = 'sent_heard.wsgi.application'
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'sentheard$sentheard_default2',
+    'NAME': 'sentheard$database_new',
     'USER': 'sentheard',
     'PASSWORD': 'MsQL2019@!jw*aw3',
     'HOST': 'sentheard.mysql.pythonanywhere-services.com',
     # 'sql_mode': 'strict',
+    # 'TEST': {
+    #     'NAME': 'sentheard$test_database_new',
+    #     }
         }
     }
 

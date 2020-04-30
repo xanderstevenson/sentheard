@@ -1,36 +1,52 @@
-
 {% extends 'index.html' %}
 {% load static %}
 
 
-    {% block content %}
-    <link rel="stylesheet" href="/static/index.css"/>
+{% block content %}
+<link rel="stylesheet" href="/static/index.css" />
 
-    <br>
-    <h1>Text Gallery</h1>
-
-
-    <h3 class="fuck-motto">Your Memories...</h3>
-    <br>
-    <!--<h5>Django Image Uploading...</h5>-->
-
-<div id='photo_gallery_block' class='row'>
-{% if user.is_authenticated %}
-            {% if text.author == user %}
-            {% for text in text_list %}
-            <div class='photo_gallery_img zoomTarget'>
-                    <p id="photo-title">Title: {{ text.title }} </p>
-                <p id="photo-title">Author: {{ text.author }}</p>
-                <a href="https://www.sentheard.com/static{{ text.text_upload.url }}" download>Text</a>
-
-             <!--<img class="" data-targetsize="0.45" data-duration="600" src="https://www.sentheard.com/static{{ text.photo.url }}" alt="...">-->
-             </div>
-
-             {% endfor %}
-             {% endif %}
-    {% else %}
-<a href={% url 'login' %}>Please Log In to View</a>
-{% endif %}
-
+<br>
+<div class="GalleryTitleBox">
+<h1>Text Gallery</h1>
+<h3 class="fuck-motto">Your Memories</h3>
 </div>
-    {% endblock %}
+<br>
+<br style="clear: both;">
+
+
+<div id='audio-row'>
+
+
+    {% if user.is_authenticated %}
+    <div id='photo_gallery_block' class='row'>
+        {% if text_list %}
+        {% for text in text_list %}
+        {% if text.author == user %}
+
+    <div class='photo_gallery_img'>
+        <div class='row'>
+            <p id="photo-title"><span id="display_category">Title: </span>{{ photo.title }}</p>
+            <p id="photo-title"><span id="display_category">Author: </span>{{photo.author.first_name }}</p>
+            <p id="photo-title"><span id="display_category">About: </span>{{ photo.description }}</p>
+            <img src="{{ static }}{{text.text.url}}" />
+        </div>
+    </div>
+
+
+        {% else %}
+        <p>No writings in the gallery.</p>
+        {% endif %}
+        {% endfor %}
+
+
+        {% endif %}
+
+    </div>
+    {% else %}
+    <a href={% url 'login' %}>Please Log In to View</a>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+

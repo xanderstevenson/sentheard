@@ -126,7 +126,7 @@ class VideoGalleryListView(ListView):
     context_object_name = 'video_list'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['now'] = timezone.now()
+        # context['now'] = timezone.now()
         return context
 
 class TextGalleryListView(ListView):
@@ -135,7 +135,7 @@ class TextGalleryListView(ListView):
     context_object_name = 'text_list'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['now'] = timezone.now()
+        # context['now'] = timezone.now()
         return context
 
 
