@@ -30,16 +30,17 @@ AUTH_USER_MODEL = 'users.CustomUser'
 # Application definition
 
 INSTALLED_APPS = [
+    'Sent_Heard_App',
+    'posts.apps.PostsConfig',
+    'users.apps.UsersConfig',
+    'payments.apps.PaymentsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Sent_Heard_App',
-    'posts.apps.PostsConfig',
-    'users.apps.UsersConfig',
-    'payments.apps.PaymentsConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -86,17 +87,15 @@ WSGI_APPLICATION = 'sent_heard.wsgi.application'
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'sentheard$database_new',
+    'NAME': 'sentheard$sentheard-db2',
     'USER': 'sentheard',
     'PASSWORD': 'MsQL2019@!jw*aw3',
     'HOST': 'sentheard.mysql.pythonanywhere-services.com',
-    # 'sql_mode': 'strict',
-    # 'TEST': {
-    #     'NAME': 'sentheard$test_database_new',
-    #     }
+    'OPTIONS': {
+        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         }
     }
-
+}
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 

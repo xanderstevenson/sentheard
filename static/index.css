@@ -742,8 +742,15 @@ p .helptext {
 }
 
 
-.empty_gallery {
-
+.galleryButton {
+    border: 3px ridge black;
+    border-image: url(images/gold.jpg) 30% round;
+    background-color: #F8F8FF;
+    opacity: 0.75;
+    width:125px;
+    height: 33px;
+    /*min-width: 365px;*/
+    box-shadow: 1px 1px 9px #333328, -1px 1px 9px #333328;
 }
 
 .GalleryTitleBox {

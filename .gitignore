@@ -1,1 +1,9 @@
 sendgrid.env
+*.pyc
+*~
+/.vscode
+__pycache__
+MyEnv
+db.mysql
+/static
+.DS_Store
