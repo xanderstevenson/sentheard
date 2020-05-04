@@ -6,11 +6,13 @@
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
     <div id=''>
-        <br>
-    <h1>Upload Audio</h1>
-    <br>
-
-<h1>Audio Uploader</h1>
+<br>
+<div class="GalleryTitleBox">
+<h1>Post Audio</h1>
+<h3 class="fuck-motto">Save Your Memories</h3>
+</div>
+<br>
+<br style="clear: both;">
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   {{ form.as_p }}
