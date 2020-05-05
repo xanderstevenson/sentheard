@@ -755,15 +755,14 @@ p .helptext {
   box-shadow: 1px 1px 4px #cdd3a6, -1px 1px 4px #cdd3a6;
     margin-bottom: 20px;
     margin-right: 20px;
-
-    text-shadow: 1px 1px 3px white;
     padding-top: 10px;
-    color: maroon;
+
 }
 
 
 #gallary-gold-text {
-        font-size: 56px;
+    /*    font-size: 46px;*/
+    /*text-shadow: 1px 1px 3px white;*/
 }
 
 .GalleryTitleBox {

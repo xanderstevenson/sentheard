@@ -69,6 +69,9 @@ class CreateVideoView(CreateView):
     form_class = VideoForm
     template_name = 'post_media/add_video.html'
     success_url = reverse_lazy('posts:gallery')
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 class CreateRecordVideoView(CreateView):
     model = Video
@@ -82,6 +85,9 @@ class CreateTextView(CreateView):
     form_class = TextForm
     template_name = 'post_media/add_text.html'
     success_url = reverse_lazy('posts:gallery')
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 # class GalleryListView(ListView):
