@@ -17,10 +17,10 @@
 <div id='photo_gallery_block' class='row'>
 
 {% if user.is_authenticated %}
-<a class="galleryButton" href={% url 'posts:photo_gallery' %}>Photo Gallery</a>
-<a class="galleryButton" href={% url 'posts:audio_gallery' %}>Audio Gallery</a>
-<a class="galleryButton" href={% url 'posts:video_gallery' %}>Video Gallery</a>
-<a class="galleryButton" href={% url 'posts:text_gallery' %}>Text Gallery</a>
+<a class="galleryButton" href={% url 'posts:photo_gallery' %}><p id="gallary-gold-text">Photos</p></a>
+<a class="galleryButton" href={% url 'posts:audio_gallery' %}><p id="gallary-gold-text">Audio</p></a>
+<a class="galleryButton" href={% url 'posts:video_gallery' %}><p id="gallary-gold-text">Video</p></a>
+<a class="galleryButton" href={% url 'posts:text_gallery' %}><p id="gallary-gold-text">Text</p></a>
     {% else %}
 <a href={% url 'login' %}>Please Log In to View</a>
 {% endif %}

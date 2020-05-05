@@ -752,12 +752,18 @@ p .helptext {
     width:155px;
     height: 55px;
     /*min-width: 365px;*/
-    box-shadow: 1px 1px 9px #333328, -1px 1px 9px #333328;
+  box-shadow: 1px 1px 4px #cdd3a6, -1px 1px 4px #cdd3a6;
     margin-bottom: 20px;
     margin-right: 20px;
-    font-size:20px;
+
     text-shadow: 1px 1px 3px white;
     padding-top: 10px;
+    color: maroon;
+}
+
+
+#gallary-gold-text {
+        font-size: 56px;
 }
 
 .GalleryTitleBox {
