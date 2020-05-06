@@ -784,8 +784,9 @@ min-width: 365px;
 
 #display_category {
     text-align: center;
-    width: 33%;
-    background:#CFB53B;
+    width: 65px;
+    /*min-width: 55px;*/
+    background: #CFB53B;
     color: 	#404040;
     border: 2px ridge goldenrod;
     float: left;
@@ -827,8 +828,10 @@ min-width: 365px;
 
 .photo_gallery_img {
   color: white;
-  max-width: 325px;
+  max-width: 320px;
   max-height: 375px;
+  min-width: 200px;
+  min-height: 100px;
   border: 2px solid #d7b88a;
   border-image: url(images/gold.jpg) 30% round;
   /*float: left;*/
@@ -864,12 +867,17 @@ min-width: 365px;
   margin-top: 2px;
   border: 1px groove silver;
   box-shadow: 1px 1px 3px black;
+  width: 95%;
+  min-width: 80px;
+  max-width: 225px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #photo_gallery_block {
-  width: 100%;
-  height: 100%;
-  min-width: 200px;
+  width: 95%;
+  height: 95%;
+  min-width: 220px;
   min-height: 300px;
   max-width: 1150px;
   border: 1px solid black;
@@ -888,6 +896,18 @@ min-width: 365px;
   border: 4px solid #d7b88a;
   border-image: url(images/gold.jpg) 25% square;
   box-shadow: 2px 2px 18px #333328, -2px 2px 18px #333328;
+}
+
+.downloadButton {
+    margin-top: 5px;
+    width: 40px;
+    background-color: #CFB53B;
+    border: 1px ridge black;
+    padding: 5px;
+    border: 2px ridge goldenrod;
+    text-shadow: 1px 1px goldenrod;
+    opacity: 1.0;
+    margin-top: 15px;
 }
 
 #videoCaptureContainer {

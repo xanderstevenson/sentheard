@@ -14,7 +14,7 @@
 <br style="clear: both;">
 
 
-<div id='audio-row'>
+<div id=''>
 
 
     {% if user.is_authenticated %}
@@ -24,16 +24,18 @@
         {% if audio.author == user %}
 
         <div class='photo_gallery_img'>
+            <div>
             <p id="photo-title"><span id="display_category">Title: </span>{{ audio.title }} </p>
             <p id="photo-title"><span id="display_category">Author: </span>{{ audio.author.first_name }}</p>
             <br>
-            <div class='row'>
+
                 <audio controls='controls'>
                     <source src='{{ static }}{{ audio.audio.url }}' type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-            </div>
 
+                <a class="downloadButton" href="{{ static }}{{audio.audio.url}}" download>Download</a>
+            </div>
         </div>
         {% else %}
         <p>There is no audio in the gallery.</p>

@@ -14,13 +14,13 @@
 <br style="clear: both;">
 
 
-<div id='audio-row'>
+<div id=''>
 
 
     {% if user.is_authenticated %}
     <div id='photo_gallery_block' class='row'>
         {% if photo_list %}
-        {% for photo in photo_list %}
+         {% for photo in photo_list %}
         {% if photo.author == user %}
 
     <div class='photo_gallery_img'>
@@ -28,15 +28,19 @@
             <p id="photo-title"><span id="display_category">Title: </span>{{ photo.title }}</p>
             <p id="photo-title"><span id="display_category">Author: </span>{{photo.author.first_name }}</p>
             <p id="photo-title"><span id="display_category">About: </span>{{ photo.description }}</p>
-            <img src="{{ static }}{{photo.photo.url}}" alt="Profile Picture" width="200" />
+            <a href="{{ static }}{{photo.photo.url}}" download><img src="{{ static }}{{photo.photo.url}}" alt="Profile Picture" width="200" /></a>
+            <br>
+            <a class="downloadButton" href="{{ static }}{{photo.title.url}}" download>Download</a>
         </div>
     </div>
+
+        {% endif %}
+        {% endfor %}
 
         </div>
         {% else %}
         <p>There are no photos in the gallery.</p>
-        {% endif %}
-        {% endfor %}
+
 
 
         {% endif %}

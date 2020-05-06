@@ -24,11 +24,11 @@
         {% if text.author == user %}
 
     <div class='photo_gallery_img'>
-        <div class='row'>
-            <p id="photo-title"><span id="display_category">Title: </span>{{ photo.title }}</p>
-            <p id="photo-title"><span id="display_category">Author: </span>{{photo.author.first_name }}</p>
-            <p id="photo-title"><span id="display_category">About: </span>{{ photo.description }}</p>
-            <img src="{{ static }}{{text.text.url}}" />
+        <div>
+            <p id="photo-title"><span id="display_category">Title: </span>{{ text.title }}</p>
+            <p id="photo-title"><span id="display_category">Author: </span>{{text.author.first_name }}</p>
+            <br>
+            <a class="downloadButton" href="{{ static }}{{text.text_upload.url}}" download>Download</a>
         </div>
     </div>
 

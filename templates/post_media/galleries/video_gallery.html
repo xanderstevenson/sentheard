@@ -17,7 +17,7 @@
 <br style="clear: both;">
 
 
-<div id='audio-row'>
+<div id=''>
 
 
     {% if user.is_authenticated %}
@@ -28,13 +28,14 @@
 
         <div class='photo_gallery_img'>
 
-            <div class='row'>
+            <div>
                 <p id="photo-title"><span id="display_category">Title: </span>{{ video.title }} </p>
-                <p id="photo-title"><span id="display_category">Author: </span>{{ video.author }}</p>
+                <p id="photo-title"><span id="display_category">Author: </span>{{ video.author.first_name }}</p>
                 <video controls = 'controls'>
-                <source src='{{ static }}{{ video.url }}' type="audio/mpeg">
+                <source src='{{ static }}{{ video.video.url }}' type="audio/mpeg">
                 Your browser does not support the video element.
                 </video>
+                <a class="downloadButton" href="{{ static }}{{ video.video.url }}" download>Download</a>
             </div>
         </div>
         {% else %}
