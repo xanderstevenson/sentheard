@@ -1,5 +1,8 @@
-.home-containers {
+@font-face {
+  font-family: KingthingsOuline;
+  src: url(static/fonts/KingthingsOuline.ttf);
 }
+
 
 * {
   align-content: center;
@@ -308,6 +311,7 @@ label {
   padding-left: 35px; */
 }
 
+
 #title-box {
   width: 265px;
   height: 75px;
@@ -322,18 +326,34 @@ label {
   border-image: url(images/gold.jpg) 30% round;
   opacity: 0.95;
   display: block;
+   font-weight: bold;
+   text-decoration: italic;
+
 }
 
 #title-box p {
-  font-size: 42px;
+  font-size: 46px;
   color: black;
-  text-shadow: -2px 1px ghostwhite;
+  text-shadow: -1px 1px ghostwhite;
   font-weight: bold;
+font-family: KingthingsOuline;
 }
 
 .titleBoxGlow {
   /*box-shadow: 14px 14px 0px #f2f0ed, -14px -14px 0px #f2f0ed, -14px 0px 0px #f2f0ed, 0px 14px 0px #f2f0ed, 0px -14px 0px #f2f0ed, 14px -14px 0px #f2f0ed, -14px 14px 0px #f2f0ed;*/
 }
+
+.loginForm {
+
+    width: 330px;
+    height: 250px;
+    border: 1px groove red;
+    padding: 25px;
+    margin-top: 5px;
+
+}
+
+
 
 #cloud-bg-title {
   width: 295px;
