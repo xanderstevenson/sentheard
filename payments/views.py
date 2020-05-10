@@ -4,6 +4,8 @@ from django.urls import reverse_lazy
 import os
 import stripe
 from django.conf import settings
+from django.db import models
+from django.contrib.auth import get_user_model
 
 stripe.api_key = "sk_test_o7yeASKfKUYcZgquJQkKmlqU00kw0WhdaK"
 
@@ -16,12 +18,20 @@ class PaymentsPageView(TemplateView):
         context = super().get_context_data(**kwargs)
         # context['key'] = settings.STRIPE_PUBLISHABLE_KEY
         context['key'] = os.environ.get("STRIPE_PUBLISHABLE_KEY")
+
+        # User = get_user_model
+        # User.has_paid = True
+
         return context
+
 
 def charge(request): # new
     if request.method == 'POST':
-#
+#       added has_paid attribute to user for later view restriction
         user = request.user
+        user.has_paid = True
+        user.save()
+
         email = request.user.email
         token = request.POST['stripeToken']
 
