@@ -5,6 +5,8 @@ $(document).ready(function () {
     var stripe = Stripe('pk_test_1WstAayFWHojpBky0IzM0LLt0031UKZWaV');
     var elements = stripe.elements();
 
+    const joinInstructions = $("#join-instructions")
+    const joinInstructWords = $("#join-instructions p")
 
     // scrolls / pillars
     const binding = $("#binding")
@@ -103,9 +105,7 @@ const changeCloudTitleSides = ()=>{
     ]
 
     // different buttons for neon interval
-    const freeButtons = ['https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717416/SentHeard/free-button-black-gold_black.png',
-        'https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574717415/SentHeard/free-button-black-fun.png'
-    ]
+    // const freeButtons = ["{% static '/images/landing_page/499-per-month.png'%}", "{% static '/images/landing_page/2ndFreeSign.png'%}"]
 
     const homeContainers = $('.home-containers')
 
@@ -146,17 +146,17 @@ const changeCloudTitleSides = ()=>{
             }
         }
 
-        const freeButtonSwitch = () => {
+        // const freeButtonSwitch = () => {
 
-            if (joinButton.attr('src') == freeButtons[0]) {
-                return (freeButtons[1])
-            } else if (joinButton.attr('src') == freeButtons[1]) {
-                return (freeButtons[0])
-            } else {
-                return (freeButtons[0])
-            }
+        //     if (joinButton.attr('src') == freeButtons[0]) {
+        //         return (freeButtons[1])
+        //     } else if (joinButton.attr('src') == freeButtons[1]) {
+        //         return (freeButtons[0])
+        //     } else {
+        //         return (freeButtons[0])
+        //     }
 
-        }
+        // }
 
 
 
@@ -170,7 +170,9 @@ const changeCloudTitleSides = ()=>{
                 image.fadeIn(3000)
             }).delay(2000)
             joinButton.fadeTo(3000, 1, 'swing', () => {
-                joinButton.fadeIn(3000)
+                joinButton.fadeIn(c)
+                joinInstructions.fadeIn(3000)
+                joinInstructWords.fadeIn(3000)
             }).delay(2000)
             logo.fadeTo(3000, 1, 'swing', () => {
                 logo.fadeIn(3000)
@@ -188,8 +190,11 @@ const changeCloudTitleSides = ()=>{
                 image.attr('src', newImage)
             })
             joinButton.fadeTo(2000, 1, () => {
-                joinButton.attr("src", freeButtonSwitch);
-                joinButton.css("visibility", "visible")
+                // joinButton.attr("src", freeButtonSwitch);
+                joinButton.fadeOut()
+                // joinButton.css("visibility", "visible")
+                joinInstructions.fadeOut()
+                joinInstructWords.fadeOut()
             })
             logo.fadeTo(2000, 0, () => {
                 logo.fadeOut()

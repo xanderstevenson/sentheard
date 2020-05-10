@@ -480,6 +480,7 @@ p .helptext {
   width: 100%;
   height: 100%;
   max-width: 345px;
+  min-width: 340px;
   max-height: 525px;
   background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574369827/SentHeard/marble-frame345x425C.png);
   -webkit-background-size: contain;
@@ -494,6 +495,7 @@ p .helptext {
   box-shadow: 1px 1px 4px rgb(65, 65, 58), -1px 1px 4px rgb(65, 65, 58),
     0px 1px 4px rgb(65, 65, 58);
   position: relative;
+  z-index: 7;
 }
 
 #home-container p {
@@ -1062,13 +1064,16 @@ video {
   width: 100%;
   min-width: 340px;
   max-width: 360px;
-  height: 373px;
   font-size: 2px;
   padding-top: 33px;
-  box-shadow: 4px 4px 4px #808071, -4px 4px 4px #808071;
+  box-shadow: 4px 4px 4px #4d4d45, -4px 4px 4px #4d4d45;
   top: 13px;
-  z-index: 7;
+  z-index: 3;
   position: relative;
+  height: 373px;
+
+  top: 50%;
+  margin-top: 135px;
 }
 
 #join-instructions p {
