@@ -16,7 +16,7 @@
 
 <div id=''>
 
-
+{% if user.has_paid %}
     {% if user.is_authenticated %}
     <div id='photo_gallery_block' class='row'>
         {% if audio_list %}
@@ -48,6 +48,7 @@
     </div>
     {% else %}
     <a href={% url 'login' %}>Please Log In to View</a>
+    {% endif %}
     {% endif %}
 </div>
 

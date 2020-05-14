@@ -7,41 +7,52 @@
     <script src="artyom.window.min.js"></script>
 
 
-    <h1>Record Video</h1>
+<br>
+<div class="GalleryTitleBox">
+<h1>Record Video</h1>
+<h3 class="fuck-motto"></h3>
+</div>
+
+<br style="clear: both;">
 
 
 
-</row>
-<div id="">
 
 
+<row id="videoRecordRow">
+<div id="videoControls">
+    <video id="gum" playsinline autoplay muted>Video Feed Will Appear Here</video>
+    <video id="recorded" playsinline loop style='display: none;'>
+        <h3>Video Feed Will Appear Here</h3>
+        </video>
 
-    <video id="gum" playsinline autoplay muted></video>
-    <video id="recorded" playsinline loop style='display: none;'></video>
-<div class='row'  id='vidButtonRow'>
-    <div id="vidRecordBtns">
-        <button class='vidButton' id="start">Start camera</button>
+<div id='vidButtonRow'>
+
+        <button class='vidButton' id="start">Start Camera</button>
         <button class='vidButton' id="record">Start Recording</button>
         <button class='vidButton' id="play">Play</button>
         <button class='vidButton' id="download">Download</button>
         <button class='vidButton' id="save">Save</button>
         <button class='vidButton' id="tryAgain">Try Again</button>
-
-        <div>
-        <p>Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
-        Check this box before starting camera to reduce or eliminate echoes.
-        </div>
-    </div>
-
-
-
+</div>
     <div>
         <span id="errorMsg"></span>
     </div>
-</div>
 
 
+        <div id="instrucker">
+        <div id='instrucker-table'>
+        <h4 style="text-decoration:underline;">Steps</h4>
+        <p>1. Start Camera</p>
+        <p>2. Start Recording</p>
+        <p>3. Stop Recording</p>
+        </div>
+        </div>
+        <p style="color:black;">Echo cancellation: <input type="checkbox" id="echoCancellation">
+        <br>
+        Check this box before starting camera to reduce or eliminate echoes.</p>
 </div>
+</row>
 <!-- include adapter for srcObject shim -->
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 <script src="/static/js/main.js" async></script>

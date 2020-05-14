@@ -3,7 +3,6 @@
   src: url(static/fonts/KingthingsOuline.ttf);
 }
 
-
 * {
   align-content: center;
   text-align: center;
@@ -64,7 +63,7 @@ html {
   width: 82px;
   height: 45px;
   margin-top: 12.5px;
-  opacity: 1.0;
+  opacity: 1;
   border: 2px inset rgb(172, 148, 17);
   border-image: url(images/gold.jpg) 30% round;
   background-color: white;
@@ -311,7 +310,6 @@ label {
   padding-left: 35px; */
 }
 
-
 #title-box {
   width: 265px;
   height: 75px;
@@ -326,9 +324,8 @@ label {
   border-image: url(images/gold.jpg) 30% round;
   opacity: 0.95;
   display: block;
-   font-weight: bold;
-   text-decoration: italic;
-
+  font-weight: bold;
+  text-decoration: italic;
 }
 
 #title-box p {
@@ -336,7 +333,7 @@ label {
   color: black;
   text-shadow: -1px 1px ghostwhite;
   font-weight: bold;
-font-family: KingthingsOuline;
+  font-family: KingthingsOuline;
 }
 
 .titleBoxGlow {
@@ -344,16 +341,12 @@ font-family: KingthingsOuline;
 }
 
 .loginForm {
-
-    width: 330px;
-    height: 250px;
-    border: 1px groove red;
-    padding: 25px;
-    margin-top: 5px;
-
+  width: 330px;
+  height: 250px;
+  border: 1px groove red;
+  padding: 25px;
+  margin-top: 5px;
 }
-
-
 
 #cloud-bg-title {
   width: 295px;
@@ -763,58 +756,53 @@ p .helptext {
   /*float: left;*/
 }
 
-
 .galleryButton {
-    border: 3px ridge black;
-    border-image: url(images/gold.jpg) 30% round;
+  border: 3px ridge black;
+  border-image: url(images/gold.jpg) 30% round;
 
-    background-image: url(images/gold.jpg);
-    background-color: #F8F8FF;
-    opacity: 0.95;
-    width:155px;
-    height: 55px;
-    /*min-width: 365px;*/
+  background-image: url(images/gold.jpg);
+  background-color: #f8f8ff;
+  opacity: 0.95;
+  width: 155px;
+  height: 55px;
+  /*min-width: 365px;*/
   box-shadow: 1px 1px 4px #cdd3a6, -1px 1px 4px #cdd3a6;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    padding-top: 10px;
-
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
 }
 
-
 #gallary-gold-text {
-    /*    font-size: 46px;*/
-    /*text-shadow: 1px 1px 3px white;*/
+  /*    font-size: 46px;*/
+  /*text-shadow: 1px 1px 3px white;*/
 }
 
 .GalleryTitleBox {
-
-border: 3px ridge black;
+  border: 3px ridge black;
   border-image: url(images/gold.jpg) 30% round;
-background-color: #F8F8FF;
-opacity: 0.75;
-max-width: 800px;
-min-width: 365px;
+  background-color: #f8f8ff;
+  opacity: 0.75;
+  max-width: 800px;
+  min-width: 365px;
   box-shadow: 1px 1px 9px #333328, -1px 1px 9px #333328;
-
 }
 
-.GalleryTitleBox h1, .GalleryTitleBox h3 {
-    text-shadow: 1px 1px silver;
+.GalleryTitleBox h1,
+.GalleryTitleBox h3 {
+  text-shadow: 1px 1px silver;
 }
-
 
 #display_category {
-    text-align: center;
-    width: 65px;
-    /*min-width: 55px;*/
-    background: #CFB53B;
-    color: 	#404040;
-    border: 2px ridge goldenrod;
-    float: left;
+  text-align: center;
+  width: 65px;
+  /*min-width: 55px;*/
+  background: #cfb53b;
+  color: #404040;
+  border: 2px ridge goldenrod;
+  float: left;
   font-size: 16px;
-   text-shadow: none;
-   font-weight: normal;
+  text-shadow: none;
+  font-weight: normal;
 }
 
 #audio-row {
@@ -879,7 +867,7 @@ min-width: 365px;
 #photo-title {
   color: #dbc660;
   text-shadow: 1px 1px 1px black;
-  background-color:#606060;
+  background-color: #606060;
   font-size: 18px;
   font-weight: bold;
   opacity: 1;
@@ -921,15 +909,15 @@ min-width: 365px;
 }
 
 .downloadButton {
-    margin-top: 5px;
-    width: 40px;
-    background-color: #CFB53B;
-    border: 1px ridge black;
-    padding: 5px;
-    border: 2px ridge goldenrod;
-    text-shadow: 1px 1px goldenrod;
-    opacity: 1.0;
-    margin-top: 15px;
+  margin-top: 5px;
+  width: 40px;
+  background-color: #cfb53b;
+  border: 1px ridge black;
+  padding: 5px;
+  border: 2px ridge goldenrod;
+  text-shadow: 1px 1px goldenrod;
+  opacity: 1;
+  margin-top: 15px;
 }
 
 #videoCaptureContainer {
@@ -1087,6 +1075,94 @@ video {
   font-weight: bold;
   font-size: 16.5px;
   opacity: 0.95;
+}
+
+#instrucker {
+  border: 4px ridge #e0dbd1;
+  width: 300px;
+  height: 160px;
+  padding: 10px;
+  font-family: Arial;
+  /*background-color: silver;*/
+  background-image: url(images/vatican/ceiling1.jpg);
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-weight: bold;
+  box-shadow: 1px 1px 6px #333328, -1px 1px 6px #333328;
+  margin-top: 5px;
+}
+
+#instrucker-table {
+  width: 200px;
+  height: 130px;
+  background-color: white;
+  opacity: 0.9;
+  box-shadow: 1px 1px 1px silver;
+  padding: 5px;
+  font-size: 18px;
+  border: 2px ridge #e0dbd1;
+}
+
+#instrucker-table p {
+  color: black;
+  margin: 0px auto;
+  text-align: left;
+  font-weight: normal;
+  padding-left: 3px;
+}
+
+#vidButtonRow {
+  align-content: center;
+  /*    margin: 0px auto;*/
+  align-content: center;
+  margin: 0px auto;
+  text-align: center;
+  padding: 5px;
+  height: 60px;
+  width: 70px;
+  border: 2px solid #d7b88a;
+  border-image: url(images/gold.jpg) 30% round;
+  background-image: url(images/vatican/ceiling1.jpg);
+  box-shadow: 1px 1px 4px #333328, -1px 1px 4px #333328;
+}
+
+#vidRecordBtns {
+  /*width: 125px;*/
+  /*height: 45px;*/
+  padding: 15px;
+  margin: 0px auto;
+  align-content: center;
+  text-align: center;
+}
+
+.vidButton {
+  padding: 10px;
+  /*width: 150px;*/
+  border: 2px solid #d7b88a;
+  border-image: url(images/gold.jpg) 30% round;
+  font-weight: bold;
+}
+
+#videoControls {
+  align-content: center;
+  text-align: center;
+  margin: 0px auto;
+  /*width: 175px;*/
+}
+
+#videoRecordRow {
+  align-content: center;
+  text-align: center;
+}
+
+#gum {
+  border: 2px solid #d7b88a;
+  border-image: url(images/gold.jpg) 30% round;
+  box-shadow: 1px 1px 4px #333328, -1px 1px 4px #333328;
 }
 
 /*.MyCardElement {*/
