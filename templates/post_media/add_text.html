@@ -12,7 +12,7 @@
 <h3 class="fuck-motto">Save Your Memories</h3>
 </div>
 <br>
-<form method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data" class='postForm'>
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit">Submit New Post</button>

@@ -1165,6 +1165,34 @@ video {
   box-shadow: 1px 1px 4px #333328, -1px 1px 4px #333328;
 }
 
+
+.postForm {
+    width: 365px;
+    height: 200px;
+    align-content: center;
+    padding: 10px;
+  border: 2px solid #d7b88a;
+  border-image: url(images/gold.jpg) 30% round;
+  box-shadow: 1px 1px 4px #333328, -1px 1px 4px #333328;
+  margin: 0px auto;
+    background-image: url(images/vatican/walkway.jpg)
+
+}
+
+.postForm label {
+    /*width: 55px;*/
+    /*height: 25px;*/
+    border: 2px groove gold;
+    border-image: url(images/gold.jpg);
+    padding: 4px;
+    background-image: url(images/gold.jpg);
+}
+
+.postForm button {
+        padding: 4px;
+}
+
+
 /*.MyCardElement {*/
 /*  height: 40px;*/
 /*  padding: 10px 12px;*/
@@ -1189,4 +1217,4 @@ video {
 
 /*.MyCardElement--webkit-autofill {*/
 /*  background-color: #fefde5 !important;*/
-/*}*/
+/*}*/e
