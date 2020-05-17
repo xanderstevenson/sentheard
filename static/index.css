@@ -341,12 +341,43 @@ label {
 }
 
 .loginForm {
-  width: 330px;
-  height: 250px;
+  width: 350px;
+  height: 320px;
   border: 1px groove red;
   padding: 25px;
   margin-top: 5px;
+
+      border: 2px solid #d7b88a;
+  border-image: url(images/gold.jpg) 30% round;
+    background-image: url(images/vault.png);
+    -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.90;
+    box-shadow: 3px 3px 12px rgb(65, 65, 58), -3px 3px 12px rgb(65, 65, 58),
+    0px 3px 12px rgb(65, 65, 58);
 }
+.loginForm label {
+    width: 95px;
+    height: 35px;
+    border: 2px groove gold;
+    border-image: url(images/gold.jpg);
+    padding: 4px;
+    background-image: url(images/gold.jpg);
+    text-shadow: 1px 1px white;
+    font-size: 18px;
+}
+
+.loginForm button {
+        padding: 6px;
+        width: 75px;
+        height: 47px;
+            font-size: 18px;
+}
+
 
 #cloud-bg-title {
   width: 295px;
@@ -769,12 +800,12 @@ p .helptext {
   box-shadow: 1px 1px 4px #cdd3a6, -1px 1px 4px #cdd3a6;
   margin-bottom: 20px;
   margin-right: 20px;
-  padding-top: 10px;
 }
 
 #gallary-gold-text {
-  /*    font-size: 46px;*/
-  /*text-shadow: 1px 1px 3px white;*/
+    font-size: 22px;
+    font-weight: bold;
+    padding: 6px;
 }
 
 .GalleryTitleBox {
