@@ -63,6 +63,9 @@ class CreateRecordAudioView(CreateView):
     form_class = AudioForm
     template_name = 'post_media/record_audio.html'
     success_url = reverse_lazy('posts:gallery')
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 class CreateVideoView(CreateView):
     model = Video

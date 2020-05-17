@@ -31,10 +31,11 @@
         <button class='vidButton' id="start">Start Camera</button>
         <button class='vidButton' id="record">Start Recording</button>
         <button class='vidButton' id="play">Play</button>
-        <button class='vidButton' id="download">Download</button>
+        <button class='vidButton' id="download" type="submit">Download</button>
         <a href={% url 'posts:post_video' %}><button class='vidButton' id="save">Save</button></a>
         <button class='vidButton' id="tryAgain">Try Again</button>
 </div>
+
     <div>
         <span id="errorMsg"></span>
     </div>

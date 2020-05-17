@@ -1173,9 +1173,10 @@ video {
     padding: 10px;
   border: 2px solid #d7b88a;
   border-image: url(images/gold.jpg) 30% round;
-  box-shadow: 1px 1px 4px #333328, -1px 1px 4px #333328;
+  box-shadow: 2px 2px 4px #333328, -2px 2px 4px #333328;
   margin: 0px auto;
-    background-image: url(images/vatican/walkway.jpg)
+    background-image: url(images/vatican/walkway.jpg);
+    opacity: 0.85;
 
 }
 
@@ -1190,6 +1191,7 @@ video {
 
 .postForm button {
         padding: 4px;
+
 }
 
 
