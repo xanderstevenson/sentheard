@@ -344,7 +344,7 @@ label {
   width: 350px;
   height: 320px;
   border: 1px groove red;
-  padding: 25px;
+  padding: 15px;
   margin-top: 5px;
 
       border: 2px solid #d7b88a;
@@ -363,21 +363,32 @@ label {
 .loginForm label {
     width: 95px;
     height: 35px;
-    border: 2px groove gold;
     border-image: url(images/gold.jpg);
     padding: 4px;
     background-image: url(images/gold.jpg);
-    text-shadow: 1px 1px white;
+    color: white;
+    text-shadow: 1px 1px black, -1px -1px goldenrod;
     font-size: 18px;
+  border: 1px ridge #967752;
 }
 
 .loginForm button {
         padding: 6px;
         width: 75px;
-        height: 47px;
+        height: 45px;
             font-size: 18px;
 }
 
+
+#plaque {
+    background-color: #967f54;
+      width: 290px;
+  height: 110px;
+  padding: 6px;
+  margin: 0px auto;
+  opacity: 0.95;
+  border: 2px ridge #967752;
+}
 
 #cloud-bg-title {
   width: 295px;
@@ -1222,6 +1233,33 @@ video {
 
 .postForm button {
         padding: 4px;
+
+}
+
+#textBoxGeneral {
+    background-color: silver;
+    background-image: url(images/heaven/3D-Heaven-angel.jpg);
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    width: 365px;
+    height: 300px;
+    padding: 30px;
+        border: 3px outset silver;
+
+  box-shadow: 3px 3px 14px #4d4d45, -3px 3px 14px #4d4d45, -3px -3px 14px #4d4d45;
+}
+
+#textBoxGeneralSpan {
+     width: 300px;
+    height: 240px;
+    padding: 15px;
+    background-color: silver;
+    opacity: 0.90;
+        border: 3px groove silver;
 
 }
 

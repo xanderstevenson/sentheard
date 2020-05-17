@@ -13,11 +13,13 @@
 </div>
 
 <div class="loginForm">
+    <div id='plaque'>
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit">Login</button>
 </form>
+    </div>
 </div>
 
 
