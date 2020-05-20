@@ -1250,16 +1250,17 @@ video {
     padding: 30px;
         border: 3px outset silver;
 
-  box-shadow: 3px 3px 14px #4d4d45, -3px 3px 14px #4d4d45, -3px -3px 14px #4d4d45;
+  box-shadow: 3px 3px 10px #FAFAD2, -3px 3px 10px #FAFAD2, -3px -3px 10px #FAFAD2;
 }
 
 #textBoxGeneralSpan {
      width: 300px;
     height: 240px;
     padding: 15px;
-    background-color: silver;
-    opacity: 0.90;
+    background-color: lightgray;
+    opacity: 0.80;
         border: 3px groove silver;
+    font-size: 18px;
 
 }
 

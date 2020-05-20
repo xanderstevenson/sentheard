@@ -11,12 +11,23 @@
 <h3 class="fuck-motto">Your Account</h3>
 </div>
 <br>
+
+<div class="loginForm">
+    <br><br><br>
+    <div id='plaque'>
+
     <p>User: {{ user }}</p>
 
     <!--{% for item in user.items %}-->
     {{author}}<br>
     <!--{% endfor %}-->
     <p><a href="{% url 'password_reset' %}">Reset Your Password</a></p>
+
+    </div>
+</div>
+
+
+
 
     {% endblock %}
 
