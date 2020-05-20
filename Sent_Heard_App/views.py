@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.core.mail import send_mail
 # Create your views here.
 def index(request):
     return render(request, "index.html")
@@ -21,3 +21,4 @@ def account(request):
 
 # def password_reset(request):
 #     return render(request, "/registration/password_reset_form.html")
+

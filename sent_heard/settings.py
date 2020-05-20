@@ -171,16 +171,26 @@ LOGOUT_REDIRECT_URL = 'index'
 
 
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+# EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 
-EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'apikey'
+# EMAIL_HOST_PASSWORD = os.environ.get("SENDGRID_API_KEY")
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'TestSite Team <noreply@example.com>'
+
+
 
 SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
-
+SENDGRID_ECHO_TO_STDOUT=True
 # Toggle sandbox mode (when running in DEBUG mode)
 # SENDGRID_SANDBOX_MODE_IN_DEBUG=True
 
 # echo to stdout or any other file-like object that is passed to the backend via the stream kwarg.
-SENDGRID_ECHO_TO_STDOUT=True
+
 
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
 STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY")
