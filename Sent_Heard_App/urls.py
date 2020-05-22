@@ -15,4 +15,5 @@ urlpatterns = [
     # path('password_reset/', views.password_reset, name="password_reset"),
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
     # path('', views.index, name="index"),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

@@ -1264,6 +1264,19 @@ video {
 
 }
 
+#stripeLogo {
+    width: 119px;
+    height: 26px;
+    margin: 5px auto;
+}
+
+
+#stripeLogoCC {
+    width: 211px;
+    height: 115px;
+    margin: 5px auto;
+}
+
 
 /*.MyCardElement {*/
 /*  height: 40px;*/

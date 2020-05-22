@@ -15,14 +15,13 @@
         $(this).find("button[class='stripe-button']").prop('disabled',true);
     });
 </script>
-    <br>
-    <div>
-    <h1>Put Your Money Where Your Mouth Is</h1>
-    <br>
-    <p>
-    </p>
+<br>
+<div class="GalleryTitleBox">
+<h1>Subscribe</h1>
       {% if user.is_authenticated %}
-<h2>Buy for $4.99</h2>
+      <h4>For Only</h4>
+<h3 class="fuck-motto">$4.99 USD per Month!</h3>
+
 
 <form action="{% url 'charge' %}" method="post">
   {% csrf_token %}
@@ -35,10 +34,20 @@
     data-amount="499"
     data-locale="auto"></script>
 </form>
+<br>
+<h6>We accept all major debit and credit cards from customers in every country.<h6>
 
+ <a href="https://stripe.com/payments/features" target="_blank"><img src="{% static '/images/logo/stripe-payments-1.png' %}" id="stripeLogoCC"></a>
+ <br>
  {% else %}
+ <h3 class="fuck-motto">You Must Login to View</h3>
  {% endif %}
-    </div>
+ <br>
+</div>
+
+
+
+
     <!-- <img src="" alt="" style="width:300px; height:200px;"> -->
     {% endblock %}
 

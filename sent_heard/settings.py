@@ -172,13 +172,14 @@ LOGOUT_REDIRECT_URL = 'index'
 
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 # EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'apikey'
 # EMAIL_HOST_PASSWORD = os.environ.get("SENDGRID_API_KEY")
-EMAIL_HOST_PASSWORD = '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'
+EMAIL_HOST_PASSWORD = os.environ.get("SENDGRID_API_KEY")
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'TestSite Team <noreply@example.com>'
 
@@ -197,10 +198,28 @@ STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY")
 
 
 
-
-
 # Subscriptions
 DFS_CURRENCY_LOCALE = 'en_us'
 
 # Subscriptions
-DFS_BASE_TEMPLATE = 'base.html'
+DFS_BASE_TEMPLATE = 'index.html'
+
+
+
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 9,
+        }
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
