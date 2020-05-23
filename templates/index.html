@@ -10,8 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Fahkwang:400,500&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/static/index.css"/>
-<script type="text/javascript" src="{% static '/js/jquery.min.js'%}" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{% static '/index.js'%}"></script>
+<script type="text/javascript" src="static/js/jquery.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="static/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     </script>
@@ -80,7 +80,7 @@
 
 <!--LEFT SCROLL / COLUMN-->
             <div>
-                <img src="{% static 'images/green-binding6a.png'%}" alt="right scroll/pillar" id="binding"
+                <img src="{% static 'images/green-binding6a.png' %}" alt="right scroll/pillar" id="binding"
                     class="bindings">
             </div>
 
@@ -92,7 +92,7 @@
                 <p><a href="{% url 'logout' %}">Logout</a></p>
 
                 {% else %}
-                <img src="{% static 'images/logo/Vanilla-2.1s-157px.gif'%}" style="margin-top:-5px;margin-left:-10px;">
+                <img src="{% static 'images/logo/Vanilla-2.1s-157px.gif' %}" style="margin-top:-5px;margin-left:-10px;">
                 <!--<br>-->
               <div style="margin-top:-6px;margin-left:3px;"><span class='underlined'><a href="{% url 'login' %}">Login</a></span>  or  <span class='underlined'><a href={% url 'signup' %}>Join</a></span></div>
                 <br>
@@ -119,7 +119,7 @@
                             <span class='test'></span>
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='smImg'></img>
                 </br>
-                <a href={% url 'signup' %}><img src="{% static '/images/arrow.gif'%}" id='marqueeArrow'><img src="{% static '/images/landing_page/FreeSign.png'%}" class='join-button' id='join-buttonSm'><img src="{% static '/images/arrow2.gif'%}" id='marqueeArrowRight'></a>
+                <a href={% url 'signup' %}><img src="static/images/arrow.gif" id='marqueeArrow'><img src="static/images/landing_page/FreeSign.png" class='join-button' id='join-buttonSm'><img src="static/images/arrow2.gif" id='marqueeArrowRight'></a>
 
                 <div id='join-instructions'>
                     <h3 style="margin-bottom: 15px; color: #e0dbd1">Join in 5 Easy Steps</h3>
@@ -145,9 +145,9 @@
                   <span class='test'></span>
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='mdImg'>
                 <br />
-                <img "{% static 'images/marquee_arrow_cropped.gif'%}" id='marqueeArrow'>
-                <a href={% url 'signup' %}><img src="{% static '/images/arrow2.gif'%}" id='marqueeArrowMedium'><img src="{% static '/images/landing_page/FreeSign.png'%}"
-                class='join-button'  id='join-buttonMd'><img src="{% static '/images/arrow.gif'%}" id='marqueeArrowMediumRight'></a>
+                <img "static/images/marquee_arrow_cropped.gif" id='marqueeArrow'>
+                <a href={% url 'signup' %}><img src="static/images/arrow2.gif" id='marqueeArrowMedium'><img src="static/images/landing_page/FreeSign.png"
+                class='join-button'  id='join-buttonMd'><img src="static/images/arrow.gif" id='marqueeArrowMediumRight'></a>
 
                 <div id='join-instructions'>
                     <h3 style="margin-bottom: 15px; color: #e0dbd1">Join in 5 Easy Steps</h3>
@@ -173,9 +173,9 @@
                   <span class='test'></span>
                 <img src='https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574546898/SentHeard/family_computer-3gen.jpg' id='lgImg'>
                 <br />
-                <img "{% static 'images/marquee_arrow_cropped.gif'%}" id='marqueeArrow'>
-                <a href={% url 'signup' %}><img src="{% static '/images/arrow.gif'%}" id='marqueeArrowLarge'><img src="{% static '/images/landing_page/FreeSign.png'%}"
-                 class='join-button'  id='join-buttonLg'><img src="{% static '/images/arrow2.gif'%}" id='marqueeArrowLargeRight'></a>
+                <img "static/images/marquee_arrow_cropped.gif" id='marqueeArrow'>
+                <a href={% url 'signup' %}><img src="static/images/arrow.gif'%}" id='marqueeArrowLarge'><img src="static/images/landing_page/FreeSign.png"
+                 class='join-button'  id='join-buttonLg'><img src="static/images/arrow2.gif" id='marqueeArrowLargeRight'></a>
 
                 <div id='join-instructions'>
                     <h3 style="margin-bottom: 15px; color: #e0dbd1">Join in 5 Easy Steps</h3>
@@ -199,7 +199,7 @@
 
 <!--RIGHT SCROLL / COLUMN-->
             <div>
-                <img src="{% static 'images/green-binding5a.png'%}" alt="right scroll/pillar" id="binding2"
+                <img src="{% static 'images/green-binding5a.png' %}" alt="right scroll/pillar" id="binding2"
                     class="bindings">
             </div>
 

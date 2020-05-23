@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # SendGrid Email
 
@@ -155,8 +155,8 @@ THUMBNAIL_HIGH_RESOLUTION = True
 
 PROJECT_URL = 'https://www.sentheard.com'
 
-MEDIA_URL = '/static/media/'
-MEDIA_ROOT = '/home/sentheard/sentheard/static/media/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/home/sentheard/sentheard/media/'
 
 
 STATIC_URL = '/static/'
@@ -175,15 +175,16 @@ EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 
-EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_USER = 'Sentheard.Mgmt@gmail.com'
 # EMAIL_HOST_PASSWORD = os.environ.get("SENDGRID_API_KEY")
-EMAIL_HOST_PASSWORD = os.environ.get("SENDGRID_API_KEY")
+EMAIL_HOST_PASSWORD = 'sbdwxeovihqiygdt'
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'TestSite Team <noreply@example.com>'
+DEFAULT_FROM_EMAIL = 'SentHeard Team <noreply@sentheard.com>'
 
-
+# Your app password for your device
+#   sbdwxeovihqiygdt
 
 SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
 SENDGRID_ECHO_TO_STDOUT=True

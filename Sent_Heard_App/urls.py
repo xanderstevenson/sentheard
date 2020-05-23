@@ -9,7 +9,7 @@ urlpatterns = [
     path('shop/', views.shop, name="shop"),
     path('donate/', views.donate, name="donate"),
     path('about_us/', views.about_us, name="about_us"),
-    path('account/', views.account, name="account"),
+    path('accounts/', views.account, name="account"),
     path('post_stuff/', include('posts.urls')),
     # path('post/', views.post, name="post"),
     # path('password_reset/', views.password_reset, name="password_reset"),
