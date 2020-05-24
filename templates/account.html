@@ -16,12 +16,12 @@
     <br><br><br>
     <div id='plaque'>
 
-    <p>User: {{ user }}</p>
+    <p>User: {{ user.email }}</p>
 
 
 
 
-    <p><a href="{% url 'password_reset' %}">Reset Your Password</a></p>
+    <button class="join-button"><a href="{% url 'password_reset' %}">Reset Your Password</a></button>
 
     </div>
 </div>
