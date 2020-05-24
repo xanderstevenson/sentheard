@@ -79,10 +79,19 @@
             <!--DONT FORGET EMAIL SUBSCRIPTION-->
 
 <!--LEFT SCROLL / COLUMN-->
+            <!--<div>-->
+            <!--    <img src="{% static 'images/green-binding6a.png' %}" alt="right scroll/pillar" id="binding"-->
+            <!--        class="bindings">-->
+            <!--</div>-->
+
+        <!--            BLOCK             -->
+            {% block content %}
+
             <div>
                 <img src="{% static 'images/green-binding6a.png' %}" alt="right scroll/pillar" id="binding"
                     class="bindings">
             </div>
+
 
             <div id='user_box'>
 
@@ -101,8 +110,7 @@
                 {% endif %}
             </div>
 
-<!--            BLOCK             -->
-            {% block content %}
+
 
             <link rel="stylesheet" href="/static/index.css" />
 
@@ -190,18 +198,22 @@
 
             </div>
 
+<br>
 
-
+            <div>
+                <img src="{% static 'images/green-binding5a.png' %}" alt="right scroll/pillar" id="binding2"
+                    class="bindings">
+            </div>
 
             {% endblock %}
 
 <!--              BLOCK END            -->
 
 <!--RIGHT SCROLL / COLUMN-->
-            <div>
-                <img src="{% static 'images/green-binding5a.png' %}" alt="right scroll/pillar" id="binding2"
-                    class="bindings">
-            </div>
+            <!--<div>-->
+            <!--    <img src="{% static 'images/green-binding5a.png' %}" alt="right scroll/pillar" id="binding2"-->
+            <!--        class="bindings">-->
+            <!--</div>-->
 
 
         </div>
