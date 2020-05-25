@@ -9,8 +9,15 @@
 <div class="GalleryTitleBox">
 <h1>Success</h1>
 <h3 class="fuck-motto">Your Payment Has Been Received</h3>
+
 </div>
+
+<a href={% url 'posts:post_stuff' %}><button class="nav-btn nav-btn-marg-left">Post</button></a>
+
+<a href={% url 'posts:gallery' %}><button class="nav-btn nav-btn-marg-left">Gallery</button></a>
 <br>
+
+
 
 <script src="https://js.stripe.com/v3/" class="stripe-button"></script>
 

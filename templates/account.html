@@ -7,23 +7,24 @@
     <link rel="stylesheet" href="/static/index.css"/>
 <br>
 <div class="GalleryTitleBox">
-<h1>Account</h1>
 <h3 class="fuck-motto">Your Account</h3>
+{{ user }}
 </div>
 <br>
 
 <div class="loginForm">
     <br><br><br>
+
+  <a href="{% url 'password_reset' %}" >
     <div id='plaque'>
 
-    <p>User: {{ user.email }}</p>
+<br>
 
-
-
-
-    <button class="join-button"><a href="{% url 'password_reset' %}">Reset Your Password</a></button>
+<span id="acccountButton">Reset Your Password</span>
 
     </div>
+    </a>
+
 </div>
 
 

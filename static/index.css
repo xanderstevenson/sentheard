@@ -380,16 +380,6 @@ label {
 }
 
 
-#plaque {
-    background-color: #967f54;
-      width: 290px;
-  height: 110px;
-  padding: 6px;
-  margin: 0px auto;
-  opacity: 0.95;
-  border: 2px ridge #967752;
-}
-
 #cloud-bg-title {
   width: 295px;
   height: 105px;
@@ -447,6 +437,8 @@ label {
   border-image: url(images/gold.jpg) 30% round;
   opacity: 0.8;
   display: inline-block;
+      box-shadow: 3px 3px 12px rgb(65, 65, 58), -3px 3px 12px rgb(65, 65, 58),
+    0px 3px 12px rgb(65, 65, 58);
 }
 
 #sign_up_form li {
@@ -1276,6 +1268,34 @@ video {
     height: 115px;
     margin: 5px auto;
 }
+
+
+#acccountButton {
+padding: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border: 2px groove silver;
+box-shadow: 3px 3px 10px #FAFAD2, -3px 3px 10px #FAFAD2, -3px -3px 10px #FAFAD2;
+}
+
+
+
+#plaque {
+    background-color: #967f54;
+      width: 310px;
+  height: 110px;
+  padding: 6px;
+  margin: 0px auto;
+  opacity: 0.95;
+  border: 2px ridge #967752;
+}
+
+
+
+
+
+
 
 
 /*.MyCardElement {*/
