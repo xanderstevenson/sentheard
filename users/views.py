@@ -1,9 +1,9 @@
 from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 from .forms import CustomUserCreationForm
 from django.contrib import auth
 from django.shortcuts import render, redirect
-
+from django.http import Http404
 
 class SignUpView(CreateView):
     form_class = CustomUserCreationForm

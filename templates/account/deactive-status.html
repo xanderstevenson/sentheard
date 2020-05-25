@@ -15,11 +15,12 @@
 <div class="loginForm">
     <br><br><br>
 
-  <a href="{% url 'password_reset' %}" >
-    <div id=''>
-<br>
+<form method="post">{% csrf_token %}
+    <p>Are you sure you want to Deavtivate Account?</p>
+    <input type="submit" value="Confirm">
+</form>
 
-<span id="acccountButton">Reset Your Password</span>
+<span id="acccountButton">Deavtivate Account</span>
 
     </div>
     </a>
@@ -28,7 +29,8 @@
 
 <a href="{% url 'DeactiveStatus' %}" >
 
-<span id="acccountButton">Deactivate Your Account</span>
+<span id="acccountButton">Cancel</span>
+   </a>
 
 
 </div>
@@ -37,5 +39,3 @@
 
 
     {% endblock %}
-
-
