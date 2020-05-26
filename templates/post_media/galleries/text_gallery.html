@@ -18,6 +18,14 @@
 
 
     {% if user.is_authenticated %}
+
+    <div id='post-page'>
+    <ul>
+    <li><a href={% url 'posts:text' %}><i class="fas fa-file-alt data-input-post">      Upload Text</i></a></li>
+    </ul>
+    </div>
+
+
     <div id='photo_gallery_block' class='row'>
         {% if text_list %}
         {% for text in text_list %}

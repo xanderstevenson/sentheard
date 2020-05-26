@@ -21,6 +21,15 @@
 
 
     {% if user.is_authenticated %}
+
+        <div id='post-page'>
+    <ul>
+          <li><a href={% url 'posts:post_video' %}><i class="fas fa-file-video data-input-post">      Upload Video</i></a></li>
+        <li><a href={% url 'posts:record_video' %}><i class="fas fa-file-video data-input-post">      Record Live Video</i></a></li>
+        </ul>
+    </div>
+
+
     <div id='photo_gallery_block' class='row'>
         {% if video_list %}
         {% for video in video_list %}

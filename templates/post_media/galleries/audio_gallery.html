@@ -17,7 +17,17 @@
 <div id=''>
 
 {% if user.has_paid %}
+
     {% if user.is_authenticated %}
+
+    <div id='post-page'>
+    <ul>
+   <li><a href={% url 'posts:add_audio' %}><i class="fas fa-microphone-alt data-input-post">      Upload Audio</i></a></li>
+    </ul>
+    </div>
+
+
+
     <div id='photo_gallery_block' class='row'>
         {% if audio_list %}
         {% for audio in audio_list %}

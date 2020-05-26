@@ -18,6 +18,14 @@
 
 
     {% if user.is_authenticated %}
+
+        <div id='post-page'>
+    <ul>
+           <li><a href={% url 'posts:add_photos' %}><i class="fas fa-camera-retro data-input-post">      Upload Photos</i></a></li>
+    </ul>
+    </div>
+
+
     <div id='photo_gallery_block' class='row'>
         {% if photo_list %}
          {% for photo in photo_list %}
