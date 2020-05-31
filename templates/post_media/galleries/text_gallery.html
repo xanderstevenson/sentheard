@@ -16,7 +16,7 @@
 
 <div id='audio-row'>
 
-
+{% if user.has_paid %}
     {% if user.is_authenticated %}
 
     <div id='post-page'>
@@ -53,6 +53,7 @@
     {% else %}
     <a href={% url 'login' %}>Please Log In to View</a>
     {% endif %}
+{% endif %}
 </div>
 
 {% endblock %}

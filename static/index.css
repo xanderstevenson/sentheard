@@ -1293,8 +1293,10 @@ box-shadow: 3px 3px 10px #FAFAD2, -3px 3px 10px #FAFAD2, -3px -3px 10px #FAFAD2;
   border: 2px ridge #967752;
 }
 
-
-
+form label{
+    font-weight: bold;
+    text-shadow: 1px 1px 2px white, -1px 1px 2px white, 1px -1px 2px white, 1px -1px 2px white;
+}
 
 
 
