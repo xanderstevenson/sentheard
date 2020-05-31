@@ -16,7 +16,7 @@
 
 <div id=''>
 
-{% if user.has_paid %}
+<!--{% if user.has_paid %}-->
 
     {% if user.is_authenticated %}
 
@@ -37,9 +37,9 @@
             <p id="photo-title"><span id="display_category">Title: </span>{{ photo.title }}</p>
             <p id="photo-title"><span id="display_category">Author: </span>{{photo.author.first_name }}</p>
             <p id="photo-title"><span id="display_category">About: </span>{{ photo.description }}</p>
-            <a href="{{ static }}{{photo.photo.url}}" download><img src="{{ static }}{{photo.photo.url}}" alt="Profile Picture" width="200" /></a>
+            <a href='static'></a><img src='https://sentheard.com{{static}}{{ photo.photo.url }}' alt="Profile Picture" width="200" /></a>
             <br>
-            <a class="downloadButton" href="{{ static }}{{photo.title.url}}" download>Download</a>
+            <a class="downloadButton" href='static' download>Download</a>
         </div>
     </div>
 
@@ -48,7 +48,7 @@
 
         </div>
         {% else %}
-        <p>There are no photos in the gallery.</p>
+        <p id="h3words">There are no photos in the gallery at this time.</p>
 
 
 
@@ -58,7 +58,7 @@
     {% else %}
     <a href={% url 'login' %}>Please Log In to View</a>
     {% endif %}
-    {% endif %}
+    <!--{% endif %}-->
 </div>
 
 {% endblock %}
