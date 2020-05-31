@@ -155,15 +155,18 @@ THUMBNAIL_HIGH_RESOLUTION = True
 
 PROJECT_URL = 'https://www.sentheard.com'
 
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 MEDIA_ROOT = '/home/sentheard/sentheard/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 
-STATIC_URL = '/static/'
+
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATIC_URL = 'static/'
 STATIC_ROOT = '/home/sentheard/sentheard/static/'
 
 
-SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+# SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 LOGIN_REDIRECT_URL = '../../post_stuff/gallery/'
 LOGOUT_REDIRECT_URL = 'index'

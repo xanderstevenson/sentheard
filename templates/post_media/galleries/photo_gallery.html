@@ -11,7 +11,7 @@
 <h3 class="fuck-motto">Your Memories</h3>
 </div>
 <br>
-<br style="clear: both;">
+
 
 
 <div id=''>
@@ -37,9 +37,11 @@
             <p id="photo-title"><span id="display_category">Title: </span>{{ photo.title }}</p>
             <p id="photo-title"><span id="display_category">Author: </span>{{photo.author.first_name }}</p>
             <p id="photo-title"><span id="display_category">About: </span>{{ photo.description }}</p>
-            <a href='static'></a><img src='https://sentheard.com{{static}}{{ photo.photo.url }}' alt="Profile Picture" width="200" /></a>
+            <!--<a href=''></a><img src='ok' alt="Profile Picture" width="200" /></a>-->
+            <img src={{ MEDIA_ROOT }}{{ photo.photo.url }} >
+
             <br>
-            <a class="downloadButton" href='static' download>Download</a>
+            <a class="downloadButton" href="{{ MEDIA_ROOT }}{{ photo.photo.url }}" download>Download</a>
         </div>
     </div>
 
