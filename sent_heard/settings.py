@@ -155,7 +155,7 @@ THUMBNAIL_HIGH_RESOLUTION = True
 
 PROJECT_URL = 'https://www.sentheard.com'
 
-MEDIA_URL = 'media/'
+MEDIA_URL = '/'
 MEDIA_ROOT = '/home/sentheard/sentheard/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 

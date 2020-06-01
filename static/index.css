@@ -742,7 +742,6 @@ p .helptext {
 #post-page {
   font-size: 25px;
   margin: 0px auto;
-
   align-content: center;
   width: 95%;
   height: auto;
@@ -775,6 +774,7 @@ p .helptext {
   align-content: center;
   list-style-type: none;
 }
+
 
 .data-input-post {
   border: 2px solid #d7b88a;
@@ -1309,6 +1309,17 @@ form label{
     font-size: 32px;
         background-image: url(images/gold.jpg);
 }
+
+.elegantFrame {
+    display: inline-block;
+    width: 355px;
+    height: 150px;
+    background-color: silver;
+    font-size: 22px;
+    border: 2px ridge black;
+
+}
+
 
 
 
