@@ -1,4 +1,3 @@
-
 {% extends 'index.html' %}
 {% load static %}
 
@@ -9,57 +8,54 @@
 <br>
 
 <div class="GalleryTitleBox">
-<h1>Video Gallery</h1>
-<h3 class="fuck-motto">Your Memories</h3>
+  <h1>Video Gallery</h1>
+  <h3 class="fuck-motto">Your Memories</h3>
 </div>
-
-<br>
-<br style="clear: both;">
-
 
 <div id=''>
 
-{% if user.has_paid %}
-    {% if user.is_authenticated %}
+  {% if user.has_paid %}
+  {% if user.is_authenticated %}
 
-        <div id='post-page'>
+  <div id='post-page'>
     <ul>
-          <li><a href={% url 'posts:post_video' %}><i class="fas fa-file-video data-input-post">      Upload Video</i></a></li>
-        <li><a href={% url 'posts:record_video' %}><i class="fas fa-file-video data-input-post">      Record Live Video</i></a></li>
-        </ul>
-    </div>
+      <li><a href={% url 'posts:post_video' %}><i class="fas fa-file-video data-input-post"> Upload Video</i></a></li>
+      <li><a href={% url 'posts:record_video' %}><i class="fas fa-file-video data-input-post"> Record Live Video</i></a>
+      </li>
+    </ul>
+  </div>
 
 
-    <div id='photo_gallery_block' class='row'>
-        {% if video_list %}
-        {% for video in video_list %}
-        {% if video.author == user %}
+  <div id='photo_gallery_block' class='row'>
+    {% if video_list %}
+    {% for video in video_list %}
+    {% if video.author == user %}
 
-        <div class='photo_gallery_img'>
+    <div class='photo_gallery_img'>
 
-            <div>
-                <p id="photo-title"><span id="display_category">Title: </span>{{ video.title }} </p>
-                <p id="photo-title"><span id="display_category">Author: </span>{{ video.author.first_name }}</p>
-                <video controls = 'controls'>
-                <source src='{{ static }}{{ video.video.url }}' type="audio/mpeg">
-                Your browser does not support the video element.
-                </video>
-                <a class="downloadButton" href="{{ static }}{{ video.video.url }}" download>Download</a>
-            </div>
-        </div>
-        {% else %}
-        <p id="h3words">There are no videos in the gallery at this time.</p>
-        {% endif %}
-        {% endfor %}
-
-
-        {% endif %}
-
+      <div>
+        <p id="photo-title"><span id="display_category">Title: </span>{{ video.title }} </p>
+        <p id="photo-title"><span id="display_category">Author: </span>{{ video.author.first_name }}</p>
+        <video controls='controls'>
+          <source src='{{ static }}{{ video.video.url }}' type="audio/mpeg">
+          Your browser does not support the video element.
+        </video>
+        <a class="downloadButton" href="{{ static }}{{ video.video.url }}" download>Download</a>
+      </div>
     </div>
     {% else %}
-    <a href={% url 'login' %}>Please Log In to View</a>
+    <p id="h3words">There are no videos in the gallery at this time.</p>
     {% endif %}
+    {% endfor %}
+
+
     {% endif %}
+
+  </div>
+  {% else %}
+  <a href={% url 'login' %}>Please Log In to View</a>
+  {% endif %}
+  {% endif %}
 </div>
 
 {% endblock %}
@@ -202,12 +198,3 @@
 <!--</div>-->
 
 <!--ALL JPLAYER STUFF ENDS-->
-
-
-
-
-
-
-
-
-

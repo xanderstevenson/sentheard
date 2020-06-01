@@ -10,10 +10,9 @@
 <h1>Choose a Gallery</h1>
 <h3 class="fuck-motto">of Your Memories</h3>
 </div>
-<br>
-<br style="clear: both;">
-    <!--<h5>Django Image Uploading...</h5>-->
-
+ <div class="elegantFrame">
+    <div>The Gallery is Where You Look at Your Media</div>
+</div>
 <div id='photo_gallery_block' class='row'>
 
 {% if user.is_authenticated %}
@@ -21,6 +20,9 @@
 <a class="galleryButton" href={% url 'posts:audio_gallery' %}><p id="gallary-gold-text">Audio</p></a>
 <a class="galleryButton" href={% url 'posts:video_gallery' %}><p id="gallary-gold-text">Video</p></a>
 <a class="galleryButton" href={% url 'posts:text_gallery' %}><p id="gallary-gold-text">Text</p></a>
+
+
+
     {% else %}
 <a href={% url 'login' %}>Please Log In to View</a>
 {% endif %}
