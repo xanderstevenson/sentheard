@@ -45,8 +45,6 @@ class CreatePhotoView(CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-# def audio(request):
-#     return render(request, "/post_media/post_audio.html")
 
 class CreateAudioView(CreateView):
     # permission_required = 'users.has_paid'

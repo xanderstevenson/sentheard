@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django.urls import reverse_lazy
 # Create your views here.
 def index(request):
     return render(request, "index.html")
@@ -13,8 +14,8 @@ def donate(request):
 def about_us(request):
     return render(request, "about_us.html")
 
-def account(request):
-    return render(request, "account.html")
+def yourAccount(request):
+    return render(request, "yourAccount.html")
 
 # def post_stuff(request):
 #     return render(request, "post.html")

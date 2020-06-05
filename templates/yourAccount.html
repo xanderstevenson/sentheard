@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+    {% block content %}
+    <link rel="stylesheet" href="/static/index.css"/>
+<br>
+<div class="GalleryTitleBox">
+<h3 class="fuck-motto">Your Account</h3>
+{{ user }}
+</div>
+<br>
+
+<div class="loginForm">
+    <br><br><br>
+
+  <a href="{% url 'password_reset' %}" >
+    <div id=''>
+<br>
+
+<span id="acccountButton">Reset Your Password</span>
+
+    </div>
+    </a>
+
+<br><br>
+
+<span id="acccountButton">Deactivate Your Account</span>
+
+
+</div>
+
+{% endblock %}

@@ -18,10 +18,6 @@ class PaymentsPageView(TemplateView):
         context = super().get_context_data(**kwargs)
         # context['key'] = settings.STRIPE_PUBLISHABLE_KEY
         context['key'] = os.environ.get("STRIPE_PUBLISHABLE_KEY")
-
-        # User = get_user_model
-        # User.has_paid = True
-
         return context
 
 
@@ -31,7 +27,6 @@ def charge(request): # new
         user = request.user
         user.has_paid = True
         user.save()
-
         email = request.user.email
         token = request.POST['stripeToken']
 
@@ -64,6 +59,3 @@ def charge(request): # new
 
         return render(request, 'payments/charge.html')
 
-# class CheckoutPageView(TemplateView):
-#     template_name = 'payments/checkout.html'
-#     success_url = reverse_lazy('login')

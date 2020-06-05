@@ -1328,7 +1328,10 @@ box-shadow: 1px 1px 4px #cdd3a6, -1px 1px 4px #cdd3a6, -1px -1px 4px #cdd3a6;
   line-height: 130%;
 }
 
-
+textarea#id_description {
+    height: 90px;
+    max-height: 90px;
+}
 
 
 /*.MyCardElement {*/

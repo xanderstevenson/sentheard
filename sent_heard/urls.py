@@ -29,10 +29,9 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('users/', include('django.contrib.auth.urls')),
     path('payments/', include('payments.urls')),
-    path('', include('Sent_Heard_App.urls')),
     path('post_stuff/', include('posts.urls', namespace="post_stuff")),
     path('', include('django.contrib.auth.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('', include('Sent_Heard_App.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

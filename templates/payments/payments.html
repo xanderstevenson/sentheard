@@ -17,8 +17,13 @@
 </script>
 <br>
 <div class="GalleryTitleBox">
-<h1>Subscribe</h1>
+
       {% if user.is_authenticated %}
+      {% if user.has_paid %}
+      <br>
+      <h1>You've already paid!</h1>
+      {% else %}
+      <h1>Subscribe</h1>
       <h4>for Only</h4>
 <h3 class="fuck-motto">$4.99 USD per Month!</h3>
 
@@ -40,6 +45,7 @@
  <a href="https://stripe.com/payments/features" target="_blank"><img src="{% static '/images/logo/stripe-payments-1.png' %}" id="stripeLogoCC"></a>
  <br>
  <h3>Cancel at Any Time with No Penalty!</h3>
+ {% endif %}
  {% else %}
  <h3 class="fuck-motto">You Must Login to View</h3>
  {% endif %}

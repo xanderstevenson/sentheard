@@ -3,25 +3,28 @@
 {% load static %}
 
 
-    {% block content %}
-    <link rel="stylesheet" href="/static/index.css"/>
-    <div id=''>
-<br>
-<div class="GalleryTitleBox">
-<h1>Post Photos</h1>
-<h3 class="fuck-motto">Save Your Memories</h3>
+{% block content %}
+<link rel="stylesheet" href="/static/index.css" />
+<div id=''>
+  <br>
+  <div class="GalleryTitleBox">
+    <h1>Post Photos</h1>
+    <h3 class="fuck-motto">Save Your Memories</h3>
+  </div>
+  <br>
+  {% if user.is_authenticated %}
+  <form method="POST" enctype="multipart/form-data" class='postForm'>
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    <button type="submit">Submit New Post</button>
+  </form>
 </div>
-<br>
 
-<form method="POST" enctype="multipart/form-data" class='postForm'>
-<!--<form method="POST" enctype="multipart/form-data" action=".">-->
-  {% csrf_token %}
-  <!--{% if user.is_authenticated %}-->
-  {{ form.as_p }}
-  <button type="submit">Submit New Post</button>
-</form>
-    </div>
- <!--{% else %}-->
- <!--{% endif %}-->
+{% else %}
 
-    {% endblock %}
+<h3>Log in to Post, dude!</h3>
+
+{% endif %}
+{% endblock %}
