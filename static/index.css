@@ -1384,6 +1384,17 @@ opacity: 0.90;
     border: 3px groove gray;
 }
 
+#accountBox {
+    border: 3px ridge goldenrod;
+    width: 352px;
+box-shadow: 2px 2px 4px #333328, -2px 2px 4px #333328, -2px -2px 4px #333328;
+ background-color: silver;
+ opacity: 1.0;
+ font-weight: bold;
+ margin-bottom: 2px;
+}
+
+
 /*#textBoxGeneralTwo form {*/
 /*    padding: 10px;*/
 /*}*/
