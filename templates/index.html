@@ -88,13 +88,13 @@
 
       <div id='user_box'>
 
-        {% if user.is_authenticated %}
-        <span id="user_box_user"> {{ user.email }} </span>
 
+        <span id="user_box_user"> {{ user.email }} </span>
+{% if user.is_authenticated %}
         <p><a href="{% url 'logout' %}">Logout</a></p>
 
         {% else %}
-        <img src="static/images/logo/Vanilla-2.1s-157px.gif" style="margin-top:-5px;margin-left:-10px;">
+        <img src="/static/images/logo/Vanilla-2.1s-157px.gif" style="margin-top:-5px;margin-left:-10px;">
         <!--<br>-->
         <div style="margin-top:-6px;margin-left:3px;"><span class='underlined'><a
               href="{% url 'login' %}">Login</a></span> or <span class='underlined'><a

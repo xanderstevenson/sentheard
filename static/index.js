@@ -18,9 +18,9 @@ $(document).ready(function () {
     const mediumMarble = $("#home-container-md")
     const largeMarble = $("#home-container-lg")
     // hide the 3 marble frames from the start or all three will display (see window.resize)
-    smallMarble.hide()
-    mediumMarble.hide()
-    largeMarble.hide()
+    smallMarble.css("display", "none")
+    mediumMarble.css("display", "none")
+    largeMarble.css("display", "none")
     // home container text
     const hcSmTxt = $('#hc-sm-txt')
     const hcMdTxt = $('#hc-md-txt')
@@ -34,25 +34,25 @@ $(document).ready(function () {
     const mdImg = $('#mdImg')
     const lgImg = $('#lgImg')
 
-    hcSmTxt.hide()
-    hcMdTxt.hide()
-    hcLgTxt.hide()
+    hcSmTxt.css("display", "none")
+    hcMdTxt.css("display", "none")
+    hcLgTxt.css("display", "none")
 
     // hide the 3 logos from the start or all three will display (see window.resize)
-    smLogo.hide()
-    mdLogo.hide()
-    lgLogo.hide()
+    smLogo.css("display", "none")
+    mdLogo.css("display", "none")
+    lgLogo.css("display", "none")
     // hide the 3 family images from the start or all three will display (see window.resize)
-    smImg.hide()
-    mdImg.hide()
-    lgImg.hide()
+    smImg.css("display", "none")
+    mdImg.css("display", "none")
+    lgImg.css("display", "none")
     const handPrayLg = $('#hand-pray-lg')
     const handPrayMd = $('#hand-pray-md')
     const handPraySm = $('#hand-pray-sm')
 
-    handPrayLg.hide()
-    handPrayMd.hide()
-    handPraySm.hide()
+    handPrayLg.css("display", "none")
+    handPrayMd.css("display", "none")
+    handPraySm.css("display", "none")
 
 const theCloudTitle= $('#cloud-bg-title')
 const theBanner= $('#banner')
@@ -86,7 +86,7 @@ const changeCloudTitleSides = ()=>{
 }
     // flashing "Join for Free"
     const joinButton = $('.join-button')
-    joinButton.hide()
+    joinButton.css("display", "none")
     // const joinButtonSm = $('#join-buttonSm')
     // const joinButtonMd = $('#join-buttonMd')
     // const joinButtonLg = $('#join-buttonLg')
@@ -228,8 +228,8 @@ const changeCloudTitleSides = ()=>{
             handPraySm.fadeIn()
             smallMarble.delay(3000).fadeIn(3000)
             handPraySm.delay(1000).fadeOut(1500)
-            mediumMarble.hide()
-            largeMarble.hide()
+            mediumMarble.css("display", "none")
+            largeMarble.css("display", "none")
 
         } else if ($('#row1').width() > 650 && $('#row1').width() <= 1080) {
             // binding.hide()
@@ -237,8 +237,8 @@ const changeCloudTitleSides = ()=>{
             handPrayMd.show()
             mediumMarble.delay(3000).fadeIn(3000)
             handPrayMd.delay(1000).fadeOut(1500)
-            largeMarble.hide()
-            smallMarble.hide()
+            largeMarble.css("display", "none")
+            smallMarble.css("display", "none")
 
         } else if ($('#row1').width() > 1080) {
             // binding.show()
@@ -246,8 +246,8 @@ const changeCloudTitleSides = ()=>{
             handPrayLg.fadeIn()
             largeMarble.delay(3000).fadeIn(3000)
             handPrayLg.delay(1000).fadeOut(1500)
-            smallMarble.hide()
-            mediumMarble.hide()
+            smallMarble.css("display", "none")
+            mediumMarble.css("display", "none")
         }
     }
 
@@ -257,19 +257,19 @@ const changeCloudTitleSides = ()=>{
             // binding.hide()
             // binding2.hide()
             smallMarble.show()
-            mediumMarble.hide()
-            largeMarble.hide()
+            mediumMarble.css("display", "none")
+            largeMarble.css("display", "none")
         } else if ($('#row1').width() > 650 && $('#row1').width() <= 1080) {
             // binding.hide()
             // binding2.hide()
-            smallMarble.hide()
+            smallMarble.css("display", "none")
             mediumMarble.show()
-            largeMarble.hide()
+            largeMarble.css("display", "none")
         } else if ($('#row1').width() > 1080) {
             // binding.show()
             // binding2.show()
-            smallMarble.hide()
-            mediumMarble.hide()
+            smallMarble.css("display", "none")
+            mediumMarble.css("display", "none")
             largeMarble.show()
         }
     }
@@ -322,7 +322,7 @@ var start_count = 0
 
 
                     record.click(()=>{
-                        record.hide()
+                        record.css("display", "none")
                         play.show()
                         download.show()
                         tryAgain.show()
@@ -330,9 +330,9 @@ var start_count = 0
 
 
                                 play.click(()=> {
-                                    gum.hide()
+                                    gum.css("display", "none")
                                     recorded.show()
-                                    play.hide()
+                                    play.css("display", "none")
 
                                 })
 
