@@ -5,32 +5,26 @@
 
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
-<br>
+
 <div class="GalleryTitleBox">
-<h3 class="fuck-motto">Your Account</h3>
-{{ user }}
+
+<h3 class="fuck-motto">Deactivate Your Account?</h3>
+
 </div>
-<br>
+
 
 <div class="loginForm">
-    <br><br><br>
+    <br><br>
 
 <form method="post">{% csrf_token %}
-    <p>Are you sure you want to Deavtivate Account?</p>
-    <input type="submit" value="Confirm">
+    <p id="plaque" style="color:white;font-size:26px;">Are you sure you want to Deactivate your Account?</p>
+    <br>
+    <a href="{% url 'delete_user' %}"><input type="submit" value="Yes, Deactivate!" id="acccountButton"></a>
+
 </form>
 
-<span id="acccountButton">Deavtivate Account</span>
 
-    </div>
-    </a>
 
-<br><br>
-
-<a href="{% url 'DeactiveStatus' %}" >
-
-<span id="acccountButton">Cancel</span>
-   </a>
 
 
 </div>

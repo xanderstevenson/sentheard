@@ -1,7 +1,12 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.urls import reverse_lazy
-# Create your views here.
+from django.contrib.auth import get_user_model
+
+
+User = get_user_model()
+
+
 def index(request):
     return render(request, "index.html")
 
@@ -16,6 +21,20 @@ def about_us(request):
 
 def yourAccount(request):
     return render(request, "yourAccount.html")
+
+def delete_user(request):
+    context = {}
+
+    try:
+        user = get_user_model()
+        user.is_active = False
+        context['msg'] = 'Profile successfully disabled.'
+    except User.DoesNotExist:
+        pass
+
+    return render(request, "account/deactive-status.html")
+
+
 
 # def post_stuff(request):
 #     return render(request, "post.html")
