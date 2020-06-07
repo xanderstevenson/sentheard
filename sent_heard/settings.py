@@ -162,7 +162,7 @@ MEDIA_ROOT = '/home/sentheard/sentheard/media/'
 
 
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = '/home/sentheard/sentheard/static/'
 
 

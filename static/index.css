@@ -1334,8 +1334,8 @@ font-size: 24px;
 font-weight: bold;
 border: 2px ridge goldenrod;
 text-shadow: 1px 1px 1px white;
-box-shadow: 1px 1px 4px #cdd3a6, -1px 1px 4px #cdd3a6, -1px -1px 4px #cdd3a6;
-  color: #3392f7;
+box-shadow: 1px 1px 4px #FAFAD2, -1px 1px 4px #cdd3a6, -1px -1px 4px #cdd3a6;
+  color:#800000;
   font-family: arial;
   line-height: 130%;
 }
