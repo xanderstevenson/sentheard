@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.urls import reverse_lazy
-from django.contrib.auth import get_user_model
 
+from .forms import DeactivateUserForm
+from django.core.exceptions import PermissionDenied
+from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
@@ -22,19 +24,24 @@ def about_us(request):
 def yourAccount(request):
     return render(request, "yourAccount.html")
 
+# def delete_user(request):
+#     context = {}
+
+#     try:
+#         user = get_user_model()
+#         user.is_active = False
+#         context['msg'] = 'Profile successfully disabled.'
+#     except User.DoesNotExist:
+#         pass
+
+#     return render(request, "account/deactive-status.html")
+
+# login_required(login_url='/accounts/login/')
 def delete_user(request):
-    context = {}
 
-    try:
-        user = get_user_model()
-        user.is_active = False
-        context['msg'] = 'Profile successfully disabled.'
-    except User.DoesNotExist:
-        pass
-
-    return render(request, "account/deactive-status.html")
-
-
+    return render(request, "account/account-deleted.html")
+    # else:
+    #     raise PermissionDenied
 
 # def post_stuff(request):
 #     return render(request, "post.html")

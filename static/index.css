@@ -1305,7 +1305,10 @@ padding: 6px;
 margin: 0px auto;
 opacity: 0.95;
 border: 2px ridge #967752;
+text-shadow: 1px 1px 1px black;1px -1px 1px black
 }
+
+
 
 form label{
 font-weight: bold;
