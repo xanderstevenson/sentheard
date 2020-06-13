@@ -19,7 +19,7 @@
 <form method="post">{% csrf_token %}
     <p id="plaque" style="color:white;font-size:26px;">Are you sure you want to <strong>deactivate your account</strong>?</p>
     <br>
-    <a href="{% url 'delete_user' %}"><input type="submit" value=" Yes " id="acccountButton" style="text-shadow:1px 1px 1px black;-1px -1px 1px black"></a>
+    <a id='plaque' href="{% url 'delete_user_confirm' %}" style="text-shadow:1px 1px 1px black;-1px -1px 1px black; color: white; font-size:26px">Yes</a>
 
 </form>
 

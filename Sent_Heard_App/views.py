@@ -24,28 +24,23 @@ def about_us(request):
 def yourAccount(request):
     return render(request, "yourAccount.html")
 
-# def delete_user(request):
-#     context = {}
 
-#     try:
-#         user = get_user_model()
-#         user.is_active = False
-#         context['msg'] = 'Profile successfully disabled.'
-#     except User.DoesNotExist:
-#         pass
+def delete_user(request):
+    return render(request, "account/deactive-status.html")
 
-#     return render(request, "account/deactive-status.html")
+# def delete_user_confirm(request):
+#     user = User
+#     user.is_active = False
+#     user.save()
+#     return render(request, "account/account-deleted.html")
+
+def delete_user_confirm(request):
+    user = request.user
+    user.is_active = False
+    user.save()
+    return render(request, "account/account-deleted.html")
 
 # login_required(login_url='/accounts/login/')
-def delete_user(request):
 
-    return render(request, "account/account-deleted.html")
-    # else:
-    #     raise PermissionDenied
 
-# def post_stuff(request):
-#     return render(request, "post.html")
-
-# def password_reset(request):
-#     return render(request, "/registration/password_reset_form.html")
 

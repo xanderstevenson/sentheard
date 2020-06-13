@@ -11,6 +11,7 @@ urlpatterns = [
     path('about_us/', views.about_us, name="about_us"),
     path('yourAccount/', views.yourAccount, name="yourAccount"),
     path('delete_user/', views.delete_user, name="delete_user"),
+    path('delete_user_confirm/', views.delete_user_confirm, name="delete_user_confirm"),
     path('post_stuff/', include('posts.urls')),
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
 
