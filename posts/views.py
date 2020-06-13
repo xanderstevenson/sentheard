@@ -12,6 +12,8 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib.auth import get_user_model
 from django.views import generic
 from django.views.generic.edit import FormMixin
+from django.core.exceptions import PermissionDenied
+from django.db.models.signals import pre_save
 # django-storages and boto3
 # def image_upload(request):
 #     if request.method == 'POST':
@@ -31,6 +33,8 @@ from django.views.generic.edit import FormMixin
 #     return render(request, 'post_media/published.html')
 
 User = get_user_model()
+
+
 
 def post_stuff(request):
     return render(request, "memories.html")
@@ -92,14 +96,6 @@ class CreateTextView(CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-
-# class GalleryListView(ListView):
-#     template_name = 'post_media/gallery.html'
-#     queryset = Photo.objects.all()
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['now'] = timezone.now()
-#         return context
 
 def GalleryListView(request):
     return render(request, "post_media/gallery.html")

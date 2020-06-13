@@ -1337,7 +1337,7 @@ font-size: 24px;
 font-weight: bold;
 border: 2px ridge goldenrod;
 text-shadow: 1px 1px 1px white;
-box-shadow: 1px 1px 4px #FAFAD2, -1px 1px 4px #cdd3a6, -1px -1px 4px #cdd3a6;
+/*box-shadow: 1px 1px 4px #FAFAD2, -1px 1px 4px #FAFAD2, -1px -1px 4px #FAFAD2;*/
   color:#800000;
   font-family: arial;
   line-height: 130%;
@@ -1395,6 +1395,25 @@ box-shadow: 2px 2px 4px #333328, -2px 2px 4px #333328, -2px -2px 4px #333328;
  opacity: 1.0;
  font-weight: bold;
  margin-bottom: 2px;
+}
+
+.errorList li {
+    color: red;
+}
+.errorList {
+    color: red;
+}
+
+
+#offering {
+    width: 355px;
+    height: 270px;
+    border: 1px solid black;
+
+}
+
+#offering p {
+      color: black;
 }
 
 

@@ -28,19 +28,13 @@ def yourAccount(request):
 def delete_user(request):
     return render(request, "account/deactive-status.html")
 
-# def delete_user_confirm(request):
-#     user = User
-#     user.is_active = False
-#     user.save()
-#     return render(request, "account/account-deleted.html")
 
 def delete_user_confirm(request):
     user = request.user
     user.is_active = False
+    logout(request)
     user.save()
     return render(request, "account/account-deleted.html")
-
-# login_required(login_url='/accounts/login/')
 
 
 
