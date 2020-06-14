@@ -94,7 +94,7 @@ const changeCloudTitleSides = ()=>{
     const verse = ['Record your stories with audio, video, images and text and pass them along to future generations.',
         'Create personalized momentos for your family, friends and descendants to cherish.',
         'We are the creator of, and world leader in, digital inheritance services.',
-        'Now, more than ever, between heaven and earth, we can be centered.'
+        'Share your past and recent memories with a select few, now, and for Eternity.'
     ]
 
     // different family images for homescreen
