@@ -14,9 +14,9 @@
 
 <div id=''>
 
-  {% if user.has_paid %}
-  {% if user.is_authenticated %}
 
+  {% if user.is_authenticated %}
+  {% if user.has_paid %}
   <div id='post-page'>
     <ul>
       <li><a href={% url 'posts:post_video' %}><i class="fas fa-file-video data-input-post"> Upload Video</i></a></li>
@@ -43,20 +43,32 @@
         <a class="downloadButton" href="{{ static }}{{ video.video.url }}" download>Download</a>
       </div>
     </div>
-    {% else %}
+
+        {% endif %}
+        {% endfor %}
+{% else %}
+    <br><br>
     <p id="h3words">There are no videos in the gallery at this time.</p>
-    {% endif %}
-    {% endfor %}
+
+{% endif %}
 
 
-    {% endif %}
 
-  </div>
-  {% else %}
-  <a href={% url 'login' %}>Please Log In to View</a>
-  {% endif %}
-  {% endif %}
+
+
+
+
+{% else %}
+    <br><br <h3><a href={% url 'payments' %}>Your payment status is <u>unpaid</u>.</a></h3>
+
+{% endif %}
+
+{% else %}
+    <br><br <h3><a href={% url 'login' %}>Please Log In to View</a></h3>
+{% endif %}
 </div>
+</div>
+
 
 {% endblock %}
 

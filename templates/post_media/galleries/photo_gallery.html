@@ -5,10 +5,9 @@
 {% block content %}
 <link rel="stylesheet" href="/static/index.css" />
 
-<br>
 <div class="GalleryTitleBox">
-<h1>Photo Gallery</h1>
-<h3 class="fuck-motto">Your Memories</h3>
+    <h1>Photo Gallery</h1>
+    <h3 class="fuck-motto">Your Memories</h3>
 </div>
 
 
@@ -16,53 +15,59 @@
 
 <div id=''>
 
-<!--{% if user.has_paid %}-->
+
 
     {% if user.is_authenticated %}
-
-        <div id='post-page'>
-    <ul>
-           <li><a href={% url 'posts:add_photos' %}><i class="fas fa-camera-retro data-input-post">      Upload Photos</i></a></li>
-    </ul>
+    {% if user.has_paid %}
+    <div id='post-page'>
+        <ul>
+            <li><a href={% url 'posts:add_photos' %}><i class="fas fa-camera-retro data-input-post"> Upload
+                        Photos</i></a></li>
+        </ul>
     </div>
 
 
     <div id='photo_gallery_block' class='row'>
         {% if photo_list %}
-         {% for photo in photo_list %}
+        {% for photo in photo_list %}
         {% if photo.author == user %}
 
-    <div class='photo_gallery_img'>
-        <div>
-            <p id="photo-title"><span id="display_category">Title: </span>{{ photo.title }}</p>
-            <p id="photo-title"><span id="display_category">Author: </span>{{photo.author.first_name }}</p>
-            <p id="photo-title"><span id="display_category">About: </span>{{ photo.description }}</p>
-            <!--<a href=''></a><img src='ok' alt="Profile Picture" width="200" /></a>-->
-            <img src={{ MEDIA_ROOT }}{{ photo.photo.url }} >
+        <div class='photo_gallery_img'>
+            <div>
+                <p id="photo-title"><span id="display_category">Title: </span>{{ photo.title }}</p>
+                <p id="photo-title"><span id="display_category">Author: </span>{{photo.author.first_name }}</p>
+                <p id="photo-title"><span id="display_category">About: </span>{{ photo.description }}</p>
+                <!--<a href=''></a><img src='ok' alt="Profile Picture" width="200" /></a>-->
+                <img src={{ MEDIA_ROOT }}{{ photo.photo.url }}>
 
-            <br>
-            <a class="downloadButton" href="{{ MEDIA_ROOT }}{{ photo.photo }}" download>Download</a>
+                <br>
+                <a class="downloadButton" href="{{ MEDIA_ROOT }}{{ photo.photo }}" download>Download</a>
+            </div>
         </div>
-    </div>
 
         {% endif %}
         {% endfor %}
+{% else %}
+    <br><br>
+    <p id="h3words">There are no photos in the gallery at this time.</p>
 
-        </div>
-        {% else %}
-        <p id="h3words">There are no photos in the gallery at this time.</p>
+{% endif %}
 
 
 
-        {% endif %}
 
-    </div>
-    {% else %}
-    <a href={% url 'login' %}>Please Log In to View</a>
-    {% endif %}
-    <!--{% endif %}-->
+
+
+
+{% else %}
+    <br><br <h3><a href={% url 'payments' %}>Your payment status is <u>unpaid</u>.</a></h3>
+
+{% endif %}
+
+{% else %}
+    <br><br <h3><a href={% url 'login' %}>Please Log In to View</a></h3>
+{% endif %}
+</div>
 </div>
 
 {% endblock %}
-
-

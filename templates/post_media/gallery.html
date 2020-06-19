@@ -5,33 +5,34 @@
 
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
-<br>
+
 <div class="GalleryTitleBox">
 <h1>Choose a Gallery</h1>
 <h3 class="fuck-motto">of Your Memories</h3>
 </div>
 
+{% if user.is_authenticated %}
+{% if user.has_paid %}
+
 <div id='photo_gallery_block' class='row'>
 
-{% if user.is_authenticated %}
+
 <a class="galleryButton" href={% url 'posts:photo_gallery' %}><p id="gallary-gold-text">Photos</p></a>
 <a class="galleryButton" href={% url 'posts:audio_gallery' %}><p id="gallary-gold-text">Audio</p></a>
 <a class="galleryButton" href={% url 'posts:video_gallery' %}><p id="gallary-gold-text">Video</p></a>
 <a class="galleryButton" href={% url 'posts:text_gallery' %}><p id="gallary-gold-text">Text</p></a>
 
 
-
-    {% else %}
-<a href={% url 'login' %}>Please Log In to View</a>
-{% endif %}
-
-
-
-
 </div>
  <div class="elegantFrame">
     <div>The Gallery is Where You Look at Your Media</div>
 </div>
+
+
+
+{% endif %}
+{% endif %}
+
     {% endblock %}
 
 

@@ -6,14 +6,14 @@
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
 
-<br>
 <div class="GalleryTitleBox">
 <h1>Post and Save</h1>
 <h3 class="fuck-motto">Your Memories</h3>
 </div>
 
 
-
+{% if user.is_authenticated %}
+{% if user.has_paid %}
     <div class='row' >
     <div id='post-page'>
     <ul>
@@ -30,4 +30,7 @@
     <div class="elegantFrame">
         <div>This is Where You Add and Save Media to Your Gallery</div>
     </div>
+
+{% endif %}
+{% endif %}
     {% endblock %}

@@ -6,20 +6,20 @@
     {% block content %}
     <link rel="stylesheet" href="/static/index.css"/>
     <div id=''>
-<br>
+
 <div class="GalleryTitleBox">
 <h1>Post Audio</h1>
 <h3 class="fuck-motto">Save Your Memories</h3>
 </div>
 <br>
-
+{% if user.has_paid %}
 <form method="post" enctype="multipart/form-data" class='postForm'>
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit"> Submit </button>
 </form>
 
-
+{% endif %}
 
     </div>
     {% endblock %}
