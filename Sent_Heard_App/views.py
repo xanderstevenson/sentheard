@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.urls import reverse_lazy
-
 from .forms import DeactivateUserForm
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth import get_user_model
@@ -32,9 +31,7 @@ def delete_user(request):
 def delete_user_confirm(request):
     user = request.user
     user.is_active = False
-    logout(request)
+    # logout(request)
     user.save()
     return render(request, "account/account-deleted.html")
-
-
 

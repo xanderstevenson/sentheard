@@ -8,7 +8,7 @@
 
 <div class="GalleryTitleBox">
 
-<h3 class="fuck-motto">Deactivate Your Account?</h3>
+<h1 class="fuck-motto">Deactivate Your Account?</h1>
 
 </div>
 
@@ -17,7 +17,7 @@
     <br><br>
 
 <form method="post">{% csrf_token %}
-    <p id="plaque" style="color:white;font-size:26px;">Are you sure you want to <strong>deactivate your account</strong>?</p>
+    <h5 id="plaque" style="color:white;font-size:26px;">Are you sure you want to <strong>deactivate your account</strong>?</h5>
     <br>
     <a id='plaque' href="{% url 'delete_user_confirm' %}" style="text-shadow:1px 1px 1px black;-1px -1px 1px black; color: white; font-size:26px">Yes</a>
 

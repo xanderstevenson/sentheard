@@ -33,7 +33,7 @@ Inactive
 
 
 <div class="loginForm">
-    <br><br><br>
+    <br>
 
   <a href="{% url 'password_reset' %}" >
     <div id=''>
@@ -48,6 +48,13 @@ Inactive
   <a href="{% url 'delete_user' %}" >
 <span id="acccountButton">Deactivate Your Account</span>
 </a>
+
+{% if user.has_paid == False %}
+<br><br><br>
+  <a href="{% url 'payments' %}" >
+<span id="acccountButton" style="text-shadow:2px 2px 2px red;">Balance is Due - Pay Here</span>
+</a>
+{% endif %}
 
 </div>
 
