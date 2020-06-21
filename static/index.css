@@ -784,7 +784,7 @@ opacity: 0.95;
 width: 155px;
 height: 55px;
 /*min-width: 365px;*/
-box-shadow: 1px 1px 4px #cdd3a6, -1px 1px 4px #cdd3a6;
+box-shadow: 1px 1px 4px gray, -1px 1px 4px gray;
 margin-bottom: 20px;
 margin-right: 20px;
 }
@@ -793,6 +793,8 @@ margin-right: 20px;
 font-size: 22px;
 font-weight: bold;
 padding: 6px;
+text-shadow:1px 1px 1px gray;
+
 }
 
 .GalleryTitleBox {
@@ -1293,14 +1295,16 @@ text-shadow: 1px 1px 2px white, -1px 1px 2px white, 1px -1px 2px white, 1px -1px
 
 #h3words {
 font-weight:bold;
-color: black;
+color: maroon;
 opacity: 0.90;
 text-shadow: 1px 1px 1px white;
 width: 355px;
 height: 100px;
 background-color: #967f54;
-font-size: 32px;
+font-size: 28px;
     background-image: url(images/gold.jpg);
+    padding: 5px;
+    box-shadow: 1px 1px 4px gray, -1px 1px 4px gray, -1px -1px 4px gray;
 }
 
 .elegantFrame {

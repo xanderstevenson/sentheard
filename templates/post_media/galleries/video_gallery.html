@@ -5,7 +5,6 @@
 {% block content %}
 <link rel="stylesheet" href="/static/index.css" />
 
-<br>
 
 <div class="GalleryTitleBox">
   <h1>Video Gallery</h1>
@@ -13,10 +12,10 @@
 </div>
 
 <div id=''>
-
-
   {% if user.is_authenticated %}
   {% if user.has_paid %}
+
+
   <div id='post-page'>
     <ul>
       <li><a href={% url 'posts:post_video' %}><i class="fas fa-file-video data-input-post"> Upload Video</i></a></li>
@@ -43,32 +42,25 @@
         <a class="downloadButton" href="{{ static }}{{ video.video.url }}" download>Download</a>
       </div>
     </div>
-
-        {% endif %}
-        {% endfor %}
-{% else %}
-    <br><br>
+    {% else %}
     <p id="h3words">There are no videos in the gallery at this time.</p>
-
-{% endif %}
-
-
+    {% endif %}
+    {% endfor %}
 
 
+    {% endif %}
 
+  </div>
 
-
-{% else %}
-    <br><br <h3><a href={% url 'payments' %}>Your payment status is <u>unpaid</u>.</a></h3>
-
-{% endif %}
-
-{% else %}
-    <br><br <h3><a href={% url 'login' %}>Please Log In to View</a></h3>
-{% endif %}
+      {% else %}
+      <br><br>
+<a href={% url 'payments' %}>Please Pay Your Subscription</a>
+  {% endif %}
+    {% else %}
+        <br><br>
+  <a href={% url 'login' %}>Please Log In to View</a>
+  {% endif %}
 </div>
-</div>
-
 
 {% endblock %}
 

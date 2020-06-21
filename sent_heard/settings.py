@@ -128,28 +128,29 @@ USE_L10N = True
 
 USE_TZ = True
 
-# USE_S3 = os.getenv('USE_S3') == 'TRUE'
+USE_S3 = os.getenv('USE_S3') == 'TRUE'
 
-# if USE_S3:
-#     # aws settings
-#     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-#     AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
-#     # add to os.environ
-#     AWS_STORAGE_BUCKET_NAME = 'django-static-sentheard'
-#     AWS_S3_REGION_NAME = 'us-east-2'
-#     AWS_DEFAULT_ACL = 'public-read'
-#     AWS_QUERYSTRING_AUTH = False
-#     AWS_IS_GZIPPED = True
-#     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
-#     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
-#     PUBLIC_MEDIA_LOCATION = '/media'
-#     # Perhaps add Region ID
-#     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
-#     # DEFAULT_FILE_STORAGE = 'sent_heard.storage_backends.PublicMediaStorage'
-#     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# else:
-#     MEDIA_URL = '/media/'
-#     MEDIA_ROOT = os.path.join(BASE_DIR, '/media')
+if USE_S3:
+    # aws settings
+    AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+    # add to os.environ
+    AWS_STORAGE_BUCKET_NAME = 'django-static-sentheard'
+    AWS_S3_REGION_NAME = 'us-east-2'
+    AWS_DEFAULT_ACL = 'public-read'
+    AWS_QUERYSTRING_AUTH = False
+    AWS_IS_GZIPPED = True
+    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    PUBLIC_MEDIA_LOCATION = '/media'
+    # Perhaps add Region ID
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
+    # DEFAULT_FILE_STORAGE = 'sent_heard.storage_backends.PublicMediaStorage'
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+else:
+    MEDIA_URL = '/'
+    MEDIA_ROOT = '/home/sentheard/sentheard/media/'
 THUMBNAIL_HIGH_RESOLUTION = True
 
 

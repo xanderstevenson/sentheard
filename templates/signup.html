@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="/static/index.css" />
 
-
+{% if user.is_active == False %}
 <div class="GalleryTitleBox">
 <h1>Create an Account</h1>
 <h5>The Payment WIll Be on the Next Page</h5>
@@ -20,5 +20,5 @@
     <button type="submit">Sign up</button>
   </form>
 </div>
-
+{% endif %}
 {% endblock %}

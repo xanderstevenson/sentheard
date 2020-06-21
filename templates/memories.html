@@ -30,6 +30,8 @@
     <div class="elegantFrame">
         <div>This is Where You Add and Save Media to Your Gallery</div>
     </div>
+{% else %}
+<br><br <h3><a href={% url 'payments' %}>Your payment status is <u>unpaid</u>.</a></h3>
 
 {% endif %}
 {% endif %}

@@ -8,14 +8,24 @@
 <div class="GalleryTitleBox">
 <h3 class="fuck-motto">Your Account</h3>
 
-
+{% if user.is_active %}
 <div id="accountBox">
+
+
+
 
 <u>Status</u>:
 {% if user.is_active %}
-Active
+<span style="color: green;">Active</span>
 {% else %}
-Inactive
+<span style="color: red;">Inactive</span>
+{% endif %}
+<br>
+<u>Paid or Unpaid</u>:
+{% if user.has_paid %}
+<span style="color: green;">Paid</span>
+{% else %}
+<span style="color: red;">Unpaid</span>
 {% endif %}
 <br>
 <u>First Name</u>: {{ user.first_name }}
@@ -32,7 +42,7 @@ Inactive
 </div>
 
 
-<div class="loginForm">
+<div class="loginForm" style="text-shadow:1px 1px 1px black;">
     <br>
 
   <a href="{% url 'password_reset' %}" >
@@ -52,10 +62,10 @@ Inactive
 {% if user.has_paid == False %}
 <br><br><br>
   <a href="{% url 'payments' %}" >
-<span id="acccountButton" style="text-shadow:2px 2px 2px red;">Balance is Due - Pay Here</span>
+<span id="acccountButton" style="text-shadow:1px 1px 1px red;">Balance is Due - Pay Here</span>
 </a>
 {% endif %}
 
 </div>
-
+{% endif %}
 {% endblock %}

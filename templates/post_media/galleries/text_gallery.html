@@ -35,33 +35,25 @@
             <a class="downloadButton" href="{{ static }}{{text.text_upload.url}}" download>Download</a>
         </div>
     </div>
+    {% else %}
+    <p id="h3words">There are no videos in the gallery at this time.</p>
+    {% endif %}
+    {% endfor %}
 
 
-        {% endif %}
-        {% endfor %}
-{% else %}
-    <br><br>
-    <p id="h3words">There are no texts in the gallery at this time.</p>
+    {% endif %}
 
-{% endif %}
+  </div>
 
-
-
-
-
-
-
-{% else %}
-    <br><br <h3><a href={% url 'payments' %}>Your payment status is <u>unpaid</u>.</a></h3>
-
-{% endif %}
-
-{% else %}
-    <br><br <h3><a href={% url 'login' %}>Please Log In to View</a></h3>
-{% endif %}
-</div>
+      {% else %}
+      <br><br>
+<a href={% url 'payments' %}>Please Pay Your Subscription</a>
+  {% endif %}
+    {% else %}
+        <br><br>
+  <a href={% url 'login' %}>Please Log In to View</a>
+  {% endif %}
 </div>
 
 {% endblock %}
-
 

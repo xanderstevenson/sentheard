@@ -28,9 +28,10 @@
     <div>The Gallery is Where You Look at Your Media</div>
 </div>
 
-
-
+{% else %}
+<br><br <h3><a href={% url 'payments' %}>Your payment status is <u>unpaid</u>.</a></h3>
 {% endif %}
+
 {% endif %}
 
     {% endblock %}
