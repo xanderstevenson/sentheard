@@ -46,7 +46,7 @@ class Video(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     # author = models.CharField(default="", max_length=55, null=False)
     title = models.CharField(default="", max_length=20)
-    video = models.FileField(upload_to='video/', default="")
+    video = models.FileField(upload_to='video/')
     def __str__(self):
         return self.title
 
