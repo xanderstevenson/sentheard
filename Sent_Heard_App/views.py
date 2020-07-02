@@ -8,6 +8,7 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
+
 def index(request):
     return render(request, "index.html")
 
@@ -35,3 +36,5 @@ def delete_user_confirm(request):
     user.save()
     return render(request, "account/account-deleted.html")
 
+def sifu_bach(request):
+    return render(request, "sifu_bach.html")

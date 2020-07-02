@@ -170,7 +170,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 PROJECT_URL = 'https://www.sentheard.com'
 
 MEDIA_URL = '/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = '/'
 # MEDIA_ROOT = '/home/sentheard/sentheard/media/'
 
 
