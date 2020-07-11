@@ -3,19 +3,32 @@
 {% load static %}
 
 
-    {% block content %}
-    <link rel="stylesheet" href="/static/index.css"/>
-    <div id=''>
+{% block content %}
+<link rel="stylesheet" href="/static/index.css" />
+<div id=''>
+
+  <div class="GalleryTitleBox">
+    <h1>Post Text</h1>
+    <h3 class="fuck-motto">Save Your Memories</h3>
+  </div>
+
+  {% if user.is_authenticated %}
     <br>
-<div class="GalleryTitleBox">
-<h1>Post Text</h1>
-<h3 class="fuck-motto">Save Your Memories</h3>
+     MAX FILE UPLOAD SIZE = 2MB
+  <br>
+  <form method="POST" enctype="multipart/form-data" class='postForm'>
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Submit New Post</button>
+  </form>
 </div>
-<br>
-<form method="post" enctype="multipart/form-data" class='postForm'>
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Submit New Post</button>
-</form>
-    </div>
-    {% endblock %}
+
+{% else %}
+
+<h3><a href={% url 'login' %}>Please Log In to View</a></h3>
+
+{% endif %}
+{% endblock %}

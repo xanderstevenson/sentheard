@@ -4,7 +4,7 @@ from django.conf import settings
 import uuid
 from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
-# from django.conf import settings
+from .validators import validate_file_size_photo, validate_file_size_audio, validate_file_size_video, validate_file_size_text
 
 
 
@@ -22,7 +22,7 @@ class Photo(models.Model):
     # author = models.CharField(default="", max_length=55, null=False)
     title = models.CharField(default="", max_length=20, null=False)
     description = models.TextField(max_length=200, default='', null=False)
-    photo = models.ImageField(upload_to = 'photos/')
+    photo = models.ImageField(upload_to = 'photos/', validators=[validate_file_size_photo])
     def __str__(self):
         return self.title
 
@@ -34,7 +34,7 @@ class Audio(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     # author = models.CharField(default="", max_length=55, null=False)
     title = models.CharField(default="", max_length=20)
-    audio = models.FileField(upload_to='audio/')
+    audio = models.FileField(upload_to='audio/', validators=[validate_file_size_audio])
     def __str__(self):
         return self.title
 
@@ -46,7 +46,7 @@ class Video(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     # author = models.CharField(default="", max_length=55, null=False)
     title = models.CharField(default="", max_length=20)
-    video = models.FileField(upload_to='video/')
+    video = models.FileField(upload_to='video/', validators=[validate_file_size_video])
     def __str__(self):
         return self.title
 
@@ -57,6 +57,6 @@ class Text(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     # author = models.CharField(default="", max_length=55, null=False)
     title = models.CharField(default="", max_length=20)
-    text_upload = models.FileField(upload_to='text/', default="")
+    text_upload = models.FileField(upload_to='text/', validators=[validate_file_size_text])
     def __str__(self):
         return self.title

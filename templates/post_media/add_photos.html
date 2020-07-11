@@ -12,12 +12,15 @@
     <h3 class="fuck-motto">Save Your Memories</h3>
   </div>
   <br>
+     MAX FILE UPLOAD SIZE = 2MB
+  <br>
   {% if user.is_authenticated %}
   <form method="POST" enctype="multipart/form-data" class='postForm'>
 
     {% csrf_token %}
 
     {{ form.as_p }}
+
     <button type="submit">Submit New Post</button>
   </form>
 </div>

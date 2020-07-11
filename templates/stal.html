@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+    {% block content %}
+    <link rel="stylesheet" href="/static/index.css"/>
+<div class="GalleryTitleBox">
+<h1>'Great Luck' by Stal</h5>
+<h6>Download and/or Play This FREE Album</h6>
+
+</div>
+
+<br>
+      <h3 class="outline">Play</h3>
+
+                <audio controls='controls'>
+                    <source src='https://django-static-sentheard.s3.us-east-2.amazonaws.com/static/music/Great+Luck+by+Stal+-+mix_35m31s.mp3' type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+
+<br>
+<a href='https://django-static-sentheard.s3.us-east-2.amazonaws.com/static/music/Great+Luck+by+Stal.zip' download><h3 class="outline">Download</h3></a>
+
+
+<a href='https://django-static-sentheard.s3.us-east-2.amazonaws.com/static/music/Great+Luck+by+Stal.zip' download><h3>
+    <img class="album-cover" src='https://django-static-sentheard.s3.us-east-2.amazonaws.com/static/music/Great+Luck+-+Album+Cover.png'></a>
+
+
+<br>
+
+
+    {% endblock %}
+

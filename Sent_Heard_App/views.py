@@ -38,3 +38,6 @@ def delete_user_confirm(request):
 
 def sifu_bach(request):
     return render(request, "sifu_bach.html")
+
+def stal(request):
+    return render(request, "stal.html")

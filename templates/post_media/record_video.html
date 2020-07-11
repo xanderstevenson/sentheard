@@ -15,7 +15,7 @@
 
 <br style="clear: both;">
 
-
+  {% if user.is_authenticated %}
 
 
 
@@ -75,7 +75,11 @@
 <!--    console.log("Something is wrong!");-->
 <!--  });-->
 <!--}-->
+{% else %}
 
+<h3><a href={% url 'login' %}>Please Log In to View</a></h3>
+
+{% endif %}
 
 
 
