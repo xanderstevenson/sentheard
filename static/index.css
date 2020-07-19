@@ -1192,7 +1192,7 @@ box-shadow: 1px 1px 4px #333328, -1px 1px 4px #333328;
 width: 365px;
 height: 500px;
 align-content: center;
-padding: 50px;
+padding: 20px;
 /*border: 2px solid #d7b88a;*/
 border-image: url(images/gold.jpg) 30% round;
 box-shadow: 2px 2px 4px #333328, -2px 2px 4px #333328;
@@ -1210,6 +1210,17 @@ border-image: url(images/gold.jpg);
 padding: 4px;
 background-image: url(images/gold.jpg);
 }
+
+
+.myGoldButton {
+    border: 3px outset goldenrod;
+border-image: url(images/gold.jpg);
+padding: 4px;
+background-image: url(images/gold.jpg);
+text-shadow: 2px 1px white, -2px 1px white;
+/*box-shadow: 2px 2px 4px goldenrod, -2px 2px 4px goldenrod, 0px -2px 4px goldenrod;*/
+}
+
 
 .postForm button {
     padding: 4px;
@@ -1377,12 +1388,13 @@ box-shadow: 2px 2px 4px #333328, -2px 2px 4px #333328, -2px -2px 4px #333328;
  margin-bottom: 2px;
 }
 
-.errorList li {
-    color: red;
-}
-.errorList {
-    color: red;
-}
+
+
+/*.errorlist {*/
+/*    color: red;*/
+/*    margin-top: -30px;*/
+/*    padding-top: 0px;*/
+/*}*/
 
 
 #offering {
@@ -1431,19 +1443,46 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 }
 
 .errorlist li {
-    margin-top: 500px;
+    margin-top: 425px;
+        color: red;
+    padding-top: 0px;
+    position: absolute;
+    font-weight: bold
+    text-align: center;
+    align-content: center;
 }
 
 textarea#id_description {
-    height: 90px;
-    max-height: 90px;
+    height: 200px;
+    max-height: 200px;
     max-width: 300px;
+
 }
 
 input {
     color: black;
+    background-color: white;
+    max-width: 300px;
+    text-align: center;
 }
 
+
+form {
+  max-width: 350px;
+
+  // positioning context
+  > div {
+    position: relative;
+
+    // Looks like placeholder
+    > label {
+      opacity: 0.3;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  }
+}
 
 /*#textBoxGeneralTwo form {*/
 /*    padding: 10px;*/

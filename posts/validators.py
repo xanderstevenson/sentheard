@@ -1,4 +1,6 @@
 from django.core.exceptions import ValidationError
+from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
 
 def validate_file_size_photo(value):
     filesize= value.size
