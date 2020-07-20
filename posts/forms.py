@@ -16,17 +16,17 @@ class AudioForm(forms.ModelForm):
     class Meta:
         model = Audio
         exclude = ['author']
-        fields = ('title', 'audio')
+        fields = ('title', 'audio', 'description')
 
 class VideoForm(forms.ModelForm):
     class Meta:
         model = Video
         exclude = ['author']
-        fields = ('title', 'video')
+        fields = ('title', 'video', 'description')
 
 class TextForm(forms.ModelForm):
     class Meta:
         model = Text
         exclude = ['author']
-        fields = ('title', 'text_upload')
+        fields = ('title', 'text_upload', 'description')
 
