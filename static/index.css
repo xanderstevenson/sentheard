@@ -1100,7 +1100,7 @@ opacity: 0.95;
 #instrucker {
 border: 4px ridge #e0dbd1;
 width: 300px;
-height: 160px;
+height: 260px;
 padding: 10px;
 font-family: Arial;
 /*background-color: silver;*/
@@ -1118,7 +1118,7 @@ margin-top: 5px;
 
 #instrucker-table {
 width: 200px;
-height: 130px;
+height: 230px;
 background-color: white;
 opacity: 0.9;
 box-shadow: 1px 1px 1px silver;

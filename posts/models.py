@@ -21,7 +21,7 @@ class Photo(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     # author = models.CharField(default="", max_length=55, null=False)
     title = models.CharField(default="", max_length=20, null=False)
-    description = models.TextField(max_length=200, default='', null=False)
+    description = models.TextField(max_length=180, default='', null=False)
     photo = models.ImageField(upload_to = 'photos/', validators=[validate_file_size_photo])
     def __str__(self):
         return self.title
@@ -34,7 +34,7 @@ class Audio(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     # author = models.CharField(default="", max_length=55, null=False)
     title = models.CharField(default="", max_length=20)
-    description = models.TextField(max_length=200, default='', null=False)
+    description = models.TextField(max_length=180, default='', null=False)
     audio = models.FileField(upload_to='audio/', validators=[validate_file_size_audio])
     def __str__(self):
         return self.title
@@ -47,7 +47,7 @@ class Video(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     # author = models.CharField(default="", max_length=55, null=False)
     title = models.CharField(default="", max_length=20)
-    description = models.TextField(max_length=200, default='', null=False)
+    description = models.TextField(max_length=180, default='', null=False)
     video = models.FileField(upload_to='video/', validators=[validate_file_size_video])
     def __str__(self):
         return self.title
@@ -59,7 +59,7 @@ class Text(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     # author = models.CharField(default="", max_length=55, null=False)
     title = models.CharField(default="", max_length=20)
-    description = models.TextField(max_length=200, default='', null=False)
+    description = models.TextField(max_length=180, default='', null=False)
     text_upload = models.FileField(upload_to='text/', validators=[validate_file_size_text])
     def __str__(self):
         return self.title

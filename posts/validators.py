@@ -1,6 +1,17 @@
 from django.core.exceptions import ValidationError
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
+# from posts.models import Photo
+
+
+# def validate_file_number_photo(self, form):
+#         form.instance.author = self.request.user
+#         if Photo.objects.count() < 1:
+#             return super().form_valid(form)
+#         else:
+#             raise ValidationError("Too many records mate")
+
+
 
 def validate_file_size_photo(value):
     filesize= value.size

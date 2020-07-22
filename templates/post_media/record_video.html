@@ -30,9 +30,9 @@
 
         <button class='vidButton' id="start">Start Camera</button>
         <button class='vidButton' id="record">Start Recording</button>
-        <button class='vidButton' id="play">Play</button>
+        <button class='vidButton' id="play" style="display:none">Play</button>
         <button class='vidButton' id="download" type="submit">Download</button>
-        <a href={% url 'posts:post_video' %}><button class='vidButton' id="save">Save</button></a>
+        <a href={% url 'posts:post_video' %}><button class='vidButton' id="save" style="display:none">Save</button></a>
         <button class='vidButton' id="tryAgain">Try Again</button>
 </div>
 
@@ -47,6 +47,8 @@
         <p>1. Start Camera</p>
         <p>2. Start Recording</p>
         <p>3. Stop Recording</p>
+        <p>4. Download Video</p>
+        <p>5. Upload Video <a href="/post_stuff/post_video/">Here</a></p>
         </div>
         </div>
         <p style="color:black;">Echo cancellation: <input type="checkbox" id="echoCancellation">
