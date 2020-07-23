@@ -12,10 +12,14 @@
     <h3 class="fuck-motto">Save Your Memories</h3>
   </div>
   <br>
+    {% if user.is_authenticated %}
+  {% if user.has_paid %}
+
      <button class='myGoldButton'>Max Photo File Upload Size = 1MB
      <br>JPG, JPEG, PNG or GIF</button>
   <br>
-  {% if user.is_authenticated %}
+
+
   <form method="POST" enctype="multipart/form-data" class='postForm'>
 
     {% csrf_token %}
@@ -27,8 +31,10 @@
 </div>
 
 {% else %}
-
-<h3><a href={% url 'login' %}>Please Log In to View</a></h3>
-
+<h3><a href={% url 'payments' %}>You have registered but not paid</a></h3>
 {% endif %}
+{% else %}
+<h3><a href={% url 'login' %}>Please Log In to View</a></h3>
+{% endif %}
+
 {% endblock %}

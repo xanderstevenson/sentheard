@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'always_authenticated.middleware.AlwaysAuthenticatedMiddleware',
+    # 'django_limits.middleware.LimitExceededMiddleware',
 ]
 
 # To run the middleware in production, set ALWAYS_AUTHENTICATED_DEBUG_ONLY to False.

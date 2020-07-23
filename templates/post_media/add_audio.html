@@ -11,9 +11,10 @@
     <h1>Post Audio</h1>
     <h3 class="fuck-motto">Save Your Memories</h3>
   </div>
-
+  <br>
   {% if user.is_authenticated %}
-    <br>
+    {% if user.has_paid %}
+
      <button class='myGoldButton'>MAX FILE UPLOAD SIZE = 5MB <br>
      MP3, WAV, AIFF or FLAC</button>
   <br>
@@ -28,8 +29,10 @@
 </div>
 
 {% else %}
-
-<h3><a href={% url 'login' %}>Please Log In to View</a></h3>
-
+<h3><a href={% url 'payments' %}>You have registered but not paid</a></h3>
 {% endif %}
+{% else %}
+<h3><a href={% url 'login' %}>Please Log In to View</a></h3>
+{% endif %}
+
 {% endblock %}
