@@ -1,7 +1,7 @@
 from django.core.exceptions import ValidationError
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
-# from posts.models import Photo
+import os
 
 
 # def validate_file_number_photo(self, form):
@@ -15,8 +15,12 @@ from django.http import HttpResponseRedirect
 
 def validate_file_size_photo(value):
     filesize= value.size
+    ext = os.path.splitext(value.name)[1]
+    valid_extensions = ['.jpg', '.gif']
     if filesize > 1048576:
         raise ValidationError("The maximum file size that can be uploaded is 1MB")
+    elif ext.lower() not in valid_extensions:
+        raise ValidationError('Unsupported file extension.')
     else:
         return value
 

@@ -1057,7 +1057,7 @@ right: 80px;
 #join-instructions {
 align-content: center;
 margin: 0px auto;
-margin-top: 120px;
+margin-top: 10px;
 /*background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1581284042/SentHeard/scroll-small3.png);*/
 background-image: url(images/landing_page/chalkboard-gold-sm.jpg);
 -webkit-background-size: contain;
@@ -1071,7 +1071,7 @@ background-position: center;
 /*padding-top: 32px;*/
 width: 100%;
 min-width: 340px;
-max-width: 360px;
+max-width: 370px;
 font-size: 2px;
 padding-top: 33px;
 box-shadow: 4px 4px 4px #4d4d45, -4px 4px 4px #4d4d45;
@@ -1217,7 +1217,7 @@ background-image: url(images/gold.jpg);
 border-image: url(images/gold.jpg);
 padding: 4px;
 background-image: url(images/gold.jpg);
-text-shadow: 2px 1px white, -2px 1px white;
+text-shadow: 1px 1px white, -1px 1px white;
 /*box-shadow: 2px 2px 4px goldenrod, -2px 2px 4px goldenrod, 0px -2px 4px goldenrod;*/
 }
 
