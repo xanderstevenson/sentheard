@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" href="/static/index.css" />
+
+<div class="GalleryTitleBox">
+    <h1>Photo Gallery</h1>
+    <h3 class="fuck-motto">Your Memories</h3>
+</div>
+
+
+
+
+<div id=''>
+
+
+
+    {% if user.is_authenticated %}
+    {% if user.has_paid %}
+
+
+<form action='' method='post'>
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{ photo.title }}"?</p>
+    <input type='submit' value='Delete'>
+</form>
+
+
+
+{% else %}
+    <br><br <h3><a href={% url 'payments' %}>Your payment status is <u>unpaid</u>.</a></h3>
+
+{% endif %}
+
+{% else %}
+    <br><br <h3><a href={% url 'login' %}>Please Log In to View</a></h3>
+{% endif %}
+</div>
+
+
+{% endblock %}

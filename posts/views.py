@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, DeleteView
 from django.urls import reverse_lazy
 from django.conf import settings
 from django.utils import timezone
@@ -143,12 +143,11 @@ class TextGalleryListView(ListView):
         # context['now'] = timezone.now()
         return context
 
-
-
-
-
-
 def post_video(request):
     return render(request, "post_media/post_video.html")
 
-
+class DeletePhotoView(DeleteView):
+    template_name = 'post_media/delete.html'
+    model = Photo
+    context_object_name = 'photo'
+    success_url = reverse_lazy('posts:gallery')
