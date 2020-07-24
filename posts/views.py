@@ -14,6 +14,7 @@ from django.views import generic
 from django.views.generic.edit import FormMixin
 from django.core.exceptions import PermissionDenied
 from django.db.models.signals import pre_save
+import boto3
 # django-storages and boto3
 # def image_upload(request):
 #     if request.method == 'POST':
@@ -151,3 +152,5 @@ class DeletePhotoView(DeleteView):
     model = Photo
     context_object_name = 'photo'
     success_url = reverse_lazy('posts:gallery')
+    # s3 = boto3.client('s3')
+    # s3.delete_object(Bucket=settings.AWS_STORAGE_BUCKET_NAME, Key=f"media/{object.title}")

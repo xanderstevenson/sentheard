@@ -20,11 +20,12 @@
     {% if user.is_authenticated %}
     {% if user.has_paid %}
 
-
+<br>
 <form action='' method='post'>
     {% csrf_token %}
-    <p>Are you sure you want to delete "{{ photo.title }}"?</p>
-    <input type='submit' value='Delete'>
+    <h5>Are you sure you want to delete "{{ photo.title }}"?</h5>
+
+    <input type='submit' value='Delete' class="downloadButton" style='width: 100px; font-size: 22px'>
 </form>
 
 

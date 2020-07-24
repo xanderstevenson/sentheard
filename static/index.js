@@ -203,7 +203,7 @@ const changeCloudTitleSides = ()=>{
 
 
 
-        }, 1000)
+        }, 3000)
 
     }
 

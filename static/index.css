@@ -1066,8 +1066,8 @@ background-image: url(images/landing_page/chalkboard-gold-sm.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
-/*padding-left: 17px;*/
-/*padding-right: 17px;*/
+padding-left: 17px;
+padding-right: 17px;
 /*padding-top: 32px;*/
 width: 100%;
 min-width: 340px;
@@ -1081,7 +1081,7 @@ position: relative;
 height: 373px;
 
 top: 50%;
-margin-top: 135px;
+
 }
 
 #join-instructions p {
@@ -1238,14 +1238,14 @@ background-repeat: no-repeat;
 background-position: center;
 width: 350px;
 height: 325px;
-padding: 15px;
+padding: 20px;
     border: 3px outset silver;
 
 box-shadow: 3px 3px 10px #FAFAD2, -3px 3px 10px #FAFAD2, -3px -3px 10px #FAFAD2;
 }
 
 #textBoxGeneralSpan {
- width: 310px;
+ width: 300px;
 height: 240px;
 padding: 15px;
 background-color: lightgray;
@@ -1255,7 +1255,7 @@ font-size: 18px;
 text-shadow: 2px 2px white;
 align-content: center;
 padding-left: 0px;
-
+margin: 0px auto;
 }
 
 
