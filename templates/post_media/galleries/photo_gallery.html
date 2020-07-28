@@ -42,7 +42,7 @@
 
                 <br>
                 <a class="downloadButton" href="{{ MEDIA_ROOT }}{{ photo.photo.url }}" download>View</a>
-                      <a class="downloadButton" href="{% url 'posts:delete' photo.id %}">Delete</a>
+                      <a class="downloadButton" href="{% url 'posts:delete_photo' photo.id %}">Delete</a>
             </div>
         </div>
 

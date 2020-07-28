@@ -41,7 +41,8 @@
                     Your browser does not support the audio element.
                 </audio>
 
-                <a class="downloadButton" href="{{ static }}{{audio.audio.url}}" download>Download</a>
+                <!--<a class="downloadButton" href="{{ static }}{{audio.audio.url}}" download>View</a>-->
+            <a class="downloadButton" href="{% url 'posts:delete_audio' audio.id %}">Delete</a>
             </div>
         </div>
 
