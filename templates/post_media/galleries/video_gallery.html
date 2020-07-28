@@ -39,27 +39,34 @@
           <source src='{{ static }}{{ video.video.url }}' type="audio/mpeg">
           Your browser does not support the video element.
         </video>
-        <a class="downloadButton" href="{{ static }}{{ video.video.url }}" download>Download</a>
+        <a class="downloadButton" href="{{ static }}{{ video.video.url }}" download>Play Large</a>
+<a class="downloadButton" href="{% url 'posts:delete_video' video.id %}">Delete</a>
+
       </div>
     </div>
-    {% else %}
-    <p id="h3words">There are no videos in the gallery at this time.</p>
-    {% endif %}
-    {% endfor %}
+        {% endif %}
+        {% endfor %}
+{% else %}
+    <br><br>
+    <p id="h3words">There are no photos in the gallery at this time.</p>
+
+{% endif %}
 
 
-    {% endif %}
 
-  </div>
 
-      {% else %}
-      <br><br>
-<a href={% url 'payments' %}>Please Pay Your Subscription</a>
-  {% endif %}
-    {% else %}
-        <br><br>
-  <a href={% url 'login' %}>Please Log In to View</a>
-  {% endif %}
+
+
+
+{% else %}
+    <br><br <h3><a href={% url 'payments' %}>Your payment status is <u>unpaid</u>.</a></h3>
+
+{% endif %}
+
+{% else %}
+    <br><br <h3><a href={% url 'login' %}>Please Log In to View</a></h3>
+{% endif %}
+</div>
 </div>
 
 {% endblock %}

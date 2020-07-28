@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 from . import views
 from .views import CreatePhotoView, CreateAudioView, CreateVideoView, CreateTextView, GalleryListView, PhotoGalleryListView,\
 AudioGalleryListView, VideoGalleryListView, TextGalleryListView, CreateRecordAudioView,  CreateRecordVideoView, post_stuff, \
-post_video, DeletePhotoView, DeleteAudioView, DeleteTextView
+post_video, DeletePhotoView, DeleteAudioView, DeleteTextView, DeleteVideoView
 from django.conf import settings
 from django.conf.urls.static import static
 from .models import Photo
@@ -31,7 +31,7 @@ urlpatterns = [
     path(r'^(?P<pk>\d+)/delete_photo/', DeletePhotoView.as_view(), name='delete_photo'),
     path(r'^(?P<pk>\d+)/delete_audio/', DeleteAudioView.as_view(), name='delete_audio'),
     path(r'^(?P<pk>\d+)/delete_text/', DeleteTextView.as_view(), name='delete_text'),
-
+    path(r'^(?P<pk>\d+)/delete_video/', DeleteVideoView.as_view(), name='delete_video'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
