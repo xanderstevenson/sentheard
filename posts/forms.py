@@ -28,5 +28,5 @@ class TextForm(forms.ModelForm):
     class Meta:
         model = Text
         exclude = ['author']
-        fields = ('title', 'text_upload', 'description')
+        fields = ('title', 'text', 'description')
 

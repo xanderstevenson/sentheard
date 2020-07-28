@@ -60,6 +60,6 @@ class Text(models.Model):
     # author = models.CharField(default="", max_length=55, null=False)
     title = models.CharField(default="", max_length=20)
     description = models.TextField(max_length=180, default='', null=False)
-    text_upload = models.FileField(upload_to='text/', validators=[validate_file_size_text])
+    text = models.FileField(upload_to='text/', validators=[validate_file_size_text])
     def __str__(self):
         return self.title

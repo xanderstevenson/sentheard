@@ -180,3 +180,19 @@ class DeleteAudioView(DeleteView):
     @receiver(models.signals.pre_delete, sender=Audio)
     def remove_file_from_s3(sender, instance, using, **kwargs):
        instance.audio.delete(save=False)
+
+class DeleteTextView(DeleteView):
+    model = Text
+    context_object_name = 'text'
+    template_name = 'post_media/delete.html'
+    success_url = reverse_lazy('posts:gallery')
+    def test_func(self):
+      obj = self.get_object()
+      if obj.user == self.request.user:
+        return True
+      return False
+
+    #This code does magic for S3 file deletion
+    @receiver(models.signals.pre_delete, sender=Text)
+    def remove_file_from_s3(sender, instance, using, **kwargs):
+       instance.text.delete(save=False)
