@@ -172,8 +172,7 @@ const changeCloudTitleSides = ()=>{
             }).delay(2000)
             joinButton.fadeTo(3000, 1, 'swing', () => {
                 joinButton.fadeIn()
-                // joinInstructions.fadeIn(3000)
-                // joinInstructWords.fadeIn(3000)
+
             }).delay(2000)
             logo.fadeTo(3000, 1, 'swing', () => {
                 logo.fadeIn(3000)
@@ -194,8 +193,7 @@ const changeCloudTitleSides = ()=>{
                 // joinButton.attr("src", freeButtonSwitch);
                 joinButton.fadeOut()
                 // joinButton.css("visibility", "visible")
-                // joinInstructions.fadeOut()
-                // joinInstructWords.fadeOut()
+
             })
             logo.fadeTo(2000, 0, () => {
                 logo.fadeOut()
