@@ -7,21 +7,22 @@ from django.conf import settings
 from django.db import models
 from django.contrib.auth import get_user_model
 
-stripe.api_key = "sk_test_o7yeASKfKUYcZgquJQkKmlqU00kw0WhdaK"
+stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
 
 
 class PaymentsPageView(TemplateView):
     template_name = 'payments/payments.html'
     success_url = reverse_lazy('charge')
 
-    def get_context_data(self, **kwargs): # new
-        context = super().get_context_data(**kwargs)
-        # context['key'] = settings.STRIPE_PUBLISHABLE_KEY
-        context['key'] = os.environ.get("STRIPE_PUBLISHABLE_KEY")
-        return context
+    # def get_context_data(self, **kwargs): # new
+    #     context = super().get_context_data(**kwargs)
+    #     # context['key'] = settings.STRIPE_PUBLISHABLE_KEY
+    #     context['key'] = os.environ.get("STRIPE_PUBLISHABLE_KEY")
+    #     return context
 
 
 def charge(request): # new
+    stripe.api_key = 'sk_test_o7yeASKfKUYcZgquJQkKmlqU00kw0WhdaK'
     if request.method == 'POST':
 #       added has_paid attribute to user for later view restriction
         user = request.user

@@ -347,16 +347,16 @@ box-shadow: 3px 3px 12px rgb(65, 65, 58), -3px 3px 12px rgb(65, 65, 58),
 0px 3px 12px rgb(65, 65, 58);
 }
 .loginForm label {
-width: 95px;
+width: 100px;
 height: 35px;
 border-image: url(images/gold.jpg);
-padding: 4px;
+padding: 3px;
 /*background-image: url(images/gold.jpg);*/
 background-color: gray;
 color: white;
 text-shadow: 1px 1px black, -1px -1px goldenrod;
 font-size: 18px;
-border: 1px ridge #967752;
+border: 2px ridge goldenrod;
 }
 
 .loginForm button {
@@ -496,6 +496,7 @@ height: 100%;
 max-width: 345px;
 min-width: 340px;
 max-height: 525px;
+min-height: 525px;
 background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1574369827/SentHeard/marble-frame345x425C.png);
 -webkit-background-size: contain;
 -moz-background-size: contain;
@@ -687,7 +688,7 @@ opacity: 0.9;
 max-width: 187px;
 
 margin: 0px auto;
-/*margin-bottom: 15px;*/
+margin-bottom: 5px;
 align-content: center;
 text-align: center;
 }
@@ -1057,7 +1058,7 @@ right: 80px;
 #join-instructions {
 align-content: center;
 margin: 0px auto;
-margin-top: 10px;
+margin-top: 250px;
 /*background-image: url(https://res.cloudinary.com/dx5eoz5dw/image/upload/v1581284042/SentHeard/scroll-small3.png);*/
 background-image: url(images/landing_page/chalkboard-gold-sm.jpg);
 -webkit-background-size: contain;
@@ -1075,12 +1076,8 @@ max-width: 370px;
 font-size: 2px;
 padding-top: 33px;
 box-shadow: 4px 4px 4px #4d4d45, -4px 4px 4px #4d4d45;
-top: 13px;
-z-index: 3;
-position: relative;
-height: 373px;
 
-top: 50%;
+height: 400px;
 
 }
 
@@ -1254,7 +1251,7 @@ opacity: 0.80;
 font-size: 18px;
 text-shadow: 2px 2px white;
 align-content: center;
-padding-left: 0px;
+padding-left: 20px;
 margin: 0px auto;
 }
 
@@ -1452,6 +1449,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
     align-content: center;
 }
 
+.nonfield li {
+    margin-top: 325px;
+        color: red;
+    padding-top: 0px;
+    position: absolute;
+    font-weight: bold
+    text-align: center;
+    align-content: center;
+    max-width: 325px;
+}
+
+
 textarea#id_description {
     height: 200px;
     max-height: 200px;
@@ -1484,32 +1493,11 @@ form {
   }
 }
 
-/*#textBoxGeneralTwo form {*/
-/*    padding: 10px;*/
-/*}*/
 
-/*.MyCardElement {*/
-/*  height: 40px;*/
-/*  padding: 10px 12px;*/
-/*  width: 100%;*/
-/*  color: #32325d;*/
-/*  background-color: white;*/
-/*  border: 1px solid transparent;*/
-/*  border-radius: 4px;*/
+#plaque ul {
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 0px;
+    max-width: 370px;
 
-/*  box-shadow: 0 1px 3px 0 #e6ebf1;*/
-/*  -webkit-transition: box-shadow 150ms ease;*/
-/*  transition: box-shadow 150ms ease;*/
-/*}*/
-
-/*.MyCardElement--focus {*/
-/*  box-shadow: 0 1px 3px 0 #cfd7df;*/
-/*}*/
-
-/*.MyCardElement--invalid {*/
-/*  border-color: #fa755a;*/
-/*}*/
-
-/*.MyCardElement--webkit-autofill {*/
-/*  background-color: #fefde5 !important;*/
-/*}*/e
+}

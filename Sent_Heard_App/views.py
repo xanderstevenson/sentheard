@@ -4,9 +4,12 @@ from django.urls import reverse_lazy
 from .forms import DeactivateUserForm
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth import get_user_model
+import stripe
+import os
+from django.contrib.auth import logout
 
 User = get_user_model()
-
+stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
 
 
 def index(request):
@@ -32,8 +35,12 @@ def delete_user(request):
 def delete_user_confirm(request):
     user = request.user
     user.is_active = False
-    # logout(request)
     user.save()
+    logout(request)
+    # stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
+    # stripe.SubscriptionItem.delete(
+    #     "si_Hm6Z6o07fWHphn",
+    # )
     return render(request, "account/account-deleted.html")
 
 def sifu_bach(request):
