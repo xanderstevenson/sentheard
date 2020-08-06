@@ -44,6 +44,10 @@ def post_stuff(request):
 
 
 class CreatePhotoView(CreateView):
+    @receiver(pre_save)
+    def check_limits(sender, **kwargs):
+        if Photo.objects.count() > 2:
+            raise PermissionDenied
     model = Photo
     form_class = PhotoForm
     template_name = 'post_media/add_photos.html'

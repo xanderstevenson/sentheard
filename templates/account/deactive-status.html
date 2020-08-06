@@ -17,19 +17,44 @@
     <br><br>
 
 <form method="post">{% csrf_token %}
-    <h5 id="plaque" style="color:white;font-size:26px;">Are you sure you want to <strong>deactivate your account</strong>?</h5>
+    <h5 id="plaque" style="color:white;font-size:20px;height:60px">Are you sure you want to <strong>deactivate your account</strong>?</h5>
     <br>
-    <a id='plaque' href="{% url 'delete_user_confirm' %}" style="text-shadow:1px 1px 1px black;-1px -1px 1px black; color: white; font-size:26px">Yes</a>
+    <a id='plaque' href="{% url 'delete_user_confirm' %}" style="text-shadow:1px 1px 1px black;-1px -1px 1px black; color: white; font-size:26px; width:70px;">Yes</a>
+    <br>
+    <br>
+    <h5 id="plaque" style="color:white;font-size:22px;height:70px"><strong>Copy</strong> the following to cancel subscription:</h5>
 
 </form>
 
 
+</div>
 
+<div id="accountBox">
+
+<u>Status</u>:
+{% if user.is_active %}
+<span style="color: green;">Active</span>
+{% else %}
+<span style="color: red;">Inactive</span>
+{% endif %}
+<br>
+<u>Paid or Unpaid</u>:
+{% if user.has_paid %}
+<span style="color: green;">Paid</span>
+{% else %}
+<span style="color: red;">Unpaid</span>
+{% endif %}
+<br>
+<u>First Name</u>: {{ user.first_name }}
+<br>
+<u>Last Name</u>: {{ user.last_name }}
+<br>
+<u>Email</u>: {{ user.email }}
+<br>
+<u>Customer ID</u>: {{ user.id }}
 
 
 </div>
-
-
 
 
     {% endblock %}

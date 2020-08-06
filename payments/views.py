@@ -22,6 +22,7 @@ class PaymentsPageView(TemplateView):
 
 
 def charge(request): # new
+    # stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
     stripe.api_key = 'sk_test_o7yeASKfKUYcZgquJQkKmlqU00kw0WhdaK'
     if request.method == 'POST':
 #       added has_paid attribute to user for later view restriction
