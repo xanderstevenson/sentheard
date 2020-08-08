@@ -23,7 +23,7 @@
 <br>
 <form action='' method='post'>
     {% csrf_token %}
-    <h5>Are you sure you want to delete "{{ photo.title }}"?</h5>
+    <h5>Are you sure you want to delete "{{ object.title }}"?</h5>
 
     <input type='submit' value='Delete' class="downloadButton" style='width: 100px; font-size: 22px'>
 </form>

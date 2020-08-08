@@ -40,6 +40,7 @@ def charge(request): # new
 
         subscription = stripe.Subscription.create(
         customer=customer.id,
+        # items=[{'plan': 'price_1HDQgOAdcapDIsTYao9Sjddq',
         items=[{'plan': 'plan_GxnJfVSz42Vay6',
         'quantity': 1,
         }],

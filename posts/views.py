@@ -46,7 +46,7 @@ def post_stuff(request):
 class CreatePhotoView(CreateView):
     @receiver(pre_save)
     def check_limits(sender, **kwargs):
-        if Photo.objects.count() > 9:
+        if sender.objects.count() > 9:
             raise PermissionDenied
     model = Photo
     form_class = PhotoForm
@@ -56,11 +56,10 @@ class CreatePhotoView(CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-
 class CreateAudioView(CreateView):
     @receiver(pre_save)
     def check_limits(sender, **kwargs):
-        if Audio.objects.count() > 4:
+        if sender.objects.count() > 4:
             raise PermissionDenied
     model = Audio
     form_class = AudioForm
@@ -82,7 +81,7 @@ class CreateRecordAudioView(CreateView):
 class CreateVideoView(CreateView):
     @receiver(pre_save)
     def check_limits(sender, **kwargs):
-        if Video.objects.count() > 4:
+        if sender.objects.count() > 4:
             raise PermissionDenied
     model = Video
     form_class = VideoForm
@@ -104,7 +103,7 @@ class CreateRecordVideoView(CreateView):
 class CreateTextView(CreateView):
     @receiver(pre_save)
     def check_limits(sender, **kwargs):
-        if Text.objects.count() > 9:
+        if sender.objects.count() > 9:
             raise PermissionDenied
     model = Text
     form_class = TextForm
