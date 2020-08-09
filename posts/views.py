@@ -46,12 +46,12 @@ def post_stuff(request):
 class CreatePhotoView(CreateView):
     @receiver(pre_save)
     def check_limits(sender, **kwargs):
-        if sender.objects.count() > 9:
+        if User.objects.count() > 10:
             raise PermissionDenied
     model = Photo
     form_class = PhotoForm
     template_name = 'post_media/add_photos.html'
-    success_url = reverse_lazy('posts:gallery')
+    success_url = reverse_lazy('posts:photo_gallery')
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
@@ -59,16 +59,16 @@ class CreatePhotoView(CreateView):
 class CreateAudioView(CreateView):
     @receiver(pre_save)
     def check_limits(sender, **kwargs):
-        if sender.objects.count() > 4:
+        if User.objects.count() > 30:
             raise PermissionDenied
     model = Audio
     form_class = AudioForm
     template_name = 'post_media/add_audio.html'
-    success_url = reverse_lazy('posts:gallery')
+    success_url = reverse_lazy('posts:audio_gallery')
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-
+# Not Used
 class CreateRecordAudioView(CreateView):
     model = Audio
     form_class = AudioForm
@@ -81,16 +81,16 @@ class CreateRecordAudioView(CreateView):
 class CreateVideoView(CreateView):
     @receiver(pre_save)
     def check_limits(sender, **kwargs):
-        if sender.objects.count() > 4:
+        if User.objects.count() > 30:
             raise PermissionDenied
     model = Video
     form_class = VideoForm
     template_name = 'post_media/add_video.html'
-    success_url = reverse_lazy('posts:gallery')
+    success_url = reverse_lazy('posts:video_gallery')
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-
+# Not Used
 class CreateRecordVideoView(CreateView):
     model = Video
     form_class = VideoForm
@@ -103,12 +103,12 @@ class CreateRecordVideoView(CreateView):
 class CreateTextView(CreateView):
     @receiver(pre_save)
     def check_limits(sender, **kwargs):
-        if sender.objects.count() > 9:
+        if User.objects.count() > 30:
             raise PermissionDenied
     model = Text
     form_class = TextForm
     template_name = 'post_media/add_text.html'
-    success_url = reverse_lazy('posts:gallery')
+    success_url = reverse_lazy('posts:text_gallery')
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)

@@ -7,7 +7,7 @@
 
 <div class="GalleryTitleBox">
     <h1>Photo Gallery</h1>
-    <h3 class="fuck-motto">Up To 10 Photo Memories</h3>
+    <h3 class="fuck-motto">You have {{ photo_list.count }} Photo Memories</h3>
 </div>
 
 
@@ -19,12 +19,19 @@
 
     {% if user.is_authenticated %}
     {% if user.has_paid %}
+    {% if photo_list.count < 10 %}
     <div id='post-page'>
         <ul>
             <li><a href={% url 'posts:add_photos' %}><i class="fas fa-camera-retro data-input-post"> Upload
-                        Photos</i></a></li>
+                        Photos</i>
+                        <br>
+
+                        </a></li>
         </ul>
     </div>
+    {% else %}
+    {% endif %}
+
 
 
     <div id='photo_gallery_block' class='row'>
@@ -53,11 +60,6 @@
     <p id="h3words">There are no photos in the gallery at this time.</p>
 
 {% endif %}
-
-
-
-
-
 
 
 {% else %}

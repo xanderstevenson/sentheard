@@ -27,7 +27,7 @@ def validate_file_size_photo(value):
 def validate_file_size_text(value):
     filesize= value.size
     ext = os.path.splitext(value.name)[1]
-    valid_extensions = ['.doc', '.txt', '.docx']
+    valid_extensions = ['.doc', '.docx']
     if filesize > 1048576:
         raise ValidationError("The maximum file size that can be uploaded is 1MB")
     elif ext.lower() not in valid_extensions:
