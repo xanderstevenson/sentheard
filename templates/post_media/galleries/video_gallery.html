@@ -8,13 +8,13 @@
 
 <div class="GalleryTitleBox">
   <h1>Video Gallery</h1>
-  <h3 class="fuck-motto">Up To 5 Video Memories</h3>
+    <h3 class="fuck-motto">You have {{ video_list.count }} Video Memories</h3>
 </div>
 
 <div id=''>
   {% if user.is_authenticated %}
   {% if user.has_paid %}
-
+    {% if video_list.count < 5  %}
 
   <div id='post-page'>
     <ul>
@@ -23,7 +23,8 @@
       </li>
     </ul>
   </div>
-
+    {% else %}
+    {% endif %}
 
   <div id='photo_gallery_block' class='row'>
     {% if video_list %}

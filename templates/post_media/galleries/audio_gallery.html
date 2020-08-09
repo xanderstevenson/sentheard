@@ -8,7 +8,7 @@
 
 <div class="GalleryTitleBox">
 <h1>Audio Gallery</h1>
-<h3 class="fuck-motto">Up To 5 Audio Memories</h3>
+    <h3 class="fuck-motto">You have {{ audio_list.count }} Photo Memories</h3>
 </div>
 
 <div id=''>
@@ -17,12 +17,14 @@
 
     {% if user.is_authenticated %}
 {% if user.has_paid %}
+    {% if audio_list.count < 5 %}
     <div id='post-page'>
     <ul>
    <li><a href={% url 'posts:add_audio' %}><i class="fas fa-microphone-alt data-input-post">      Upload Audio</i></a></li>
     </ul>
     </div>
-
+    {% else %}
+    {% endif %}
 
 
     <div id='photo_gallery_block' class='row'>

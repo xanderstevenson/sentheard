@@ -7,7 +7,7 @@
 
 <div class="GalleryTitleBox">
 <h1>Text Gallery</h1>
-<h3 class="fuck-motto">Up To 10 Text Memories</h3>
+ <h3 class="fuck-motto">You have {{ text_list.count }} Text Memories</h3>
 </div>
 
 <div id='audio-row'>
@@ -15,11 +15,14 @@
 
     {% if user.is_authenticated %}
 {% if user.has_paid %}
+    {% if text_list.count < 10 %}
     <div id='post-page'>
     <ul>
     <li><a href={% url 'posts:text' %}><i class="fas fa-file-alt data-input-post">      Upload Text</i></a></li>
     </ul>
     </div>
+    {% else %}
+    {% endif %}
 
 
     <div id='photo_gallery_block' class='row'>
