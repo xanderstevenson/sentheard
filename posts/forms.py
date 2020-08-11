@@ -10,7 +10,7 @@ class PhotoForm(forms.ModelForm):
         model = Photo
         exclude = ['author']
         # author = User
-        fields = ('title', 'photo', 'description')
+        fields = ('title', 'photo', 'date')
 
 class AudioForm(forms.ModelForm):
     class Meta:

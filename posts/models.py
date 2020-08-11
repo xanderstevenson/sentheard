@@ -5,7 +5,7 @@ import uuid
 from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
 from .validators import validate_file_size_photo, validate_file_size_audio, validate_file_size_video, validate_file_size_text
-
+import datetime
 
 
 # django-storages and boto3
@@ -21,7 +21,7 @@ class Photo(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     # author = models.CharField(default="", max_length=55, null=False)
     title = models.CharField(default="", max_length=20, null=False)
-    description = models.TextField(max_length=180, default='', null=False)
+    date = models.DateField(("Date"), default=datetime.date.today)
     photo = models.ImageField(upload_to = 'photos/', validators=[validate_file_size_photo])
     def __str__(self):
         return self.title

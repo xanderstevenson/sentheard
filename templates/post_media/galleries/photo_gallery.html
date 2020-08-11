@@ -7,7 +7,7 @@
 
 <div class="GalleryTitleBox">
     <h1>Photo Gallery</h1>
-    <h3 class="fuck-motto">You have {{ photo_list.count }} Photo Memories</h3>
+    <h3 class="fuck-motto">Your {{ photo_list.count }} Photo Memories</h3>
 </div>
 
 
@@ -22,8 +22,8 @@
     {% if photo_list.count < 10 %}
     <div id='post-page'>
         <ul>
-            <li><a href={% url 'posts:add_photos' %}><i class="fas fa-camera-retro data-input-post"> Upload
-                        Photos</i>
+            <li><a href={% url 'posts:add_photos' %} id="input_button"><i class="fas fa-camera-retro data-input-post"> Upload
+                        Photo</i>
                         <br>
 
                         </a></li>
@@ -43,7 +43,7 @@
             <div>
                 <p id="photo-title"><span id="display_category">Title: </span>{{ photo.title }}</p>
                 <p id="photo-title"><span id="display_category">Author: </span>{{photo.author.first_name }}</p>
-                <p id="photo-title"><span id="display_category">About: </span>{{ photo.description }}</p>
+                <p id="photo-title" style="font-size:13px;"><span id="display_category">Date: </span>{{ photo.date }}</p>
                 <!--<a href=''></a><img src='ok' alt="Profile Picture" width="200" /></a>-->
                 <img src={{ MEDIA_ROOT }}{{ photo.photo.url }}>
 
@@ -56,8 +56,8 @@
         {% endif %}
         {% endfor %}
 {% else %}
-    <br><br>
-    <p id="h3words">There are no photos in the gallery at this time.</p>
+    <!--<br><br>-->
+    <!--<p id="h3words">There are no photos in the gallery at this time.</p>-->
 
 {% endif %}
 
@@ -72,5 +72,28 @@
 {% endif %}
 </div>
 </div>
+
+<!--<div id="formHide">-->
+<!--     <button class='myGoldButton'>Max Photo File Upload Size = 1MB-->
+<!--     <br>JPG, JPEG, PNG or GIF</button>-->
+<!--  <br>-->
+
+
+<!--  <form method="POST" enctype="multipart/form-data" class='postForm' id="form">-->
+
+<!--    {% csrf_token %}-->
+
+<!--    {{ form.as_p }}-->
+
+<!--    <button type="submit">Submit New Post</button>-->
+<!--  </form>-->
+
+<!--</div>-->
+
+<!--<script>-->
+<!--    var formHide = document.getElementById("formHide");-->
+<!--    formHide.hide();-->
+<!--</script>-->
+
 
 {% endblock %}
