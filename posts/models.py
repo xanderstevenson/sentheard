@@ -21,7 +21,7 @@ class Photo(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None, null=True)
     # author = models.CharField(default="", max_length=55, null=False)
     title = models.CharField(default="", max_length=20, null=False)
-    date = models.DateField(("Date"), default=datetime.date.today)
+    date = models.DateField(("Date"), auto_now_add=True)
     photo = models.ImageField(upload_to = 'photos/', validators=[validate_file_size_photo])
     def __str__(self):
         return self.title

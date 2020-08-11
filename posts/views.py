@@ -56,6 +56,15 @@ class CreatePhotoView(CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
+    queryset = Photo.objects.all().order_by('photo_id')[:10]
+    context_object_name = 'photo_list'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # context['now'] = timezone.now()
+        return context
+
+
+
 class CreateAudioView(CreateView):
     @receiver(pre_save)
     def check_limits(sender, **kwargs):
@@ -122,8 +131,6 @@ class PhotoGalleryListView(ListView):
     model = Photo
     template_name = 'post_media/galleries/photo_gallery.html'
     queryset = Photo.objects.all().order_by('photo_id')[:10]
-    # def get_queryset(self):
-    #     return Book.objects.filter(title__icontains='war')[:5]
     context_object_name = 'photo_list'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
