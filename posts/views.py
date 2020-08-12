@@ -17,23 +17,7 @@ from django.db.models.signals import pre_save
 from django.db import models
 from django.dispatch import receiver
 import os
-# django-storages and boto3
-# def image_upload(request):
-#     if request.method == 'POST':
-#         image_file = request.FILES['image_file']
-#         image_type = request.POST['image_type']
-#         if settings.USE_S3:
-#             upload = Upload(file=image_file)
-#             upload.save()
-#             image_url = upload.file.url
-#         else:
-#             fs = FileSystemStorage()
-#             filename = fs.save(image_file.name, image_file)
-#             image_url = fs.url(filename)
-#         return render(request, 'upload.html', {
-#             'image_url': image_url
-#         })
-#     return render(request, 'post_media/published.html')
+
 
 User = get_user_model()
 
@@ -46,7 +30,7 @@ def post_stuff(request):
 class CreatePhotoView(CreateView):
     @receiver(pre_save)
     def check_limits(sender, **kwargs):
-        if User.objects.count() > 10:
+        if User.objects.count() > 8:
             raise PermissionDenied
     model = Photo
     form_class = PhotoForm
@@ -56,12 +40,6 @@ class CreatePhotoView(CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-    queryset = Photo.objects.all().order_by('photo_id')[:10]
-    context_object_name = 'photo_list'
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        # context['now'] = timezone.now()
-        return context
 
 
 

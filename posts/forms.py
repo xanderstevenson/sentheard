@@ -17,7 +17,7 @@ class AudioForm(forms.ModelForm):
         model = Audio
         exclude = ['author']
         # author = User
-        fields = ('title', 'audio', 'description')
+        fields = ('title', 'audio')
 
 class VideoForm(forms.ModelForm):
     class Meta:

@@ -1186,10 +1186,10 @@ box-shadow: 1px 1px 4px #333328, -1px 1px 4px #333328;
 
 
 .postForm {
-width: 365px;
-height: 500px;
+width: 375px;
+height: 200px;
 align-content: center;
-padding: 20px;
+padding: 10px;
 /*border: 2px solid #d7b88a;*/
 border-image: url(images/gold.jpg) 30% round;
 box-shadow: 2px 2px 4px #333328, -2px 2px 4px #333328;
