@@ -9,12 +9,12 @@
 
   <div class="GalleryTitleBox">
     <h1>Post Audio</h1>
-    <h3 class="fuck-motto">Up To 5 Audio Memories</h3>
+<h3 class="fuck-motto">You have {{ audio_list.count }} Audio Memories</h3>
   </div>
 
   {% if user.is_authenticated %}
     {% if user.has_paid %}
-
+    {% if audio_list.count < 5 %}
      <button class='myGoldButton'>MAX FILE UPLOAD SIZE = 5MB <br>
      MP3, WAV, AIFF or FLAC</button>
   <br>
@@ -26,7 +26,14 @@
 
     <button type="submit">Submit New Post</button>
   </form>
+
 </div>
+
+
+    {% else %}
+    {% endif %}
+
+
 
 {% else %}
 <h3><a href={% url 'payments' %}>You have registered but not paid</a></h3>
