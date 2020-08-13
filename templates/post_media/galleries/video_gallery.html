@@ -36,6 +36,7 @@
       <div>
         <p id="photo-title"><span id="display_category">Title: </span>{{ video.title }} </p>
         <p id="photo-title"><span id="display_category">Author: </span>{{ video.author.first_name }}</p>
+                <p id="photo-title"><span id="display_category">Date: </span>{{ video.date }}</p>
         <video controls='controls'>
           <source src='{{ static }}{{ video.video.url }}' type="audio/mpeg">
           Your browser does not support the video element.

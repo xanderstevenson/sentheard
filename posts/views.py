@@ -39,7 +39,9 @@ class CreatePhotoView(CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-
+    def get_context_data(self, **kwargs):
+        kwargs['photo_list'] = Photo.objects.order_by('date')
+        return super(CreatePhotoView, self).get_context_data(**kwargs)
 
 
 
@@ -108,7 +110,7 @@ def GalleryListView(request):
 class PhotoGalleryListView(ListView):
     model = Photo
     template_name = 'post_media/galleries/photo_gallery.html'
-    queryset = Photo.objects.all().order_by('photo_id')[:10]
+    queryset = Photo.objects.all().order_by('date')[:10]
     context_object_name = 'photo_list'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -120,7 +122,7 @@ class PhotoGalleryListView(ListView):
 class AudioGalleryListView(ListView):
     model = Audio
     template_name = 'post_media/galleries/audio_gallery.html'
-    queryset = Audio.objects.all().order_by('audio_id')[:5]
+    queryset = Audio.objects.all().order_by('date')[:5]
     context_object_name = 'audio_list'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -130,7 +132,7 @@ class AudioGalleryListView(ListView):
 class VideoGalleryListView(ListView):
     model = Video
     template_name = 'post_media/galleries/video_gallery.html'
-    queryset = Video.objects.all().order_by('video_id')[:5]
+    queryset = Video.objects.all().order_by('date')[:5]
     context_object_name = 'video_list'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -140,7 +142,7 @@ class VideoGalleryListView(ListView):
 class TextGalleryListView(ListView):
     model = Text
     template_name = 'post_media/galleries/text_gallery.html'
-    queryset = Text.objects.all().order_by('text_id')[:10]
+    queryset = Text.objects.all().order_by('date')[:10]
     context_object_name = 'text_list'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

@@ -23,11 +23,11 @@ class VideoForm(forms.ModelForm):
     class Meta:
         model = Video
         exclude = ['author']
-        fields = ('title', 'video', 'description')
+        fields = ('title', 'video')
 
 class TextForm(forms.ModelForm):
     class Meta:
         model = Text
         exclude = ['author']
-        fields = ('title', 'text', 'description')
+        fields = ('title', 'text')
 

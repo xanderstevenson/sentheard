@@ -9,12 +9,12 @@
 
   <div class="GalleryTitleBox">
     <h1>Post Photos</h1>
-<h3 class="fuck-motto">You have {{ Photo.count }} Photo Memories</h3>
+<h3 class="fuck-motto">You have {{ photo_list.count }} Photo Memories</h3>
   </div>
 
     {% if user.is_authenticated %}
   {% if user.has_paid %}
-
+    {% if photo_list.count < 10 %}
      <button class='myGoldButton'>Max Photo File Upload Size = 1MB
      <br>JPG, JPEG, PNG or GIF</button>
   <br>
@@ -32,6 +32,10 @@
     <button type="submit"> Submit </button>
   </form>
 </div>
+
+    {% else %}
+    {% endif %}
+
 
 {% else %}
 <h3><a href={% url 'payments' %}>You have registered but not paid</a></h3>

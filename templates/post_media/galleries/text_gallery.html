@@ -34,6 +34,7 @@
         <div>
             <p id="photo-title"><span id="display_category">Title: </span>{{ text.title }}</p>
             <p id="photo-title"><span id="display_category">Author: </span>{{text.author.first_name }}</p>
+         <p id="photo-title" style="font-size:12px;"><span id="display_category">Date: </span>{{text.date }}</p>
             <br>
             <a class="downloadButton" href="{{ static }}{{text.text.url}}" download>Download</a>
                               <a class="downloadButton" href="{% url 'posts:delete_text' text.id %}">Delete</a>
