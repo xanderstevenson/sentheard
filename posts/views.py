@@ -85,6 +85,10 @@ class CreateVideoView(CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+    def get_context_data(self, **kwargs):
+        kwargs['video_list'] = Video.objects.order_by('date')
+        return super(CreateVideoView, self).get_context_data(**kwargs)
+
 # Not Used
 class CreateRecordVideoView(CreateView):
     model = Video

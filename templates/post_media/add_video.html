@@ -8,12 +8,12 @@
 
   <div class="GalleryTitleBox">
     <h1>Post Video</h1>
-    <h3 class="fuck-motto">Up To 5 Video Memories</h3>
+<h3 class="fuck-motto">You have {{ video_list.count }} Video Memories</h3>
   </div>
 
   {% if user.is_authenticated %}
         {% if user.has_paid %}
-
+    {% if video_list.count < 5 %}
      <button class='myGoldButton'>Max Video File Upload Size = 10MB<br>
      MP4, MOV, AVI, WEBM, WMV or OGG</button>
   <br>
@@ -26,6 +26,9 @@
     <button type="submit">Submit New Post</button>
   </form>
 </div>
+    {% else %}
+    {% endif %}
+
 
 {% else %}
 <h3><a href={% url 'payments' %}>You have registered but not paid</a></h3>
