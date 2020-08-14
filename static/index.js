@@ -85,9 +85,7 @@ const changeCloudTitleSides = ()=>{
     // flashing "Join for Free"
     const joinButton = $('.join-button')
     joinButton.css("display", "none")
-    // const joinButtonSm = $('#join-buttonSm')
-    // const joinButtonMd = $('#join-buttonMd')
-    // const joinButtonLg = $('#join-buttonLg')
+
     // different texts for home screen rotation
     const verse = ['Record your stories with audio, video, images and text and pass them along to future generations.',
         'Create personalized momentos for your family, friends and descendants to cherish.',
@@ -144,19 +142,6 @@ const changeCloudTitleSides = ()=>{
             }
         }
 
-        // const freeButtonSwitch = () => {
-
-        //     if (joinButton.attr('src') == freeButtons[0]) {
-        //         return (freeButtons[1])
-        //     } else if (joinButton.attr('src') == freeButtons[1]) {
-        //         return (freeButtons[0])
-        //     } else {
-        //         return (freeButtons[0])
-        //     }
-
-        // }
-
-
 
         setInterval(() => {
 
@@ -178,21 +163,19 @@ const changeCloudTitleSides = ()=>{
         changeCloudTitleSides()
 
 
-            marble.fadeTo(2000, 0, () => {
+            marble.fadeTo(3000, 0, () => {
                 marble.fadeOut();
                 marble.text(newText)
             })
-            image.fadeTo(2000, 0, () => {
+            image.fadeTo(3000, 0, () => {
                 image.fadeOut();
                 image.attr('src', newImage)
             })
-            joinButton.fadeTo(2000, 1, () => {
-                // joinButton.attr("src", freeButtonSwitch);
+            joinButton.fadeTo(3000, 1, () => {
                 joinButton.fadeOut()
-                // joinButton.css("visibility", "visible")
 
             })
-            logo.fadeTo(2000, 0, () => {
+            logo.fadeTo(3000, 0, () => {
                 logo.fadeOut()
             });
 
@@ -218,30 +201,17 @@ const changeCloudTitleSides = ()=>{
         // $('#title-box').toggleClass('titleBoxGlow')
 
         if ($('#row1').width() <= 650) {
-            // binding.hide()
-            // binding2.hide()
-            // handPraySm.show()
-            handPraySm.fadeIn()
             smallMarble.delay(3000).fadeIn(3000)
-            handPraySm.delay(1000).fadeOut(1500)
             mediumMarble.css("display", "none")
             largeMarble.css("display", "none")
 
         } else if ($('#row1').width() > 650 && $('#row1').width() <= 1080) {
-            // binding.hide()
-            // binding2.hide()
-            handPrayMd.show()
             mediumMarble.delay(3000).fadeIn(3000)
-            handPrayMd.delay(1000).fadeOut(1500)
             largeMarble.css("display", "none")
             smallMarble.css("display", "none")
 
         } else if ($('#row1').width() > 1080) {
-            // binding.show()
-            // binding2.show()
-            handPrayLg.fadeIn()
             largeMarble.delay(3000).fadeIn(3000)
-            handPrayLg.delay(1000).fadeOut(1500)
             smallMarble.css("display", "none")
             mediumMarble.css("display", "none")
         }
@@ -250,20 +220,14 @@ const changeCloudTitleSides = ()=>{
     // show the correct marble frame based on screen size
     window.onresize = function (event) {
         if ($('#row1').width() <= 650) {
-            // binding.hide()
-            // binding2.hide()
             smallMarble.show()
             mediumMarble.css("display", "none")
             largeMarble.css("display", "none")
         } else if ($('#row1').width() > 650 && $('#row1').width() <= 1080) {
-            // binding.hide()
-            // binding2.hide()
             smallMarble.css("display", "none")
             mediumMarble.show()
             largeMarble.css("display", "none")
         } else if ($('#row1').width() > 1080) {
-            // binding.show()
-            // binding2.show()
             smallMarble.css("display", "none")
             mediumMarble.css("display", "none")
             largeMarble.show()
