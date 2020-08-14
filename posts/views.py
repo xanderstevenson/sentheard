@@ -30,7 +30,7 @@ def post_stuff(request):
 class CreatePhotoView(CreateView):
     @receiver(pre_save)
     def check_limits(sender, **kwargs):
-        if User.objects.count() > 8:
+        if User.objects.count() > 30:
             raise PermissionDenied
     model = Photo
     form_class = PhotoForm
@@ -111,6 +111,10 @@ class CreateTextView(CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+    def get_context_data(self, **kwargs):
+        kwargs['text_list'] = Text.objects.order_by('date')
+        return super(CreateTextView, self).get_context_data(**kwargs)
+
 
 
 def GalleryListView(request):
