@@ -91,7 +91,7 @@ DATABASES = {
     'ENGINE': 'django.db.backends.mysql',
     'NAME': 'sentheard$sentheard-db2',
     'USER': 'sentheard',
-    'PASSWORD': 'MsQL2019@!jw*aw3',
+    'PASSWORD': '',
     'HOST': 'sentheard.mysql.pythonanywhere-services.com',
     'OPTIONS': {
         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
