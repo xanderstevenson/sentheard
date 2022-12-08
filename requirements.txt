@@ -1,6 +1,6 @@
 -f /usr/share/pip-wheels
 asgiref==3.2.5
-certifi==2019.11.28
+certifi==2022.12.7
 chardet==3.0.4
 dj-stripe==2.2.3
 Django>=3.0.7
